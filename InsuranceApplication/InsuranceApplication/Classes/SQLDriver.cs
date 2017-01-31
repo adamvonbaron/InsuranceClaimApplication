@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace InsuranceApplication.Classes {
@@ -31,14 +32,16 @@ namespace InsuranceApplication.Classes {
         /* methods */
         //<summary>
         //update information in database
+        //TODO: figure out if i should use SqlCommand or SqlDataAdapter
         //</summary>
         private object UpdateDB(string statement) {
-            var resp;
+            DataSet dataset = new DataSet();
+            SqlDataAdapter da;
             try {
                 SqlCommand cmd = new SqlCommand(statement, conn);
-                return resp;
+                return dataset;
             } catch (SqlException ex) {
-
+                return ex.ToString();
             }
         }
 
@@ -46,7 +49,7 @@ namespace InsuranceApplication.Classes {
         //insert information in database
         //</summary>
         private object InsertDB(string statement) {
-            var resp;
+            DataSet resp;
             try {
                 SqlCommand cmd = new SqlCommand(statement, conn);
             }
