@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InsuranceApplication.Classes;
 
 namespace InsuranceApplication
 {
@@ -20,6 +21,11 @@ namespace InsuranceApplication
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnTestDB_Click(object sender, EventArgs e)
+        {
+            SQLDriver sqlconn = new SQLDriver();
         }
     }
 }

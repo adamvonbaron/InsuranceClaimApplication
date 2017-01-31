@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-
 namespace InsuranceApplication.Classes {
     class SQLDriver {
         public SQLDriver() {
@@ -21,8 +20,6 @@ namespace InsuranceApplication.Classes {
                 TrustServerCertificate=False;
                 Connection Timeout=30;")) {
                 conn.Open();
-                Console.WriteLine("successsfully connected.\npress any key to quit.");
-                Console.ReadKey(true);
             }
         }
     }
