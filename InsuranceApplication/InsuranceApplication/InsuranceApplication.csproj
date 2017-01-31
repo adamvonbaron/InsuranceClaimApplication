@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AdminAcc.cs" />
+    <Compile Include="Classes\ClaimManagerAcc.cs" />
     <Compile Include="Classes\SQLDriver.cs" />
     <Compile Include="Forms\MainWindow.cs">
       <SubType>Form</SubType>
