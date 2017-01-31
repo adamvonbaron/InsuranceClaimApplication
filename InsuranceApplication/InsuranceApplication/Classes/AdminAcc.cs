@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Aaron Zelenkofske
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,33 @@ namespace InsuranceApplication.Classes
 {
     class AdminAcc
     {
-        //test code
+        //Class for the Admin account
+        //This class holds the attributes
+
+        
+        public FirstName()
+        {
+
+        }
+
+        public LastName()
+        {
+        
+        }
+
+        public UserName()
+        {
+
+        }
+
+        public PassWord()
+        {
+
+        }
+
+        public UserRank()
+        {
+
+        }
     }
 }
