@@ -22,10 +22,5 @@ namespace InsuranceApplication
         {
             Application.Exit();
         }
-
-        private void btnTestDB_Click(object sender, EventArgs e)
-        {
-            SQLDriver sqlconn = new SQLDriver();
-        }
     }
 }

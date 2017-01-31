@@ -35,7 +35,6 @@
             this.btnFinanceManager = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnTestDB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -108,22 +107,11 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnTestDB
-            // 
-            this.btnTestDB.Location = new System.Drawing.Point(376, 351);
-            this.btnTestDB.Name = "btnTestDB";
-            this.btnTestDB.Size = new System.Drawing.Size(75, 23);
-            this.btnTestDB.TabIndex = 7;
-            this.btnTestDB.Text = "test DB";
-            this.btnTestDB.UseVisualStyleBackColor = true;
-            this.btnTestDB.Click += new System.EventHandler(this.btnTestDB_Click);
-            // 
             // formInsuranceClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 399);
-            this.Controls.Add(this.btnTestDB);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClient);
             this.Controls.Add(this.btnFinanceManager);
@@ -147,7 +135,6 @@
         private System.Windows.Forms.Button btnFinanceManager;
         private System.Windows.Forms.Button btnClient;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnTestDB;
     }
 }
 
