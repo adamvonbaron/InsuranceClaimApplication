@@ -12,31 +12,16 @@ namespace InsuranceApplication.Classes
     class ClaimManagerAcc
     {
         //constructors
-        public FirstName()
+        public ClaimManagerAcc(string FirstName, string LastName, string Username, string PassWord, int UserRank)
         {
 
         }
+        
 
-        public LastName()
-        {
-
-        }
+        //methods
 
 
-        public UserName()
-        {
 
-        }
-
-        public PassWord()
-        {
-
-        }
-
-        public UserRank()
-        {
-            
-        }
 
 
 
