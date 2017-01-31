@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InsuranceApplication
+namespace InsuranceApplication.Forms
 {
-    public partial class formInsuranceClaim : Form
+    public partial class AdminLogin : Form
     {
-        public formInsuranceClaim()
+        public AdminLogin()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnAdminExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }
