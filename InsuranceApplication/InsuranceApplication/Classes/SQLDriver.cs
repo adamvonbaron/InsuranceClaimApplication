@@ -34,17 +34,19 @@ namespace InsuranceApplication.Classes {
         }
 
         /* methods */
+
         //<summary>
-        //get messages for user
+        //retrieve data from database
         //</summary>
-        private XmlDocument GetMessages(string username) {
-            string query = "select * from messages where username = @username";
+        private XmlDocument GetData(string table, string username) {
+            string query = "select * from @table where username = @username";
             string xmlstring = null;
             XmlDocument xmldata = new XmlDocument();
             SqlDataAdapter da = null;
             try {
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@table", table);
                 da = new SqlDataAdapter(cmd);
                 using (DataSet ds = new DataSet()) {
                     da.SelectCommand.Connection.Open();
@@ -54,13 +56,27 @@ namespace InsuranceApplication.Classes {
                 }
                 xmldata.LoadXml(xmlstring);
             } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Error", 
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             } finally {
                 da.SelectCommand.Connection.Close();
             }
             return xmldata;
         }
-            
+        //<summary>
+        //get messages for user
+        //</summary>
+        private XmlDocument GetMessages(string username) {
+            return GetData("messages", username);
+        }
+
+        //<summary>
+        //get claims for user
+        //</summary>
+        private XmlDocument GetClaims(string username) {
+            return GetData("claims", username);
+        }
+
         //<summary>
         //modify profile
         //</summary>
