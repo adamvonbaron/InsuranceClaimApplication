@@ -16,6 +16,8 @@ Application for Insurance Claim project
 
 [Interfacing with SQL using C#](http://csharp.net-informations.com/data-providers/csharp-sql-server-connection.htm)
 
+[Using XML Serialization with C# and SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/28151.using-xml-serialization-with-c-and-sql-server.aspx)
+
 ### msdn documentation
 
 1. [SqlClient](https://msdn.microsoft.com/en-us/library/system.data.sqlclient(v=vs.110).aspx)
