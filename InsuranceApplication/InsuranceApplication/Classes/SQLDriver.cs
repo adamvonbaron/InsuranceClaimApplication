@@ -9,50 +9,60 @@ using System.Data.SqlClient;
 
 namespace InsuranceApplication.Classes {
     class SQLDriver {
-        /* auto property */
-        private SqlConnection _conn;
+        /* properties */
+        private readonly SqlConnection _conn = new SqlConnection(
+            @"Server=tcp:insuranceclaim.database.windows.net,1433;
+            Initial Catalog=InsuranceClaim;
+            Persist Security Info=False;
+            User ID=charlesroot;
+            Password=Ieamainsuranceclaim123;
+            MultipleActiveResultSets=False;
+            Encrypt=True;
+            TrustServerCertificate=False;
+            Connection Timeout=30;");
+
         public SqlConnection conn {
             get {
-                return new SqlConnection(
-                    @"Server=tcp:insuranceclaim.database.windows.net,1433;
-                    Initial Catalog=InsuranceClaim; 
-                    Persist Security Info=False;
-                    User ID=charlesroot;
-                    Password=Ieamainsuranceclaim123;
-                    MultipleActiveResultSets=False;
-                    Encrypt=True;
-                    TrustServerCertificate=False;
-                    Connection Timeout=30;");
+                return _conn;
+            } private set {
+                conn = value;
             }
-            set {
-                _conn = value;
-            }
+        }
+
+        /* SQL return structure */
+        public struct SqlRecv {
+            public bool data;
+            public DataTable datatable;
         }
 
         /* methods */
         //<summary>
-        //update information in database
+        //modify profile
         //TODO: figure out if i should use SqlCommand or SqlDataAdapter
         //</summary>
-        private object UpdateDB(string statement) {
-            DataSet dataset = new DataSet();
-            SqlDataAdapter da;
+        private int ModifyProfile(string statement, long userid) {
+            SqlCommand cmd;
             try {
-                SqlCommand cmd = new SqlCommand(statement, conn);
-                return dataset;
+                cmd = new SqlCommand(statement, conn);
+
+                int affected = cmd.ExecuteNonQuery();
+                return affected;
             } catch (SqlException ex) {
-                return ex.ToString();
+                return 0;
             }
         }
 
         //<summary>
-        //insert information in database
+        //send claim to database
         //</summary>
-        private object InsertDB(string statement) {
-            DataSet resp;
+        private int SendClaim(string statement, long userid) {
             try {
-                SqlCommand cmd = new SqlCommand(statement, conn);
+            
+            } catch (SqlException ex) {
+                return 0;
             }
         }
+
+        private int SendMessage(string statment, long )
     }
 }
