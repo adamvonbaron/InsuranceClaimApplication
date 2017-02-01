@@ -34,7 +34,6 @@ namespace InsuranceApplication.Classes {
         }
 
         /* methods */
-
         //<summary>
         //retrieve data from database
         //</summary>
@@ -82,9 +81,23 @@ namespace InsuranceApplication.Classes {
         //</summary>
         private int ModifyProfile(XmlDocument xmldoc) {
             SqlCommand cmd;
+            string statement = @"update users
+                                set firstname = @firstname,
+                                    lastname = @lastname,
+                                    username = @username,
+                                    password = @password,
+                                    rank = @rank,
+                                    creation = @creation,
+                                    claims = @claims";
             try {
                 cmd = new SqlCommand(statement, conn);
-
+                cmd.Parameters.AddWithValue("@firstname", xmldoc.GetElementById("firstname").ToString());
+                cmd.Parameters.AddWithValue("@lastname", xmldoc.GetElementById("lastname").ToString());
+                cmd.Parameters.AddWithValue("@username", xmldoc.GetElementById("username").ToString());
+                cmd.Parameters.AddWithValue("@password", xmldoc.GetElementById("password").ToString());
+                cmd.Parameters.AddWithValue("@rank", int.Parse(xmldoc.GetElementById("rank").ToString()));
+                cmd.Parameters.AddWithValue("@creation", xmldoc.GetElementById("creation").ToString());
+                cmd.Parameters.AddWithValue("@claims", int.Parse(xmldoc.GetElementById("claims").ToString()));
                 int affected = cmd.ExecuteNonQuery();
                 return affected;
             } catch (SqlException ex) {
