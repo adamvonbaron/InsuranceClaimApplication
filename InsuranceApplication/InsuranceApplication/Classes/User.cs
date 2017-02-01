@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InsuranceApplication.Classes {
+    [Serializable]
     class User {
         public string firstname {
             get;

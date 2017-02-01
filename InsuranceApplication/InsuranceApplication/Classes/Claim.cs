@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InsuranceApplication.Classes {
+    [Serializable]
     class Claim {
         public string date {
             get;
