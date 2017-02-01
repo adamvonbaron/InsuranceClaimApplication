@@ -52,6 +52,7 @@
     <Compile Include="Classes\Message.cs" />
     <Compile Include="Classes\SQLDriver.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\XMLDriver.cs" />
     <Compile Include="Forms\AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
