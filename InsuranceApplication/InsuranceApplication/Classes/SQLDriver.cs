@@ -62,6 +62,7 @@ namespace InsuranceApplication.Classes {
             }
             return xmldata;
         }
+
         //<summary>
         //get messages for user
         //</summary>
@@ -79,8 +80,10 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //modify profile
         //</summary>
-        private int ModifyProfile(XmlDocument xmldoc) {
+        private XmlDocument ModifyProfile(XmlDocument xmldoc) {
             SqlCommand cmd;
+            XmlReader xmlread = null;
+            XmlDocument xmldata = null;
             string statement = @"update users
                                 set firstname = @firstname,
                                     lastname = @lastname,
@@ -88,7 +91,8 @@ namespace InsuranceApplication.Classes {
                                     password = @password,
                                     rank = @rank,
                                     creation = @creation,
-                                    claims = @claims";
+                                    claims = @claims
+                                    where username = @username for xml auto";
             try {
                 cmd = new SqlCommand(statement, conn);
                 cmd.Parameters.AddWithValue("@firstname", xmldoc.GetElementById("firstname").ToString());
@@ -98,11 +102,18 @@ namespace InsuranceApplication.Classes {
                 cmd.Parameters.AddWithValue("@rank", int.Parse(xmldoc.GetElementById("rank").ToString()));
                 cmd.Parameters.AddWithValue("@creation", xmldoc.GetElementById("creation").ToString());
                 cmd.Parameters.AddWithValue("@claims", int.Parse(xmldoc.GetElementById("claims").ToString()));
-                int affected = cmd.ExecuteNonQuery();
-                return affected;
+                xmlread = cmd.ExecuteXmlReader();
+                xmldata.Load(xmlread);
             } catch (SqlException ex) {
-                return 0;
+                MessageBox.Show(ex.ToString(), "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (XmlException ex) {
+                MessageBox.Show(ex.ToString(), "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } finally {
+                xmlread.Close();
             }
+            return xmldata;
         }
 
         //<summary>
