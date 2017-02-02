@@ -9,17 +9,43 @@ namespace InsuranceApplication.Classes
     class FinanceManger
     {
            //constructors
-            public FinanceManger(string FirstName, string LastName, string Username, string PassWord, int UserRank)
+            //public FinanceManger
+            public string FirstName 
             {
-
+            get; 
+            set;
             }
-
+        public string Lastname
+        {
+            get;
+            set;
+        }
+        public string Username
+        {
+            get;
+            set;
+        }
+           public string PassWord
+        {
+            get;
+            set;
+        }
+            public int UserRank
+        {
+            get;
+            set;
+        }
+            public long id
+        {
+            get;
+            set;
+        }
 
             //methods
 
 
-        
-        }
+
+    }
     }
 
 
