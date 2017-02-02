@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblInstructions = new System.Windows.Forms.Label();
-            this.btnAdministrator = new System.Windows.Forms.Button();
-            this.btnClientManager = new System.Windows.Forms.Button();
-            this.btnFinanceManager = new System.Windows.Forms.Button();
-            this.btnClient = new System.Windows.Forms.Button();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -41,71 +41,67 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(36, 25);
+            this.lblTitle.Location = new System.Drawing.Point(35, 55);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(505, 31);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Insurance Claim Management System";
             // 
-            // lblInstructions
+            // lblUsername
             // 
-            this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructions.Location = new System.Drawing.Point(42, 120);
-            this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(182, 20);
-            this.lblInstructions.TabIndex = 1;
-            this.lblInstructions.Text = "Select the User Type:";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(120, 161);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(111, 24);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "Username:";
             // 
-            // btnAdministrator
+            // lblPassword
             // 
-            this.btnAdministrator.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrator.Location = new System.Drawing.Point(42, 239);
-            this.btnAdministrator.Name = "btnAdministrator";
-            this.btnAdministrator.Size = new System.Drawing.Size(120, 46);
-            this.btnAdministrator.TabIndex = 2;
-            this.btnAdministrator.Text = "Administrator";
-            this.btnAdministrator.UseVisualStyleBackColor = true;
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(120, 219);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(106, 24);
+            this.lblPassword.TabIndex = 2;
+            this.lblPassword.Text = "Password:";
             // 
-            // btnClientManager
+            // txtUsername
             // 
-            this.btnClientManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientManager.Location = new System.Drawing.Point(169, 239);
-            this.btnClientManager.Name = "btnClientManager";
-            this.btnClientManager.Size = new System.Drawing.Size(120, 46);
-            this.btnClientManager.TabIndex = 3;
-            this.btnClientManager.Text = "Client Manager";
-            this.btnClientManager.UseVisualStyleBackColor = true;
+            this.txtUsername.Location = new System.Drawing.Point(238, 164);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(150, 20);
+            this.txtUsername.TabIndex = 3;
             // 
-            // btnFinanceManager
+            // txtPassword
             // 
-            this.btnFinanceManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinanceManager.Location = new System.Drawing.Point(295, 239);
-            this.btnFinanceManager.Name = "btnFinanceManager";
-            this.btnFinanceManager.Size = new System.Drawing.Size(120, 46);
-            this.btnFinanceManager.TabIndex = 4;
-            this.btnFinanceManager.Text = "Finance Manager";
-            this.btnFinanceManager.UseVisualStyleBackColor = true;
+            this.txtPassword.Location = new System.Drawing.Point(238, 224);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(150, 20);
+            this.txtPassword.TabIndex = 4;
             // 
-            // btnClient
+            // btnLogin
             // 
-            this.btnClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.Location = new System.Drawing.Point(421, 239);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(120, 46);
-            this.btnClient.TabIndex = 5;
-            this.btnClient.Text = "Client";
-            this.btnClient.UseVisualStyleBackColor = true;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(124, 284);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(129, 35);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(457, 351);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(296, 284);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(129, 35);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // formInsuranceClaim
             // 
@@ -113,11 +109,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 399);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnClient);
-            this.Controls.Add(this.btnFinanceManager);
-            this.Controls.Add(this.btnClientManager);
-            this.Controls.Add(this.btnAdministrator);
-            this.Controls.Add(this.lblInstructions);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTitle);
             this.Name = "formInsuranceClaim";
             this.Text = "Insurance Claim";
@@ -129,11 +125,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblInstructions;
-        private System.Windows.Forms.Button btnAdministrator;
-        private System.Windows.Forms.Button btnClientManager;
-        private System.Windows.Forms.Button btnFinanceManager;
-        private System.Windows.Forms.Button btnClient;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
     }
 }

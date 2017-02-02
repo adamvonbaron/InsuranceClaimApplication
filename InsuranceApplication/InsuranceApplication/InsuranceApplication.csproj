@@ -53,11 +53,29 @@
     <Compile Include="Classes\SQLDriver.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\XMLDriver.cs" />
-    <Compile Include="Forms\AdminLogin.cs">
+    <Compile Include="Forms\AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminLogin.Designer.cs">
-      <DependentUpon>AdminLogin.cs</DependentUpon>
+    <Compile Include="Forms\AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientHome.Designer.cs">
+      <DependentUpon>ClientHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientManagerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientManagerHome.Designer.cs">
+      <DependentUpon>ClientManagerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FinanceManagerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinanceManagerHome.Designer.cs">
+      <DependentUpon>FinanceManagerHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainWindow.cs">
       <SubType>Form</SubType>
@@ -67,8 +85,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AdminLogin.resx">
-      <DependentUpon>AdminLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientHome.resx">
+      <DependentUpon>ClientHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientManagerHome.resx">
+      <DependentUpon>ClientManagerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FinanceManagerHome.resx">
+      <DependentUpon>FinanceManagerHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
