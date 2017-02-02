@@ -16,5 +16,38 @@ namespace InsuranceApplication.Forms
         {
             InitializeComponent();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnViewUserData_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.AdminViewUserData f3 = new Forms.AdminViewUserData();
+            f3.Show();
+        }
+
+        private void btnAddPermissions_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.AdminAddPermissions f4 = new Forms.AdminAddPermissions();
+            f4.Show();
+        }
+
+        private void btnCreateClientFolder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.AdminCreateClientFolder f5 = new Forms.AdminCreateClientFolder();
+            f5.Show();
+        }
+
+        private void btnRegisterCMFM_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.AdminRegisterCMFM f6 = new Forms.AdminRegisterCMFM();
+            f6.Show();
+        }
     }
 }

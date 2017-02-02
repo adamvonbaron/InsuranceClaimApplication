@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientHome : Form
+    public partial class AdminAddPermissions : Form
     {
-        public ClientHome()
+        public AdminAddPermissions()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
+            Forms.AdminHome f3 = new Forms.AdminHome();
+            f3.Show();
         }
     }
 }

@@ -37,21 +37,40 @@ namespace InsuranceApplication
         {
             //String UN = SQLDriver.GetUser(txtUsername.ToString());
 
+            //get password
+            String password = txtPassword.Text;
             //link login to admin home page
-            Forms.AdminHome f1 = new Forms.AdminHome();
-            f1.Show();
+            if (password == "admin")
+            {
+                Forms.AdminHome f1 = new Forms.AdminHome();
+                f1.Show();
+            }
 
             //link login to client home page
-            Forms.ClientHome f2 = new Forms.ClientHome();
-            f2.Show();
-
+            else if (password == "client")
+            {
+                Forms.ClientHome f2 = new Forms.ClientHome();
+                f2.Show();
+            }
+            
             //link login to client manager home page
-            Forms.ClientManagerHome f3 = new Forms.ClientManagerHome();
-            f3.Show();
+            else if (password == "clientmanager")
+            {
+                Forms.ClientManagerHome f3 = new Forms.ClientManagerHome();
+                f3.Show();
+            }
 
             //link login to finance manager home page
-            Forms.FinanceManagerHome f4 = new Forms.FinanceManagerHome();
-            f4.Show();
+            else if (password == "financemanager")
+            {
+                Forms.FinanceManagerHome f4 = new Forms.FinanceManagerHome();
+                f4.Show();
+            }
+
+            else
+            {
+                  MessageBox.Show("Warning", "Please enter a valid password!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
         }
     }
 }
