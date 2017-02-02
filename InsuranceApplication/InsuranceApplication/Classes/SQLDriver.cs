@@ -62,25 +62,25 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //get messages for user
         //</summary>
-        private XmlDocument GetMessages(string username) {
+        public XmlDocument GetMessages(string username) {
             return GetData("messages", username);
         }
 
         //<summary>
         //get claims for user
         //</summary>
-        private XmlDocument GetClaims(string username) {
+        public XmlDocument GetClaims(string username) {
             return GetData("claims", username);
         }
 
-        private XmlDocument GetUser(string username) {
+        public XmlDocument GetUser(string username) {
             return GetData("users", username);
         }
 
         //<summary>
         //modify profile
         //</summary>
-        private XmlDocument ModifyProfile(XmlDocument xmldoc) {
+        public XmlDocument ModifyProfile(XmlDocument xmldoc) {
             SqlCommand cmd = null;
             XmlReader xmlread = null;
             XmlDocument xmldata = null;
@@ -119,7 +119,7 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //send claim to database
         //</summary>
-        private XmlDocument SendClaim(XmlDocument xmldoc) {
+        public XmlDocument SendClaim(XmlDocument xmldoc) {
             SqlCommand cmd = null;
             XmlReader xmlread = null;
             XmlDocument xmldata = null;
@@ -148,7 +148,7 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //send message to database
         //</summary>
-        private XmlDocument SendMessage(XmlDocument xmldoc) {
+        public XmlDocument SendMessage(XmlDocument xmldoc) {
             SqlCommand cmd = null;
             XmlReader xmlread = null;
             XmlDocument xmldata = null;
