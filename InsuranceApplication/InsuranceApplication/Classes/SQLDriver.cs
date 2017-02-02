@@ -73,6 +73,10 @@ namespace InsuranceApplication.Classes {
             return GetData("claims", username);
         }
 
+        private XmlDocument GetUser(string username) {
+            return GetData("users", username);
+        }
+
         //<summary>
         //modify profile
         //</summary>
