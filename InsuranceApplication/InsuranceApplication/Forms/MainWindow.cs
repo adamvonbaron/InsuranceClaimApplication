@@ -71,13 +71,13 @@ namespace InsuranceApplication {
             SqlCommand cmd = null;
             string statement = @"update users
                                 set firstname = @firstname,
-                                    lastname = @lastname,
-                                    username = @username,
-                                    password = @password,
-                                    rank = @rank,
-                                    creation = @creation,
-                                    claims = @claims
-                                    where username = @username;";
+                                lastname = @lastname,
+                                username = @username,
+                                password = @password,
+                                rank = @rank,
+                                creation = @creation,
+                                claims = @claims
+                                where username = 'adamkessler';";
             try
             {
                 cmd = new SqlCommand(statement, conn);
