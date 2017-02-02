@@ -3,8 +3,7 @@ using System;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using System.Xml;
-using System.Xml.Serialization;
+using System.Xml.Linq;
 using System.Windows.Forms;
 
 namespace InsuranceApplication.Classes {
@@ -33,10 +32,10 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //retrieve data from database
         //</summary>
-        private XmlDocument GetData(string table, string username) {
+        private XDocument GetData(string table, string username) {
             string query = "select * from @table where username = @username";
             string xmlstring = null;
-            XmlDocument xmldata = new XmlDocument();
+            XDocument xmldata = new XDocument();
             SqlDataAdapter da = null;
             try {
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -62,28 +61,29 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //get messages for user
         //</summary>
-        public XmlDocument GetMessages(string username) {
+        public XDocument GetMessages(string username) {
             return GetData("messages", username);
         }
 
         //<summary>
         //get claims for user
         //</summary>
-        public XmlDocument GetClaims(string username) {
+        public XDocument GetClaims(string username) {
             return GetData("claims", username);
         }
 
-        public XmlDocument GetUser(string username) {
+        public XDocument GetUser(string username) {
             return GetData("users", username);
         }
 
         //<summary>
         //modify profile
         //</summary>
-        private XmlDocument ModifyProfile(XmlDocument xmldoc) {
+        //TODO: fix to work with XDocument appropriately
+        private XDocument ModifyProfile(XDocument xmldoc) {
             SqlCommand cmd = null;
             XmlReader xmlread = null;
-            XmlDocument xmldata = null;
+            XDocument xmldata = null;
             string statement = @"update users
                                 set firstname = @firstname,
                                     lastname = @lastname,
@@ -120,10 +120,11 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //send claim to database
         //</summary>
-        private XmlDocument SendClaim(XmlDocument xmldoc) {
+        //TODO: fix to work with XDocument appropriately
+        private XDocument SendClaim(XDocument xmldoc) {
             SqlCommand cmd = null;
             XmlReader xmlread = null;
-            XmlDocument xmldata = null;
+            XDocument xmldata = null;
             string statement = @"insert into claims (date, username, claim)
                                  values (@date, @username, @claim)
                                  where username = @username for xml auto, xmldata;";
@@ -149,10 +150,11 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //send message to database
         //</summary>
-        private XmlDocument SendMessage(XmlDocument xmldoc) {
+        //TODO: fix to work with XDocument appropriately
+        private XDocument SendMessage(XDocument xmldoc) {
             SqlCommand cmd = null;
             XmlReader xmlread = null;
-            XmlDocument xmldata = null;
+            XDocument xmldata = null;
             string statement = @"insert into messages 
                                  (to, from, date, subject, message)
                                  values (@to, @from, @date, @subject, @message)
