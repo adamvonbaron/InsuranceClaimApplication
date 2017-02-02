@@ -21,3 +21,4 @@ Application for Insurance Claim project
 ### msdn documentation
 
 1. [SqlClient](https://msdn.microsoft.com/en-us/library/system.data.sqlclient(v=vs.110).aspx)
+2. [SecureString](https://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx)
