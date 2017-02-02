@@ -62,18 +62,18 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //get messages for user
         //</summary>
-        private XmlDocument GetMessages(string username) {
+        public XmlDocument GetMessages(string username) {
             return GetData("messages", username);
         }
 
         //<summary>
         //get claims for user
         //</summary>
-        private XmlDocument GetClaims(string username) {
+        public XmlDocument GetClaims(string username) {
             return GetData("claims", username);
         }
 
-        private XmlDocument GetUser(string username) {
+        public XmlDocument GetUser(string username) {
             return GetData("users", username);
         }
 
@@ -102,8 +102,8 @@ namespace InsuranceApplication.Classes {
                 cmd.Parameters.AddWithValue("@rank", int.Parse(xmldoc.GetElementById("rank").ToString()));
                 cmd.Parameters.AddWithValue("@creation", xmldoc.GetElementById("creation").ToString());
                 cmd.Parameters.AddWithValue("@claims", int.Parse(xmldoc.GetElementById("claims").ToString()));
-                xmlread = cmd.ExecuteXmlReader();
-                xmldata.Load(xmlread);
+                conn.Open();
+                cmd.ExecuteNonQuery();
             } catch (SqlException ex) {
                 MessageBox.Show(ex.ToString(), "SQL Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -112,6 +112,7 @@ namespace InsuranceApplication.Classes {
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             } finally {
                 xmlread.Close();
+                conn.Close();
             }
             return xmldata;
         }
