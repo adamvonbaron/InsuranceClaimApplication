@@ -92,7 +92,7 @@ namespace InsuranceApplication.Classes {
                                     rank = @rank,
                                     creation = @creation,
                                     claims = @claims
-                                    where username = @username for xml auto";
+                                    where username = @username for xml auto, xmldata;";
             try {
                 cmd = new SqlCommand(statement, conn);
                 cmd.Parameters.AddWithValue("@firstname", xmldoc.GetElementById("firstname").ToString());
@@ -105,10 +105,10 @@ namespace InsuranceApplication.Classes {
                 xmlread = cmd.ExecuteXmlReader();
                 xmldata.Load(xmlread);
             } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString(), "Error",
+                MessageBox.Show(ex.ToString(), "SQL Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             } catch (XmlException ex) {
-                MessageBox.Show(ex.ToString(), "Error",
+                MessageBox.Show(ex.ToString(), "XML Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             } finally {
                 xmlread.Close();
@@ -119,12 +119,30 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //send claim to database
         //</summary>
-        private int SendClaim(XmlDocument xmldoc) {
+        private XmlDocument SendClaim(XmlDocument xmldoc) {
+            SqlCommand cmd;
+            XmlReader xmlread = null;
+            XmlDocument xmldata = null;
+            string statement = @"insert into claims (date, username, claim)
+                                 values (@date, @username, @claim)
+                                 where username = @username for xml auto, xmldata;";
             try {
-            
+                cmd = new SqlCommand(statement, conn);
+                cmd.Parameters.AddWithValue("@date", xmldoc.GetElementById("date").ToString());
+                cmd.Parameters.AddWithValue("@username", xmldoc.GetElementById("username").ToString());
+                cmd.Parameters.AddWithValue("@claim", xmldoc.GetElementById("claim").ToString());
+                xmlread = cmd.ExecuteXmlReader();
+                xmldata.Load(xmlread);
             } catch (SqlException ex) {
-                return 0;
+                MessageBox.Show(ex.ToString(), "SQL Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (XmlException ex) {
+                MessageBox.Show(ex.ToString(), "XML Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } finally {
+                xmlread.Close();
             }
+            return xmldata;
         }
 
         //<summary>
