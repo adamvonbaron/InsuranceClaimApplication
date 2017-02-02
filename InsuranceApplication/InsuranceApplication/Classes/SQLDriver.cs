@@ -77,6 +77,11 @@ namespace InsuranceApplication.Classes {
             return GetData("users", username);
         }
 
+        public XmlDocument GetCheck(string username, string password)
+        {
+            return CheckUser("users", username, password);
+        }
+
         //<summary>
         //modify profile
         //</summary>
@@ -173,6 +178,40 @@ namespace InsuranceApplication.Classes {
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             } finally {
                 xmlread.Close();
+            }
+            return xmldata;
+        }
+
+        private XmlDocument CheckUser(string table, string username, string password)
+        {
+            string query = "select rank from @table where username = @username and password = @password";
+            string xmlstring = null;
+            XmlDocument xmldata = new XmlDocument();
+            SqlDataAdapter da = null;
+            try
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@table", table);
+                da = new SqlDataAdapter(cmd);
+                using (DataSet ds = new DataSet())
+                {
+                    da.SelectCommand.Connection.Open();
+                    da.Fill(ds);
+                    if (ds != null && ds.Tables.Count > 0)
+                        xmlstring = ds.GetXml();
+                }
+                xmldata.LoadXml(xmlstring);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                da.SelectCommand.Connection.Close();
             }
             return xmldata;
         }
