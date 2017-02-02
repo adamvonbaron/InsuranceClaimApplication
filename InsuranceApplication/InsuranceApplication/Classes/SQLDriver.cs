@@ -1,15 +1,11 @@
 ﻿/* adam 2017-01-30 SQLDriver.cs */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Windows.Forms;
-using System.Data.SqlTypes;
 
 namespace InsuranceApplication.Classes {
     class SQLDriver {
@@ -81,7 +77,7 @@ namespace InsuranceApplication.Classes {
         //modify profile
         //</summary>
         private XmlDocument ModifyProfile(XmlDocument xmldoc) {
-            SqlCommand cmd;
+            SqlCommand cmd = null;
             XmlReader xmlread = null;
             XmlDocument xmldata = null;
             string statement = @"update users
@@ -120,7 +116,7 @@ namespace InsuranceApplication.Classes {
         //send claim to database
         //</summary>
         private XmlDocument SendClaim(XmlDocument xmldoc) {
-            SqlCommand cmd;
+            SqlCommand cmd = null;
             XmlReader xmlread = null;
             XmlDocument xmldata = null;
             string statement = @"insert into claims (date, username, claim)
@@ -148,16 +144,33 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //send message to database
         //</summary>
-        private int SendMessage(XmlDocument xmldoc) {
-
-        }
-
-        private int DeleteUser(XmlDocument xmldoc) {
-
-        }
-
-        private int AddUser(XmlDocument xmldoc) {
-
+        private XmlDocument SendMessage(XmlDocument xmldoc) {
+            SqlCommand cmd = null;
+            XmlReader xmlread = null;
+            XmlDocument xmldata = null;
+            string statement = @"insert into messages 
+                                 (to, from, date, subject, message)
+                                 values (@to, @from, @date, @subject, @message)
+                                 where username = @to for xml auto, xmldata;";
+            try {
+                cmd = new SqlCommand(statement, conn);
+                cmd.Parameters.AddWithValue("@to", xmldoc.GetElementById("to").ToString());
+                cmd.Parameters.AddWithValue("@from", xmldoc.GetElementById("from").ToString());
+                cmd.Parameters.AddWithValue("@date", xmldoc.GetElementById("date").ToString());
+                cmd.Parameters.AddWithValue("@subject", xmldoc.GetElementById("subject").ToString());
+                cmd.Parameters.AddWithValue("@message", xmldoc.GetElementById("message").ToString());
+                xmlread = cmd.ExecuteXmlReader();
+                xmldata.Load(xmlread);
+            } catch (SqlException ex) {
+                MessageBox.Show(ex.ToString(), "SQL Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (XmlException ex) {
+                MessageBox.Show(ex.ToString(), "XML Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } finally {
+                xmlread.Close();
+            }
+            return xmldata;
         }
     }
 }
