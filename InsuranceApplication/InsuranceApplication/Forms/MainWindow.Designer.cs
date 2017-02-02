@@ -44,9 +44,6 @@
             this.lblClaim = new System.Windows.Forms.Label();
             this.txtClaims = new System.Windows.Forms.TextBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,10 +52,15 @@
             this.creationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.claimsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
+            this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -67,7 +69,6 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(150, 20);
             this.txtFirstName.TabIndex = 0;
-            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // lblFirstName
             // 
@@ -93,7 +94,6 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(149, 20);
             this.txtLastName.TabIndex = 3;
-            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // txtUserName
             // 
@@ -101,7 +101,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(149, 20);
             this.txtUserName.TabIndex = 4;
-            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // lblUsername
             // 
@@ -127,7 +126,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(148, 20);
             this.txtPassword.TabIndex = 7;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // lblRank
             // 
@@ -144,7 +142,6 @@
             this.txtRank.Name = "txtRank";
             this.txtRank.Size = new System.Drawing.Size(149, 20);
             this.txtRank.TabIndex = 9;
-            this.txtRank.TextChanged += new System.EventHandler(this.txtRank_TextChanged);
             // 
             // txtCreation
             // 
@@ -152,7 +149,6 @@
             this.txtCreation.Name = "txtCreation";
             this.txtCreation.Size = new System.Drawing.Size(149, 20);
             this.txtCreation.TabIndex = 10;
-            this.txtCreation.TextChanged += new System.EventHandler(this.txtCreation_TextChanged);
             // 
             // lblCreation
             // 
@@ -178,7 +174,6 @@
             this.txtClaims.Name = "txtClaims";
             this.txtClaims.Size = new System.Drawing.Size(149, 20);
             this.txtClaims.TabIndex = 13;
-            this.txtClaims.TextChanged += new System.EventHandler(this.txtClaims_TextChanged);
             // 
             // dgvUsers
             // 
@@ -198,21 +193,6 @@
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.Size = new System.Drawing.Size(388, 218);
             this.dgvUsers.TabIndex = 14;
-            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
-            // 
-            // insuranceClaimDataSet
-            // 
-            this.insuranceClaimDataSet.DataSetName = "InsuranceClaimDataSet";
-            this.insuranceClaimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.insuranceClaimDataSet;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // firstnameDataGridViewTextBoxColumn
             // 
@@ -263,6 +243,20 @@
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.insuranceClaimDataSet;
+            // 
+            // insuranceClaimDataSet
+            // 
+            this.insuranceClaimDataSet.DataSetName = "InsuranceClaimDataSet";
+            this.insuranceClaimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(12, 223);
@@ -273,11 +267,29 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(106, 233);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 16;
+            this.lblID.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(130, 230);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 17;
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 253);
+            this.ClientSize = new System.Drawing.Size(640, 324);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.txtClaims);
@@ -298,8 +310,8 @@
             this.Text = "Form Demo";
             this.Load += new System.EventHandler(this.formFormDemo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +346,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn claimsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtID;
     }
 }
 
