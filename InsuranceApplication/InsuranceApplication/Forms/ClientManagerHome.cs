@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class AdminLogin : Form
+    public partial class ClientManagerHome : Form
     {
-        public AdminLogin()
+        public ClientManagerHome()
         {
             InitializeComponent();
-        }
-
-        private void btnAdminExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
