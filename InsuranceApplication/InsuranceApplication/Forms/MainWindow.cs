@@ -54,9 +54,9 @@ namespace InsuranceApplication
             }
             
             //link login to client manager home page
-            else if (password == "clientmanager")
+            else if (password == "claimmanager")
             {
-                Forms.ClientManagerHome f3 = new Forms.ClientManagerHome();
+                Forms.ClaimManager f3 = new Forms.ClaimManager();
                 f3.Show();
             }
 
@@ -71,6 +71,18 @@ namespace InsuranceApplication
             {
                   MessageBox.Show("Warning", "Please enter a valid password!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Forms.Register f4 = new Forms.Register();
+            f4.Show();
+        }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            Forms.ForgotPassword f3 = new Forms.ForgotPassword();
+            f3.Show();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class FinanceManagerHome : Form
+    public partial class ClaimManager : Form
     {
-        public FinanceManagerHome()
+        public ClaimManager()
         {
             InitializeComponent();
         }
@@ -25,14 +25,14 @@ namespace InsuranceApplication.Forms
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.FinanceManagerEditProfile f3 = new Forms.FinanceManagerEditProfile();
+            Forms.ClaimManagerEditProfile f3 = new Forms.ClaimManagerEditProfile();
             f3.Show();
         }
 
         private void btnViewClientProfile_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.FinanceManagerViewClientProfile f3 = new Forms.FinanceManagerViewClientProfile();
+            Forms.ClaimManagerViewClientProfile f3 = new Forms.ClaimManagerViewClientProfile();
             f3.Show();
         }
     }

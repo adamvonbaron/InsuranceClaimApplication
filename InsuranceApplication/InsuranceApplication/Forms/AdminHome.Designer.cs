@@ -34,6 +34,7 @@
             this.btnCreateClientFolder = new System.Windows.Forms.Button();
             this.btnRegisterCMFM = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnEditProfile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdminTitle
@@ -100,11 +101,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnEditProfile
+            // 
+            this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProfile.Location = new System.Drawing.Point(26, 245);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Size = new System.Drawing.Size(179, 62);
+            this.btnEditProfile.TabIndex = 6;
+            this.btnEditProfile.Text = "Edit Profile";
+            this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 362);
+            this.Controls.Add(this.btnEditProfile);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRegisterCMFM);
             this.Controls.Add(this.btnCreateClientFolder);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Button btnCreateClientFolder;
         private System.Windows.Forms.Button btnRegisterCMFM;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnEditProfile;
     }
 }

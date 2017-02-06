@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientManagerHome : Form
+    public partial class ClaimManagerEditProfile : Form
     {
-        public ClientManagerHome()
+        public ClaimManagerEditProfile()
         {
             InitializeComponent();
         }
@@ -20,6 +20,8 @@ namespace InsuranceApplication.Forms
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Forms.ClaimManager f3 = new Forms.ClaimManager();
+            f3.Show();
         }
     }
 }

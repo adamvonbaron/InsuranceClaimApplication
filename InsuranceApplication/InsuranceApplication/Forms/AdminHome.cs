@@ -49,5 +49,12 @@ namespace InsuranceApplication.Forms
             Forms.AdminRegisterCMFM f6 = new Forms.AdminRegisterCMFM();
             f6.Show();
         }
+
+        private void btnEditProfile_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.AdminEditProfile f2 = new Forms.AdminEditProfile();
+            f2.Show();
+        }
     }
 }

@@ -87,6 +87,7 @@
             this.btnEditProfile.TabIndex = 4;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
             // btnViewClientProfile
             // 
@@ -97,6 +98,7 @@
             this.btnViewClientProfile.TabIndex = 5;
             this.btnViewClientProfile.Text = "View Client Profile";
             this.btnViewClientProfile.UseVisualStyleBackColor = true;
+            this.btnViewClientProfile.Click += new System.EventHandler(this.btnViewClientProfile_Click);
             // 
             // btnTransfer
             // 

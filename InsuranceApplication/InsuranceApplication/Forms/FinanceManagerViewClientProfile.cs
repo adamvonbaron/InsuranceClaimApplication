@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientHome : Form
+    public partial class FinanceManagerViewClientProfile : Form
     {
-        public ClientHome()
+        public FinanceManagerViewClientProfile()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnEditProfile_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Forms.ClientEditProfile f3 = new Forms.ClientEditProfile();
+            Forms.FinanceManagerHome f3 = new Forms.FinanceManagerHome();
             f3.Show();
         }
     }

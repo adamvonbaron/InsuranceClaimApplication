@@ -86,6 +86,7 @@
             this.btnEditProfile.TabIndex = 4;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
             // btnViewStatus
             // 
