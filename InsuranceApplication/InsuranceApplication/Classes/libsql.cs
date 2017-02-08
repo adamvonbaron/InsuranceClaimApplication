@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 using System.Windows.Forms;
 
 namespace InsuranceApplication.Classes {
-    class SQLDriver {
+    class libsql {
         /* properties */
         private readonly SqlConnection _conn = new SqlConnection(
             @"Server=tcp:insuranceclaim.database.windows.net,1433;

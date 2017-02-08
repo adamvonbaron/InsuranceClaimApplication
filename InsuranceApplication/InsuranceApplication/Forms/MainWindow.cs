@@ -18,7 +18,7 @@ namespace InsuranceApplication
             InitializeComponent();
         }
 
-        private SQLDriver objCheck;
+        private libsql objCheck;
 
         private void btnExit_Click(object sender, EventArgs e)
         {

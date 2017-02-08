@@ -6,7 +6,7 @@ using System.Xml;
 using System.Xml.Serialization;
 
 namespace InsuranceApplication.Classes {
-    class XMLDriver {
+    class libxmlserial {
         public static String SerializeXML<T>(T input) {
             string xml = null;
             using (StringWriter sw = new StringWriter()) {
