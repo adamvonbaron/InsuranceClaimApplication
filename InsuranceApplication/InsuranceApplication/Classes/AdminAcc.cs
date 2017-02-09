@@ -11,10 +11,45 @@ namespace InsuranceApplication.Classes
     {
         //Class for the Admin account
         //This class holds the attributes
+
+        //properties
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public int Rank { get; set; }
+
         //constructor
-        public AdminAcc(string FirstName, string LastName, string UserName, string PassWord, int UserRank)
+        public AdminAcc(string firstname, string lastname, string username,
+            string password, int rank)
         {
-            
+            this.FirstName = firstname;
+            this.LastName = lastname;
+            this.UserName = username;
+            this.Password = password;
+            this.Rank = rank;
+        }
+
+        //methods
+        public void ViewUserData()
+        {
+
+        }
+        public void CreateClientFolder()
+        {
+
+        }
+        public void EditProfile()
+        {
+
+        }
+        public void AddPermissions()
+        {
+
+        }
+        public void Register()
+        {
+
         }
     }
 }
