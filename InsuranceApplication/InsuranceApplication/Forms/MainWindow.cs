@@ -87,5 +87,17 @@ namespace InsuranceApplication
             Forms.ForgotPassword f3 = new Forms.ForgotPassword();
             f3.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDriver_Click(object sender, EventArgs e)
+        {
+            formFormDemo ffd = new formFormDemo();
+            ffd.Show();
+            
+        }
     }
 }
