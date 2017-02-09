@@ -16,7 +16,7 @@ namespace InsuranceApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formFormDemo());
+            Application.Run(new formInsuranceClaim());
         }
     }
 }
