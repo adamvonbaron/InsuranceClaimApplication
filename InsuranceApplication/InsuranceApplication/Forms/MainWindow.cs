@@ -40,10 +40,8 @@ namespace InsuranceApplication
             //String UN = SQLDriver.GetUser(txtUsername.ToString());
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            objCheck.GetCheck(username, password);
-
             //get password
-            String password = txtPassword.Text;
+            password = txtPassword.Text;
             //link login to admin home page
             if (password == "admin")
             {
