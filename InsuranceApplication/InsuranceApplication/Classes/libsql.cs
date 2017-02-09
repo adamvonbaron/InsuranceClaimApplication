@@ -154,5 +154,32 @@ namespace InsuranceApplication.Classes {
             }
             return rowsaffected;
         }
+
+        public int InsertUser(XDocument xmldoc) {
+            int rowsaffected = -1;
+            string query = @"insert into users
+                             (firstname, lastname, username, password, birthday, phonenumber)
+                             values (@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
+            try {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@firstname", xmldoc.Root.Element("firstname").Value);
+                cmd.Parameters.AddWithValue("@lastname", xmldoc.Root.Element("lastname").Value);
+                cmd.Parameters.AddWithValue("@username", xmldoc.Root.Element("username").Value);
+                cmd.Parameters.AddWithValue("@password", xmldoc.Root.Element("password").Value);
+                cmd.Parameters.AddWithValue("@birthday", xmldoc.Root.Element("birthday").Value);
+                cmd.Parameters.AddWithValue("@phonenumber", xmldoc.Root.Element("phonenumber").Value);
+                conn.Open();
+                rowsaffected = cmd.ExecuteNonQuery();
+            } catch (SqlException ex) {
+                MessageBox.Show(ex.ToString(), "SQL Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (InvalidOperationException ex) {
+                MessageBox.Show(ex.ToString(), "Null Reference Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } finally {
+                conn.Close();
+            }
+            return rowsaffected;
+        }
     }
 }
