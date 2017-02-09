@@ -14,18 +14,10 @@ using System.Data.SqlClient;
 
 namespace InsuranceApplication {
     public partial class formFormDemo : Form {
+        libsql database = new libsql();
         public formFormDemo() {
             InitializeComponent();
         }
-
-        public string firstname = null;
-        public string lastname = null;
-        public string username = null;
-        public string password = null;
-        public int rank = 0;
-        public string creation = null;
-        public int claims = 0;
-        public int id = 0;
 
         private void btnExit_Click(object sender, EventArgs e) {
             Application.Exit();
@@ -36,14 +28,14 @@ namespace InsuranceApplication {
         }
 
         private void btnSubmit_Click(object sender, EventArgs e) {
-            firstname = txtFirstName.Text;
-            lastname = txtLastName.Text;
-            username = txtUserName.Text;
-            password = txtPassword.Text;
-            rank = int.Parse(txtRank.Text);
-            creation = txtCreation.Text;
-            claims = int.Parse(txtClaims.Text);
-            id = int.Parse(txtID.Text);
+            string firstname = txtFirstName.Text;
+            string lastname = txtLastName.Text;
+            string username = txtUserName.Text;
+            string password = txtPassword.Text;
+            int rank = int.Parse(txtRank.Text);
+            string creation = txtCreation.Text;
+            int claims = int.Parse(txtClaims.Text);
+            long id = int.Parse(txtID.Text);
             XDocument xmldoc = new XDocument();
             XElement xml = new XElement("user",
                            new XElement("firstname", firstname),
@@ -56,8 +48,32 @@ namespace InsuranceApplication {
                            new XElement("id", id));
             xmldoc.Add(xml);
             xmldoc.Save("H:\\user_demo.xml");
-            libsql database = new libsql();
-            database.ModifyProfile(xmldoc);
+            int rowsaffected = database.ModifyProfile(xmldoc);
+            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnSendMessage_Click(object sender, EventArgs e) {
+            string to, from, date, subject, message = string.Empty;
+            to = txtTo.Text;
+            from = txtFrom.Text;
+            date = txtDate.Text;
+            subject = txtSubject.Text;
+            message = txtMessage.Text;
+            XDocument xmldoc = new XDocument();
+            XElement xml = new XElement("userMessage",
+                           new XElement("to", to),
+                           new XElement("from", from),
+                           new XElement("date", date),
+                           new XElement("subject", subject),
+                           new XElement("message", message));
+            xmldoc.Add(xml);
+            xmldoc.Save("H:\\message_demo.xml");
+            int rowsaffected = database.SendMessage(xmldoc);
+            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnGetUserInfo_Click(object sender, EventArgs e) {
+            database.GetUser(txtGetUser.Text);
         }
     }
 }

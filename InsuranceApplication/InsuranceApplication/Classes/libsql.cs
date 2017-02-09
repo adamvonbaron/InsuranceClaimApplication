@@ -32,47 +32,38 @@ namespace InsuranceApplication.Classes {
         //<summary>
         //retrieve data from database
         //</summary>
-        private XDocument GetData(string table, string username) {
-            string query = "select * from @table where username = @username";
-            string xmlstring = null;
-            XDocument xmldata = new XDocument();
-            SqlDataAdapter da = null;
+        private void GetData(string table, string username) {
             try {
+                string query = "select * from " + table + " where username = " + username + " for xml path('student')";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@table", table);
-                da = new SqlDataAdapter(cmd);
-                using (DataSet ds = new DataSet()) {
-                    da.SelectCommand.Connection.Open();
-                    da.Fill(ds);
-                    if (ds != null && ds.Tables.Count > 0)
-                        xmlstring = ds.GetXml();
-                }
+                conn.Open();
+                var result = cmd.ExecuteNonQuery();
+                MessageBox.Show(result.ToString());
+            } catch (InvalidOperationException ex) {
+                MessageBox.Show(ex.ToString());
             } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString(), "Error", 
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString());
             } finally {
-                da.SelectCommand.Connection.Close();
+                conn.Close();
             }
-            return xmldata;
         }
 
         //<summary>
         //get messages for user
         //</summary>
-        public XDocument GetMessages(string username) {
-            return GetData("messages", username);
+        public void GetMessages(string username) {
+            GetData("messages", username);
         }
 
         //<summary>
         //get claims for user
         //</summary>
-        public XDocument GetClaims(string username) {
-            return GetData("claims", username);
+        public void GetClaims(string username) {
+            GetData("claims", username);
         }
 
-        public XDocument GetUser(string username) {
-            return GetData("users", username);
+        public void GetUser(string username) {
+            GetData("users", username);
         }
 
         //<summary>
@@ -104,6 +95,9 @@ namespace InsuranceApplication.Classes {
             } catch (SqlException ex) {
                 MessageBox.Show(ex.ToString(), "SQL Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (InvalidOperationException ex) {
+                MessageBox.Show(ex.ToString(), "Null Reference Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             } finally {
                 conn.Close();
             }
@@ -117,8 +111,7 @@ namespace InsuranceApplication.Classes {
             SqlCommand cmd = null;
             int rowsaffected = -1;
             string statement = @"insert into claims (date, username, claim)
-                                 values (@date, @username, @claim)
-                                 where username = @username;";
+                                 values (@date, @username, @claim);";
             try {
                 cmd = new SqlCommand(statement, conn);
                 cmd.Parameters.AddWithValue("@date", xmldoc.Root.Element("date").Value);
@@ -140,8 +133,7 @@ namespace InsuranceApplication.Classes {
             int rowsaffected = -1;
             string statement = @"insert into messages 
                                  (to, from, date, subject, message)
-                                 values (@to, @from, @date, @subject, @message)
-                                 where username = @to;";
+                                 values (@to, @from, @date, @subject, @message);";
             try {
                 cmd = new SqlCommand(statement, conn);
                 cmd.Parameters.AddWithValue("@to", xmldoc.Root.Element("to").Value);
@@ -149,10 +141,16 @@ namespace InsuranceApplication.Classes {
                 cmd.Parameters.AddWithValue("@date", xmldoc.Root.Element("date").Value);
                 cmd.Parameters.AddWithValue("@subject", xmldoc.Root.Element("subject").Value);
                 cmd.Parameters.AddWithValue("@message", xmldoc.Root.Element("message").Value);
+                conn.Open();
                 rowsaffected = cmd.ExecuteNonQuery();
             } catch (SqlException ex) {
                 MessageBox.Show(ex.ToString(), "SQL Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (InvalidOperationException ex) {
+                MessageBox.Show(ex.ToString(), "Null Reference Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } finally {
+                conn.Close();
             }
             return rowsaffected;
         }

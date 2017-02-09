@@ -50,9 +50,26 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.lblTo = new System.Windows.Forms.Label();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.lblSubject = new System.Windows.Forms.Label();
+            this.txtTo = new System.Windows.Forms.TextBox();
+            this.txtFrom = new System.Windows.Forms.TextBox();
+            this.txtSubject = new System.Windows.Forms.TextBox();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.lblGetUserInfo = new System.Windows.Forms.Label();
+            this.dgvViewUser = new System.Windows.Forms.DataGridView();
+            this.txtGetUser = new System.Windows.Forms.TextBox();
+            this.lblGetUser = new System.Windows.Forms.Label();
+            this.btnGetUserInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -218,11 +235,163 @@
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 17;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(12, 266);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(76, 16);
+            this.lblMessage.TabIndex = 18;
+            this.lblMessage.Text = "Message:";
+            // 
+            // lblTo
+            // 
+            this.lblTo.AutoSize = true;
+            this.lblTo.Location = new System.Drawing.Point(12, 286);
+            this.lblTo.Name = "lblTo";
+            this.lblTo.Size = new System.Drawing.Size(26, 13);
+            this.lblTo.TabIndex = 19;
+            this.lblTo.Text = "To: ";
+            // 
+            // lblFrom
+            // 
+            this.lblFrom.AutoSize = true;
+            this.lblFrom.Location = new System.Drawing.Point(191, 286);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(33, 13);
+            this.lblFrom.TabIndex = 20;
+            this.lblFrom.Text = "From:";
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.Location = new System.Drawing.Point(392, 286);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(49, 13);
+            this.lblSubject.TabIndex = 21;
+            this.lblSubject.Text = "Subject: ";
+            // 
+            // txtTo
+            // 
+            this.txtTo.Location = new System.Drawing.Point(44, 283);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(141, 20);
+            this.txtTo.TabIndex = 22;
+            // 
+            // txtFrom
+            // 
+            this.txtFrom.Location = new System.Drawing.Point(230, 283);
+            this.txtFrom.Name = "txtFrom";
+            this.txtFrom.Size = new System.Drawing.Size(156, 20);
+            this.txtFrom.TabIndex = 23;
+            // 
+            // txtSubject
+            // 
+            this.txtSubject.Location = new System.Drawing.Point(447, 283);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(180, 20);
+            this.txtSubject.TabIndex = 24;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Location = new System.Drawing.Point(12, 309);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(616, 227);
+            this.txtMessage.TabIndex = 25;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Location = new System.Drawing.Point(12, 542);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(112, 23);
+            this.btnSendMessage.TabIndex = 26;
+            this.btnSendMessage.Text = "Send Message";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(292, 264);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(36, 13);
+            this.lblDate.TabIndex = 27;
+            this.lblDate.Text = "Date: ";
+            // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(335, 256);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(250, 20);
+            this.txtDate.TabIndex = 28;
+            // 
+            // lblGetUserInfo
+            // 
+            this.lblGetUserInfo.AutoSize = true;
+            this.lblGetUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGetUserInfo.Location = new System.Drawing.Point(635, 13);
+            this.lblGetUserInfo.Name = "lblGetUserInfo";
+            this.lblGetUserInfo.Size = new System.Drawing.Size(124, 20);
+            this.lblGetUserInfo.TabIndex = 29;
+            this.lblGetUserInfo.Text = "Get User Info:";
+            // 
+            // dgvViewUser
+            // 
+            this.dgvViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewUser.Location = new System.Drawing.Point(639, 42);
+            this.dgvViewUser.Name = "dgvViewUser";
+            this.dgvViewUser.Size = new System.Drawing.Size(491, 234);
+            this.dgvViewUser.TabIndex = 30;
+            // 
+            // txtGetUser
+            // 
+            this.txtGetUser.Location = new System.Drawing.Point(697, 283);
+            this.txtGetUser.Name = "txtGetUser";
+            this.txtGetUser.Size = new System.Drawing.Size(270, 20);
+            this.txtGetUser.TabIndex = 31;
+            // 
+            // lblGetUser
+            // 
+            this.lblGetUser.AutoSize = true;
+            this.lblGetUser.Location = new System.Drawing.Point(639, 285);
+            this.lblGetUser.Name = "lblGetUser";
+            this.lblGetUser.Size = new System.Drawing.Size(52, 13);
+            this.lblGetUser.TabIndex = 32;
+            this.lblGetUser.Text = "Get User:";
+            // 
+            // btnGetUserInfo
+            // 
+            this.btnGetUserInfo.Location = new System.Drawing.Point(973, 282);
+            this.btnGetUserInfo.Name = "btnGetUserInfo";
+            this.btnGetUserInfo.Size = new System.Drawing.Size(157, 23);
+            this.btnGetUserInfo.TabIndex = 33;
+            this.btnGetUserInfo.Text = "Get User Info";
+            this.btnGetUserInfo.UseVisualStyleBackColor = true;
+            this.btnGetUserInfo.Click += new System.EventHandler(this.btnGetUserInfo_Click);
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 324);
+            this.ClientSize = new System.Drawing.Size(1142, 583);
+            this.Controls.Add(this.btnGetUserInfo);
+            this.Controls.Add(this.lblGetUser);
+            this.Controls.Add(this.txtGetUser);
+            this.Controls.Add(this.dgvViewUser);
+            this.Controls.Add(this.lblGetUserInfo);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.btnSendMessage);
+            this.Controls.Add(this.txtMessage);
+            this.Controls.Add(this.txtSubject);
+            this.Controls.Add(this.txtFrom);
+            this.Controls.Add(this.txtTo);
+            this.Controls.Add(this.lblSubject);
+            this.Controls.Add(this.lblFrom);
+            this.Controls.Add(this.lblTo);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnSubmit);
@@ -247,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +445,22 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label lblTo;
+        private System.Windows.Forms.Label lblFrom;
+        private System.Windows.Forms.Label lblSubject;
+        private System.Windows.Forms.TextBox txtTo;
+        private System.Windows.Forms.TextBox txtFrom;
+        private System.Windows.Forms.TextBox txtSubject;
+        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.Button btnSendMessage;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.Label lblGetUserInfo;
+        private System.Windows.Forms.DataGridView dgvViewUser;
+        private System.Windows.Forms.TextBox txtGetUser;
+        private System.Windows.Forms.Label lblGetUser;
+        private System.Windows.Forms.Button btnGetUserInfo;
     }
 }
 
