@@ -70,34 +70,32 @@ namespace InsuranceApplication.Classes {
         //modify profile
         //</summary>
         public int ModifyProfile(XDocument xmldoc) {
-            SqlCommand cmd = null;
             int rowsaffected = -1;
-            string statement = @"update users
-                                set firstname = @firstname,
-                                    lastname = @lastname,
-                                    username = @username,
-                                    password = @password,
-                                    rank = @rank,
-                                    creation = @creation,
-                                    claims = @claims
-                                    where username = @username;";
+            SqlDataAdapter sda;
             try {
-                cmd = new SqlCommand(statement, conn);
-                cmd.Parameters.AddWithValue("@firstname", xmldoc.Root.Element("firstname").Value);
-                cmd.Parameters.AddWithValue("@lastname", xmldoc.Root.Element("lastname").Value);
-                cmd.Parameters.AddWithValue("@username", xmldoc.Root.Element("username").Value);
-                cmd.Parameters.AddWithValue("@password", xmldoc.Root.Element("password").Value);
-                cmd.Parameters.AddWithValue("@rank", int.Parse(xmldoc.Root.Element("rank").Value));
-                cmd.Parameters.AddWithValue("@creation", xmldoc.Root.Element("creation").Value);
-                cmd.Parameters.AddWithValue("@claims", int.Parse(xmldoc.Root.Element("claims").Value));
+                SqlCommand cmd = new SqlCommand(@"update users set
+                                              firstname = @firstname,
+                                              lastname = @lastname,
+                                              username = @username,
+                                              password = @password,
+                                              birthday = @birthday,
+                                              phonenumber = @phonenumber
+                                              where username = @oldusername;", conn);
+                cmd.Parameters.Add("@firstname", SqlDbType.NVarChar, 50, xmldoc.Root.Element("firstname").Value);
+                cmd.Parameters.Add("@lastname", SqlDbType.NVarChar, 50, xmldoc.Root.Element("lastname").Value);
+                cmd.Parameters.Add("@username", SqlDbType.NVarChar, 50, xmldoc.Root.Element("username").Value);
+                cmd.Parameters.Add("@password", SqlDbType.NVarChar, -1, xmldoc.Root.Element("password").Value);
+                cmd.Parameters.Add("@birthday", SqlDbType.DateTime, -1, xmldoc.Root.Element("birthday").Value);
+                cmd.Parameters.Add("@phonenumber", SqlDbType.NVarChar, 50, xmldoc.Root.Element("phonenumber").Value);
+                cmd.Parameters.Add("@oldusername", SqlDbType.NVarChar, 50, xmldoc.Root.Element("username").Value);
+                sda = new SqlDataAdapter();
+                sda.UpdateCommand = cmd;
                 conn.Open();
-                rowsaffected = cmd.ExecuteNonQuery();
+                rowsaffected = sda.UpdateCommand.ExecuteNonQuery();
             } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString(), "SQL Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } catch (InvalidOperationException ex) {
-                MessageBox.Show(ex.ToString(), "Null Reference Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString());
+            } catch (NullReferenceException ex) {
+                MessageBox.Show(ex.ToString());
             } finally {
                 conn.Close();
             }
@@ -110,12 +108,13 @@ namespace InsuranceApplication.Classes {
         public int SendClaim(XDocument xmldoc) {
             SqlCommand cmd = null;
             int rowsaffected = -1;
-            string statement = @"insert into claims (date, username, claim)
-                                 values (@date, @username, @claim);";
+            string statement = @"insert into claims (date, username, status, claim)
+                                 values (@date, @username, @status, @claim);";
             try {
                 cmd = new SqlCommand(statement, conn);
                 cmd.Parameters.AddWithValue("@date", xmldoc.Root.Element("date").Value);
                 cmd.Parameters.AddWithValue("@username", xmldoc.Root.Element("username").Value);
+                cmd.Parameters.AddWithValue("@status", xmldoc.Root.Element("status").Value);
                 cmd.Parameters.AddWithValue("@claim", xmldoc.Root.Element("claim").Value);
                 rowsaffected = cmd.ExecuteNonQuery();
             } catch (SqlException ex) {
@@ -157,25 +156,26 @@ namespace InsuranceApplication.Classes {
 
         public int InsertUser(XDocument xmldoc) {
             int rowsaffected = -1;
-            string query = @"insert into users
-                             (firstname, lastname, username, password, birthday, phonenumber)
-                             values (@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
+            SqlDataAdapter sda;
             try {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@firstname", xmldoc.Root.Element("firstname").Value);
-                cmd.Parameters.AddWithValue("@lastname", xmldoc.Root.Element("lastname").Value);
-                cmd.Parameters.AddWithValue("@username", xmldoc.Root.Element("username").Value);
-                cmd.Parameters.AddWithValue("@password", xmldoc.Root.Element("password").Value);
-                cmd.Parameters.AddWithValue("@birthday", xmldoc.Root.Element("birthday").Value);
-                cmd.Parameters.AddWithValue("@phonenumber", xmldoc.Root.Element("phonenumber").Value);
+                SqlCommand cmd = new SqlCommand(@"insert into users
+                                                  (firstname, lastname, username, password, birthday, phonenumber)
+                                                  values
+                                                  (@firstname, @lastname, @username, @password, @birthday @phonenumber);", conn);
+                cmd.Parameters.Add("@firstname", SqlDbType.NVarChar).Value = xmldoc.Root.Element("firstname").Value;
+                cmd.Parameters.Add("@lastname", SqlDbType.NVarChar).Value = xmldoc.Root.Element("lastname").Value;
+                cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = xmldoc.Root.Element("username").Value;
+                cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = xmldoc.Root.Element("password").Value;
+                cmd.Parameters.Add("@birthday", SqlDbType.NVarChar).Value = xmldoc.Root.Element("birthday").Value;
+                cmd.Parameters.Add("@phonenumber", SqlDbType.NVarChar).Value = xmldoc.Root.Element("phonenumber").Value;
+                sda = new SqlDataAdapter();
+                sda.InsertCommand = cmd;
                 conn.Open();
-                rowsaffected = cmd.ExecuteNonQuery();
+                rowsaffected = sda.InsertCommand.ExecuteNonQuery();
             } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString(), "SQL Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } catch (InvalidOperationException ex) {
-                MessageBox.Show(ex.ToString(), "Null Reference Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString());
+            } catch (NullReferenceException ex) {
+                MessageBox.Show(ex.ToString());
             } finally {
                 conn.Close();
             }

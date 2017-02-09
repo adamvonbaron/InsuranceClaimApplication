@@ -37,17 +37,12 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblRank = new System.Windows.Forms.Label();
-            this.txtRank = new System.Windows.Forms.TextBox();
-            this.txtCreation = new System.Windows.Forms.TextBox();
-            this.lblCreation = new System.Windows.Forms.Label();
-            this.lblClaim = new System.Windows.Forms.Label();
-            this.txtClaims = new System.Windows.Forms.TextBox();
+            this.lblBirthday = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.lblID = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.btnUpdateProfile = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
             this.lblFrom = new System.Windows.Forms.Label();
@@ -64,6 +59,8 @@
             this.txtGetUser = new System.Windows.Forms.TextBox();
             this.lblGetUser = new System.Windows.Forms.Label();
             this.btnGetUserInfo = new System.Windows.Forms.Button();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.btnRegisterUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
@@ -133,94 +130,55 @@
             this.txtPassword.Size = new System.Drawing.Size(148, 20);
             this.txtPassword.TabIndex = 7;
             // 
-            // lblRank
+            // lblBirthday
             // 
-            this.lblRank.AutoSize = true;
-            this.lblRank.Location = new System.Drawing.Point(12, 135);
-            this.lblRank.Name = "lblRank";
-            this.lblRank.Size = new System.Drawing.Size(33, 13);
-            this.lblRank.TabIndex = 8;
-            this.lblRank.Text = "Rank";
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Location = new System.Drawing.Point(12, 135);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(45, 13);
+            this.lblBirthday.TabIndex = 8;
+            this.lblBirthday.Text = "Birthday";
             // 
-            // txtRank
+            // txtPhoneNumber
             // 
-            this.txtRank.Location = new System.Drawing.Point(75, 135);
-            this.txtRank.Name = "txtRank";
-            this.txtRank.Size = new System.Drawing.Size(149, 20);
-            this.txtRank.TabIndex = 9;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(75, 172);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(149, 20);
+            this.txtPhoneNumber.TabIndex = 10;
             // 
-            // txtCreation
+            // lblPhoneNumber
             // 
-            this.txtCreation.Location = new System.Drawing.Point(75, 172);
-            this.txtCreation.Name = "txtCreation";
-            this.txtCreation.Size = new System.Drawing.Size(149, 20);
-            this.txtCreation.TabIndex = 10;
-            // 
-            // lblCreation
-            // 
-            this.lblCreation.AutoSize = true;
-            this.lblCreation.Location = new System.Drawing.Point(12, 172);
-            this.lblCreation.Name = "lblCreation";
-            this.lblCreation.Size = new System.Drawing.Size(46, 13);
-            this.lblCreation.TabIndex = 11;
-            this.lblCreation.Text = "Creation";
-            // 
-            // lblClaim
-            // 
-            this.lblClaim.AutoSize = true;
-            this.lblClaim.Location = new System.Drawing.Point(12, 207);
-            this.lblClaim.Name = "lblClaim";
-            this.lblClaim.Size = new System.Drawing.Size(37, 13);
-            this.lblClaim.TabIndex = 12;
-            this.lblClaim.Text = "Claims";
-            // 
-            // txtClaims
-            // 
-            this.txtClaims.Location = new System.Drawing.Point(76, 204);
-            this.txtClaims.Name = "txtClaims";
-            this.txtClaims.Size = new System.Drawing.Size(149, 20);
-            this.txtClaims.TabIndex = 13;
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(12, 172);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(38, 13);
+            this.lblPhoneNumber.TabIndex = 11;
+            this.lblPhoneNumber.Text = "Phone";
             // 
             // dgvUsers
             // 
             this.dgvUsers.AllowUserToAddRows = false;
             this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(240, 6);
+            this.dgvUsers.Location = new System.Drawing.Point(282, 6);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
-            this.dgvUsers.Size = new System.Drawing.Size(388, 218);
+            this.dgvUsers.Size = new System.Drawing.Size(346, 218);
             this.dgvUsers.TabIndex = 14;
             // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "users";
             // 
-            // btnSubmit
+            // btnUpdateProfile
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(12, 223);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 15;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(106, 233);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
-            this.lblID.TabIndex = 16;
-            this.lblID.Text = "ID";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(130, 230);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 17;
+            this.btnUpdateProfile.Location = new System.Drawing.Point(12, 201);
+            this.btnUpdateProfile.Name = "btnUpdateProfile";
+            this.btnUpdateProfile.Size = new System.Drawing.Size(90, 23);
+            this.btnUpdateProfile.TabIndex = 15;
+            this.btnUpdateProfile.Text = "Update Profile";
+            this.btnUpdateProfile.UseVisualStyleBackColor = true;
+            this.btnUpdateProfile.Click += new System.EventHandler(this.btnUpdateProfile_Click);
             // 
             // lblMessage
             // 
@@ -358,11 +316,30 @@
             this.btnGetUserInfo.UseVisualStyleBackColor = true;
             this.btnGetUserInfo.Click += new System.EventHandler(this.btnGetUserInfo_Click);
             // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Location = new System.Drawing.Point(76, 135);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
+            this.dtpBirthday.TabIndex = 34;
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.Location = new System.Drawing.Point(110, 201);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Size = new System.Drawing.Size(91, 23);
+            this.btnRegisterUser.TabIndex = 35;
+            this.btnRegisterUser.Text = "Register User";
+            this.btnRegisterUser.UseVisualStyleBackColor = true;
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 583);
+            this.Controls.Add(this.btnRegisterUser);
+            this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.btnGetUserInfo);
             this.Controls.Add(this.lblGetUser);
             this.Controls.Add(this.txtGetUser);
@@ -379,16 +356,11 @@
             this.Controls.Add(this.lblFrom);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnUpdateProfile);
             this.Controls.Add(this.dgvUsers);
-            this.Controls.Add(this.txtClaims);
-            this.Controls.Add(this.lblClaim);
-            this.Controls.Add(this.lblCreation);
-            this.Controls.Add(this.txtCreation);
-            this.Controls.Add(this.txtRank);
-            this.Controls.Add(this.lblRank);
+            this.Controls.Add(this.lblPhoneNumber);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.lblBirthday);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
@@ -418,17 +390,12 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblRank;
-        private System.Windows.Forms.TextBox txtRank;
-        private System.Windows.Forms.TextBox txtCreation;
-        private System.Windows.Forms.Label lblCreation;
-        private System.Windows.Forms.Label lblClaim;
-        private System.Windows.Forms.TextBox txtClaims;
+        private System.Windows.Forms.Label lblBirthday;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnUpdateProfile;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Label lblFrom;
@@ -445,6 +412,8 @@
         private System.Windows.Forms.TextBox txtGetUser;
         private System.Windows.Forms.Label lblGetUser;
         private System.Windows.Forms.Button btnGetUserInfo;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.Button btnRegisterUser;
     }
 }
 
