@@ -45,8 +45,6 @@
             this.txtClaims = new System.Windows.Forms.TextBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
-            this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -68,7 +66,6 @@
             this.btnGetUserInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,16 +195,6 @@
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.insuranceClaimDataSet;
-            // 
-            // insuranceClaimDataSet
-            // 
-            this.insuranceClaimDataSet.DataSetName = "InsuranceClaimDataSet";
-            this.insuranceClaimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // btnSubmit
             // 
@@ -415,7 +402,6 @@
             this.Load += new System.EventHandler(this.formFormDemo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -439,9 +425,7 @@
         private System.Windows.Forms.Label lblClaim;
         private System.Windows.Forms.TextBox txtClaims;
         private System.Windows.Forms.DataGridView dgvUsers;
-        private InsuranceClaimDataSet insuranceClaimDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private InsuranceClaimDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtID;
