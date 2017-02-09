@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace InsuranceApplication.Classes
 {
-    class FinanceManger
+    class Client
     {
-
         //properties
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -16,8 +15,8 @@ namespace InsuranceApplication.Classes
         public string Password { get; set; }
         public int Rank { get; set; }
 
-        //constructors
-        public FinanceManger(string firstname, string lastname, string username,
+        //constructor
+        public Client(string firstname, string lastname, string username,
             string password, int rank)
         {
             this.FirstName = firstname;
@@ -25,13 +24,9 @@ namespace InsuranceApplication.Classes
             this.UserName = username;
             this.Password = password;
             this.Rank = rank;
-        } 
+        }
 
         //methods
 
-
-
     }
-    }
-
-
+}
