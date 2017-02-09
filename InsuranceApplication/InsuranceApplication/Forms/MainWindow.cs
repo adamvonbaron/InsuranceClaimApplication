@@ -42,21 +42,52 @@ namespace InsuranceApplication
             string password = txtPassword.Text;
             objCheck.GetCheck(username, password);
 
+            //get password
+            String password = txtPassword.Text;
             //link login to admin home page
-            Forms.AdminHome f1 = new Forms.AdminHome();
-            f1.Show();
+            if (password == "admin")
+            {
+                Forms.AdminHome f1 = new Forms.AdminHome();
+                f1.Show();
+            }
 
             //link login to client home page
-            Forms.ClientHome f2 = new Forms.ClientHome();
-            f2.Show();
-
+            else if (password == "client")
+            {
+                Forms.ClientHome f2 = new Forms.ClientHome();
+                f2.Show();
+            }
+            
             //link login to client manager home page
-            Forms.ClientManagerHome f3 = new Forms.ClientManagerHome();
-            f3.Show();
+            else if (password == "claimmanager")
+            {
+                Forms.ClaimManager f3 = new Forms.ClaimManager();
+                f3.Show();
+            }
 
             //link login to finance manager home page
-            Forms.FinanceManagerHome f4 = new Forms.FinanceManagerHome();
+            else if (password == "financemanager")
+            {
+                Forms.FinanceManagerHome f4 = new Forms.FinanceManagerHome();
+                f4.Show();
+            }
+
+            else
+            {
+                  MessageBox.Show("Warning", "Please enter a valid password!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Forms.Register f4 = new Forms.Register();
             f4.Show();
+        }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            Forms.ForgotPassword f3 = new Forms.ForgotPassword();
+            f3.Show();
         }
     }
 }

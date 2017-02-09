@@ -10,23 +10,24 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientHome : Form
+    public partial class ForgotPassword : Form
     {
-        public ClientHome()
+        public ForgotPassword()
         {
             InitializeComponent();
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            txtNewPassword.Clear();
+            Random rnd = new Random();
+            int password = rnd.Next(10000, 15000);
+            txtNewPassword.Text = password.ToString();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnEditProfile_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Forms.ClientEditProfile f3 = new Forms.ClientEditProfile();
-            f3.Show();
         }
     }
 }

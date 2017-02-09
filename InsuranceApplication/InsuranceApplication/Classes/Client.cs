@@ -27,6 +27,25 @@ namespace InsuranceApplication.Classes
         }
 
         //methods
+        public void ApplyClaim()
+        {
 
+        }
+        public void ViewMessages()
+        {
+
+        }
+        public void ViewStatus()
+        {
+
+        }
+        public void Upload()
+        {
+
+        }
+        public void EditProfile()
+        {
+
+        }
     }
 }

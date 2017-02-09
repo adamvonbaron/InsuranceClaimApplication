@@ -27,14 +27,31 @@ namespace InsuranceApplication.Classes
             this.Password = password;
             this.Rank = rank;
         }
-        
 
         //methods
+        public void ViewClientList()
+        {
 
+        }
+        public void ViewMessages()
+        {
 
+        }
+        public void ViewClientProfile()
+        {
 
+        }
+        public void EditProfile()
+        {
 
+        }
+        public void Download()
+        {
 
+        }
+        public void Transfer()
+        {
 
+        }
     }
 }

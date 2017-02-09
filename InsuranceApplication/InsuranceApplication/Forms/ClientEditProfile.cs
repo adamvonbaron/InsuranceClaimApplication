@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientHome : Form
+    public partial class ClientEditProfile : Form
     {
-        public ClientHome()
+        public ClientEditProfile()
         {
             InitializeComponent();
         }
@@ -20,12 +20,7 @@ namespace InsuranceApplication.Forms
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnEditProfile_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Forms.ClientEditProfile f3 = new Forms.ClientEditProfile();
+            Forms.ClientHome f3 = new Forms.ClientHome();
             f3.Show();
         }
     }

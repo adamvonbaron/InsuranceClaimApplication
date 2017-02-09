@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 namespace InsuranceApplication.Classes {
     [Serializable]
     class User {
-        public string FirstName { get; set;}
+        public string FirstName { get; set; }
 
-        public string LastName { get; set;}
+        public string LastName { get; set; }
 
-        public string UserName { get; set;}
+        public string UserName { get; set; }
 
-        public string Password { get; set;}
+        public string Password { get; set; }
 
-        public int Rank { get; set;}
+        public int Rank { get; set; }
 
-       //public string creation { get; set;}
+        //public string creation { get; set;}
 
         //public int claims { get; set;}
 
@@ -26,7 +26,7 @@ namespace InsuranceApplication.Classes {
         //public long id { get; set;}
 
         //constructor
-        public User(string firstname, string lastname, string username, string password, 
+        public User(string firstname, string lastname, string username, string password,
             int rank)
         {
             this.FirstName = firstname;

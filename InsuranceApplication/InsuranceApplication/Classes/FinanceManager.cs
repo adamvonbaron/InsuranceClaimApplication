@@ -1,5 +1,4 @@
-﻿//Aaron Zelenkofske
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace InsuranceApplication.Classes
 {
-    class AdminAcc
+    class FinanceManager
     {
-        //Class for the Admin account
-        //This class holds the attributes
-
         //properties
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -19,8 +15,8 @@ namespace InsuranceApplication.Classes
         public string Password { get; set; }
         public int Rank { get; set; }
 
-        //constructor
-        public AdminAcc(string firstname, string lastname, string username,
+        //constructors
+        public FinanceManager(string firstname, string lastname, string username,
             string password, int rank)
         {
             this.FirstName = firstname;
@@ -31,23 +27,27 @@ namespace InsuranceApplication.Classes
         }
 
         //methods
-        public void ViewUserData()
+        public void ViewMessages()
         {
 
         }
-        public void CreateClientFolder()
+        public void ViewClientList()
         {
 
         }
+       // public double Estimate()
+        //{
+
+        //}
         public void EditProfile()
         {
 
         }
-        public void AddPermissions()
+        public void ViewProfile()
         {
 
         }
-        public void Register()
+        public void Transfer()
         {
 
         }

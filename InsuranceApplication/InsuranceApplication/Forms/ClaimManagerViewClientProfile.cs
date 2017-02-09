@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientHome : Form
+    public partial class ClaimManagerViewClientProfile : Form
     {
-        public ClientHome()
+        public ClaimManagerViewClientProfile()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void ClaimManagerViewClientProfile_Load(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
-        private void btnEditProfile_Click(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.ClientEditProfile f3 = new Forms.ClientEditProfile();
+            Forms.ClaimManager f3 = new Forms.ClaimManager();
             f3.Show();
         }
     }

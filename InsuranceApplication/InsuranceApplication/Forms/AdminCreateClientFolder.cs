@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientManagerHome : Form
+    public partial class AdminCreateClientFolder : Form
     {
-        public ClientManagerHome()
+        public AdminCreateClientFolder()
         {
             InitializeComponent();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Forms.AdminHome f3 = new Forms.AdminHome();
+            f3.Show();
         }
     }
 }
