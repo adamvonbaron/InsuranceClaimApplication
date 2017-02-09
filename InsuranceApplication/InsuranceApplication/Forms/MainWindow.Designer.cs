@@ -44,14 +44,6 @@
             this.lblClaim = new System.Windows.Forms.Label();
             this.txtClaims = new System.Windows.Forms.TextBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claimsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
             this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
@@ -177,71 +169,14 @@
             // 
             // dgvUsers
             // 
-            this.dgvUsers.AutoGenerateColumns = false;
+            this.dgvUsers.AllowUserToAddRows = false;
+            this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.firstnameDataGridViewTextBoxColumn,
-            this.lastnameDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.rankDataGridViewTextBoxColumn,
-            this.creationDataGridViewTextBoxColumn,
-            this.claimsDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn});
-            this.dgvUsers.DataSource = this.usersBindingSource;
             this.dgvUsers.Location = new System.Drawing.Point(240, 6);
             this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.ReadOnly = true;
             this.dgvUsers.Size = new System.Drawing.Size(388, 218);
             this.dgvUsers.TabIndex = 14;
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // rankDataGridViewTextBoxColumn
-            // 
-            this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
-            this.rankDataGridViewTextBoxColumn.HeaderText = "rank";
-            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
-            // 
-            // creationDataGridViewTextBoxColumn
-            // 
-            this.creationDataGridViewTextBoxColumn.DataPropertyName = "creation";
-            this.creationDataGridViewTextBoxColumn.HeaderText = "creation";
-            this.creationDataGridViewTextBoxColumn.Name = "creationDataGridViewTextBoxColumn";
-            // 
-            // claimsDataGridViewTextBoxColumn
-            // 
-            this.claimsDataGridViewTextBoxColumn.DataPropertyName = "claims";
-            this.claimsDataGridViewTextBoxColumn.HeaderText = "claims";
-            this.claimsDataGridViewTextBoxColumn.Name = "claimsDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usersBindingSource
             // 
@@ -337,14 +272,6 @@
         private InsuranceClaimDataSet insuranceClaimDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private InsuranceClaimDataSetTableAdapters.usersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rankDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn claimsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtID;

@@ -32,8 +32,6 @@ namespace InsuranceApplication {
         }
 
         private void formFormDemo_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'insuranceClaimDataSet.users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.insuranceClaimDataSet.users);
 
         }
 
@@ -58,54 +56,8 @@ namespace InsuranceApplication {
                            new XElement("id", id));
             xmldoc.Add(xml);
             xmldoc.Save("H:\\user_demo.xml");
-            SqlConnection conn = new SqlConnection(
-            @"Server=tcp:insuranceclaim.database.windows.net,1433;
-            Initial Catalog=InsuranceClaim;
-            Persist Security Info=False;
-            User ID=charlesroot;
-            Password=Ieamainsuranceclaim123;
-            MultipleActiveResultSets=False;
-            Encrypt=True;
-            TrustServerCertificate=False;
-            Connection Timeout=30;");
-            SqlCommand cmd = null;
-            string statement = @"update users
-                                set firstname = @firstname,
-                                lastname = @lastname,
-                                username = @username,
-                                password = @password,
-                                rank = @rank,
-                                creation = @creation,
-                                claims = @claims
-                                where username = 'adamkessler';";
-            try
-            {
-                cmd = new SqlCommand(statement, conn);
-                cmd.Parameters.AddWithValue("@firstname", firstname);
-                cmd.Parameters.AddWithValue("@lastname", lastname);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", username);
-                cmd.Parameters.AddWithValue("@rank", rank);
-                cmd.Parameters.AddWithValue("@creation", creation);
-                cmd.Parameters.AddWithValue("@claims", claims);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                dgvUsers.Refresh();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString(), "SQL Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (XmlException ex)
-            {
-                MessageBox.Show(ex.ToString(), "XML Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            libsql database = new libsql();
+            database.ModifyProfile(xmldoc);
         }
     }
 }

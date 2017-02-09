@@ -50,9 +50,9 @@
     <Compile Include="Classes\Claim.cs" />
     <Compile Include="Classes\ClaimManagerAcc.cs" />
     <Compile Include="Classes\Message.cs" />
-    <Compile Include="Classes\SQLDriver.cs" />
+    <Compile Include="Classes\libsql.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Classes\XMLDriver.cs" />
+    <Compile Include="Classes\libxmlserial.cs" />
     <Compile Include="Forms\AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
