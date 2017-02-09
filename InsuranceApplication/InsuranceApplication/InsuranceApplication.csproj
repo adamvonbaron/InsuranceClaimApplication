@@ -50,6 +50,7 @@
     <Compile Include="Classes\Claim.cs" />
     <Compile Include="Classes\ClaimManagerAcc.cs" />
     <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\FinanceManager.cs" />
     <Compile Include="Classes\Message.cs" />
     <Compile Include="Classes\SQLDriver.cs" />
     <Compile Include="Classes\User.cs" />
