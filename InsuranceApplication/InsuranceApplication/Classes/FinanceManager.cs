@@ -35,10 +35,10 @@ namespace InsuranceApplication.Classes
         {
 
         }
-        public double Estimate()
-        {
+       // public double Estimate()
+        //{
 
-        }
+        //}
         public void EditProfile()
         {
 
