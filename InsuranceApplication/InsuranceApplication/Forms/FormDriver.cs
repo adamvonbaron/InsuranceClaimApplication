@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InsuranceApplication.Classes;
-using System.Xml;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 

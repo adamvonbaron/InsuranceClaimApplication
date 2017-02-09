@@ -40,3 +40,8 @@ sql workflow (profile):
 7. run sql update query on data
 8. close form
 9. if user clicks cancel, do nothing
+
+todo:
+add method to insert user
+verify that sendClaim and sendMessage work
+get GetData to work (get sql response to xml and return that)
