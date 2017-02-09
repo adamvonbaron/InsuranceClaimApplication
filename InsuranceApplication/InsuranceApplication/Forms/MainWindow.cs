@@ -18,6 +18,8 @@ namespace InsuranceApplication
             InitializeComponent();
         }
 
+        private libsql objCheck;
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -36,6 +38,9 @@ namespace InsuranceApplication
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //String UN = SQLDriver.GetUser(txtUsername.ToString());
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            objCheck.GetCheck(username, password);
 
             //get password
             String password = txtPassword.Text;
