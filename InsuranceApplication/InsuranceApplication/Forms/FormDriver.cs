@@ -59,7 +59,7 @@ namespace InsuranceApplication {
             subject = txtSubject.Text;
             message = txtMessage.Text;
             XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("userMessage",
+            XElement xml = new XElement("user",
                            new XElement("to", to),
                            new XElement("from", from),
                            new XElement("date", date),
