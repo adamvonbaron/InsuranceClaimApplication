@@ -80,9 +80,9 @@
             // btnEditProfile
             // 
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.Location = new System.Drawing.Point(283, 175);
+            this.btnEditProfile.Location = new System.Drawing.Point(55, 272);
             this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(177, 75);
+            this.btnEditProfile.Size = new System.Drawing.Size(404, 34);
             this.btnEditProfile.TabIndex = 4;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
@@ -91,16 +91,16 @@
             // btnViewStatus
             // 
             this.btnViewStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewStatus.Location = new System.Drawing.Point(55, 286);
+            this.btnViewStatus.Location = new System.Drawing.Point(283, 175);
             this.btnViewStatus.Name = "btnViewStatus";
-            this.btnViewStatus.Size = new System.Drawing.Size(176, 83);
+            this.btnViewStatus.Size = new System.Drawing.Size(176, 75);
             this.btnViewStatus.TabIndex = 5;
             this.btnViewStatus.Text = "View Current Status";
             this.btnViewStatus.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(385, 346);
+            this.btnExit.Location = new System.Drawing.Point(385, 331);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 395);
+            this.ClientSize = new System.Drawing.Size(509, 376);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnViewStatus);
             this.Controls.Add(this.btnEditProfile);

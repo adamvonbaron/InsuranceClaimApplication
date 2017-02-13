@@ -52,7 +52,7 @@
             // 
             this.lblUpdateFirstname.AutoSize = true;
             this.lblUpdateFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateFirstname.Location = new System.Drawing.Point(12, 38);
+            this.lblUpdateFirstname.Location = new System.Drawing.Point(43, 37);
             this.lblUpdateFirstname.Name = "lblUpdateFirstname";
             this.lblUpdateFirstname.Size = new System.Drawing.Size(158, 20);
             this.lblUpdateFirstname.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.lblUpdateLastname.AutoSize = true;
             this.lblUpdateLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateLastname.Location = new System.Drawing.Point(12, 71);
+            this.lblUpdateLastname.Location = new System.Drawing.Point(43, 70);
             this.lblUpdateLastname.Name = "lblUpdateLastname";
             this.lblUpdateLastname.Size = new System.Drawing.Size(157, 20);
             this.lblUpdateLastname.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             this.lblUpdateUsername.AutoSize = true;
             this.lblUpdateUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateUsername.Location = new System.Drawing.Point(11, 104);
+            this.lblUpdateUsername.Location = new System.Drawing.Point(42, 103);
             this.lblUpdateUsername.Name = "lblUpdateUsername";
             this.lblUpdateUsername.Size = new System.Drawing.Size(160, 20);
             this.lblUpdateUsername.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.lblUpdatePassword.AutoSize = true;
             this.lblUpdatePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdatePassword.Location = new System.Drawing.Point(12, 138);
+            this.lblUpdatePassword.Location = new System.Drawing.Point(43, 137);
             this.lblUpdatePassword.Name = "lblUpdatePassword";
             this.lblUpdatePassword.Size = new System.Drawing.Size(155, 20);
             this.lblUpdatePassword.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             this.lblUpdateEmail.AutoSize = true;
             this.lblUpdateEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateEmail.Location = new System.Drawing.Point(13, 169);
+            this.lblUpdateEmail.Location = new System.Drawing.Point(44, 168);
             this.lblUpdateEmail.Name = "lblUpdateEmail";
             this.lblUpdateEmail.Size = new System.Drawing.Size(122, 20);
             this.lblUpdateEmail.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             this.lblUpdateDOB.AutoSize = true;
             this.lblUpdateDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateDOB.Location = new System.Drawing.Point(13, 203);
+            this.lblUpdateDOB.Location = new System.Drawing.Point(44, 202);
             this.lblUpdateDOB.Name = "lblUpdateDOB";
             this.lblUpdateDOB.Size = new System.Drawing.Size(181, 20);
             this.lblUpdateDOB.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.lblUpdatePhone.AutoSize = true;
             this.lblUpdatePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdatePhone.Location = new System.Drawing.Point(13, 240);
+            this.lblUpdatePhone.Location = new System.Drawing.Point(44, 239);
             this.lblUpdatePhone.Name = "lblUpdatePhone";
             this.lblUpdatePhone.Size = new System.Drawing.Size(196, 20);
             this.lblUpdatePhone.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             this.lblUpdateAddress.AutoSize = true;
             this.lblUpdateAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateAddress.Location = new System.Drawing.Point(13, 271);
+            this.lblUpdateAddress.Location = new System.Drawing.Point(44, 270);
             this.lblUpdateAddress.Name = "lblUpdateAddress";
             this.lblUpdateAddress.Size = new System.Drawing.Size(144, 20);
             this.lblUpdateAddress.TabIndex = 7;
@@ -130,66 +130,66 @@
             // 
             // txtUpdateFirstname
             // 
-            this.txtUpdateFirstname.Location = new System.Drawing.Point(177, 37);
+            this.txtUpdateFirstname.Location = new System.Drawing.Point(246, 37);
             this.txtUpdateFirstname.Name = "txtUpdateFirstname";
-            this.txtUpdateFirstname.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateFirstname.Size = new System.Drawing.Size(141, 20);
             this.txtUpdateFirstname.TabIndex = 8;
             // 
             // txtUpdateLastname
             // 
-            this.txtUpdateLastname.Location = new System.Drawing.Point(177, 73);
+            this.txtUpdateLastname.Location = new System.Drawing.Point(246, 72);
             this.txtUpdateLastname.Name = "txtUpdateLastname";
-            this.txtUpdateLastname.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateLastname.Size = new System.Drawing.Size(141, 20);
             this.txtUpdateLastname.TabIndex = 9;
             // 
             // txtUpdateUsername
             // 
-            this.txtUpdateUsername.Location = new System.Drawing.Point(177, 106);
+            this.txtUpdateUsername.Location = new System.Drawing.Point(246, 105);
             this.txtUpdateUsername.Name = "txtUpdateUsername";
-            this.txtUpdateUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateUsername.Size = new System.Drawing.Size(141, 20);
             this.txtUpdateUsername.TabIndex = 10;
             // 
             // txtUpdatePassword
             // 
-            this.txtUpdatePassword.Location = new System.Drawing.Point(177, 140);
+            this.txtUpdatePassword.Location = new System.Drawing.Point(246, 139);
             this.txtUpdatePassword.Name = "txtUpdatePassword";
-            this.txtUpdatePassword.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdatePassword.Size = new System.Drawing.Size(141, 20);
             this.txtUpdatePassword.TabIndex = 11;
             // 
             // txtUpdateEmail
             // 
-            this.txtUpdateEmail.Location = new System.Drawing.Point(141, 171);
+            this.txtUpdateEmail.Location = new System.Drawing.Point(246, 170);
             this.txtUpdateEmail.Name = "txtUpdateEmail";
-            this.txtUpdateEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateEmail.Size = new System.Drawing.Size(141, 20);
             this.txtUpdateEmail.TabIndex = 12;
             // 
             // txtUpdateDOB
             // 
-            this.txtUpdateDOB.Location = new System.Drawing.Point(200, 205);
+            this.txtUpdateDOB.Location = new System.Drawing.Point(246, 204);
             this.txtUpdateDOB.Name = "txtUpdateDOB";
-            this.txtUpdateDOB.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateDOB.Size = new System.Drawing.Size(141, 20);
             this.txtUpdateDOB.TabIndex = 13;
             // 
             // txtUpdatePhone
             // 
-            this.txtUpdatePhone.Location = new System.Drawing.Point(215, 240);
+            this.txtUpdatePhone.Location = new System.Drawing.Point(246, 239);
             this.txtUpdatePhone.Name = "txtUpdatePhone";
-            this.txtUpdatePhone.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdatePhone.Size = new System.Drawing.Size(141, 20);
             this.txtUpdatePhone.TabIndex = 14;
             // 
             // txtUpdateAddress
             // 
-            this.txtUpdateAddress.Location = new System.Drawing.Point(163, 273);
+            this.txtUpdateAddress.Location = new System.Drawing.Point(246, 272);
             this.txtUpdateAddress.Name = "txtUpdateAddress";
-            this.txtUpdateAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateAddress.Size = new System.Drawing.Size(141, 20);
             this.txtUpdateAddress.TabIndex = 15;
             // 
             // btnEnter
             // 
             this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(60, 323);
+            this.btnEnter.Location = new System.Drawing.Point(136, 320);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.Size = new System.Drawing.Size(75, 24);
             this.btnEnter.TabIndex = 16;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
@@ -197,9 +197,9 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(154, 323);
+            this.btnExit.Location = new System.Drawing.Point(230, 320);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(75, 24);
             this.btnExit.TabIndex = 17;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 393);
+            this.ClientSize = new System.Drawing.Size(441, 361);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.txtUpdateAddress);

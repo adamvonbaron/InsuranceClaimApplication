@@ -51,7 +51,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(171, 327);
+            this.btnExit.Location = new System.Drawing.Point(234, 329);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 35;
@@ -62,7 +62,7 @@
             // btnEnter
             // 
             this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(77, 327);
+            this.btnEnter.Location = new System.Drawing.Point(140, 329);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 34;
@@ -71,58 +71,58 @@
             // 
             // txtUpdateAddress
             // 
-            this.txtUpdateAddress.Location = new System.Drawing.Point(180, 277);
+            this.txtUpdateAddress.Location = new System.Drawing.Point(232, 277);
             this.txtUpdateAddress.Name = "txtUpdateAddress";
-            this.txtUpdateAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateAddress.Size = new System.Drawing.Size(169, 20);
             this.txtUpdateAddress.TabIndex = 33;
             // 
             // txtUpdatePhone
             // 
             this.txtUpdatePhone.Location = new System.Drawing.Point(232, 244);
             this.txtUpdatePhone.Name = "txtUpdatePhone";
-            this.txtUpdatePhone.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdatePhone.Size = new System.Drawing.Size(169, 20);
             this.txtUpdatePhone.TabIndex = 32;
             // 
             // txtUpdateDOB
             // 
-            this.txtUpdateDOB.Location = new System.Drawing.Point(217, 209);
+            this.txtUpdateDOB.Location = new System.Drawing.Point(232, 209);
             this.txtUpdateDOB.Name = "txtUpdateDOB";
-            this.txtUpdateDOB.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateDOB.Size = new System.Drawing.Size(169, 20);
             this.txtUpdateDOB.TabIndex = 31;
             // 
             // txtUpdateEmail
             // 
-            this.txtUpdateEmail.Location = new System.Drawing.Point(158, 175);
+            this.txtUpdateEmail.Location = new System.Drawing.Point(232, 175);
             this.txtUpdateEmail.Name = "txtUpdateEmail";
-            this.txtUpdateEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateEmail.Size = new System.Drawing.Size(169, 20);
             this.txtUpdateEmail.TabIndex = 30;
             // 
             // txtUpdatePassword
             // 
-            this.txtUpdatePassword.Location = new System.Drawing.Point(194, 144);
+            this.txtUpdatePassword.Location = new System.Drawing.Point(232, 147);
             this.txtUpdatePassword.Name = "txtUpdatePassword";
-            this.txtUpdatePassword.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdatePassword.Size = new System.Drawing.Size(169, 20);
             this.txtUpdatePassword.TabIndex = 29;
             // 
             // txtUpdateUsername
             // 
-            this.txtUpdateUsername.Location = new System.Drawing.Point(194, 110);
+            this.txtUpdateUsername.Location = new System.Drawing.Point(232, 113);
             this.txtUpdateUsername.Name = "txtUpdateUsername";
-            this.txtUpdateUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateUsername.Size = new System.Drawing.Size(169, 20);
             this.txtUpdateUsername.TabIndex = 28;
             // 
             // txtUpdateLastname
             // 
-            this.txtUpdateLastname.Location = new System.Drawing.Point(194, 77);
+            this.txtUpdateLastname.Location = new System.Drawing.Point(232, 80);
             this.txtUpdateLastname.Name = "txtUpdateLastname";
-            this.txtUpdateLastname.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateLastname.Size = new System.Drawing.Size(169, 20);
             this.txtUpdateLastname.TabIndex = 27;
             // 
             // txtUpdateFirstname
             // 
-            this.txtUpdateFirstname.Location = new System.Drawing.Point(194, 41);
+            this.txtUpdateFirstname.Location = new System.Drawing.Point(232, 44);
             this.txtUpdateFirstname.Name = "txtUpdateFirstname";
-            this.txtUpdateFirstname.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateFirstname.Size = new System.Drawing.Size(169, 20);
             this.txtUpdateFirstname.TabIndex = 26;
             // 
             // lblUpdateAddress
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 428);
+            this.ClientSize = new System.Drawing.Size(444, 391);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.txtUpdateAddress);

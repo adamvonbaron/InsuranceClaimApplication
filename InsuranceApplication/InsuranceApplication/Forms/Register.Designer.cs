@@ -53,7 +53,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(163, 342);
+            this.btnExit.Location = new System.Drawing.Point(234, 344);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 35;
@@ -64,7 +64,7 @@
             // btnEnter
             // 
             this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(67, 342);
+            this.btnEnter.Location = new System.Drawing.Point(138, 344);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 34;
@@ -73,65 +73,65 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(175, 297);
+            this.txtAddress.Location = new System.Drawing.Point(212, 296);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtAddress.Size = new System.Drawing.Size(169, 20);
             this.txtAddress.TabIndex = 33;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(163, 264);
+            this.txtPhone.Location = new System.Drawing.Point(212, 263);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtPhone.Size = new System.Drawing.Size(169, 20);
             this.txtPhone.TabIndex = 32;
             // 
             // txtDOB
             // 
-            this.txtDOB.Location = new System.Drawing.Point(148, 229);
+            this.txtDOB.Location = new System.Drawing.Point(212, 226);
             this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(100, 20);
+            this.txtDOB.Size = new System.Drawing.Size(169, 20);
             this.txtDOB.TabIndex = 31;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(89, 193);
+            this.txtEmail.Location = new System.Drawing.Point(212, 192);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.Size = new System.Drawing.Size(169, 20);
             this.txtEmail.TabIndex = 30;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(121, 130);
+            this.txtPassword.Location = new System.Drawing.Point(212, 129);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.Size = new System.Drawing.Size(169, 20);
             this.txtPassword.TabIndex = 29;
             // 
             // txtUpdateUsername
             // 
-            this.txtUpdateUsername.Location = new System.Drawing.Point(125, 96);
+            this.txtUpdateUsername.Location = new System.Drawing.Point(212, 95);
             this.txtUpdateUsername.Name = "txtUpdateUsername";
-            this.txtUpdateUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateUsername.Size = new System.Drawing.Size(169, 20);
             this.txtUpdateUsername.TabIndex = 28;
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(121, 65);
+            this.txtLastname.Location = new System.Drawing.Point(212, 62);
             this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(100, 20);
+            this.txtLastname.Size = new System.Drawing.Size(169, 20);
             this.txtLastname.TabIndex = 27;
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(124, 30);
+            this.txtFirstname.Location = new System.Drawing.Point(212, 29);
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstname.Size = new System.Drawing.Size(169, 20);
             this.txtFirstname.TabIndex = 26;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(23, 297);
+            this.lblAddress.Location = new System.Drawing.Point(47, 294);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(80, 20);
             this.lblAddress.TabIndex = 25;
@@ -141,7 +141,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(25, 264);
+            this.lblPhone.Location = new System.Drawing.Point(49, 261);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(132, 20);
             this.lblPhone.TabIndex = 24;
@@ -151,7 +151,7 @@
             // 
             this.lblDOB.AutoSize = true;
             this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOB.Location = new System.Drawing.Point(25, 227);
+            this.lblDOB.Location = new System.Drawing.Point(49, 224);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(117, 20);
             this.lblDOB.TabIndex = 23;
@@ -161,7 +161,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(25, 193);
+            this.lblEmail.Location = new System.Drawing.Point(49, 190);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(58, 20);
             this.lblEmail.TabIndex = 22;
@@ -171,7 +171,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(24, 130);
+            this.lblPassword.Location = new System.Drawing.Point(48, 127);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(91, 20);
             this.lblPassword.TabIndex = 21;
@@ -181,7 +181,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(23, 96);
+            this.lblUsername.Location = new System.Drawing.Point(47, 93);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(96, 20);
             this.lblUsername.TabIndex = 20;
@@ -191,7 +191,7 @@
             // 
             this.lblLastname.AutoSize = true;
             this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastname.Location = new System.Drawing.Point(24, 63);
+            this.lblLastname.Location = new System.Drawing.Point(48, 60);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(93, 20);
             this.lblLastname.TabIndex = 19;
@@ -201,7 +201,7 @@
             // 
             this.lblFirstname.AutoSize = true;
             this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstname.Location = new System.Drawing.Point(24, 30);
+            this.lblFirstname.Location = new System.Drawing.Point(48, 27);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(94, 20);
             this.lblFirstname.TabIndex = 18;
@@ -209,16 +209,16 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(188, 164);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(212, 161);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(169, 20);
             this.txtConfirmPassword.TabIndex = 37;
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(24, 162);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(48, 159);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(158, 20);
             this.lblConfirmPassword.TabIndex = 36;
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 402);
+            this.ClientSize = new System.Drawing.Size(446, 385);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.btnExit);
