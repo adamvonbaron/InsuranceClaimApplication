@@ -106,7 +106,7 @@
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditProfile.Location = new System.Drawing.Point(48, 245);
             this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(392, 40);
+            this.btnEditProfile.Size = new System.Drawing.Size(392, 32);
             this.btnEditProfile.TabIndex = 6;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
