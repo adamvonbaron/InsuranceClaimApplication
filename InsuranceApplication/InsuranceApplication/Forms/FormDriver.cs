@@ -29,7 +29,19 @@ namespace InsuranceApplication {
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
-           
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = database.conn;
+            cmd.CommandText = @"update users set firstname = @firstname, lastname = @lastname, username = @username, password = @password, birthday = @birthday, phonenumber = @phonenumber Where username = @oldusername;";
+            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
+            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
+            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
+            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
+            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
+            cmd.Parameters.AddWithValue("@oldusername", txtUserName.Text);
+            database.conn.Open();
+            cmd.ExecuteNonQuery();
+            database.conn.Close();
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e) {
@@ -71,6 +83,23 @@ namespace InsuranceApplication {
             database.conn.Open();
             cmd.ExecuteNonQuery();
             database.conn.Close();
+        }
+
+        //send claim button method
+        private void btnSendClaim_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = database.conn;
+            cmd.CommandText = @"insert into claims (username, date, status, claim) 
+                                values(@username, @date, @status, @claim);";
+            cmd.Parameters.AddWithValue("@username", txtClaimUserName.Text);
+            cmd.Parameters.AddWithValue("@date", dtpClaimDate.Text);
+            cmd.Parameters.AddWithValue("@status", txtClaimStatus.Text);
+            cmd.Parameters.AddWithValue("@claim", txtWriteClaim.Text);
+            database.conn.Open();
+            cmd.ExecuteNonQuery();
+            database.conn.Close();
+
         }
     }
 }
