@@ -76,11 +76,6 @@ namespace InsuranceApplication
             f3.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDriver_Click(object sender, EventArgs e)
         {
             formFormDemo ffd = new formFormDemo();

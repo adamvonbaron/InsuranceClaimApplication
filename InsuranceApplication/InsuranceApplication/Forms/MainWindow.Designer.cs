@@ -38,7 +38,6 @@
             this.btnForgotPassword = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnDriver = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -137,22 +136,11 @@
             this.btnDriver.UseVisualStyleBackColor = true;
             this.btnDriver.Click += new System.EventHandler(this.btnDriver_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(220, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "test (ignore)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // formInsuranceClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 386);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDriver);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnForgotPassword);
@@ -182,7 +170,6 @@
         private System.Windows.Forms.Button btnForgotPassword;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnDriver;
-        private System.Windows.Forms.Button button1;
     }
 }
 
