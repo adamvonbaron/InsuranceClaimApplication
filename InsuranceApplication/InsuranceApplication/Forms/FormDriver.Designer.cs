@@ -466,6 +466,7 @@
             this.btnSendClaim.TabIndex = 37;
             this.btnSendClaim.Text = "Send Claim";
             this.btnSendClaim.UseVisualStyleBackColor = true;
+            this.btnSendClaim.Click += new System.EventHandler(this.btnSendClaim_Click);
             // 
             // txtWriteClaim
             // 

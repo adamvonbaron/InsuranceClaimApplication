@@ -84,5 +84,22 @@ namespace InsuranceApplication {
             cmd.ExecuteNonQuery();
             database.conn.Close();
         }
+
+        //send claim button method
+        private void btnSendClaim_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = database.conn;
+            cmd.CommandText = @"insert into claims (username, claimdate, claimstatus, typedclaim) 
+                                values(@username, @claimdate, @claimstatus, @typedclaim);";
+            cmd.Parameters.AddWithValue("@username", txtClaimUserName.Text);
+            cmd.Parameters.AddWithValue("@claimdate", dtpClaimDate.Text);
+            cmd.Parameters.AddWithValue("@claimstatus", txtClaimStatus.Text);
+            cmd.Parameters.AddWithValue("@typedclaim", txtWriteClaim.Text);
+            database.conn.Open();
+            cmd.ExecuteNonQuery();
+            database.conn.Close();
+
+        }
     }
 }
