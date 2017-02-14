@@ -45,12 +45,21 @@ namespace InsuranceApplication {
                                  txtSubject.Text, txtMessage.Text);
         }
 
-        //TODO: This.
+        /* example of getting a user's info */
         private void btnGetUserInfo_Click(object sender, EventArgs e) {
-            
+           User UserInfo = database.GetUserData(txtGetUser.Text);
+            /* example of populating text boxes with info from database
+             * (technically just info in the User instance, not
+             * from database directly) */
+            txtFirstName.Text = UserInfo.FirstName;
+            txtLastName.Text = UserInfo.LastName;
+            txtUserName.Text = UserInfo.UserName;
+            txtPassword.Text = UserInfo.Password;
+            dtpBirthday.Text = UserInfo.Birthday;
+            txtPhoneNumber.Text = UserInfo.Phonenumber;
         }
 
-        /* example of registration for logic stuff */
+        /* example of registering a user */
         private void btnRegisterUser_Click(object sender, EventArgs e) {
             if (!database.RegisterUser(txtFirstName.Text, txtLastName.Text,
                                        txtUserName.Text, txtPassword.Text,

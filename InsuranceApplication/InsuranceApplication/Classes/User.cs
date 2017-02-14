@@ -16,6 +16,10 @@ namespace InsuranceApplication.Classes {
 
         public string Password { get; set; }
 
+        public string Birthday { get; set; }
+
+        public string Phonenumber { get; set; }
+
         private byte[] Salt { get; set; }
 
         public int Rank { get; set; }
@@ -29,11 +33,13 @@ namespace InsuranceApplication.Classes {
 
         //constructor
         public User(string firstname, string lastname, string username, string password,
-            int rank)
+                    string birthday, string phonenumber, int rank)
         {
             this.FirstName = firstname;
             this.LastName = lastname;
             this.UserName = username;
+            this.Birthday = birthday;
+            this.Phonenumber = phonenumber;
             this.Rank = rank;
 
             this.Salt = new byte[32];
@@ -62,6 +68,12 @@ namespace InsuranceApplication.Classes {
         public void login(string username, string password)
         {
 
+        }
+
+        public override string ToString() {
+            return String.Format(@"First Name: {0}\nLast Name: {1}\nUsername: {2}\nPassword: {3}\n
+                                   Birthday: {4}\nPhone Number: {5}", this.FirstName, this.LastName,
+                                   this.UserName, this.Password, this.Birthday, this.Phonenumber);
         }
     }
 }

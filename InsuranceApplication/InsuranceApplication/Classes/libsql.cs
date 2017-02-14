@@ -89,18 +89,21 @@ namespace InsuranceApplication.Classes {
             return CheckField("users", "password", password);
         }
 
+        /* creates new user in database */
         public bool RegisterUser(string firstname, string lastname,
                                  string username, string password,
                                  string birthday, string phonenumber) {
             return UserDB(firstname, lastname, username, password, birthday, phonenumber, true);
         }
 
+        /* updates existing user info */
         public bool UpdateUser(string firstname, string lastname, 
                                string username, string password,
                                string birthday, string phonenumber) {
             return UserDB(firstname, lastname, username, password, birthday, phonenumber, false);
         }
 
+        /* inserts claim in database */
         public bool SendClaim(string username, string date, string status, string claim) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
@@ -121,6 +124,7 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        /* inserts message in database */
         public bool SendMessage(string to, string from, string date, 
                                 string subject, string message) {
             SqlCommand cmd = new SqlCommand();
@@ -143,8 +147,36 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        /* checks username and password in database */
         public bool ValidateUser(string username, string password) {
             return (CheckUsername(username) && CheckPassword(password));
+        }
+
+        /* returns data for single user */
+        public User GetUserData(string username) {
+            string query = "select * from users where username = @username";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader sqlReader;
+            User user = null;
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@username", username);
+            try {
+                conn.Open();
+                sqlReader = cmd.ExecuteReader();
+                sqlReader.Read();
+                user = new User(sqlReader.GetString(0),
+                                sqlReader.GetString(1),
+                                sqlReader.GetString(2),
+                                sqlReader.GetString(3),
+                                sqlReader.GetString(4),
+                                sqlReader.GetString(5),
+                                sqlReader.GetInt32(6));
+            } catch (Exception ex) {
+                MessageBox.Show(ex.ToString());
+            } finally {
+                conn.Close();
+            }
+            return user;
         }
     }
 }
