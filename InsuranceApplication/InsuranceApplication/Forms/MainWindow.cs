@@ -99,9 +99,10 @@ namespace InsuranceApplication
             ffd.Show();
             
         }
-
+        
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             Forms.UserEditProfile uep = new Forms.UserEditProfile();
             uep.Show();
         }
