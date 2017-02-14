@@ -16,6 +16,8 @@ namespace InsuranceApplication.Classes {
 
         public string Password { get; set; }
 
+        private byte[] Salt { get; set; }
+
         public int Rank { get; set; }
 
         //public string creation { get; set;}
@@ -32,8 +34,28 @@ namespace InsuranceApplication.Classes {
             this.FirstName = firstname;
             this.LastName = lastname;
             this.UserName = username;
-            this.Password = password;
             this.Rank = rank;
+
+            this.Salt = new byte[32];
+            System.Security.Cryptography.RNGCryptoServiceProvider.Create().GetBytes(Salt);
+
+            // Convert the plain string pwd into bytes
+            byte[] plainTextBytes = System.Text.UnicodeEncoding.Unicode.GetBytes(password);
+            // Append salt to pwd before hashing
+            byte[] combinedBytes = new byte[plainTextBytes.Length + Salt.Length];
+            System.Buffer.BlockCopy(plainTextBytes, 0, combinedBytes, 0, plainTextBytes.Length);
+            System.Buffer.BlockCopy(Salt, 0, combinedBytes, plainTextBytes.Length, Salt.Length);
+
+            // Create hash for the pwd+salt
+            System.Security.Cryptography.HashAlgorithm hashAlgo = new System.Security.Cryptography.SHA256Managed();
+            byte[] hash = hashAlgo.ComputeHash(combinedBytes);
+
+            // Append the salt to the hash
+            byte[] hashPlusSalt = new byte[hash.Length + Salt.Length];
+            System.Buffer.BlockCopy(hash, 0, hashPlusSalt, 0, hash.Length);
+            System.Buffer.BlockCopy(Salt, 0, hashPlusSalt, hash.Length, Salt.Length);
+
+            this.Password = Encoding.UTF8.GetString(hashPlusSalt);
         }
 
         //methods
