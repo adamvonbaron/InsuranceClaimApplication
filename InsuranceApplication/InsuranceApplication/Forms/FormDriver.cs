@@ -27,24 +27,7 @@ namespace InsuranceApplication {
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
-            string firstname = txtFirstName.Text;
-            string lastname = txtLastName.Text;
-            string username = txtUserName.Text;
-            string password = txtPassword.Text;
-            DateTime birthday = dtpBirthday.Value;
-            string phonenumber = txtPhoneNumber.Text;
-            XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("user",
-                           new XElement("firstname", firstname),
-                           new XElement("lastname", lastname),
-                           new XElement("username", username),
-                           new XElement("password", password),
-                           new XElement("birthday", birthday),
-                           new XElement("phonenumber", phonenumber));
-            xmldoc.Add(xml);
-            xmldoc.Save("H:\\user_demo.xml");
-            int rowsaffected = database.ModifyProfile(xmldoc);
-            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e) {
