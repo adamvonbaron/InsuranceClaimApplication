@@ -73,6 +73,7 @@ namespace InsuranceApplication {
             database.GetUser(txtGetUser.Text);
         }
 
+        /* example of registration for logic stuff */
         private void btnRegisterUser_Click(object sender, EventArgs e) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = database.conn;
