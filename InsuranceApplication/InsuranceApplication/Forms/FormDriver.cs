@@ -29,19 +29,11 @@ namespace InsuranceApplication {
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = database.conn;
-            cmd.CommandText = @"update users set firstname = @firstname, lastname = @lastname, username = @username, password = @password, birthday = @birthday, phonenumber = @phonenumber Where username = @oldusername;";
-            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
-            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
-            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
-            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
-            cmd.Parameters.AddWithValue("@oldusername", txtUserName.Text);
-            database.conn.Open();
-            cmd.ExecuteNonQuery();
-            database.conn.Close();
+            if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
+                                txtUserName.Text, txtPassword.Text,
+                                dtpBirthday.Text, txtPhoneNumber.Text))
+                MessageBox.Show("error updating user.", "Error", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e) {
@@ -68,7 +60,8 @@ namespace InsuranceApplication {
             if (!database.RegisterUser(txtFirstName.Text, txtLastName.Text,
                                        txtUserName.Text, txtPassword.Text,
                                        dtpBirthday.Text, txtPhoneNumber.Text))
-                MessageBox.Show("Error registering user.");
+                MessageBox.Show("Error registering user.", "Error", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         //send claim button method

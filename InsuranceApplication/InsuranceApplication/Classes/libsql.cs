@@ -45,15 +45,24 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
-        public bool RegisterUser(string firstname, string lastname,
-                                 string username, string password,
-                                 string birthday, string phonenumber) {
-            if (!CheckUsername(username))
-                return false;
+        private bool UserDB(string firstname, string lastname,
+                           string username, string password,
+                           string birthday, string phonenumber,
+                           bool register) {
+            string query = string.Empty;
+            if (register) {
+                query = @"insert into users (firstname, lastname, username, password, birthday, phonenumber)
+                        values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
+                if (!CheckUsername(username))
+                    return false;
+            } else {
+                query = @"update users set firstname = @firstname, lastname = @lastname, 
+                          username = @username, password = @password, birthday = @birthday, 
+                          phonenumber = @phonenumber Where username = @username;";
+            }
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = @"insert into users (firstname, lastname, username, password, birthday, phonenumber)
-                                values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
+            cmd.CommandText = query;
             cmd.Parameters.AddWithValue("@firstname", firstname);
             cmd.Parameters.AddWithValue("@lastname", lastname);
             cmd.Parameters.AddWithValue("@username", username);
@@ -70,6 +79,22 @@ namespace InsuranceApplication.Classes {
                 conn.Close();
             }
             return true;
+        }
+
+        public bool RegisterUser(string firstname, string lastname,
+                                 string username, string password,
+                                 string birthday, string phonenumber) {
+            if (UserDB(firstname, lastname, username, password, birthday, phonenumber, true))
+                return true;
+            return false;
+        }
+
+        public bool UpdateUser(string firstname, string lastname, 
+                               string username, string password,
+                               string birthday, string phonenumber) {
+            if (UserDB(firstname, lastname, username, password, birthday, phonenumber, false))
+                return true;
+            return false;
         }
 
         public bool SendClaim(string username, string date, string status, string claim) {
