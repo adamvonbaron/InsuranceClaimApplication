@@ -28,77 +28,46 @@ namespace InsuranceApplication {
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
+            if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
+                                txtUserName.Text, txtPassword.Text,
+                                dtpBirthday.Text, txtPhoneNumber.Text))
+                MessageBox.Show("error updating user.", "Error", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnSendMessage_Click(object sender, EventArgs e) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = database.conn;
-            cmd.CommandText = @"update users set firstname = @firstname, lastname = @lastname, username = @username, password = @password, birthday = @birthday, phonenumber = @phonenumber Where username = @oldusername;";
-            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
-            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
-            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
-            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
-            cmd.Parameters.AddWithValue("@oldusername", txtUserName.Text);
+            cmd.CommandText = @"insert into messages ([to], [from], [date], subject, message)
+                                values(@to, @from, @date, @subject, @message);";
+            cmd.Parameters.AddWithValue("@to", txtTo.Text);
+            cmd.Parameters.AddWithValue("@from", txtFrom.Text);
+            cmd.Parameters.AddWithValue("@date", txtDate.Text);
+            cmd.Parameters.AddWithValue("@subject", txtSubject.Text);
+            cmd.Parameters.AddWithValue("@message", txtMessage.Text);
             database.conn.Open();
             cmd.ExecuteNonQuery();
             database.conn.Close();
         }
 
-        private void btnSendMessage_Click(object sender, EventArgs e) {
-            string to, from, date, subject, message = string.Empty;
-            to = txtTo.Text;
-            from = txtFrom.Text;
-            date = txtDate.Text;
-            subject = txtSubject.Text;
-            message = txtMessage.Text;
-            XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("user",
-                           new XElement("to", to),
-                           new XElement("from", from),
-                           new XElement("date", date),
-                           new XElement("subject", subject),
-                           new XElement("message", message));
-            xmldoc.Add(xml);
-            xmldoc.Save("H:\\message_demo.xml");
-            int rowsaffected = database.SendMessage(xmldoc);
-            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void btnGetUserInfo_Click(object sender, EventArgs e) {
-            database.GetUser(txtGetUser.Text);
+            
         }
 
         /* example of registration for logic stuff */
         private void btnRegisterUser_Click(object sender, EventArgs e) {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = database.conn;
-            cmd.CommandText = @"insert into users (firstname, lastname, username, password, birthday, phonenumber)
-                                values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
-            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
-            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
-            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
-            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
-            database.conn.Open();
-            cmd.ExecuteNonQuery();
-            database.conn.Close();
+            if (!database.RegisterUser(txtFirstName.Text, txtLastName.Text,
+                                       txtUserName.Text, txtPassword.Text,
+                                       dtpBirthday.Text, txtPhoneNumber.Text))
+                MessageBox.Show("Error registering user.", "Error", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         //send claim button method
         private void btnSendClaim_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = database.conn;
-            cmd.CommandText = @"insert into claims (username, date, status, claim) 
-                                values(@username, @date, @status, @claim);";
-            cmd.Parameters.AddWithValue("@username", txtClaimUserName.Text);
-            cmd.Parameters.AddWithValue("@date", dtpClaimDate.Text);
-            cmd.Parameters.AddWithValue("@status", txtClaimStatus.Text);
-            cmd.Parameters.AddWithValue("@claim", txtWriteClaim.Text);
-            database.conn.Open();
-            cmd.ExecuteNonQuery();
-            database.conn.Close();
-
+            database.SendClaim(txtClaimUserName.Text, dtpClaimDate.Text, 
+                               txtClaimStatus.Text, txtWriteClaim.Text);
         }
     }
 }
