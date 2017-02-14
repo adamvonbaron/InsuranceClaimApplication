@@ -12,10 +12,14 @@ namespace InsuranceApplication.Forms
 {
     public partial class ClientHome : Form
     {
-        public ClientHome(string username)
+        public string Username;
+        public string Firstname;
+        public ClientHome(string firstname, string username)
         {
             InitializeComponent();
-            this.lblClientHome.Text = "Welcome, " + username + ".";
+            this.lblClientHome.Text = "Welcome, " + firstname + ".";
+            this.Username = username;
+            this.Firstname = firstname;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -26,7 +30,7 @@ namespace InsuranceApplication.Forms
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.ClientEditProfile f3 = new Forms.ClientEditProfile();
+            Forms.ClientEditProfile f3 = new Forms.ClientEditProfile(Username);
             f3.Show();
         }
     }

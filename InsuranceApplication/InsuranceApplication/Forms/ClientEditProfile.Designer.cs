@@ -32,7 +32,6 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.txtUpdateAddress = new System.Windows.Forms.TextBox();
             this.txtUpdatePhone = new System.Windows.Forms.TextBox();
-            this.txtUpdateDOB = new System.Windows.Forms.TextBox();
             this.txtUpdateEmail = new System.Windows.Forms.TextBox();
             this.txtUpdatePassword = new System.Windows.Forms.TextBox();
             this.txtUpdateUsername = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.lblUpdateUsername = new System.Windows.Forms.Label();
             this.lblUpdateLastname = new System.Windows.Forms.Label();
             this.lblUpdateFirstname = new System.Windows.Forms.Label();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnExit
@@ -82,13 +82,6 @@
             this.txtUpdatePhone.Name = "txtUpdatePhone";
             this.txtUpdatePhone.Size = new System.Drawing.Size(177, 20);
             this.txtUpdatePhone.TabIndex = 32;
-            // 
-            // txtUpdateDOB
-            // 
-            this.txtUpdateDOB.Location = new System.Drawing.Point(235, 203);
-            this.txtUpdateDOB.Name = "txtUpdateDOB";
-            this.txtUpdateDOB.Size = new System.Drawing.Size(177, 20);
-            this.txtUpdateDOB.TabIndex = 31;
             // 
             // txtUpdateEmail
             // 
@@ -205,16 +198,23 @@
             this.lblUpdateFirstname.TabIndex = 18;
             this.lblUpdateFirstname.Text = "Update Firstname:";
             // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Location = new System.Drawing.Point(235, 200);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
+            this.dtpBirthday.TabIndex = 36;
+            // 
             // ClientEditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 370);
+            this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.txtUpdateAddress);
             this.Controls.Add(this.txtUpdatePhone);
-            this.Controls.Add(this.txtUpdateDOB);
             this.Controls.Add(this.txtUpdateEmail);
             this.Controls.Add(this.txtUpdatePassword);
             this.Controls.Add(this.txtUpdateUsername);
@@ -241,7 +241,6 @@
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.TextBox txtUpdateAddress;
         private System.Windows.Forms.TextBox txtUpdatePhone;
-        private System.Windows.Forms.TextBox txtUpdateDOB;
         private System.Windows.Forms.TextBox txtUpdateEmail;
         private System.Windows.Forms.TextBox txtUpdatePassword;
         private System.Windows.Forms.TextBox txtUpdateUsername;
@@ -255,5 +254,6 @@
         private System.Windows.Forms.Label lblUpdateUsername;
         private System.Windows.Forms.Label lblUpdateLastname;
         private System.Windows.Forms.Label lblUpdateFirstname;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
     }
 }
