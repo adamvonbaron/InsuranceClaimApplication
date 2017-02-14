@@ -102,8 +102,8 @@ namespace InsuranceApplication
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Forms.EditTemplate et = new Forms.EditTemplate();
-            et.Show();
+            Forms.UserEditProfile uep = new Forms.UserEditProfile();
+            uep.Show();
         }
     }
 }
