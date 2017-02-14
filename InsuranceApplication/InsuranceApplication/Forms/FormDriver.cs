@@ -39,7 +39,7 @@ namespace InsuranceApplication {
 
         /* example of sending a message */
         private void btnSendMessage_Click(object sender, EventArgs e) {
-            database.SendMessage(txtTo.Text, txtFrom.Text, txtDate.Text, 
+            database.SendMessage(txtTo.Text, txtFrom.Text, dtpMessageDate.Text, 
                                  txtSubject.Text, txtMessage.Text);
         }
 

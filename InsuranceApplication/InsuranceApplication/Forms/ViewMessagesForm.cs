@@ -14,23 +14,24 @@ namespace InsuranceApplication.Forms {
     public partial class ViewMessagesForm : Form {
         public string Username;
         libsql database = new libsql();
+        DataTable messages;
         public ViewMessagesForm(string username) {
             InitializeComponent();
             this.Username = username;
         }
 
         private void ViewMessagesForm_Load(object sender, EventArgs e) {
-            try {
-                DataTable messages = database.GetInboxMessages(Username);
-                dgvMessages.ReadOnly = true;
-                if(messages.Equals(null))
-                    MessageBox.Show("No messages to display.", "Messages",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    dgvMessages.DataSource = messages;
-            } catch(Exception ex) {
-                MessageBox.Show("Error retrieving messages.", "Error",
-                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            lvMessages.View = View.Details;
+            DataTable messages = database.GetInboxMessages(Username);
+            lvMessages.Columns.Add("From", 75);
+            lvMessages.Columns.Add("Date", 125);
+            lvMessages.Columns.Add("Subject", 500);
+            for(int i = 0; i < messages.Rows.Count; i++) {
+                DataRow dr = messages.Rows[i];
+                ListViewItem curItem = new ListViewItem(dr[1].ToString());
+                curItem.SubItems.Add(dr[2].ToString());
+                curItem.SubItems.Add(dr[3].ToString());
+                lvMessages.Items.Add(curItem);
             }
         }
 
@@ -38,8 +39,7 @@ namespace InsuranceApplication.Forms {
             this.Close();
         }
 
-        private void dgvMessages_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void lvMessages_SelectedIndexChanged(object sender, EventArgs e) {
 
         }
     }
