@@ -33,19 +33,12 @@ namespace InsuranceApplication.Classes {
         //retrieve data from database
         //</summary>
         private void GetData(string table, string username) {
-            try {
-                string query = "select * from " + table + " where username = " + username + " for xml path('student')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                conn.Open();
-                var result = cmd.ExecuteNonQuery();
-                MessageBox.Show(result.ToString());
-            } catch (InvalidOperationException ex) {
-                MessageBox.Show(ex.ToString());
-            } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString());
-            } finally {
-                conn.Close();
-            }
+            string query = "select * from " + table.ToString() + " where username = " + username.ToString() + ";";
+            DataTable dtData = new DataTable();
+            SqlDataAdapter sdaData = new SqlDataAdapter(query, conn);
+            BindingSource bsData = new BindingSource();
+            sdaData.Fill(dtData);
+            bsData.DataSource = dtData;
         }
 
         //<summary>
