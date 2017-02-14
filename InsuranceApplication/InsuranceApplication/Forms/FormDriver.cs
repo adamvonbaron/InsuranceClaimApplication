@@ -89,12 +89,12 @@ namespace InsuranceApplication {
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = database.conn;
-            cmd.CommandText = @"insert into claims (username, claimdate, claimstatus, typedclaim) 
-                                values(@username, @claimdate, @claimstatus, @typedclaim);";
+            cmd.CommandText = @"insert into claims (username, date, status, claim) 
+                                values(@username, @date, @status, @claim);";
             cmd.Parameters.AddWithValue("@username", txtClaimUserName.Text);
-            cmd.Parameters.AddWithValue("@claimdate", dtpClaimDate.Text);
-            cmd.Parameters.AddWithValue("@claimstatus", txtClaimStatus.Text);
-            cmd.Parameters.AddWithValue("@typedclaim", txtWriteClaim.Text);
+            cmd.Parameters.AddWithValue("@date", dtpClaimDate.Text);
+            cmd.Parameters.AddWithValue("@status", txtClaimStatus.Text);
+            cmd.Parameters.AddWithValue("@claim", txtWriteClaim.Text);
             database.conn.Open();
             cmd.ExecuteNonQuery();
             database.conn.Close();
