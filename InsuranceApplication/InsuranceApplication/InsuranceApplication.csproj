@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassesRefine\Client.cs" />
+    <Compile Include="ClassesRefine\User.cs" />
     <Compile Include="Classes\AdminAcc.cs" />
     <Compile Include="Classes\Claim.cs" />
     <Compile Include="Classes\ClaimManagerAcc.cs" />
@@ -279,6 +281,7 @@
     <Content Include="Classes\readme.txt" />
     <Content Include="Forms\readme.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
