@@ -12,9 +12,10 @@ namespace InsuranceApplication.Forms
 {
     public partial class ClientHome : Form
     {
-        public ClientHome()
+        public ClientHome(string username)
         {
             InitializeComponent();
+            this.lblClientHome.Text = "Welcome, " + username + ".";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

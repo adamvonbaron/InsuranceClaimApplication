@@ -40,21 +40,21 @@ namespace InsuranceApplication
             int rank;
             if(database.ValidateUser(txtUsername.Text, txtPassword.Text)) {
                 rank = database.GetRank(txtUsername.Text);
+                Form homescreen = null;
                 switch(rank) {
                     case 1:
-                        AdminHome adminHome = new AdminHome();
-                        adminHome.Show();
+                        homescreen = new AdminHome();
                         break;
                     case 2:
                     case 3:
-                        FinanceManagerHome fmHome = new FinanceManagerHome();
-                        fmHome.Show();
+                        homescreen = new FinanceManagerHome();
                         break;
                    case 4:
-                        ClientHome cHome = new ClientHome();
-                        cHome.Show();
+                        homescreen = new ClientHome(database.GetFirstName(txtUsername.Text));
+                        
                         break;
                 }
+                homescreen.Show();
             } else {
                 MessageBox.Show("Wrong Username or Password.", "Error", 
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
