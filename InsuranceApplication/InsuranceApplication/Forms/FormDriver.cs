@@ -47,14 +47,13 @@ namespace InsuranceApplication {
         private void btnSendMessage_Click(object sender, EventArgs e) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = database.conn;
-            cmd.CommandText = @"insert into messages (firstname, lastname, username, password, birthday, phonenumber)
-                                values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
-            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
-            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
-            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
-            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
+            cmd.CommandText = @"insert into messages ([to], [from], [date], subject, message)
+                                values(@to, @from, @date, @subject, @message);";
+            cmd.Parameters.AddWithValue("@to", txtTo.Text);
+            cmd.Parameters.AddWithValue("@from", txtFrom.Text);
+            cmd.Parameters.AddWithValue("@date", txtDate.Text);
+            cmd.Parameters.AddWithValue("@subject", txtSubject.Text);
+            cmd.Parameters.AddWithValue("@message", txtMessage.Text);
             database.conn.Open();
             cmd.ExecuteNonQuery();
             database.conn.Close();
