@@ -164,6 +164,16 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        public DataTable GetInboxMessages(string username) {
+            string query = "select * from messages where [to] = @username";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable messages = new DataTable();
+            sda.Fill(messages);
+            return messages;
+        }
+
         /* checks username and password in database */
         public bool ValidateUser(string username, string password) {
             return (CheckUsername(username) && CheckPassword(password));

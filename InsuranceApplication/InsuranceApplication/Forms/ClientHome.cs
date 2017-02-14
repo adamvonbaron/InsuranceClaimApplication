@@ -38,5 +38,10 @@ namespace InsuranceApplication.Forms
             ClientApplyforClaim cac = new ClientApplyforClaim(Username);
             cac.ShowDialog();
         }
+
+        private void btnViewMessages_Click(object sender, EventArgs e) {
+            ViewMessagesForm vmf = new ViewMessagesForm(Username);
+            vmf.ShowDialog();
+        }
     }
 }

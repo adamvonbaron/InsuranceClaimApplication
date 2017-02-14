@@ -52,10 +52,10 @@ namespace InsuranceApplication
                    case 4:
                         homescreen = new ClientHome(database.GetFirstName(txtUsername.Text),
                                                     txtUsername.Text);
-                        
                         break;
                 }
-                homescreen.Show();
+                this.Hide();
+                homescreen.ShowDialog();
             } else {
                 MessageBox.Show("Wrong Username or Password.", "Error", 
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -67,6 +67,7 @@
             this.btnViewMessages.TabIndex = 2;
             this.btnViewMessages.Text = "View Messages";
             this.btnViewMessages.UseVisualStyleBackColor = true;
+            this.btnViewMessages.Click += new System.EventHandler(this.btnViewMessages_Click);
             // 
             // btnUpload
             // 
