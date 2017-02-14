@@ -30,8 +30,8 @@ namespace InsuranceApplication.Forms
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.ClientEditProfile f3 = new Forms.ClientEditProfile(Username);
-            f3.Show();
+            ClientEditProfile f3 = new ClientEditProfile(Username);
+            f3.ShowDialog();
         }
 
         private void btnApplyForClaim_Click(object sender, EventArgs e) {

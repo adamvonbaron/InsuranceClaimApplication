@@ -27,8 +27,14 @@ namespace InsuranceApplication.Forms
         }
 
         private void btnSubmit_Click(object sender, EventArgs e) {
-            database.SendClaim(Username, dtpClaimDate.Text,
-                               txtStatus.Text, txtClaim.Text);
+            if (database.SendClaim(Username, dtpClaimDate.Text,
+                               txtStatus.Text, txtClaim.Text)) {
+                MessageBox.Show("Claim sent successfully.", "Send Claim", MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                this.Close();
+            } else
+                MessageBox.Show("Error sending claim.", "Send Claim", MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
         }
     }
 }
