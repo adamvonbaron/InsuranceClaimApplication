@@ -29,24 +29,19 @@ namespace InsuranceApplication {
         }
 
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
-            string firstname = txtFirstName.Text;
-            string lastname = txtLastName.Text;
-            string username = txtUserName.Text;
-            string password = txtPassword.Text;
-            DateTime birthday = dtpBirthday.Value;
-            string phonenumber = txtPhoneNumber.Text;
-            XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("user",
-                           new XElement("firstname", firstname),
-                           new XElement("lastname", lastname),
-                           new XElement("username", username),
-                           new XElement("password", password),
-                           new XElement("birthday", birthday),
-                           new XElement("phonenumber", phonenumber));
-            xmldoc.Add(xml);
-            xmldoc.Save("H:\\user_demo.xml");
-            int rowsaffected = database.ModifyProfile(xmldoc);
-            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = database.conn;
+            cmd.CommandText = @"update users set firstname = @firstname, lastname = @lastname, username = @username, password = @password, birthday = @birthday, phonenumber = @phonenumber Where username = @oldusername;";
+            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
+            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
+            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
+            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
+            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
+            cmd.Parameters.AddWithValue("@oldusername", txtUserName.Text);
+            database.conn.Open();
+            cmd.ExecuteNonQuery();
+            database.conn.Close();
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e) {
@@ -84,6 +79,23 @@ namespace InsuranceApplication {
             database.conn.Open();
             cmd.ExecuteNonQuery();
             database.conn.Close();
+        }
+
+        //send claim button method
+        private void btnSendClaim_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = database.conn;
+            cmd.CommandText = @"insert into claims (username, date, status, claim) 
+                                values(@username, @date, @status, @claim);";
+            cmd.Parameters.AddWithValue("@username", txtClaimUserName.Text);
+            cmd.Parameters.AddWithValue("@date", dtpClaimDate.Text);
+            cmd.Parameters.AddWithValue("@status", txtClaimStatus.Text);
+            cmd.Parameters.AddWithValue("@claim", txtWriteClaim.Text);
+            database.conn.Open();
+            cmd.ExecuteNonQuery();
+            database.conn.Close();
+
         }
     }
 }
