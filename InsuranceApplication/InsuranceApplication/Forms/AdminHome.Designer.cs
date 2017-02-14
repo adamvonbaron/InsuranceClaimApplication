@@ -37,6 +37,7 @@
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.btnRegisterUser = new System.Windows.Forms.Button();
+            this.btnMessageCenter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdminTitle
@@ -96,7 +97,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 327);
+            this.btnExit.Location = new System.Drawing.Point(12, 422);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -118,7 +119,7 @@
             // lblCurUserInfo
             // 
             this.lblCurUserInfo.AutoSize = true;
-            this.lblCurUserInfo.Location = new System.Drawing.Point(93, 332);
+            this.lblCurUserInfo.Location = new System.Drawing.Point(93, 427);
             this.lblCurUserInfo.Name = "lblCurUserInfo";
             this.lblCurUserInfo.Size = new System.Drawing.Size(35, 13);
             this.lblCurUserInfo.TabIndex = 7;
@@ -135,11 +136,23 @@
             this.btnRegisterUser.UseVisualStyleBackColor = true;
             this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
+            // btnMessageCenter
+            // 
+            this.btnMessageCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessageCenter.Location = new System.Drawing.Point(48, 282);
+            this.btnMessageCenter.Name = "btnMessageCenter";
+            this.btnMessageCenter.Size = new System.Drawing.Size(179, 58);
+            this.btnMessageCenter.TabIndex = 9;
+            this.btnMessageCenter.Text = "Message Center";
+            this.btnMessageCenter.UseVisualStyleBackColor = true;
+            this.btnMessageCenter.Click += new System.EventHandler(this.btnMessageCenter_Click);
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 362);
+            this.ClientSize = new System.Drawing.Size(490, 457);
+            this.Controls.Add(this.btnMessageCenter);
             this.Controls.Add(this.btnRegisterUser);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnEditProfile);
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.Button btnRegisterUser;
+        private System.Windows.Forms.Button btnMessageCenter;
     }
 }

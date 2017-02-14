@@ -26,7 +26,7 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnViewUserData_Click(object sender, EventArgs e) {
@@ -62,6 +62,11 @@ namespace InsuranceApplication.Forms {
         private void btnRegisterUser_Click(object sender, EventArgs e) {
             Register register = new Register();
             register.ShowDialog();
+        }
+
+        private void btnMessageCenter_Click(object sender, EventArgs e) {
+            MessageCenter mc = new MessageCenter(Username);
+            mc.ShowDialog();
         }
     }
 }
