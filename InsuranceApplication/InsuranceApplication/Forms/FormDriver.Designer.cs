@@ -61,9 +61,26 @@
             this.btnGetUserInfo = new System.Windows.Forms.Button();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.btnRegisterUser = new System.Windows.Forms.Button();
+            this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
+            this.insuranceClaimDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claimsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -284,7 +301,20 @@
             // 
             // dgvViewUser
             // 
+            this.dgvViewUser.AutoGenerateColumns = false;
             this.dgvViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.birthdayDataGridViewTextBoxColumn,
+            this.phonenumberDataGridViewTextBoxColumn,
+            this.rankDataGridViewTextBoxColumn,
+            this.creationDataGridViewTextBoxColumn,
+            this.claimsDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn});
+            this.dgvViewUser.DataSource = this.usersBindingSource1;
             this.dgvViewUser.Location = new System.Drawing.Point(639, 42);
             this.dgvViewUser.Name = "dgvViewUser";
             this.dgvViewUser.Size = new System.Drawing.Size(491, 234);
@@ -333,6 +363,86 @@
             this.btnRegisterUser.UseVisualStyleBackColor = true;
             this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
+            // insuranceClaimDataSet
+            // 
+            this.insuranceClaimDataSet.DataSetName = "InsuranceClaimDataSet";
+            this.insuranceClaimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // insuranceClaimDataSetBindingSource
+            // 
+            this.insuranceClaimDataSetBindingSource.DataSource = this.insuranceClaimDataSet;
+            this.insuranceClaimDataSetBindingSource.Position = 0;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.insuranceClaimDataSetBindingSource;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // birthdayDataGridViewTextBoxColumn
+            // 
+            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
+            // 
+            // phonenumberDataGridViewTextBoxColumn
+            // 
+            this.phonenumberDataGridViewTextBoxColumn.DataPropertyName = "phonenumber";
+            this.phonenumberDataGridViewTextBoxColumn.HeaderText = "phonenumber";
+            this.phonenumberDataGridViewTextBoxColumn.Name = "phonenumberDataGridViewTextBoxColumn";
+            // 
+            // rankDataGridViewTextBoxColumn
+            // 
+            this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
+            this.rankDataGridViewTextBoxColumn.HeaderText = "rank";
+            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
+            // 
+            // creationDataGridViewTextBoxColumn
+            // 
+            this.creationDataGridViewTextBoxColumn.DataPropertyName = "creation";
+            this.creationDataGridViewTextBoxColumn.HeaderText = "creation";
+            this.creationDataGridViewTextBoxColumn.Name = "creationDataGridViewTextBoxColumn";
+            // 
+            // claimsDataGridViewTextBoxColumn
+            // 
+            this.claimsDataGridViewTextBoxColumn.DataPropertyName = "claims";
+            this.claimsDataGridViewTextBoxColumn.HeaderText = "claims";
+            this.claimsDataGridViewTextBoxColumn.Name = "claimsDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +485,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +527,20 @@
         private System.Windows.Forms.Button btnGetUserInfo;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.Button btnRegisterUser;
+        private System.Windows.Forms.BindingSource insuranceClaimDataSetBindingSource;
+        private InsuranceClaimDataSet insuranceClaimDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private InsuranceClaimDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthdayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rankDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn creationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claimsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
     }
 }
 
