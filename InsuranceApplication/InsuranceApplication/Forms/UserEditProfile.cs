@@ -16,5 +16,31 @@ namespace InsuranceApplication.Forms
         {
             InitializeComponent();
         }
+
+        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        {
+            btnUpdateInfo.Visible = false;
+            btnSaveInfo.Visible = true;
+            txtInfo.Visible = true;
+        }
+
+        private void btnSaveInfo_Click(object sender, EventArgs e)
+        {
+            lblInfo.Text = txtInfo.Text;
+            txtInfo.Clear();
+            btnSaveInfo.Visible = false;
+            txtInfo.Visible = false;
+            btnUpdateInfo.Visible = true;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

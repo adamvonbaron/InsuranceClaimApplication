@@ -42,16 +42,16 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(152, 116);
+            this.txtLastName.Location = new System.Drawing.Point(150, 106);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtLastName.Size = new System.Drawing.Size(123, 20);
             this.txtLastName.TabIndex = 13;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(44, 114);
+            this.lblLastName.Location = new System.Drawing.Point(42, 104);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(100, 20);
             this.lblLastName.TabIndex = 12;
@@ -59,16 +59,16 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(152, 59);
+            this.txtFirstName.Location = new System.Drawing.Point(150, 49);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(123, 20);
             this.txtFirstName.TabIndex = 11;
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(44, 60);
+            this.lblFirstName.Location = new System.Drawing.Point(42, 50);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(101, 20);
             this.lblFirstName.TabIndex = 10;
@@ -76,16 +76,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 213);
+            this.textBox1.Location = new System.Drawing.Point(150, 203);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(123, 20);
             this.textBox1.TabIndex = 17;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(44, 211);
+            this.lblPassword.Location = new System.Drawing.Point(42, 201);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(91, 20);
             this.lblPassword.TabIndex = 16;
@@ -93,16 +93,16 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 168);
+            this.textBox2.Location = new System.Drawing.Point(150, 158);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(123, 20);
             this.textBox2.TabIndex = 15;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(44, 166);
+            this.lblUsername.Location = new System.Drawing.Point(42, 156);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(96, 20);
             this.lblUsername.TabIndex = 14;
@@ -110,7 +110,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(177, 295);
+            this.btnReturn.Location = new System.Drawing.Point(184, 263);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(75, 23);
             this.btnReturn.TabIndex = 19;
@@ -120,7 +120,7 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(48, 295);
+            this.btnEnter.Location = new System.Drawing.Point(69, 263);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 18;
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 362);
+            this.ClientSize = new System.Drawing.Size(330, 313);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.textBox1);

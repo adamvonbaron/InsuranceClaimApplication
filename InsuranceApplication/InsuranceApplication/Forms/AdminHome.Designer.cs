@@ -50,7 +50,7 @@
             // btnViewUserData
             // 
             this.btnViewUserData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewUserData.Location = new System.Drawing.Point(26, 83);
+            this.btnViewUserData.Location = new System.Drawing.Point(48, 83);
             this.btnViewUserData.Name = "btnViewUserData";
             this.btnViewUserData.Size = new System.Drawing.Size(179, 61);
             this.btnViewUserData.TabIndex = 1;
@@ -61,7 +61,7 @@
             // btnAddPermissions
             // 
             this.btnAddPermissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPermissions.Location = new System.Drawing.Point(234, 83);
+            this.btnAddPermissions.Location = new System.Drawing.Point(256, 83);
             this.btnAddPermissions.Name = "btnAddPermissions";
             this.btnAddPermissions.Size = new System.Drawing.Size(184, 61);
             this.btnAddPermissions.TabIndex = 2;
@@ -72,7 +72,7 @@
             // btnCreateClientFolder
             // 
             this.btnCreateClientFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateClientFolder.Location = new System.Drawing.Point(26, 165);
+            this.btnCreateClientFolder.Location = new System.Drawing.Point(48, 165);
             this.btnCreateClientFolder.Name = "btnCreateClientFolder";
             this.btnCreateClientFolder.Size = new System.Drawing.Size(179, 62);
             this.btnCreateClientFolder.TabIndex = 3;
@@ -83,7 +83,7 @@
             // btnRegisterCMFM
             // 
             this.btnRegisterCMFM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterCMFM.Location = new System.Drawing.Point(234, 165);
+            this.btnRegisterCMFM.Location = new System.Drawing.Point(256, 165);
             this.btnRegisterCMFM.Name = "btnRegisterCMFM";
             this.btnRegisterCMFM.Size = new System.Drawing.Size(184, 62);
             this.btnRegisterCMFM.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(372, 322);
+            this.btnExit.Location = new System.Drawing.Point(365, 314);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -104,9 +104,9 @@
             // btnEditProfile
             // 
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.Location = new System.Drawing.Point(26, 245);
+            this.btnEditProfile.Location = new System.Drawing.Point(48, 245);
             this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(179, 62);
+            this.btnEditProfile.Size = new System.Drawing.Size(392, 32);
             this.btnEditProfile.TabIndex = 6;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 362);
+            this.ClientSize = new System.Drawing.Size(490, 362);
             this.Controls.Add(this.btnEditProfile);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRegisterCMFM);

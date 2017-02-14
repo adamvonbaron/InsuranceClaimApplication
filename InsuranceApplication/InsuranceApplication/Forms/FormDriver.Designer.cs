@@ -56,14 +56,39 @@
             this.txtDate = new System.Windows.Forms.TextBox();
             this.lblGetUserInfo = new System.Windows.Forms.Label();
             this.dgvViewUser = new System.Windows.Forms.DataGridView();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claimsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.insuranceClaimDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
             this.txtGetUser = new System.Windows.Forms.TextBox();
             this.lblGetUser = new System.Windows.Forms.Label();
             this.btnGetUserInfo = new System.Windows.Forms.Button();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.btnRegisterUser = new System.Windows.Forms.Button();
+            this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
+            this.dtpClaimDate = new System.Windows.Forms.DateTimePicker();
+            this.btnSendClaim = new System.Windows.Forms.Button();
+            this.txtWriteClaim = new System.Windows.Forms.TextBox();
+            this.txtClaimUserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtClaimStatus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -284,11 +309,100 @@
             // 
             // dgvViewUser
             // 
+            this.dgvViewUser.AutoGenerateColumns = false;
             this.dgvViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.birthdayDataGridViewTextBoxColumn,
+            this.phonenumberDataGridViewTextBoxColumn,
+            this.rankDataGridViewTextBoxColumn,
+            this.creationDataGridViewTextBoxColumn,
+            this.claimsDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn});
+            this.dgvViewUser.DataSource = this.usersBindingSource1;
             this.dgvViewUser.Location = new System.Drawing.Point(639, 42);
             this.dgvViewUser.Name = "dgvViewUser";
             this.dgvViewUser.Size = new System.Drawing.Size(491, 234);
             this.dgvViewUser.TabIndex = 30;
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "firstname";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "lastname";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // birthdayDataGridViewTextBoxColumn
+            // 
+            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
+            // 
+            // phonenumberDataGridViewTextBoxColumn
+            // 
+            this.phonenumberDataGridViewTextBoxColumn.DataPropertyName = "phonenumber";
+            this.phonenumberDataGridViewTextBoxColumn.HeaderText = "phonenumber";
+            this.phonenumberDataGridViewTextBoxColumn.Name = "phonenumberDataGridViewTextBoxColumn";
+            // 
+            // rankDataGridViewTextBoxColumn
+            // 
+            this.rankDataGridViewTextBoxColumn.DataPropertyName = "rank";
+            this.rankDataGridViewTextBoxColumn.HeaderText = "rank";
+            this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
+            // 
+            // creationDataGridViewTextBoxColumn
+            // 
+            this.creationDataGridViewTextBoxColumn.DataPropertyName = "creation";
+            this.creationDataGridViewTextBoxColumn.HeaderText = "creation";
+            this.creationDataGridViewTextBoxColumn.Name = "creationDataGridViewTextBoxColumn";
+            // 
+            // claimsDataGridViewTextBoxColumn
+            // 
+            this.claimsDataGridViewTextBoxColumn.DataPropertyName = "claims";
+            this.claimsDataGridViewTextBoxColumn.HeaderText = "claims";
+            this.claimsDataGridViewTextBoxColumn.Name = "claimsDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.insuranceClaimDataSetBindingSource;
+            // 
+            // insuranceClaimDataSetBindingSource
+            // 
+            this.insuranceClaimDataSetBindingSource.DataSource = this.insuranceClaimDataSet;
+            this.insuranceClaimDataSetBindingSource.Position = 0;
+            // 
+            // insuranceClaimDataSet
+            // 
+            this.insuranceClaimDataSet.DataSetName = "InsuranceClaimDataSet";
+            this.insuranceClaimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtGetUser
             // 
@@ -333,11 +447,89 @@
             this.btnRegisterUser.UseVisualStyleBackColor = true;
             this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // dtpClaimDate
+            // 
+            this.dtpClaimDate.Location = new System.Drawing.Point(720, 347);
+            this.dtpClaimDate.Name = "dtpClaimDate";
+            this.dtpClaimDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpClaimDate.TabIndex = 36;
+            // 
+            // btnSendClaim
+            // 
+            this.btnSendClaim.Location = new System.Drawing.Point(1035, 548);
+            this.btnSendClaim.Name = "btnSendClaim";
+            this.btnSendClaim.Size = new System.Drawing.Size(75, 23);
+            this.btnSendClaim.TabIndex = 37;
+            this.btnSendClaim.Text = "Send Claim";
+            this.btnSendClaim.UseVisualStyleBackColor = true;
+            this.btnSendClaim.Click += new System.EventHandler(this.btnSendClaim_Click);
+            // 
+            // txtWriteClaim
+            // 
+            this.txtWriteClaim.Location = new System.Drawing.Point(658, 413);
+            this.txtWriteClaim.Multiline = true;
+            this.txtWriteClaim.Name = "txtWriteClaim";
+            this.txtWriteClaim.Size = new System.Drawing.Size(452, 123);
+            this.txtWriteClaim.TabIndex = 38;
+            // 
+            // txtClaimUserName
+            // 
+            this.txtClaimUserName.Location = new System.Drawing.Point(720, 318);
+            this.txtClaimUserName.Name = "txtClaimUserName";
+            this.txtClaimUserName.Size = new System.Drawing.Size(200, 20);
+            this.txtClaimUserName.TabIndex = 39;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(656, 321);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Username:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(681, 347);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Date:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(681, 380);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Status:";
+            // 
+            // txtClaimStatus
+            // 
+            this.txtClaimStatus.Location = new System.Drawing.Point(720, 377);
+            this.txtClaimStatus.Name = "txtClaimStatus";
+            this.txtClaimStatus.Size = new System.Drawing.Size(200, 20);
+            this.txtClaimStatus.TabIndex = 44;
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 583);
+            this.Controls.Add(this.txtClaimStatus);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtClaimUserName);
+            this.Controls.Add(this.txtWriteClaim);
+            this.Controls.Add(this.btnSendClaim);
+            this.Controls.Add(this.dtpClaimDate);
             this.Controls.Add(this.btnRegisterUser);
             this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.btnGetUserInfo);
@@ -375,6 +567,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +609,28 @@
         private System.Windows.Forms.Button btnGetUserInfo;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.Button btnRegisterUser;
+        private System.Windows.Forms.BindingSource insuranceClaimDataSetBindingSource;
+        private InsuranceClaimDataSet insuranceClaimDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private InsuranceClaimDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthdayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rankDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn creationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claimsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker dtpClaimDate;
+        private System.Windows.Forms.Button btnSendClaim;
+        private System.Windows.Forms.TextBox txtWriteClaim;
+        private System.Windows.Forms.TextBox txtClaimUserName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtClaimStatus;
     }
 }
 

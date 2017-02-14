@@ -51,16 +51,16 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(164, 45);
+            this.txtUsername.Location = new System.Drawing.Point(243, 46);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.Size = new System.Drawing.Size(164, 20);
             this.txtUsername.TabIndex = 1;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(145, 91);
+            this.txtAddress.Location = new System.Drawing.Point(243, 91);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtAddress.Size = new System.Drawing.Size(164, 20);
             this.txtAddress.TabIndex = 3;
             // 
             // lblAddress
@@ -75,9 +75,9 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(120, 131);
+            this.txtEmail.Location = new System.Drawing.Point(243, 131);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.Size = new System.Drawing.Size(164, 20);
             this.txtEmail.TabIndex = 5;
             // 
             // lblEmail
@@ -93,9 +93,9 @@
             // btnGenerate
             // 
             this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.Location = new System.Drawing.Point(50, 290);
+            this.btnGenerate.Location = new System.Drawing.Point(50, 188);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(214, 54);
+            this.btnGenerate.Size = new System.Drawing.Size(164, 52);
             this.btnGenerate.TabIndex = 6;
             this.btnGenerate.Text = "Generate New Password";
             this.btnGenerate.UseVisualStyleBackColor = true;
@@ -103,14 +103,14 @@
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(307, 309);
+            this.txtNewPassword.Location = new System.Drawing.Point(243, 206);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(158, 20);
             this.txtNewPassword.TabIndex = 7;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(422, 370);
+            this.btnExit.Location = new System.Drawing.Point(332, 268);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 8;
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 414);
+            this.ClientSize = new System.Drawing.Size(474, 317);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.btnGenerate);

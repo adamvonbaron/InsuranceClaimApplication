@@ -23,73 +23,46 @@ namespace InsuranceApplication {
         }
 
         private void formFormDemo_Load(object sender, EventArgs e) {
-
+            // TODO: This line of code loads data into the 'insuranceClaimDataSet.users' table. 
+            // You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.insuranceClaimDataSet.users);
         }
 
+        /* example of updating user info */
+        /* TODO: work on example showing how to populate
+         * text fields with data from db */
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
-            string firstname = txtFirstName.Text;
-            string lastname = txtLastName.Text;
-            string username = txtUserName.Text;
-            string password = txtPassword.Text;
-            DateTime birthday = dtpBirthday.Value;
-            string phonenumber = txtPhoneNumber.Text;
-            XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("user",
-                           new XElement("firstname", firstname),
-                           new XElement("lastname", lastname),
-                           new XElement("username", username),
-                           new XElement("password", password),
-                           new XElement("birthday", birthday),
-                           new XElement("phonenumber", phonenumber));
-            xmldoc.Add(xml);
-            xmldoc.Save("H:\\user_demo.xml");
-            int rowsaffected = database.ModifyProfile(xmldoc);
-            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
+                                txtUserName.Text, txtPassword.Text,
+                                dtpBirthday.Text, txtPhoneNumber.Text))
+                MessageBox.Show("error updating user.", "Error", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e) {
-            string to, from, date, subject, message = string.Empty;
-            to = txtTo.Text;
-            from = txtFrom.Text;
-            date = txtDate.Text;
-            subject = txtSubject.Text;
-            message = txtMessage.Text;
-            XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("user",
-                           new XElement("to", to),
-                           new XElement("from", from),
-                           new XElement("date", date),
-                           new XElement("subject", subject),
-                           new XElement("message", message));
-            xmldoc.Add(xml);
-            xmldoc.Save("H:\\message_demo.xml");
-            int rowsaffected = database.SendMessage(xmldoc);
-            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            database.SendMessage(txtTo.Text, txtFrom.Text, txtDate.Text, 
+                                 txtSubject.Text, txtMessage.Text);
         }
 
+        //TODO: This.
         private void btnGetUserInfo_Click(object sender, EventArgs e) {
-            database.GetUser(txtGetUser.Text);
+            
         }
 
+        /* example of registration for logic stuff */
         private void btnRegisterUser_Click(object sender, EventArgs e) {
-            string firstname = txtFirstName.Text;
-            string lastname = txtLastName.Text;
-            string username = txtUserName.Text;
-            string password = txtPassword.Text;
-            DateTime birthday = dtpBirthday.Value;
-            string phonenumber = txtPhoneNumber.Text;
-            XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("user",
-                           new XElement("firstname", firstname),
-                           new XElement("lastname", lastname),
-                           new XElement("username", username),
-                           new XElement("password", password),
-                           new XElement("birthday", birthday),
-                           new XElement("phonenumber", phonenumber));
-            xmldoc.Add(xml);
-            xmldoc.Save("H:\\user_demo.xml");
-            int rowsaffected = database.InsertUser(xmldoc);
-            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!database.RegisterUser(txtFirstName.Text, txtLastName.Text,
+                                       txtUserName.Text, txtPassword.Text,
+                                       dtpBirthday.Text, txtPhoneNumber.Text))
+                MessageBox.Show("Error registering user.", "Error", 
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        //send claim button method
+        private void btnSendClaim_Click(object sender, EventArgs e)
+        {
+            database.SendClaim(txtClaimUserName.Text, dtpClaimDate.Text, 
+                               txtClaimStatus.Text, txtWriteClaim.Text);
         }
     }
 }

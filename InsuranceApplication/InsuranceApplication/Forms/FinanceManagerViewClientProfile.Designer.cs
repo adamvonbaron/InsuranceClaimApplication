@@ -41,7 +41,7 @@
             // btnReturn
             // 
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(209, 240);
+            this.btnReturn.Location = new System.Drawing.Point(244, 202);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(83, 27);
             this.btnReturn.TabIndex = 15;
@@ -52,7 +52,7 @@
             // btnViewProfile
             // 
             this.btnViewProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewProfile.Location = new System.Drawing.Point(51, 240);
+            this.btnViewProfile.Location = new System.Drawing.Point(51, 202);
             this.btnViewProfile.Name = "btnViewProfile";
             this.btnViewProfile.Size = new System.Drawing.Size(134, 27);
             this.btnViewProfile.TabIndex = 14;
@@ -61,9 +61,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(170, 146);
+            this.textBox1.Location = new System.Drawing.Point(173, 146);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(154, 20);
             this.textBox1.TabIndex = 13;
             // 
             // lblDOB
@@ -78,9 +78,9 @@
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(148, 101);
+            this.txtLastname.Location = new System.Drawing.Point(173, 101);
             this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(100, 20);
+            this.txtLastname.Size = new System.Drawing.Size(154, 20);
             this.txtLastname.TabIndex = 11;
             // 
             // lblLastname
@@ -95,9 +95,9 @@
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(148, 58);
+            this.txtFirstname.Location = new System.Drawing.Point(173, 58);
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstname.Size = new System.Drawing.Size(154, 20);
             this.txtFirstname.TabIndex = 9;
             // 
             // lblFirstname
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 405);
+            this.ClientSize = new System.Drawing.Size(399, 294);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnViewProfile);
             this.Controls.Add(this.textBox1);

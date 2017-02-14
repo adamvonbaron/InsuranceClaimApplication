@@ -40,7 +40,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(184, 304);
+            this.btnReturn.Location = new System.Drawing.Point(227, 244);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(75, 23);
             this.btnReturn.TabIndex = 11;
@@ -50,7 +50,7 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(55, 304);
+            this.btnEnter.Location = new System.Drawing.Point(98, 244);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 10;
@@ -59,16 +59,16 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(159, 132);
+            this.txtLastName.Location = new System.Drawing.Point(188, 122);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtLastName.Size = new System.Drawing.Size(138, 20);
             this.txtLastName.TabIndex = 9;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(51, 133);
+            this.lblLastName.Location = new System.Drawing.Point(51, 122);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(100, 20);
             this.lblLastName.TabIndex = 8;
@@ -76,16 +76,16 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(159, 64);
+            this.txtFirstName.Location = new System.Drawing.Point(188, 54);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(138, 20);
             this.txtFirstName.TabIndex = 7;
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(51, 65);
+            this.lblFirstName.Location = new System.Drawing.Point(51, 54);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(101, 20);
             this.lblFirstName.TabIndex = 6;
@@ -93,16 +93,16 @@
             // 
             // txtRank
             // 
-            this.txtRank.Location = new System.Drawing.Point(188, 196);
+            this.txtRank.Location = new System.Drawing.Point(188, 185);
             this.txtRank.Name = "txtRank";
-            this.txtRank.Size = new System.Drawing.Size(100, 20);
+            this.txtRank.Size = new System.Drawing.Size(138, 20);
             this.txtRank.TabIndex = 13;
             // 
             // lblRank
             // 
             this.lblRank.AutoSize = true;
             this.lblRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRank.Location = new System.Drawing.Point(52, 196);
+            this.lblRank.Location = new System.Drawing.Point(52, 185);
             this.lblRank.Name = "lblRank";
             this.lblRank.Size = new System.Drawing.Size(130, 20);
             this.lblRank.TabIndex = 12;
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 375);
+            this.ClientSize = new System.Drawing.Size(402, 299);
             this.Controls.Add(this.txtRank);
             this.Controls.Add(this.lblRank);
             this.Controls.Add(this.btnReturn);

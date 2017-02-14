@@ -127,6 +127,12 @@
     <Compile Include="Forms\ClaimManager.Designer.cs">
       <DependentUpon>ClaimManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditTemplate.Designer.cs">
+      <DependentUpon>EditTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FinanceManagerEditProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,11 +175,10 @@
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserEditProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\UserEditProfile.Designer.cs">
-      <DependentUpon>UserEditProfile.cs</DependentUpon>
+    <Compile Include="InsuranceClaimDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsuranceClaimDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,6 +218,9 @@
     <EmbeddedResource Include="Forms\ClaimManager.resx">
       <DependentUpon>ClaimManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditTemplate.resx">
+      <DependentUpon>EditTemplate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinanceManagerEditProfile.resx">
       <DependentUpon>FinanceManagerEditProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,9 +242,6 @@
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserEditProfile.resx">
-      <DependentUpon>UserEditProfile.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -246,6 +251,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="InsuranceClaimDataSet1.xsc">
+      <DependentUpon>InsuranceClaimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="InsuranceClaimDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsuranceClaimDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsuranceClaimDataSet1.xss">
+      <DependentUpon>InsuranceClaimDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

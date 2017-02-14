@@ -51,7 +51,7 @@
             // btnViewMessages
             // 
             this.btnViewMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewMessages.Location = new System.Drawing.Point(39, 83);
+            this.btnViewMessages.Location = new System.Drawing.Point(68, 82);
             this.btnViewMessages.Name = "btnViewMessages";
             this.btnViewMessages.Size = new System.Drawing.Size(167, 58);
             this.btnViewMessages.TabIndex = 1;
@@ -61,7 +61,7 @@
             // btnViewClientList
             // 
             this.btnViewClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientList.Location = new System.Drawing.Point(39, 159);
+            this.btnViewClientList.Location = new System.Drawing.Point(68, 158);
             this.btnViewClientList.Name = "btnViewClientList";
             this.btnViewClientList.Size = new System.Drawing.Size(167, 58);
             this.btnViewClientList.TabIndex = 2;
@@ -71,7 +71,7 @@
             // btnEstimate
             // 
             this.btnEstimate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstimate.Location = new System.Drawing.Point(39, 233);
+            this.btnEstimate.Location = new System.Drawing.Point(68, 232);
             this.btnEstimate.Name = "btnEstimate";
             this.btnEstimate.Size = new System.Drawing.Size(167, 56);
             this.btnEstimate.TabIndex = 3;
@@ -81,7 +81,7 @@
             // btnEditProfile
             // 
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.Location = new System.Drawing.Point(260, 83);
+            this.btnEditProfile.Location = new System.Drawing.Point(289, 82);
             this.btnEditProfile.Name = "btnEditProfile";
             this.btnEditProfile.Size = new System.Drawing.Size(153, 58);
             this.btnEditProfile.TabIndex = 4;
@@ -92,7 +92,7 @@
             // btnViewClientProfile
             // 
             this.btnViewClientProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientProfile.Location = new System.Drawing.Point(260, 159);
+            this.btnViewClientProfile.Location = new System.Drawing.Point(289, 158);
             this.btnViewClientProfile.Name = "btnViewClientProfile";
             this.btnViewClientProfile.Size = new System.Drawing.Size(153, 58);
             this.btnViewClientProfile.TabIndex = 5;
@@ -103,7 +103,7 @@
             // btnTransfer
             // 
             this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(260, 233);
+            this.btnTransfer.Location = new System.Drawing.Point(289, 232);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Size = new System.Drawing.Size(153, 56);
             this.btnTransfer.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(385, 336);
+            this.btnExit.Location = new System.Drawing.Point(367, 319);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 7;
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 381);
+            this.ClientSize = new System.Drawing.Size(508, 364);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnTransfer);
             this.Controls.Add(this.btnViewClientProfile);

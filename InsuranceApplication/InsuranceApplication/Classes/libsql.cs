@@ -28,158 +28,115 @@ namespace InsuranceApplication.Classes {
             }
         }
 
-        /* methods */
-        //<summary>
-        //retrieve data from database
-        //</summary>
-        private void GetData(string table, string username) {
+        private bool CheckUsername(string username) {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "select username from users where username = @username";
+            cmd.Parameters.AddWithValue("@username", username);
             try {
-                string query = "select * from " + table + " where username = " + username + " for xml path('student')";
-                SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();
-                var result = cmd.ExecuteNonQuery();
-                MessageBox.Show(result.ToString());
-            } catch (InvalidOperationException ex) {
-                MessageBox.Show(ex.ToString());
-            } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString());
+                if (username.Equals((string) cmd.ExecuteScalar()))
+                    return false;
+            } catch (Exception ex) {
+                return false;
             } finally {
                 conn.Close();
             }
+            return true;
         }
 
-        //<summary>
-        //get messages for user
-        //</summary>
-        public void GetMessages(string username) {
-            GetData("messages", username);
-        }
-
-        //<summary>
-        //get claims for user
-        //</summary>
-        public void GetClaims(string username) {
-            GetData("claims", username);
-        }
-
-        public void GetUser(string username) {
-            GetData("users", username);
-        }
-
-        //<summary>
-        //modify profile
-        //</summary>
-        public int ModifyProfile(XDocument xmldoc) {
-            int rowsaffected = -1;
-            SqlDataAdapter sda;
+        private bool UserDB(string firstname, string lastname,
+                           string username, string password,
+                           string birthday, string phonenumber,
+                           bool register) {
+            string query = string.Empty;
+            if (register) {
+                query = @"insert into users (firstname, lastname, username, password, birthday, phonenumber)
+                        values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
+                if (!CheckUsername(username))
+                    return false;
+            } else {
+                query = @"update users set firstname = @firstname, lastname = @lastname, 
+                          username = @username, password = @password, birthday = @birthday, 
+                          phonenumber = @phonenumber Where username = @username;";
+            }
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.Parameters.AddWithValue("@firstname", firstname);
+            cmd.Parameters.AddWithValue("@lastname", lastname);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@birthday", birthday);
+            cmd.Parameters.AddWithValue("@phonenumber", phonenumber);
             try {
-                SqlCommand cmd = new SqlCommand(@"update users set
-                                              firstname = @firstname,
-                                              lastname = @lastname,
-                                              username = @username,
-                                              password = @password,
-                                              birthday = @birthday,
-                                              phonenumber = @phonenumber
-                                              where username = @oldusername;", conn);
-                cmd.Parameters.Add("@firstname", SqlDbType.NVarChar, 50, xmldoc.Root.Element("firstname").Value);
-                cmd.Parameters.Add("@lastname", SqlDbType.NVarChar, 50, xmldoc.Root.Element("lastname").Value);
-                cmd.Parameters.Add("@username", SqlDbType.NVarChar, 50, xmldoc.Root.Element("username").Value);
-                cmd.Parameters.Add("@password", SqlDbType.NVarChar, -1, xmldoc.Root.Element("password").Value);
-                cmd.Parameters.Add("@birthday", SqlDbType.DateTime, -1, xmldoc.Root.Element("birthday").Value);
-                cmd.Parameters.Add("@phonenumber", SqlDbType.NVarChar, 50, xmldoc.Root.Element("phonenumber").Value);
-                cmd.Parameters.Add("@oldusername", SqlDbType.NVarChar, 50, xmldoc.Root.Element("username").Value);
-                sda = new SqlDataAdapter();
-                sda.UpdateCommand = cmd;
                 conn.Open();
-                rowsaffected = sda.UpdateCommand.ExecuteNonQuery();
-            } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString());
-            } catch (NullReferenceException ex) {
-                MessageBox.Show(ex.ToString());
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex) {
+                return false;
             } finally {
                 conn.Close();
             }
-            return rowsaffected;
+            return true;
         }
 
-        //<summary>
-        //send claim to database
-        //</summary>
-        public int SendClaim(XDocument xmldoc) {
-            SqlCommand cmd = null;
-            int rowsaffected = -1;
-            string statement = @"insert into claims (date, username, status, claim)
-                                 values (@date, @username, @status, @claim);";
-            try {
-                cmd = new SqlCommand(statement, conn);
-                cmd.Parameters.AddWithValue("@date", xmldoc.Root.Element("date").Value);
-                cmd.Parameters.AddWithValue("@username", xmldoc.Root.Element("username").Value);
-                cmd.Parameters.AddWithValue("@status", xmldoc.Root.Element("status").Value);
-                cmd.Parameters.AddWithValue("@claim", xmldoc.Root.Element("claim").Value);
-                rowsaffected = cmd.ExecuteNonQuery();
-            } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString(), "SQL Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return rowsaffected;
+        public bool RegisterUser(string firstname, string lastname,
+                                 string username, string password,
+                                 string birthday, string phonenumber) {
+            if (UserDB(firstname, lastname, username, password, birthday, phonenumber, true))
+                return true;
+            return false;
         }
 
-        //<summary>
-        //send message to database
-        //</summary>
-        public int SendMessage(XDocument xmldoc) {
-            SqlCommand cmd = null;
-            int rowsaffected = -1;
-            string statement = @"insert into messages 
-                                 (to, from, date, subject, message)
-                                 values (@to, @from, @date, @subject, @message);";
+        public bool UpdateUser(string firstname, string lastname, 
+                               string username, string password,
+                               string birthday, string phonenumber) {
+            if (UserDB(firstname, lastname, username, password, birthday, phonenumber, false))
+                return true;
+            return false;
+        }
+
+        public bool SendClaim(string username, string date, string status, string claim) {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = @"insert into claims (username, date, status, claim) 
+                                values(@username, @date, @status, @claim);";
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.Parameters.AddWithValue("@status", status);
+            cmd.Parameters.AddWithValue("@claim", claim);
             try {
-                cmd = new SqlCommand(statement, conn);
-                cmd.Parameters.AddWithValue("@to", xmldoc.Root.Element("to").Value);
-                cmd.Parameters.AddWithValue("@from", xmldoc.Root.Element("from").Value);
-                cmd.Parameters.AddWithValue("@date", xmldoc.Root.Element("date").Value);
-                cmd.Parameters.AddWithValue("@subject", xmldoc.Root.Element("subject").Value);
-                cmd.Parameters.AddWithValue("@message", xmldoc.Root.Element("message").Value);
                 conn.Open();
-                rowsaffected = cmd.ExecuteNonQuery();
-            } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString(), "SQL Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } catch (InvalidOperationException ex) {
-                MessageBox.Show(ex.ToString(), "Null Reference Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmd.ExecuteNonQuery();
+            } catch (Exception ex) {
+                return false;
             } finally {
                 conn.Close();
             }
-            return rowsaffected;
+            return true;
         }
 
-        public int InsertUser(XDocument xmldoc) {
-            int rowsaffected = -1;
-            SqlDataAdapter sda;
+        public bool SendMessage(string to, string from, string date, 
+                                string subject, string message) {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = @"insert into messages ([to], [from], date, subject, message)
+                                values(@to, @from, @date, @subject, @message);";
+            cmd.Parameters.AddWithValue("@to", to);
+            cmd.Parameters.AddWithValue("@from", from);
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.Parameters.AddWithValue("@subject", subject);
+            cmd.Parameters.AddWithValue("@message", message);
             try {
-                SqlCommand cmd = new SqlCommand(@"insert into users
-                                                  (firstname, lastname, username, password, birthday, phonenumber)
-                                                  values
-                                                  (@firstname, @lastname, @username, @password, @birthday @phonenumber);", conn);
-                cmd.Parameters.Add("@firstname", SqlDbType.NVarChar).Value = xmldoc.Root.Element("firstname").Value;
-                cmd.Parameters.Add("@lastname", SqlDbType.NVarChar).Value = xmldoc.Root.Element("lastname").Value;
-                cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = xmldoc.Root.Element("username").Value;
-                cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = xmldoc.Root.Element("password").Value;
-                cmd.Parameters.Add("@birthday", SqlDbType.NVarChar).Value = xmldoc.Root.Element("birthday").Value;
-                cmd.Parameters.Add("@phonenumber", SqlDbType.NVarChar).Value = xmldoc.Root.Element("phonenumber").Value;
-                sda = new SqlDataAdapter();
-                sda.InsertCommand = cmd;
                 conn.Open();
-                rowsaffected = sda.InsertCommand.ExecuteNonQuery();
-            } catch (SqlException ex) {
-                MessageBox.Show(ex.ToString());
-            } catch (NullReferenceException ex) {
-                MessageBox.Show(ex.ToString());
+                cmd.ExecuteNonQuery();
+            } catch (Exception ex) {
+                return false;
             } finally {
                 conn.Close();
             }
-            return rowsaffected;
+            return true;
         }
     }
 }
