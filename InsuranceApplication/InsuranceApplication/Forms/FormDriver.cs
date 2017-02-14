@@ -26,7 +26,6 @@ namespace InsuranceApplication {
             // TODO: This line of code loads data into the 'insuranceClaimDataSet.users' table. 
             // You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.insuranceClaimDataSet.users);
-
         }
 
         /* example of updating user info */
