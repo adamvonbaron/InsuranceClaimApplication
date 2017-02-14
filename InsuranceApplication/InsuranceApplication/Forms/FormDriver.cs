@@ -31,13 +31,14 @@ namespace InsuranceApplication {
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = database.conn;
-            cmd.CommandText = @"update users set firstname = @firstname, lastname = @lastname, username = @username, password = @password, birthday = @birthday, phonenumber = @phonenumber Where username = @username;";
+            cmd.CommandText = @"update users set firstname = @firstname, lastname = @lastname, username = @username, password = @password, birthday = @birthday, phonenumber = @phonenumber Where username = @oldusername;";
             cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
             cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
             cmd.Parameters.AddWithValue("@username", txtUserName.Text);
             cmd.Parameters.AddWithValue("@password", txtPassword.Text);
             cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
             cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
+            cmd.Parameters.AddWithValue("@oldusername", txtUserName.Text);
             database.conn.Open();
             cmd.ExecuteNonQuery();
             database.conn.Close();
