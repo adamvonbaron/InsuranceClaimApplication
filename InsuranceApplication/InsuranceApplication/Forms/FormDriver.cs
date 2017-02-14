@@ -60,41 +60,22 @@ namespace InsuranceApplication {
         }
 
         private void btnGetUserInfo_Click(object sender, EventArgs e) {
-            database.GetUser(txtGetUser.Text);
+            
         }
 
         /* example of registration for logic stuff */
         private void btnRegisterUser_Click(object sender, EventArgs e) {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = database.conn;
-            cmd.CommandText = @"insert into users (firstname, lastname, username, password, birthday, phonenumber)
-                                values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
-            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
-            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
-            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
-            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
-            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
-            database.conn.Open();
-            cmd.ExecuteNonQuery();
-            database.conn.Close();
+            if (!database.RegisterUser(txtFirstName.Text, txtLastName.Text,
+                                       txtUserName.Text, txtPassword.Text,
+                                       dtpBirthday.Text, txtPhoneNumber.Text))
+                MessageBox.Show("Error registering user.");
         }
 
         //send claim button method
         private void btnSendClaim_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = database.conn;
-            cmd.CommandText = @"insert into claims (username, date, status, claim) 
-                                values(@username, @date, @status, @claim);";
-            cmd.Parameters.AddWithValue("@username", txtClaimUserName.Text);
-            cmd.Parameters.AddWithValue("@date", dtpClaimDate.Text);
-            cmd.Parameters.AddWithValue("@status", txtClaimStatus.Text);
-            cmd.Parameters.AddWithValue("@claim", txtWriteClaim.Text);
-            database.conn.Open();
-            cmd.ExecuteNonQuery();
-            database.conn.Close();
-
+            database.SendClaim(txtClaimUserName.Text, dtpClaimDate.Text, 
+                               txtClaimStatus.Text, txtWriteClaim.Text);
         }
     }
 }
