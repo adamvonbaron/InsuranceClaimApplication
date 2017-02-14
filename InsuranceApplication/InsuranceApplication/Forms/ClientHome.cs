@@ -14,12 +14,15 @@ namespace InsuranceApplication.Forms
     {
         public string Username;
         public string Firstname;
-        public ClientHome(string firstname, string username)
+        public string Lastname;
+        public ClientHome(string firstname, string lastname, string username)
         {
             InitializeComponent();
-            this.lblClientHome.Text = "Welcome, " + firstname + ".";
+            this.lblClientHome.Text = "Welcome, " + firstname + " " + lastname;
+            this.lblCurUserInfo.Text = "Logged in as: " + username + "      Rank: Client";
             this.Username = username;
             this.Firstname = firstname;
+            this.Lastname = lastname;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -29,7 +32,6 @@ namespace InsuranceApplication.Forms
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            this.Close();
             ClientEditProfile f3 = new ClientEditProfile(Username);
             f3.ShowDialog();
         }

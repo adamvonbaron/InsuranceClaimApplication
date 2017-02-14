@@ -35,6 +35,7 @@
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.btnViewStatus = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblClientHome
@@ -102,7 +103,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(385, 331);
+            this.btnExit.Location = new System.Drawing.Point(55, 312);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 6;
@@ -110,11 +111,21 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblCurUserInfo
+            // 
+            this.lblCurUserInfo.AutoSize = true;
+            this.lblCurUserInfo.Location = new System.Drawing.Point(136, 317);
+            this.lblCurUserInfo.Name = "lblCurUserInfo";
+            this.lblCurUserInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblCurUserInfo.TabIndex = 7;
+            this.lblCurUserInfo.Text = "label1";
+            // 
             // ClientHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 376);
+            this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnViewStatus);
             this.Controls.Add(this.btnEditProfile);
@@ -138,5 +149,6 @@
         private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.Button btnViewStatus;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblCurUserInfo;
     }
 }

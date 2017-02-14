@@ -43,7 +43,9 @@ namespace InsuranceApplication
                 Form homescreen = null;
                 switch(rank) {
                     case 1:
-                        homescreen = new AdminHome();
+                        homescreen = new AdminHome(database.GetFirstName(txtUsername.Text),
+                                                   database.GetLastName(txtUsername.Text),
+                                                   txtUsername.Text);
                         break;
                     case 2:
                     case 3:
@@ -51,6 +53,7 @@ namespace InsuranceApplication
                         break;
                    case 4:
                         homescreen = new ClientHome(database.GetFirstName(txtUsername.Text),
+                                                    database.GetLastName(txtUsername.Text),
                                                     txtUsername.Text);
                         break;
                 }

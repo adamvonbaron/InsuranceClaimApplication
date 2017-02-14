@@ -35,12 +35,15 @@
             this.btnRegisterCMFM = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEditProfile = new System.Windows.Forms.Button();
+            this.lblCurUserInfo = new System.Windows.Forms.Label();
+            this.btnRegisterUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdminTitle
             // 
             this.lblAdminTitle.AutoSize = true;
             this.lblAdminTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminTitle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblAdminTitle.Location = new System.Drawing.Point(21, 20);
             this.lblAdminTitle.Name = "lblAdminTitle";
             this.lblAdminTitle.Size = new System.Drawing.Size(449, 25);
@@ -61,7 +64,7 @@
             // btnAddPermissions
             // 
             this.btnAddPermissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPermissions.Location = new System.Drawing.Point(256, 83);
+            this.btnAddPermissions.Location = new System.Drawing.Point(233, 83);
             this.btnAddPermissions.Name = "btnAddPermissions";
             this.btnAddPermissions.Size = new System.Drawing.Size(184, 61);
             this.btnAddPermissions.TabIndex = 2;
@@ -72,7 +75,7 @@
             // btnCreateClientFolder
             // 
             this.btnCreateClientFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateClientFolder.Location = new System.Drawing.Point(48, 165);
+            this.btnCreateClientFolder.Location = new System.Drawing.Point(48, 150);
             this.btnCreateClientFolder.Name = "btnCreateClientFolder";
             this.btnCreateClientFolder.Size = new System.Drawing.Size(179, 62);
             this.btnCreateClientFolder.TabIndex = 3;
@@ -83,7 +86,7 @@
             // btnRegisterCMFM
             // 
             this.btnRegisterCMFM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterCMFM.Location = new System.Drawing.Point(256, 165);
+            this.btnRegisterCMFM.Location = new System.Drawing.Point(233, 150);
             this.btnRegisterCMFM.Name = "btnRegisterCMFM";
             this.btnRegisterCMFM.Size = new System.Drawing.Size(184, 62);
             this.btnRegisterCMFM.TabIndex = 4;
@@ -93,7 +96,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(365, 314);
+            this.btnExit.Location = new System.Drawing.Point(12, 327);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -104,19 +107,41 @@
             // btnEditProfile
             // 
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.Location = new System.Drawing.Point(48, 245);
+            this.btnEditProfile.Location = new System.Drawing.Point(48, 218);
             this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(392, 32);
+            this.btnEditProfile.Size = new System.Drawing.Size(179, 58);
             this.btnEditProfile.TabIndex = 6;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
             this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
+            // 
+            // lblCurUserInfo
+            // 
+            this.lblCurUserInfo.AutoSize = true;
+            this.lblCurUserInfo.Location = new System.Drawing.Point(93, 332);
+            this.lblCurUserInfo.Name = "lblCurUserInfo";
+            this.lblCurUserInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblCurUserInfo.TabIndex = 7;
+            this.lblCurUserInfo.Text = "label1";
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterUser.Location = new System.Drawing.Point(233, 218);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Size = new System.Drawing.Size(184, 58);
+            this.btnRegisterUser.TabIndex = 8;
+            this.btnRegisterUser.Text = "Register User";
+            this.btnRegisterUser.UseVisualStyleBackColor = true;
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
             // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 362);
+            this.Controls.Add(this.btnRegisterUser);
+            this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnEditProfile);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRegisterCMFM);
@@ -140,5 +165,7 @@
         private System.Windows.Forms.Button btnRegisterCMFM;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnEditProfile;
+        private System.Windows.Forms.Label lblCurUserInfo;
+        private System.Windows.Forms.Button btnRegisterUser;
     }
 }

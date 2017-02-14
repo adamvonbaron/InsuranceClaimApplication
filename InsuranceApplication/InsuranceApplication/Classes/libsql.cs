@@ -188,6 +188,10 @@ namespace InsuranceApplication.Classes {
             return (string) GetField("users", "firstname", "username", username);
         }
 
+        public string GetLastName(string username) {
+            return (string) GetField("users", "lastname", "username", username);
+        }
+
         /* returns data for single user */
         public User GetUserData(string username) {
             string query = "select * from users where username = @username";

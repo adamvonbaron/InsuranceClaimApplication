@@ -41,8 +41,9 @@ namespace InsuranceApplication.Classes {
             this.Birthday = birthday;
             this.Phonenumber = phonenumber;
             this.Rank = rank;
+            this.Password = password;
 
-            this.Salt = new byte[32];
+            /*this.Salt = new byte[32];
             System.Security.Cryptography.RNGCryptoServiceProvider.Create().GetBytes(Salt);
 
             // Convert the plain string pwd into bytes
@@ -61,7 +62,7 @@ namespace InsuranceApplication.Classes {
             System.Buffer.BlockCopy(hash, 0, hashPlusSalt, 0, hash.Length);
             System.Buffer.BlockCopy(Salt, 0, hashPlusSalt, hash.Length, Salt.Length);
 
-            this.Password = Encoding.UTF8.GetString(hashPlusSalt);
+            this.Password = Encoding.UTF8.GetString(hashPlusSalt); */
         }
 
         //methods
