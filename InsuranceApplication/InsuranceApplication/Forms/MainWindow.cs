@@ -18,7 +18,7 @@ namespace InsuranceApplication
             InitializeComponent();
         }
 
-        private libsql objCheck;
+        //private libsql objCheck;
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -98,6 +98,12 @@ namespace InsuranceApplication
             formFormDemo ffd = new formFormDemo();
             ffd.Show();
             
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Forms.EditTemplate et = new Forms.EditTemplate();
+            et.Show();
         }
     }
 }
