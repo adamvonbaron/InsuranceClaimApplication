@@ -127,6 +127,12 @@
     <Compile Include="Forms\ClaimManager.Designer.cs">
       <DependentUpon>ClaimManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditTemplate.Designer.cs">
+      <DependentUpon>EditTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FinanceManagerEditProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClaimManager.resx">
       <DependentUpon>ClaimManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditTemplate.resx">
+      <DependentUpon>EditTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinanceManagerEditProfile.resx">
       <DependentUpon>FinanceManagerEditProfile.cs</DependentUpon>
