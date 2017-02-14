@@ -50,23 +50,19 @@ namespace InsuranceApplication {
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e) {
-            string to, from, date, subject, message = string.Empty;
-            to = txtTo.Text;
-            from = txtFrom.Text;
-            date = txtDate.Text;
-            subject = txtSubject.Text;
-            message = txtMessage.Text;
-            XDocument xmldoc = new XDocument();
-            XElement xml = new XElement("user",
-                           new XElement("to", to),
-                           new XElement("from", from),
-                           new XElement("date", date),
-                           new XElement("subject", subject),
-                           new XElement("message", message));
-            xmldoc.Add(xml);
-            xmldoc.Save("H:\\message_demo.xml");
-            int rowsaffected = database.SendMessage(xmldoc);
-            MessageBox.Show("Rows affected: " + rowsaffected, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = database.conn;
+            cmd.CommandText = @"insert into messages (firstname, lastname, username, password, birthday, phonenumber)
+                                values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
+            cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
+            cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
+            cmd.Parameters.AddWithValue("@username", txtUserName.Text);
+            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+            cmd.Parameters.AddWithValue("@birthday", dtpBirthday.Text);
+            cmd.Parameters.AddWithValue("@phonenumber", txtPhoneNumber.Text);
+            database.conn.Open();
+            cmd.ExecuteNonQuery();
+            database.conn.Close();
         }
 
         private void btnGetUserInfo_Click(object sender, EventArgs e) {

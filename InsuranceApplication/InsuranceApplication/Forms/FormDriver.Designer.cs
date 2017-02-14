@@ -56,15 +56,6 @@
             this.txtDate = new System.Windows.Forms.TextBox();
             this.lblGetUserInfo = new System.Windows.Forms.Label();
             this.dgvViewUser = new System.Windows.Forms.DataGridView();
-            this.txtGetUser = new System.Windows.Forms.TextBox();
-            this.lblGetUser = new System.Windows.Forms.Label();
-            this.btnGetUserInfo = new System.Windows.Forms.Button();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.btnRegisterUser = new System.Windows.Forms.Button();
-            this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
-            this.insuranceClaimDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,12 +66,21 @@
             this.creationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.claimsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.insuranceClaimDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insuranceClaimDataSet = new InsuranceApplication.InsuranceClaimDataSet();
+            this.txtGetUser = new System.Windows.Forms.TextBox();
+            this.lblGetUser = new System.Windows.Forms.Label();
+            this.btnGetUserInfo = new System.Windows.Forms.Button();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.btnRegisterUser = new System.Windows.Forms.Button();
+            this.usersTableAdapter = new InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -320,68 +320,6 @@
             this.dgvViewUser.Size = new System.Drawing.Size(491, 234);
             this.dgvViewUser.TabIndex = 30;
             // 
-            // txtGetUser
-            // 
-            this.txtGetUser.Location = new System.Drawing.Point(697, 283);
-            this.txtGetUser.Name = "txtGetUser";
-            this.txtGetUser.Size = new System.Drawing.Size(270, 20);
-            this.txtGetUser.TabIndex = 31;
-            // 
-            // lblGetUser
-            // 
-            this.lblGetUser.AutoSize = true;
-            this.lblGetUser.Location = new System.Drawing.Point(639, 285);
-            this.lblGetUser.Name = "lblGetUser";
-            this.lblGetUser.Size = new System.Drawing.Size(52, 13);
-            this.lblGetUser.TabIndex = 32;
-            this.lblGetUser.Text = "Get User:";
-            // 
-            // btnGetUserInfo
-            // 
-            this.btnGetUserInfo.Location = new System.Drawing.Point(973, 282);
-            this.btnGetUserInfo.Name = "btnGetUserInfo";
-            this.btnGetUserInfo.Size = new System.Drawing.Size(157, 23);
-            this.btnGetUserInfo.TabIndex = 33;
-            this.btnGetUserInfo.Text = "Get User Info";
-            this.btnGetUserInfo.UseVisualStyleBackColor = true;
-            this.btnGetUserInfo.Click += new System.EventHandler(this.btnGetUserInfo_Click);
-            // 
-            // dtpBirthday
-            // 
-            this.dtpBirthday.Location = new System.Drawing.Point(76, 135);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthday.TabIndex = 34;
-            // 
-            // btnRegisterUser
-            // 
-            this.btnRegisterUser.Location = new System.Drawing.Point(110, 201);
-            this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.Size = new System.Drawing.Size(91, 23);
-            this.btnRegisterUser.TabIndex = 35;
-            this.btnRegisterUser.Text = "Register User";
-            this.btnRegisterUser.UseVisualStyleBackColor = true;
-            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
-            // 
-            // insuranceClaimDataSet
-            // 
-            this.insuranceClaimDataSet.DataSetName = "InsuranceClaimDataSet";
-            this.insuranceClaimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // insuranceClaimDataSetBindingSource
-            // 
-            this.insuranceClaimDataSetBindingSource.DataSource = this.insuranceClaimDataSet;
-            this.insuranceClaimDataSetBindingSource.Position = 0;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "users";
-            this.usersBindingSource1.DataSource = this.insuranceClaimDataSetBindingSource;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
             // firstnameDataGridViewTextBoxColumn
             // 
             this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "firstname";
@@ -443,6 +381,68 @@
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.insuranceClaimDataSetBindingSource;
+            // 
+            // insuranceClaimDataSetBindingSource
+            // 
+            this.insuranceClaimDataSetBindingSource.DataSource = this.insuranceClaimDataSet;
+            this.insuranceClaimDataSetBindingSource.Position = 0;
+            // 
+            // insuranceClaimDataSet
+            // 
+            this.insuranceClaimDataSet.DataSetName = "InsuranceClaimDataSet";
+            this.insuranceClaimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtGetUser
+            // 
+            this.txtGetUser.Location = new System.Drawing.Point(697, 283);
+            this.txtGetUser.Name = "txtGetUser";
+            this.txtGetUser.Size = new System.Drawing.Size(270, 20);
+            this.txtGetUser.TabIndex = 31;
+            // 
+            // lblGetUser
+            // 
+            this.lblGetUser.AutoSize = true;
+            this.lblGetUser.Location = new System.Drawing.Point(639, 285);
+            this.lblGetUser.Name = "lblGetUser";
+            this.lblGetUser.Size = new System.Drawing.Size(52, 13);
+            this.lblGetUser.TabIndex = 32;
+            this.lblGetUser.Text = "Get User:";
+            // 
+            // btnGetUserInfo
+            // 
+            this.btnGetUserInfo.Location = new System.Drawing.Point(973, 282);
+            this.btnGetUserInfo.Name = "btnGetUserInfo";
+            this.btnGetUserInfo.Size = new System.Drawing.Size(157, 23);
+            this.btnGetUserInfo.TabIndex = 33;
+            this.btnGetUserInfo.Text = "Get User Info";
+            this.btnGetUserInfo.UseVisualStyleBackColor = true;
+            this.btnGetUserInfo.Click += new System.EventHandler(this.btnGetUserInfo_Click);
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Location = new System.Drawing.Point(76, 135);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
+            this.dtpBirthday.TabIndex = 34;
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.Location = new System.Drawing.Point(110, 201);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Size = new System.Drawing.Size(91, 23);
+            this.btnRegisterUser.TabIndex = 35;
+            this.btnRegisterUser.Text = "Register User";
+            this.btnRegisterUser.UseVisualStyleBackColor = true;
+            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,9 +485,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
