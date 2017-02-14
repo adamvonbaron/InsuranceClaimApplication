@@ -23,11 +23,15 @@ namespace InsuranceApplication {
         }
 
         private void formFormDemo_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'insuranceClaimDataSet.users' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'insuranceClaimDataSet.users' table. 
+            // You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.insuranceClaimDataSet.users);
 
         }
 
+        /* example of updating user info */
+        /* TODO: work on example showing how to populate
+         * text fields with data from db */
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
             if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
                                 txtUserName.Text, txtPassword.Text,
@@ -37,20 +41,11 @@ namespace InsuranceApplication {
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e) {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = database.conn;
-            cmd.CommandText = @"insert into messages ([to], [from], [date], subject, message)
-                                values(@to, @from, @date, @subject, @message);";
-            cmd.Parameters.AddWithValue("@to", txtTo.Text);
-            cmd.Parameters.AddWithValue("@from", txtFrom.Text);
-            cmd.Parameters.AddWithValue("@date", txtDate.Text);
-            cmd.Parameters.AddWithValue("@subject", txtSubject.Text);
-            cmd.Parameters.AddWithValue("@message", txtMessage.Text);
-            database.conn.Open();
-            cmd.ExecuteNonQuery();
-            database.conn.Close();
+            database.SendMessage(txtTo.Text, txtFrom.Text, txtDate.Text, 
+                                 txtSubject.Text, txtMessage.Text);
         }
 
+        //TODO: This.
         private void btnGetUserInfo_Click(object sender, EventArgs e) {
             
         }

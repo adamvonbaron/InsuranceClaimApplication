@@ -116,5 +116,27 @@ namespace InsuranceApplication.Classes {
             }
             return true;
         }
+
+        public bool SendMessage(string to, string from, string date, 
+                                string subject, string message) {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = @"insert into messages ([to], [from], date, subject, message)
+                                values(@to, @from, @date, @subject, @message);";
+            cmd.Parameters.AddWithValue("@to", to);
+            cmd.Parameters.AddWithValue("@from", from);
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.Parameters.AddWithValue("@subject", subject);
+            cmd.Parameters.AddWithValue("@message", message);
+            try {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            } catch (Exception ex) {
+                return false;
+            } finally {
+                conn.Close();
+            }
+            return true;
+        }
     }
 }
