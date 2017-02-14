@@ -27,5 +27,13 @@ namespace InsuranceApplication.Forms {
         private void btnExit_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void btnEnter_Click(object sender, EventArgs e) {
+            if (!database.UpdateUser(txtUpdateFirstname.Text, txtUpdateLastname.Text,
+                                txtUpdateUsername.Text, txtUpdatePassword.Text,
+                                dtpBirthday.Text, txtUpdatePhone.Text))
+                MessageBox.Show("error updating user.", "Error",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

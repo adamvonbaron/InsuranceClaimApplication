@@ -68,6 +68,7 @@
             this.btnEnter.TabIndex = 34;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // txtUpdateAddress
             // 

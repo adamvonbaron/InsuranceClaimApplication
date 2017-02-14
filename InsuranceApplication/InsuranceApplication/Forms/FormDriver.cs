@@ -30,7 +30,7 @@ namespace InsuranceApplication {
 
         /* example of updating user info */
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
-            if (database.UpdateUser(txtFirstName.Text, txtLastName.Text,
+            if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
                                 txtUserName.Text, txtPassword.Text,
                                 dtpBirthday.Text, txtPhoneNumber.Text))
                 MessageBox.Show("error updating user.", "Error", 
