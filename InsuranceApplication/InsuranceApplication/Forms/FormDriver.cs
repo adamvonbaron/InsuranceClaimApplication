@@ -39,6 +39,7 @@ namespace InsuranceApplication {
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        /* example of sending a message */
         private void btnSendMessage_Click(object sender, EventArgs e) {
             database.SendMessage(txtTo.Text, txtFrom.Text, txtDate.Text, 
                                  txtSubject.Text, txtMessage.Text);
@@ -58,7 +59,7 @@ namespace InsuranceApplication {
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        //send claim button method
+        /* example of sending a claim */
         private void btnSendClaim_Click(object sender, EventArgs e)
         {
             database.SendClaim(txtClaimUserName.Text, dtpClaimDate.Text, 

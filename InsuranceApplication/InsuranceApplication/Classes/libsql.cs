@@ -28,14 +28,14 @@ namespace InsuranceApplication.Classes {
             }
         }
 
-        private bool CheckUsername(string username) {
+        private bool CheckField(string table, string column, string data) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select username from users where username = @username";
-            cmd.Parameters.AddWithValue("@username", username);
+            cmd.CommandText = "select " + column + " from " + table + " where " + column + " = @field";
+            cmd.Parameters.AddWithValue("@field", data);
             try {
                 conn.Open();
-                if (username.Equals((string) cmd.ExecuteScalar()))
+                if (data.Equals((string)cmd.ExecuteScalar()))
                     return false;
             } catch (Exception ex) {
                 return false;
@@ -81,20 +81,24 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        private bool CheckUsername(string username) {
+            return CheckField("users", "username", username);
+        }
+
+        private bool CheckPassword(string password) {
+            return CheckField("users", "password", password);
+        }
+
         public bool RegisterUser(string firstname, string lastname,
                                  string username, string password,
                                  string birthday, string phonenumber) {
-            if (UserDB(firstname, lastname, username, password, birthday, phonenumber, true))
-                return true;
-            return false;
+            return UserDB(firstname, lastname, username, password, birthday, phonenumber, true);
         }
 
         public bool UpdateUser(string firstname, string lastname, 
                                string username, string password,
                                string birthday, string phonenumber) {
-            if (UserDB(firstname, lastname, username, password, birthday, phonenumber, false))
-                return true;
-            return false;
+            return UserDB(firstname, lastname, username, password, birthday, phonenumber, false);
         }
 
         public bool SendClaim(string username, string date, string status, string claim) {
@@ -137,6 +141,10 @@ namespace InsuranceApplication.Classes {
                 conn.Close();
             }
             return true;
+        }
+
+        public bool ValidateUser(string username, string password) {
+            return (CheckUsername(username) && CheckPassword(password));
         }
     }
 }
