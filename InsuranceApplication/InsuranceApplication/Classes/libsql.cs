@@ -36,13 +36,30 @@ namespace InsuranceApplication.Classes {
             try {
                 conn.Open();
                 if (data.Equals((string)cmd.ExecuteScalar()))
-                    return false;
+                    return true;
             } catch (Exception ex) {
                 return false;
             } finally {
                 conn.Close();
             }
             return true;
+        }
+
+        private object GetField(string table, string column, string where, string data) {
+            SqlCommand cmd = new SqlCommand();
+            object resp = null;
+            cmd.Connection = conn;
+            cmd.CommandText = "select " + column + " from " + table + " where " + where + " = @field";
+            cmd.Parameters.AddWithValue("@field", data);
+            try {
+                conn.Open();
+                resp = cmd.ExecuteScalar();
+            } catch (Exception ex) {
+                return null;
+            } finally {
+                conn.Close();
+            }
+            return resp;
         }
 
         private bool UserDB(string firstname, string lastname,
@@ -150,6 +167,11 @@ namespace InsuranceApplication.Classes {
         /* checks username and password in database */
         public bool ValidateUser(string username, string password) {
             return (CheckUsername(username) && CheckPassword(password));
+        }
+
+        /* get user rank */
+        public int GetRank(string username) {
+            return (int) GetField("users", "rank", "username", username);
         }
 
         /* returns data for single user */

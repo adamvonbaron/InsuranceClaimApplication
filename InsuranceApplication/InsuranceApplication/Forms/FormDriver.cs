@@ -29,10 +29,8 @@ namespace InsuranceApplication {
         }
 
         /* example of updating user info */
-        /* TODO: work on example showing how to populate
-         * text fields with data from db */
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
-            if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
+            if (database.UpdateUser(txtFirstName.Text, txtLastName.Text,
                                 txtUserName.Text, txtPassword.Text,
                                 dtpBirthday.Text, txtPhoneNumber.Text))
                 MessageBox.Show("error updating user.", "Error", 
