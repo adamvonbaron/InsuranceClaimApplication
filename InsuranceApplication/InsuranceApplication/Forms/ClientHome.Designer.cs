@@ -56,6 +56,7 @@
             this.btnApplyForClaim.TabIndex = 1;
             this.btnApplyForClaim.Text = "Apply for Claim";
             this.btnApplyForClaim.UseVisualStyleBackColor = true;
+            this.btnApplyForClaim.Click += new System.EventHandler(this.btnApplyForClaim_Click);
             // 
             // btnViewMessages
             // 

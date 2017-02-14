@@ -33,5 +33,10 @@ namespace InsuranceApplication.Forms
             Forms.ClientEditProfile f3 = new Forms.ClientEditProfile(Username);
             f3.Show();
         }
+
+        private void btnApplyForClaim_Click(object sender, EventArgs e) {
+            ClientApplyforClaim cac = new ClientApplyforClaim(Username);
+            cac.ShowDialog();
+        }
     }
 }
