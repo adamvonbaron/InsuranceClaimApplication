@@ -11,20 +11,21 @@ namespace InsuranceApplication.Classes
     class User
     {
         //Automatic Properties
-        public string UserName { get; set; } 
+        public string UserName { get; set; }
         public string Password { get; set; }
-        private string Rank { get { return getRank(); } }
-        
+        private string Rank { get { return Classes.libsql.getRank(); } }
+
         //Methods
-        public void Login()
-        {
-            User user = new User
-            switch (Rank)
-            {
-                case "Client":
-                    Client 
-            }
-        }
+        //public void Login()
+        //{
+        //    User user = new User
+        //    switch (Rank)
+        //    {
+        //        case "Client":
+        //            Client
+        //    }
+        //}
+    }
 }
             //make sure the user exists
 
@@ -129,3 +130,4 @@ public override string ToString() {
 }
 }
 }
+*/
