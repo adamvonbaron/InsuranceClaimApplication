@@ -20,8 +20,13 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnSend_Click(object sender, EventArgs e) {
-            database.SendMessage(txtTo.Text, Username, DateTime.Now.ToString(),
-                                 txtSubject.Text, txtMessage.Text);
+            if (database.SendMessage(txtTo.Text, Username, DateTime.Now.ToString(),
+                                 txtSubject.Text, txtMessage.Text))
+            {
+                MessageBox.Show("Message sent successfully.", "Message", MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                this.Close();
+            }
         }
 
         private void btnDraft_Click(object sender, EventArgs e) {

@@ -22,5 +22,10 @@ namespace InsuranceApplication.Forms
             SendMessage sm = new SendMessage(Username);
             sm.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
