@@ -59,6 +59,8 @@ namespace InsuranceApplication
                 }
                 this.Hide();
                 homescreen.ShowDialog();
+                txtPassword.Text = string.Empty;
+                this.Show();
             } else {
                 MessageBox.Show("Wrong Username or Password.", "Error", 
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);

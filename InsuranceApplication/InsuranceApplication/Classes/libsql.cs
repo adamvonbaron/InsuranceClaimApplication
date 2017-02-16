@@ -70,7 +70,7 @@ namespace InsuranceApplication.Classes {
             if (register) {
                 query = @"insert into users (firstname, lastname, username, password, birthday, phonenumber)
                         values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
-                if (CheckUsername(username))
+                if (!CheckUsername(username))
                     return false;
             } else {
                 query = @"update users set firstname = @firstname, lastname = @lastname, 
@@ -190,6 +190,23 @@ namespace InsuranceApplication.Classes {
 
         public string GetLastName(string username) {
             return (string) GetField("users", "lastname", "username", username);
+        }
+
+        public bool UpdateRank(string username, int rank) {
+            string query = "update users set rank = @rank where username = @username;";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@rank", rank);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.CommandType = CommandType.Text;
+            try {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            } catch (Exception ex) {
+                return false;
+            } finally {
+                conn.Close();
+            }
+            return true;
         }
 
         /* returns data for single user */

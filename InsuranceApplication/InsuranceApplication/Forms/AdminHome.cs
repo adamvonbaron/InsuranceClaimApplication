@@ -26,35 +26,30 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnViewUserData_Click(object sender, EventArgs e) {
-            this.Close();
             ClaimManagerViewClientProfile f3 = new ClaimManagerViewClientProfile(Username);
             f3.ShowDialog();
         }
 
         private void btnAddPermissions_Click(object sender, EventArgs e) {
-            this.Close();
             AdminAddPermissions f4 = new AdminAddPermissions();
             f4.ShowDialog();
         }
 
         private void btnCreateClientFolder_Click(object sender, EventArgs e) {
-            this.Close();
             AdminCreateClientFolder f5 = new AdminCreateClientFolder();
             f5.ShowDialog();
         }
 
         private void btnRegisterCMFM_Click(object sender, EventArgs e) {
-            this.Close();
             AdminRegisterCMFM f6 = new AdminRegisterCMFM();
             f6.ShowDialog();
         }
 
         private void btnEditProfile_Click(object sender, EventArgs e) {
-            this.Close();
             EditUserProfile f2 = new EditUserProfile(Username);
             f2.ShowDialog();
         }
