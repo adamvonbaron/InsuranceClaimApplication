@@ -32,7 +32,7 @@ namespace InsuranceApplication.Forms
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            ClientEditProfile f3 = new ClientEditProfile(Username);
+            EditUserProfile f3 = new EditUserProfile(Username);
             f3.ShowDialog();
         }
 

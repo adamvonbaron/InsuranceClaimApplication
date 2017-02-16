@@ -11,9 +11,9 @@ using InsuranceApplication.Classes;
 using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms {
-    public partial class ClientEditProfile : Form {
+    public partial class EditUserProfile : Form {
         libsql database = new libsql();
-        public ClientEditProfile(string username) {
+        public EditUserProfile(string username) {
             InitializeComponent();
             User curUser = database.GetUserData(username);
             txtUpdateFirstname.Text = curUser.FirstName;

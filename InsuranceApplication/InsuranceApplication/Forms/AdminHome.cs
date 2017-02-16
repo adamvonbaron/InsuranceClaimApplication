@@ -55,7 +55,7 @@ namespace InsuranceApplication.Forms {
 
         private void btnEditProfile_Click(object sender, EventArgs e) {
             this.Close();
-            ClientEditProfile f2 = new ClientEditProfile(Username);
+            EditUserProfile f2 = new EditUserProfile(Username);
             f2.ShowDialog();
         }
 

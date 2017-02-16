@@ -1,6 +1,6 @@
 ﻿namespace InsuranceApplication.Forms
 {
-    partial class ClientEditProfile
+    partial class EditUserProfile
     {
         /// <summary>
         /// Required designer variable.
