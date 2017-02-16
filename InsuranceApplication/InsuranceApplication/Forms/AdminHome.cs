@@ -31,7 +31,7 @@ namespace InsuranceApplication.Forms {
 
         private void btnViewUserData_Click(object sender, EventArgs e) {
             this.Close();
-            AdminViewUserData f3 = new AdminViewUserData();
+            ClaimManagerViewClientProfile f3 = new ClaimManagerViewClientProfile(Username);
             f3.ShowDialog();
         }
 
