@@ -23,9 +23,16 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnEnter_Click(object sender, EventArgs e) {
-            database.RegisterUser(txtFirstname.Text, txtLastname.Text,
+            if(database.RegisterUser(txtFirstname.Text, txtLastname.Text,
                                   txtUsername.Text, txtPassword.Text,
-                                  dtpDateOfBirth.Text, txtPhone.Text);
+                                  dtpDateOfBirth.Text, txtPhone.Text))
+            {
+                MessageBox.Show("Registered user successfully.", "Register",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            } else
+                MessageBox.Show("Error registering user.", "Register",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
