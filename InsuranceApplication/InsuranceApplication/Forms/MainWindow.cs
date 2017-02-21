@@ -49,7 +49,9 @@ namespace InsuranceApplication
                         break;
                     case 2:
                     case 3:
-                        homescreen = new FinanceManagerHome();
+                        homescreen = new FinanceManagerHome(database.GetFirstName(txtUsername.Text), 
+                                                            database.GetLastName(txtUsername.Text),
+                                                            txtUsername.Text);
                         break;
                    case 4:
                         homescreen = new ClientHome(database.GetFirstName(txtUsername.Text),

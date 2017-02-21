@@ -20,8 +20,8 @@ namespace InsuranceApplication.Forms
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.FinanceManagerHome f3 = new Forms.FinanceManagerHome();
-            f3.Show();
+            //Forms.FinanceManagerHome f3 = new Forms.FinanceManagerHome();
+            //f3.Show();
         }
     }
 }
