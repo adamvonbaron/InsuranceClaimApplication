@@ -1,6 +1,6 @@
 ﻿namespace InsuranceApplication.Forms
 {
-    partial class ClaimManagerViewClientProfile
+    partial class ViewProfile
     {
         /// <summary>
         /// Required designer variable.

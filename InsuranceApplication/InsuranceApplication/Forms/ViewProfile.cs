@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClaimManagerViewClientProfile : Form
+    public partial class ViewProfile : Form
     {
         string Username;
-        public ClaimManagerViewClientProfile(string username)
+        public ViewProfile(string username)
         {
             InitializeComponent();
             this.Username = username;

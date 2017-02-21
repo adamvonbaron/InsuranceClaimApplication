@@ -30,7 +30,7 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnViewUserData_Click(object sender, EventArgs e) {
-            ClaimManagerViewClientProfile f3 = new ClaimManagerViewClientProfile(Username);
+            ViewProfile f3 = new ViewProfile(Username);
             f3.ShowDialog();
         }
 
