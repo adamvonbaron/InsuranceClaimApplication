@@ -41,6 +41,12 @@ sql workflow (profile):
 8. close form
 9. if user clicks cancel, do nothing
 
+ranks:
+1: admin
+2: finance manager
+3: client manager
+4: client
+
 todo:
 add method to insert user
 verify that sendClaim and sendMessage work
