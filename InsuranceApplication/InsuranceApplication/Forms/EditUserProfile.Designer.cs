@@ -42,12 +42,14 @@
             this.lblUpdateLastname = new System.Windows.Forms.Label();
             this.lblUpdateFirstname = new System.Windows.Forms.Label();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtRank = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(93, 202);
+            this.btnExit.Location = new System.Drawing.Point(92, 240);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 35;
@@ -58,7 +60,7 @@
             // btnEnter
             // 
             this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(12, 202);
+            this.btnEnter.Location = new System.Drawing.Point(12, 240);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 34;
@@ -168,11 +170,30 @@
             this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
             this.dtpBirthday.TabIndex = 36;
             // 
-            // ClientEditProfile
+            // txtRank
+            // 
+            this.txtRank.Location = new System.Drawing.Point(214, 219);
+            this.txtRank.Name = "txtRank";
+            this.txtRank.Size = new System.Drawing.Size(177, 20);
+            this.txtRank.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 217);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Update Rank:";
+            // 
+            // EditUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 237);
+            this.ClientSize = new System.Drawing.Size(457, 275);
+            this.Controls.Add(this.txtRank);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
@@ -187,7 +208,7 @@
             this.Controls.Add(this.lblUpdateUsername);
             this.Controls.Add(this.lblUpdateLastname);
             this.Controls.Add(this.lblUpdateFirstname);
-            this.Name = "ClientEditProfile";
+            this.Name = "EditUserProfile";
             this.Text = "ClientEditProfile";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,5 +231,7 @@
         private System.Windows.Forms.Label lblUpdateLastname;
         private System.Windows.Forms.Label lblUpdateFirstname;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.TextBox txtRank;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -64,18 +64,18 @@ namespace InsuranceApplication.Classes {
 
         private bool UserDB(string firstname, string lastname,
                            string username, string password,
-                           string birthday, string phonenumber,
+                           string birthday, string phonenumber, int rank,
                            bool register) {
             string query = string.Empty;
             if (register) {
-                query = @"insert into users (firstname, lastname, username, password, birthday, phonenumber)
-                        values(@firstname, @lastname, @username, @password, @birthday, @phonenumber);";
+                query = @"insert into users (firstname, lastname, username, password, birthday, phonenumber, rank)
+                        values(@firstname, @lastname, @username, @password, @birthday, @phonenumber, @rank);";
                 if (!CheckUsername(username))
                     return false;
             } else {
                 query = @"update users set firstname = @firstname, lastname = @lastname, 
                           username = @username, password = @password, birthday = @birthday, 
-                          phonenumber = @phonenumber Where username = @username;";
+                          phonenumber = @phonenumber, rank = @rank Where username = @username;";
             }
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
@@ -86,6 +86,7 @@ namespace InsuranceApplication.Classes {
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@birthday", birthday);
             cmd.Parameters.AddWithValue("@phonenumber", phonenumber);
+            cmd.Parameters.AddWithValue("@rank", rank);
             try {
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -109,15 +110,15 @@ namespace InsuranceApplication.Classes {
         /* creates new user in database */
         public bool RegisterUser(string firstname, string lastname,
                                  string username, string password,
-                                 string birthday, string phonenumber) {
-            return UserDB(firstname, lastname, username, password, birthday, phonenumber, true);
+                                 string birthday, string phonenumber, int rank) {
+            return UserDB(firstname, lastname, username, password, birthday, phonenumber, rank, true);
         }
 
         /* updates existing user info */
         public bool UpdateUser(string firstname, string lastname, 
                                string username, string password,
-                               string birthday, string phonenumber) {
-            return UserDB(firstname, lastname, username, password, birthday, phonenumber, false);
+                               string birthday, string phonenumber, int rank) {
+            return UserDB(firstname, lastname, username, password, birthday, phonenumber, rank, false);
         }
 
         /* inserts claim in database */

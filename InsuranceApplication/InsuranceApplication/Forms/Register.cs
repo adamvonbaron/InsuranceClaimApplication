@@ -23,9 +23,19 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnEnter_Click(object sender, EventArgs e) {
+            int rank;
+            if (comboBoxRank.SelectedText == "admin")
+                rank = 1;
+            else if (comboBoxRank.SelectedText == "finance manager")
+                rank = 2;
+            else if (comboBoxRank.SelectedText == "client manager")
+                rank = 3;
+            else
+                rank = 4;
+
             if(database.RegisterUser(txtFirstname.Text, txtLastname.Text,
                                   txtUsername.Text, txtPassword.Text,
-                                  dtpDateOfBirth.Text, txtPhone.Text))
+                                  dtpDateOfBirth.Text, txtPhone.Text, rank))
             {
                 MessageBox.Show("Registered user successfully.", "Register",
                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -33,6 +43,8 @@ namespace InsuranceApplication.Forms {
             } else
                 MessageBox.Show("Error registering user.", "Register",
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            database.UpdateRank(txtUsername.Text, rank);
         }
     }
 }

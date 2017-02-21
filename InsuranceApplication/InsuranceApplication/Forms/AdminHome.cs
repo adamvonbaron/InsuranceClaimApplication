@@ -45,8 +45,8 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnRegisterCMFM_Click(object sender, EventArgs e) {
-            AdminRegisterCMFM f6 = new AdminRegisterCMFM();
-            f6.ShowDialog();
+            Register register = new Register();
+            register.ShowDialog();
         }
 
         private void btnEditProfile_Click(object sender, EventArgs e) {

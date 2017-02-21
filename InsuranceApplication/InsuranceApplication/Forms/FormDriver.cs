@@ -32,7 +32,7 @@ namespace InsuranceApplication {
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
             if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
                                 txtUserName.Text, txtPassword.Text,
-                                dtpBirthday.Text, txtPhoneNumber.Text))
+                                dtpBirthday.Text, txtPhoneNumber.Text, int.Parse(txtRank.Text)))
                 MessageBox.Show("error updating user.", "Error", 
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -61,7 +61,7 @@ namespace InsuranceApplication {
         private void btnRegisterUser_Click(object sender, EventArgs e) {
             if (!database.RegisterUser(txtFirstName.Text, txtLastName.Text,
                                        txtUserName.Text, txtPassword.Text,
-                                       dtpBirthday.Text, txtPhoneNumber.Text))
+                                       dtpBirthday.Text, txtPhoneNumber.Text, int.Parse(txtRank.Text)))
                 MessageBox.Show("Error registering user.", "Error", 
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

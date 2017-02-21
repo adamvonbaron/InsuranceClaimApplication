@@ -83,6 +83,8 @@
             this.txtClaimStatus = new System.Windows.Forms.TextBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtpMessageDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRank = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
@@ -193,7 +195,7 @@
             // 
             // btnUpdateProfile
             // 
-            this.btnUpdateProfile.Location = new System.Drawing.Point(12, 201);
+            this.btnUpdateProfile.Location = new System.Drawing.Point(12, 240);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
             this.btnUpdateProfile.Size = new System.Drawing.Size(90, 23);
             this.btnUpdateProfile.TabIndex = 15;
@@ -428,7 +430,7 @@
             // 
             // btnRegisterUser
             // 
-            this.btnRegisterUser.Location = new System.Drawing.Point(110, 201);
+            this.btnRegisterUser.Location = new System.Drawing.Point(108, 240);
             this.btnRegisterUser.Name = "btnRegisterUser";
             this.btnRegisterUser.Size = new System.Drawing.Size(91, 23);
             this.btnRegisterUser.TabIndex = 35;
@@ -517,11 +519,29 @@
             this.dtpMessageDate.Size = new System.Drawing.Size(200, 20);
             this.dtpMessageDate.TabIndex = 45;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 211);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Rank";
+            // 
+            // txtRank
+            // 
+            this.txtRank.Location = new System.Drawing.Point(75, 211);
+            this.txtRank.Name = "txtRank";
+            this.txtRank.Size = new System.Drawing.Size(149, 20);
+            this.txtRank.TabIndex = 46;
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 583);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtRank);
             this.Controls.Add(this.dtpMessageDate);
             this.Controls.Add(this.txtClaimStatus);
             this.Controls.Add(this.label3);
@@ -631,6 +651,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtClaimStatus;
         private System.Windows.Forms.DateTimePicker dtpMessageDate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtRank;
     }
 }
 
