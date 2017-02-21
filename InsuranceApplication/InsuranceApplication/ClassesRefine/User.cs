@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceApplication.Classes
 {
+    /*
     [Serializable]
     class User
     {
@@ -128,6 +129,5 @@ public override string ToString() {
                            Birthday: {4}\nPhone Number: {5}", this.FirstName, this.LastName,
                            this.UserName, this.Password, this.Birthday, this.Phonenumber);
 }
+}*/
 }
-}
-*/

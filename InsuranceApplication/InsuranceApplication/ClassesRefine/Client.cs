@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InsuranceApplication.Classes
-{
+{/*
     class Client
     {
         //properties
@@ -47,5 +47,5 @@ namespace InsuranceApplication.Classes
         {
 
         }
-    }
+    }*/
 }
