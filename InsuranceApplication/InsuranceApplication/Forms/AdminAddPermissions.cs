@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Forms
 {
     public partial class AdminAddPermissions : Form
     {
+        libsql database = new libsql();
         public AdminAddPermissions()
         {
             InitializeComponent();
@@ -20,8 +22,11 @@ namespace InsuranceApplication.Forms
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.AdminHome f3 = new Forms.AdminHome();
-            f3.Show();
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            database.UpdateRank(txtUsername.Text, int.Parse(txtRank.Text));
         }
     }
 }

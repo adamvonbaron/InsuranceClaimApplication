@@ -36,13 +36,30 @@ namespace InsuranceApplication.Classes {
             try {
                 conn.Open();
                 if (data.Equals((string)cmd.ExecuteScalar()))
-                    return false;
+                    return true;
             } catch (Exception ex) {
                 return false;
             } finally {
                 conn.Close();
             }
             return true;
+        }
+
+        private object GetField(string table, string column, string where, string data) {
+            SqlCommand cmd = new SqlCommand();
+            object resp = null;
+            cmd.Connection = conn;
+            cmd.CommandText = "select " + column + " from " + table + " where " + where + " = @field";
+            cmd.Parameters.AddWithValue("@field", data);
+            try {
+                conn.Open();
+                resp = cmd.ExecuteScalar();
+            } catch (Exception ex) {
+                return null;
+            } finally {
+                conn.Close();
+            }
+            return resp;
         }
 
         private bool UserDB(string firstname, string lastname,
@@ -147,9 +164,49 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        public DataTable GetInboxMessages(string username) {
+            string query = "select * from messages where [to] = @username";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable messages = new DataTable();
+            sda.Fill(messages);
+            return messages;
+        }
+
         /* checks username and password in database */
         public bool ValidateUser(string username, string password) {
             return (CheckUsername(username) && CheckPassword(password));
+        }
+
+        /* get user rank */
+        public int GetRank(string username) {
+            return (int) GetField("users", "rank", "username", username);
+        }
+
+        public string GetFirstName(string username) {
+            return (string) GetField("users", "firstname", "username", username);
+        }
+
+        public string GetLastName(string username) {
+            return (string) GetField("users", "lastname", "username", username);
+        }
+
+        public bool UpdateRank(string username, int rank) {
+            string query = "update users set rank = @rank where username = @username;";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@rank", rank);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.CommandType = CommandType.Text;
+            try {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            } catch (Exception ex) {
+                return false;
+            } finally {
+                conn.Close();
+            }
+            return true;
         }
 
         /* returns data for single user */

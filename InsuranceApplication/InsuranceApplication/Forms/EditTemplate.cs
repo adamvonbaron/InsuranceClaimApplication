@@ -111,8 +111,6 @@ namespace InsuranceApplication.Forms
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.AdminHome f3 = new Forms.AdminHome();
-            f3.Show();
         }
     }
 }

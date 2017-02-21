@@ -10,18 +10,22 @@ using System.Windows.Forms;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClaimManagerEditProfile : Form
+    public partial class MessageCenter : Form
     {
-        public ClaimManagerEditProfile()
-        {
+        public string Username;
+        public MessageCenter(string username) {
             InitializeComponent();
+            this.Username = username;
+        }
+
+        private void btnSendMessage_Click(object sender, EventArgs e) {
+            SendMessage sm = new SendMessage(Username);
+            sm.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.ClaimManager f3 = new Forms.ClaimManager();
-            f3.Show();
         }
     }
 }

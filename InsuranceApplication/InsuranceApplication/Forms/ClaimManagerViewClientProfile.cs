@@ -12,9 +12,11 @@ namespace InsuranceApplication.Forms
 {
     public partial class ClaimManagerViewClientProfile : Form
     {
-        public ClaimManagerViewClientProfile()
+        string Username;
+        public ClaimManagerViewClientProfile(string username)
         {
             InitializeComponent();
+            this.Username = username;
         }
 
         private void ClaimManagerViewClientProfile_Load(object sender, EventArgs e)
@@ -22,11 +24,14 @@ namespace InsuranceApplication.Forms
 
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            Forms.ClaimManager f3 = new Forms.ClaimManager();
-            f3.Show();
+        }
+
+        private void btnViewProfile_Click(object sender, EventArgs e) {
+            ViewUserProfile vup = new ViewUserProfile(txtUsername.Text);
+            vup.ShowDialog();
         }
     }
 }

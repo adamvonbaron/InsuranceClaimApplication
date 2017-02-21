@@ -29,8 +29,6 @@ namespace InsuranceApplication {
         }
 
         /* example of updating user info */
-        /* TODO: work on example showing how to populate
-         * text fields with data from db */
         private void btnUpdateProfile_Click(object sender, EventArgs e) {
             if (!database.UpdateUser(txtFirstName.Text, txtLastName.Text,
                                 txtUserName.Text, txtPassword.Text,
@@ -41,7 +39,7 @@ namespace InsuranceApplication {
 
         /* example of sending a message */
         private void btnSendMessage_Click(object sender, EventArgs e) {
-            database.SendMessage(txtTo.Text, txtFrom.Text, txtDate.Text, 
+            database.SendMessage(txtTo.Text, txtFrom.Text, dtpMessageDate.Text, 
                                  txtSubject.Text, txtMessage.Text);
         }
 

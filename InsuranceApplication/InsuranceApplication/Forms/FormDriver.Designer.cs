@@ -41,7 +41,6 @@
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnUpdateProfile = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
             this.lblGetUserInfo = new System.Windows.Forms.Label();
             this.dgvViewUser = new System.Windows.Forms.DataGridView();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,12 +81,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtClaimStatus = new System.Windows.Forms.TextBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtpMessageDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -191,10 +191,6 @@
             this.dgvUsers.Size = new System.Drawing.Size(346, 218);
             this.dgvUsers.TabIndex = 14;
             // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            // 
             // btnUpdateProfile
             // 
             this.btnUpdateProfile.Location = new System.Drawing.Point(12, 201);
@@ -289,13 +285,6 @@
             this.lblDate.Size = new System.Drawing.Size(36, 13);
             this.lblDate.TabIndex = 27;
             this.lblDate.Text = "Date: ";
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(335, 256);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(250, 20);
-            this.txtDate.TabIndex = 28;
             // 
             // lblGetUserInfo
             // 
@@ -517,11 +506,23 @@
             this.txtClaimStatus.Size = new System.Drawing.Size(200, 20);
             this.txtClaimStatus.TabIndex = 44;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            // 
+            // dtpMessageDate
+            // 
+            this.dtpMessageDate.Location = new System.Drawing.Point(334, 256);
+            this.dtpMessageDate.Name = "dtpMessageDate";
+            this.dtpMessageDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpMessageDate.TabIndex = 45;
+            // 
             // formFormDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1142, 583);
+            this.Controls.Add(this.dtpMessageDate);
             this.Controls.Add(this.txtClaimStatus);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -537,7 +538,6 @@
             this.Controls.Add(this.txtGetUser);
             this.Controls.Add(this.dgvViewUser);
             this.Controls.Add(this.lblGetUserInfo);
-            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.btnSendMessage);
             this.Controls.Add(this.txtMessage);
@@ -565,11 +565,11 @@
             this.Text = "Form Demo";
             this.Load += new System.EventHandler(this.formFormDemo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.insuranceClaimDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,7 +601,6 @@
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnSendMessage;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.Label lblGetUserInfo;
         private System.Windows.Forms.DataGridView dgvViewUser;
         private System.Windows.Forms.TextBox txtGetUser;
@@ -631,6 +630,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtClaimStatus;
+        private System.Windows.Forms.DateTimePicker dtpMessageDate;
     }
 }
 

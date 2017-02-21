@@ -69,12 +69,6 @@
     <Compile Include="Forms\AdminCreateClientFolder.Designer.cs">
       <DependentUpon>AdminCreateClientFolder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminEditProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminEditProfile.Designer.cs">
-      <DependentUpon>AdminEditProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,12 +87,6 @@
     <Compile Include="Forms\AdminViewUserData.Designer.cs">
       <DependentUpon>AdminViewUserData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ClaimManagerEditProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ClaimManagerEditProfile.Designer.cs">
-      <DependentUpon>ClaimManagerEditProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ClaimManagerViewClientProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +99,11 @@
     <Compile Include="Forms\ClientApplyforClaim.Designer.cs">
       <DependentUpon>ClientApplyforClaim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ClientEditProfile.cs">
+    <Compile Include="Forms\EditUserProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ClientEditProfile.Designer.cs">
-      <DependentUpon>ClientEditProfile.cs</DependentUpon>
+    <Compile Include="Forms\EditUserProfile.Designer.cs">
+      <DependentUpon>EditUserProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ClientHome.cs">
       <SubType>Form</SubType>
@@ -171,11 +159,35 @@
     <Compile Include="Forms\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MessageCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageCenter.Designer.cs">
+      <DependentUpon>MessageCenter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SendMessage.Designer.cs">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewMessagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewMessagesForm.Designer.cs">
+      <DependentUpon>ViewMessagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewUserProfile.Designer.cs">
+      <DependentUpon>ViewUserProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="InsuranceClaimDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -190,9 +202,6 @@
     <EmbeddedResource Include="Forms\AdminCreateClientFolder.resx">
       <DependentUpon>AdminCreateClientFolder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminEditProfile.resx">
-      <DependentUpon>AdminEditProfile.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,17 +211,14 @@
     <EmbeddedResource Include="Forms\AdminViewUserData.resx">
       <DependentUpon>AdminViewUserData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ClaimManagerEditProfile.resx">
-      <DependentUpon>ClaimManagerEditProfile.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClaimManagerViewClientProfile.resx">
       <DependentUpon>ClaimManagerViewClientProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientApplyforClaim.resx">
       <DependentUpon>ClientApplyforClaim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ClientEditProfile.resx">
-      <DependentUpon>ClientEditProfile.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EditUserProfile.resx">
+      <DependentUpon>EditUserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientHome.resx">
       <DependentUpon>ClientHome.cs</DependentUpon>
@@ -241,8 +247,20 @@
     <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageCenter.resx">
+      <DependentUpon>MessageCenter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SendMessage.resx">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewMessagesForm.resx">
+      <DependentUpon>ViewMessagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewUserProfile.resx">
+      <DependentUpon>ViewUserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
