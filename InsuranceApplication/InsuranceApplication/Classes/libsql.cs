@@ -209,6 +209,30 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        /* update password */
+        public bool UpdatePassword(string username, string password)
+        {
+            string query = "update users set password = @password where username = @username;";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return true;
+        }
+
         /* returns data for single user */
         public User GetUserData(string username) {
             string query = "select * from users where username = @username";

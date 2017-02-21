@@ -77,7 +77,7 @@ namespace InsuranceApplication
 
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
-            ForgotPassword f3 = new ForgotPassword();
+            ForgotPassword f3 = new ForgotPassword(txtUsername.Text);
             f3.Show();
         }
 
