@@ -42,8 +42,6 @@
             this.lblLastname = new System.Windows.Forms.Label();
             this.lblFirstname = new System.Windows.Forms.Label();
             this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxRank = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -170,36 +168,11 @@
             this.dtpDateOfBirth.Size = new System.Drawing.Size(200, 20);
             this.dtpDateOfBirth.TabIndex = 36;
             // 
-            // comboBoxRank
-            // 
-            this.comboBoxRank.FormattingEnabled = true;
-            this.comboBoxRank.Items.AddRange(new object[] {
-            "Admin",
-            "Finance Manager",
-            "Client Manager",
-            "Client"});
-            this.comboBoxRank.Location = new System.Drawing.Point(131, 185);
-            this.comboBoxRank.Name = "comboBoxRank";
-            this.comboBoxRank.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxRank.TabIndex = 37;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 18);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Rank:";
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 258);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxRank);
             this.Controls.Add(this.dtpDateOfBirth);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
@@ -237,7 +210,5 @@
         private System.Windows.Forms.Label lblLastname;
         private System.Windows.Forms.Label lblFirstname;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
-        private System.Windows.Forms.ComboBox comboBoxRank;
-        private System.Windows.Forms.Label label1;
     }
 }
