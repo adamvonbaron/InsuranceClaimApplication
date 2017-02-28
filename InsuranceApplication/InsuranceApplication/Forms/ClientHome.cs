@@ -12,17 +12,13 @@ namespace InsuranceApplication.Forms
 {
     public partial class ClientHome : Form
     {
-        public string Username;
-        public string Firstname;
-        public string Lastname;
-        public ClientHome(string firstname, string lastname, string username)
+        ClassesRefine.Client curClient = null;
+        public ClientHome(ClassesRefine.Client client)
         {
+            curClient = client;
             InitializeComponent();
-            this.lblClientHome.Text = "Welcome, " + firstname + " " + lastname;
-            this.lblCurUserInfo.Text = "Logged in as: " + username + "      Rank: Client";
-            this.Username = username;
-            this.Firstname = firstname;
-            this.Lastname = lastname;
+            this.lblClientHome.Text = "Welcome, " + curClient.FirstName + " " + curClient.LastName;
+            this.lblCurUserInfo.Text = "Logged in as: " + curClient.UserName + "      Rank: Client";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -32,18 +28,15 @@ namespace InsuranceApplication.Forms
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            EditUserProfile f3 = new EditUserProfile(Username);
-            f3.ShowDialog();
+            curClient.EditProfile();
         }
 
         private void btnApplyForClaim_Click(object sender, EventArgs e) {
-            ClientApplyforClaim cac = new ClientApplyforClaim(Username);
-            cac.ShowDialog();
+            curClient.ApplyForClaim();
         }
 
         private void btnViewMessages_Click(object sender, EventArgs e) {
-            ViewMessagesForm vmf = new ViewMessagesForm(Username);
-            vmf.ShowDialog();
+            curClient.ViewMessages();
         }
     }
 }

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace InsuranceApplication.ClassesRefine
 {
-    class User
+    public class User
     {
         //Automatic Properties
-        string FirstName;
-        string LastName;
-        string Birthday;
-        string UserName;
-        string Password;
-        string Phonenumber;
-        int Rank;
+        public string FirstName;
+        public string LastName;
+        public string Birthday;
+        public string UserName;
+        public string Password;
+        public string Phonenumber;
+        public int Rank;
         Classes.libsql database = new Classes.libsql();
 
         public User(string firstname, string lastname, string username, string password,
@@ -68,7 +68,8 @@ namespace InsuranceApplication.ClassesRefine
                     //case 3:
                     //return new ClientManager();
                     case 4:
-                        return new Client(FirstName, LastName, UserName, Password, Rank);
+                        return new Client(FirstName, LastName, UserName, 
+                                          Password, Birthday, Phonenumber, Rank);
                 }
                 return new User("", "", "", "", "", "", -1);
             }
