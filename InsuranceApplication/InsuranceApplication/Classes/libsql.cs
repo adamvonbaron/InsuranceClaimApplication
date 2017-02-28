@@ -7,9 +7,9 @@ using System.Xml.Linq;
 using System.Windows.Forms;
 
 namespace InsuranceApplication.Classes {
-    class libsql {
+    static class libsql {
         /* properties */
-        private readonly SqlConnection _conn = new SqlConnection(
+        private static SqlConnection _conn = new SqlConnection(
             @"Server=tcp:insuranceclaim.database.windows.net,1433;
             Initial Catalog=InsuranceClaim;
             Persist Security Info=False;
@@ -20,7 +20,7 @@ namespace InsuranceApplication.Classes {
             TrustServerCertificate=False;
             Connection Timeout=30;");
 
-        public SqlConnection conn {
+        public static SqlConnection conn {
             get {
                 return _conn;
             } private set {
@@ -28,7 +28,7 @@ namespace InsuranceApplication.Classes {
             }
         }
 
-        private bool CheckField(string table, string column, string data) {
+        private static bool CheckField(string table, string column, string data) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = "select " + column + " from " + table + " where " + column + " = @field";
@@ -45,7 +45,7 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
-        private object GetField(string table, string column, string where, string data) {
+        private static object GetField(string table, string column, string where, string data) {
             SqlCommand cmd = new SqlCommand();
             object resp = null;
             cmd.Connection = conn;
@@ -62,7 +62,7 @@ namespace InsuranceApplication.Classes {
             return resp;
         }
 
-        private bool UserDB(string firstname, string lastname,
+        private static bool UserDB(string firstname, string lastname,
                            string username, string password,
                            string birthday, string phonenumber, int rank,
                            bool register) {
@@ -99,30 +99,30 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
-        private bool CheckUsername(string username) {
+        private static bool CheckUsername(string username) {
             return CheckField("users", "username", username);
         }
 
-        private bool CheckPassword(string password) {
+        private static bool CheckPassword(string password) {
             return CheckField("users", "password", password);
         }
 
         /* creates new user in database */
-        public bool RegisterUser(string firstname, string lastname,
+        public static bool RegisterUser(string firstname, string lastname,
                                  string username, string password,
                                  string birthday, string phonenumber, int rank) {
             return UserDB(firstname, lastname, username, password, birthday, phonenumber, rank, true);
         }
 
         /* updates existing user info */
-        public bool UpdateUser(string firstname, string lastname, 
+        public static bool UpdateUser(string firstname, string lastname, 
                                string username, string password,
                                string birthday, string phonenumber, int rank) {
             return UserDB(firstname, lastname, username, password, birthday, phonenumber, rank, false);
         }
 
         /* inserts claim in database */
-        public bool SendClaim(string username, string date, string status, string claim) {
+        public static bool SendClaim(string username, string date, string status, string claim) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = @"insert into claims (username, date, status, claim) 
@@ -143,7 +143,7 @@ namespace InsuranceApplication.Classes {
         }
 
         /* inserts message in database */
-        public bool SendMessage(string to, string from, string date, 
+        public static bool SendMessage(string to, string from, string date, 
                                 string subject, string message) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
@@ -165,7 +165,7 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
-        public DataTable GetInboxMessages(string username) {
+        public static DataTable GetInboxMessages(string username) {
             string query = "select * from messages where [to] = @username";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@username", username);
@@ -176,24 +176,24 @@ namespace InsuranceApplication.Classes {
         }
 
         /* checks username and password in database */
-        public bool ValidateUser(string username, string password) {
+        public static bool ValidateUser(string username, string password) {
             return (CheckUsername(username) && CheckPassword(password));
         }
 
         /* get user rank */
-        public int GetRank(string username) {
+        public static int GetRank(string username) {
             return (int) GetField("users", "rank", "username", username);
         }
 
-        public string GetFirstName(string username) {
+        public static string GetFirstName(string username) {
             return (string) GetField("users", "firstname", "username", username);
         }
 
-        public string GetLastName(string username) {
+        public static string GetLastName(string username) {
             return (string) GetField("users", "lastname", "username", username);
         }
 
-        public bool UpdateRank(string username, int rank) {
+        public static bool UpdateRank(string username, int rank) {
             string query = "update users set rank = @rank where username = @username;";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@rank", rank);
@@ -211,7 +211,7 @@ namespace InsuranceApplication.Classes {
         }
 
         /* update password */
-        public bool UpdatePassword(string username, string password)
+        public static bool UpdatePassword(string username, string password)
         {
             string query = "update users set password = @password where username = @username;";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -235,33 +235,36 @@ namespace InsuranceApplication.Classes {
         }
 
         /* returns data for single user */
-        public User GetUserData(string username) {
+        public static UserData GetUserData(string username) {
             string query = "select * from users where username = @username";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataReader sqlReader;
-            User user = null;
+            UserData userdata = User.NullUserData;
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@username", username);
             try {
                 conn.Open();
                 sqlReader = cmd.ExecuteReader();
                 sqlReader.Read();
-                user = new User(sqlReader.GetString(0),
-                                sqlReader.GetString(1),
-                                sqlReader.GetString(2),
-                                sqlReader.GetString(3),
-                                sqlReader.GetString(4),
-                                sqlReader.GetString(5),
-                                sqlReader.GetInt32(6));
+                userdata = new UserData
+                {
+                    FirstName = sqlReader.GetString(0),
+                    LastName = sqlReader.GetString(1),
+                    UserName = sqlReader.GetString(2),
+                    Password = sqlReader.GetString(3),
+                    Birthday = sqlReader.GetString(4),
+                    Phonenumber = sqlReader.GetString(5),
+                    Type = (UserType) sqlReader.GetInt32(6)
+                };
             } catch (Exception ex) {
                 MessageBox.Show(ex.ToString());
             } finally {
                 conn.Close();
             }
-            return user;
+            return userdata;
         }
 
-        public bool DeleteUser(string username)
+        public static bool DeleteUser(string username)
         {
             string query = "delete from users where username = @username;";
             SqlCommand cmd = new SqlCommand(query, conn);

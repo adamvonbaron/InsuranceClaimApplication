@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using InsuranceApplication.ClassesRefine;
+using InsuranceApplication.Classes;
 using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms {
     public partial class EditUserProfile : Form {
         int rank;
-        public EditUserProfile(User user) {
+        public EditUserProfile() {
             InitializeComponent();
             User curUser = user;
             switch(user.Rank)

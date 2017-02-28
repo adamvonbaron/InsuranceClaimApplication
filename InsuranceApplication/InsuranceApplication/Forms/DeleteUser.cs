@@ -13,7 +13,6 @@ namespace InsuranceApplication.Forms
 {
     public partial class DeleteUser : Form
     {
-        libsql database = new libsql();
         public DeleteUser()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace InsuranceApplication.Forms
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            database.DeleteUser(txtUsername.Text);
+            libsql.DeleteUser(txtUsername.Text);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

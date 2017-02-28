@@ -5,16 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using InsuranceApplication.Forms;
 
-namespace InsuranceApplication.ClassesRefine
+namespace InsuranceApplication.Classes
 {
     public class Client : User
     {
-        public Client(string firstname, string lastname, string username, string password,
-                      string birthday, string phonenumber, int rank) :
-               base(firstname, lastname, username, password,
-                    birthday, phonenumber, rank)
+        public Client(string username, string password) : base(username, password)
         {
-
+            UserData userdata = libsql.GetUserData(UserName);
+            FirstName = userdata.FirstName;
+            LastName = userdata.LastName;
+            Birthday = userdata.Birthday;
+            Phonenumber = userdata.Phonenumber;
+            Type = userdata.Type;
         }
 
         public void ViewProfile()

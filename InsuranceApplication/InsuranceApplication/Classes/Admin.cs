@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using InsuranceApplication.Forms;
+using InsuranceApplication.Classes;
 
-namespace InsuranceApplication.ClassesRefine
+namespace InsuranceApplication.Classes
 {
     class Admin : User
     {
-        Classes.libsql database = new Classes.libsql();
        
         //properties
         public string FirstName { get; set; }

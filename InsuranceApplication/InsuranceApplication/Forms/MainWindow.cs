@@ -19,8 +19,6 @@ namespace InsuranceApplication
             InitializeComponent();
         }
 
-        libsql database = new libsql();
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -36,38 +34,24 @@ namespace InsuranceApplication
             Application.Exit();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e) {
-            int rank;
-            if(database.ValidateUser(txtUsername.Text, txtPassword.Text)) {
-                rank = database.GetRank(txtUsername.Text);
-                Form homescreen = null;
-                switch(rank) {
-                    case 1:
-                        homescreen = new AdminHome(database.GetFirstName(txtUsername.Text),
-                                                   database.GetLastName(txtUsername.Text),
-                                                   txtUsername.Text);
-                        break;
-                    case 2:
-                    case 3:
-                        homescreen = new FinanceManagerHome(database.GetFirstName(txtUsername.Text), 
-                                                            database.GetLastName(txtUsername.Text),
-                                                            txtUsername.Text);
-                        break;
-                   case 4:
-                        homescreen = new ClientHome(database.GetFirstName(txtUsername.Text),
-                                                    database.GetLastName(txtUsername.Text),
-                                                    txtUsername.Text);
-                        break;
-                }
-                this.Hide();
-                homescreen.ShowDialog();
-                txtPassword.Text = string.Empty;
-                this.Show();
-            } else {
-                MessageBox.Show("Wrong Username or Password.", "Error", 
-                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsername.Text = String.Empty;
-                txtPassword.Text = String.Empty;
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            UserType usertype = User.Login(txtUsername.Text, txtPassword.Text);
+            User user;
+            switch(usertype)
+            {
+                case UserType.Admin:
+                    //user = new Admin();
+                    break;
+                case UserType.FinanceManager:
+                    user = new FinanceManager(txtUsername.Text, txtPassword.Text);
+                    break;
+                case UserType.ClientManager:
+                    //user = new ClientManager(txtUsername.Text, txtPassword.Text);
+                    break;
+                case UserType.Client:
+                    user = new Client(txtUsername.Text, txtPassword.Text);
+                    break;
             }
         }
 
@@ -92,8 +76,8 @@ namespace InsuranceApplication
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            EditTemplate et = new EditTemplate();
-            et.Show();
+            //EditTemplate et = new EditTemplate();
+            //et.Show();
         }
     }
 }

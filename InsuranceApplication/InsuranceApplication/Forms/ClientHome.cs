@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Forms
 {
     public partial class ClientHome : Form
     {
-        ClassesRefine.Client curClient = null;
-        public ClientHome(ClassesRefine.Client client)
+        Client curClient = null;
+        public ClientHome(Client client)
         {
             curClient = client;
             InitializeComponent();
