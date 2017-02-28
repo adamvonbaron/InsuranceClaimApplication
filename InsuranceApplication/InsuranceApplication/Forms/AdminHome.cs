@@ -40,8 +40,7 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnCreateClientFolder_Click(object sender, EventArgs e) {
-            AdminCreateClientFolder f5 = new AdminCreateClientFolder();
-            f5.ShowDialog();
+
         }
 
         private void btnRegisterCMFM_Click(object sender, EventArgs e) {
@@ -62,6 +61,12 @@ namespace InsuranceApplication.Forms {
         private void btnMessageCenter_Click(object sender, EventArgs e) {
             MessageCenter mc = new MessageCenter(Username);
             mc.ShowDialog();
+        }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            DeleteUser du = new DeleteUser();
+            du.ShowDialog();
         }
     }
 }

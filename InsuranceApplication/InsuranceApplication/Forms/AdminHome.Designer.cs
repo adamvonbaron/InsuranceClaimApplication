@@ -37,6 +37,7 @@
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.btnRegisterUser = new System.Windows.Forms.Button();
             this.btnMessageCenter = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdminTitle
@@ -135,11 +136,23 @@
             this.btnMessageCenter.UseVisualStyleBackColor = true;
             this.btnMessageCenter.Click += new System.EventHandler(this.btnMessageCenter_Click);
             // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteUser.Location = new System.Drawing.Point(48, 283);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(179, 54);
+            this.btnDeleteUser.TabIndex = 10;
+            this.btnDeleteUser.Text = "Delete User";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 457);
+            this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnMessageCenter);
             this.Controls.Add(this.btnRegisterUser);
             this.Controls.Add(this.lblCurUserInfo);
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.Button btnRegisterUser;
         private System.Windows.Forms.Button btnMessageCenter;
+        private System.Windows.Forms.Button btnDeleteUser;
     }
 }

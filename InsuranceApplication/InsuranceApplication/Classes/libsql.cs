@@ -260,5 +260,27 @@ namespace InsuranceApplication.Classes {
             }
             return user;
         }
+
+        public bool DeleteUser(string username)
+        {
+            string query = "delete from users where username = @username;";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return true;
+        }
     }
 }
