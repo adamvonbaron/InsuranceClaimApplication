@@ -52,24 +52,31 @@ namespace InsuranceApplication.ClassesRefine
         }
 
         //methods
-        public User login(string username, string password)
+        public User Login(string username, string password)
         {
             int rank;
-            if (database.ValidateUser(UserName, Password))
+            try
             {
+                database.ValidateUser(UserName, Password);
                 rank = database.GetRank(UserName);
                 switch (rank)
                 {
-                    case 1:
-                        //return new Admin(FirstName, LastName, UserName, Password, Rank);
+                    //case 1:
+                    //return new Admin(FirstName, LastName, UserName, Password, Rank);
                     case 2:
                         return new FinanceManager();
-                    case 3:
-                        //return new ClientManager();
+                    //case 3:
+                    //return new ClientManager();
                     case 4:
                         return new Client(FirstName, LastName, UserName, Password, Rank);
                 }
+                return new User("", "", "", "", "", "", -1);
             }
+            catch (Exception ex)
+            {
+                return new User("", "", "", "", "", "", -1);
+            }
+        }
 
         public override string ToString()
         {
