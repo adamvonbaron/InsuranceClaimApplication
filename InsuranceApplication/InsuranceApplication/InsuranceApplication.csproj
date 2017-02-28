@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassesRefine\Admin.cs" />
     <Compile Include="ClassesRefine\Client.cs" />
     <Compile Include="ClassesRefine\User.cs" />
     <Compile Include="Classes\AdminAcc.cs" />
