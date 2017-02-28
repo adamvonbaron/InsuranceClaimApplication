@@ -26,7 +26,7 @@ namespace InsuranceApplication.ClassesRefine
         }
 
         //methods
-        public void Login(string username, string password)
+        
         {
 
         }
