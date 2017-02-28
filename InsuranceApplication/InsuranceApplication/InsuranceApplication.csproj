@@ -48,16 +48,12 @@
   <ItemGroup>
     <Compile Include="ClassesRefine\Admin.cs" />
     <Compile Include="ClassesRefine\Client.cs" />
+    <Compile Include="ClassesRefine\FinanceManager.cs" />
     <Compile Include="ClassesRefine\User.cs" />
-    <Compile Include="Classes\AdminAcc.cs" />
     <Compile Include="Classes\Claim.cs" />
-    <Compile Include="Classes\ClaimManagerAcc.cs" />
-    <Compile Include="Classes\Client.cs" />
-    <Compile Include="Classes\FinanceManager.cs" />
     <Compile Include="Classes\libsql.cs" />
     <Compile Include="Classes\libxmlserial.cs" />
     <Compile Include="Classes\Message.cs" />
-    <Compile Include="Classes\User.cs" />
     <Compile Include="Forms\AdminAddPermissions.cs">
       <SubType>Form</SubType>
     </Compile>

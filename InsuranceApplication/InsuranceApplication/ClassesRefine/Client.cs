@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InsuranceApplication.Classes
-{/*
-    class Client
+namespace InsuranceApplication.ClassesRefine
+{
+    class Client : User
     {
         //properties
         public string FirstName { get; set; }
@@ -47,5 +47,5 @@ namespace InsuranceApplication.Classes
         {
 
         }
-    }*/
+    }
 }
