@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InsuranceApplication.Classes;
 using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.ClassesRefine
@@ -11,6 +10,7 @@ namespace InsuranceApplication.ClassesRefine
     class Admin : User
     {
         Classes.libsql database = new Classes.libsql();
+       
         //properties
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -35,21 +35,22 @@ namespace InsuranceApplication.ClassesRefine
         //methods
         public void UpdateUser(string firstname, string lastname, string username, string password, int rank, string birthday, string phonenumber)
         {
-            
+             
         }
-
 
         public void DeleteUser(string username)
         {
-            if(username != null)
-            {
-                //delete profile
-            }
-            else
-            {
-                //error message
-            }
-        }
+            DeleteUser du = new DeleteUser(this);
 
+            //if(username != null)
+            //{
+            //    DeleteUser(username);
+            //}
+            //else
+            //{
+            //    //error message
+            //}
+        }
+       
     }
 }
