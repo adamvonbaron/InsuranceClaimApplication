@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InsuranceApplication.Classes.Claim" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAiA=</HashCode>
+      <FileName>Classes\Claim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Classes.libsql" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAAgAAAAAAEAyEAAgAAAQQQAAAACAAAMKICAAA=</HashCode>
+      <FileName>Classes\libsql.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Classes.libxmlserial" Collapsed="true">
+    <Position X="14.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\libxmlserial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Classes.Message" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAQAAAiA=</HashCode>
+      <FileName>Classes\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.ClassesRefine.Admin" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAAAABEAAAAQAAAAQAIAAACAQAAAAAAAAg=</HashCode>
+      <FileName>ClassesRefine\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.ClassesRefine.Client" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgBAAAAAIAAAA=</HashCode>
+      <FileName>ClassesRefine\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.ClassesRefine.FinanceManager" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassesRefine\FinanceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.ClassesRefine.User" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAAAABEAAAAQAAAAAAIAAACAQAQAAAAAAg=</HashCode>
+      <FileName>ClassesRefine\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.AdminAddPermissions" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAECAAAABAAACEAAACgGEIAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Forms\AdminAddPermissions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.AdminHome" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBgAAEEAFCBABCBIA0iAEEAiACICAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Forms\AdminHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.ClaimManager" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAQgEAAFCAAAAAKAQCABAAiACBAAAAAAABAAAQAAAA=</HashCode>
+      <FileName>Forms\ClaimManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.ClientApplyforClaim" Collapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAABFAAQCAAEACAAAAAAFEAAAQAMAAAAA=</HashCode>
+      <FileName>Forms\ClientApplyforClaim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.ClientHome" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIgAAQFCAAAAAEAACAAAAiACAAAAAIAIAAAAgQAAA=</HashCode>
+      <FileName>Forms\ClientHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.DeleteUser" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAECAAABBAAACAAAACACEAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Forms\DeleteUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.EditUserProfile" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAAESAICACABAKAAAACAmEACAABAAAAgAAAIAA=</HashCode>
+      <FileName>Forms\EditUserProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.FinanceManagerHome" Collapsed="true">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgEAAFCAAAABKAQCABAAiACAAAAAAAIBAAAQAAAA=</HashCode>
+      <FileName>Forms\FinanceManagerHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.ForgotPassword" Collapsed="true">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECABABBAIACAAAACAGAAAAAAABAAAAEAAAA=</HashCode>
+      <FileName>Forms\ForgotPassword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.MessageCenter" Collapsed="true">
+    <Position X="18.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAECAAAAAAARCAAAACACAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Forms\MessageCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.Register" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgAAAAAMCACAABAAAKBAAACAGFAAAAAAhAAIAAAEAA=</HashCode>
+      <FileName>Forms\Register.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.SendMessage" Collapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAICACAAAQBAAQCAAAAaQAAgAACAIAAAAAAAAAI=</HashCode>
+      <FileName>Forms\SendMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.ViewMessagesForm" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECADAABAAQCEAAACACAAAAABAAAAAAIAAAA=</HashCode>
+      <FileName>Forms\ViewMessagesForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.ViewProfile" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAUCAAAAAAAQCAAAACAGAQAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Forms\ViewProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Forms.ViewUserProfile" Collapsed="true">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAESAAABBAAQCJAAgCAGAAAAAQgAAAAIAAAAA=</HashCode>
+      <FileName>Forms\ViewUserProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.formFormDemo" Collapsed="true">
+    <Position X="18.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBjAgAJSESBIAjDgABCBSLgWAsBgAADEiwgDAeIMQAI=</HashCode>
+      <FileName>Forms\FormDriver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.formInsuranceClaim" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAECAAAABAAACAAAACAGAADAgAApAgAABhAEQ=</HashCode>
+      <FileName>Forms\MainWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.InsuranceClaimDataSet" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAwAAgAJABAAMQAAAAAgCQBgBAAAAAAEABTA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Program" Collapsed="true">
+    <Position X="11.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.InsuranceClaimDataSetTableAdapters.claimsTableAdapter" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.InsuranceClaimDataSetTableAdapters.messagesTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.InsuranceClaimDataSetTableAdapters.usersTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.InsuranceClaimDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAgkEBACgAAAAAQAAAIABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Properties.Resources" Collapsed="true">
+    <Position X="13" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InsuranceApplication.Properties.Settings" Collapsed="true">
+    <Position X="16.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
