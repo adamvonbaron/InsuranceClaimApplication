@@ -35,19 +35,21 @@ namespace InsuranceApplication.ClassesRefine
         //methods
         public void UpdateUser(string firstname, string lastname, string username, string password, int rank, string birthday, string phonenumber)
         {
-            
+             
         }
 
         public void DeleteUser(string username)
         {
-            if(username != null)
-            {
-                DeleteUser(username);
-            }
-            else
-            {
-                //error message
-            }
+            DeleteUser du = new DeleteUser(this);
+
+            //if(username != null)
+            //{
+            //    DeleteUser(username);
+            //}
+            //else
+            //{
+            //    //error message
+            //}
         }
        
     }
