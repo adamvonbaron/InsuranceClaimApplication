@@ -5,129 +5,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InsuranceApplication.Classes
+namespace InsuranceApplication.ClassesRefine
 {
-    /*
-    [Serializable]
     class User
     {
         //Automatic Properties
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        private string Rank { get { return Classes.libsql.getRank(); } }
+        string FirstName;
+        string LastName;
+        string Birthday;
+        string UserName;
+        string Password;
+        string Phonenumber;
+        int Rank;
+        Classes.libsql database = new Classes.libsql();
 
-        //Methods
-        //public void Login()
-        //{
-        //    User user = new User
-        //    switch (Rank)
-        //    {
-        //        case "Client":
-        //            Client
-        //    }
-        //}
-    }
-}
-            //make sure the user exists
+        public User(string firstname, string lastname, string username, string password,
+                    string birthday, string phonenumber, int rank)
+        {
+            this.FirstName = firstname;
+            this.LastName = lastname;
+            this.UserName = username;
+            this.Birthday = birthday;
+            this.Phonenumber = phonenumber;
+            this.Rank = rank;
+            this.Password = password;
+            //this.Salt = new byte[32];
+            //System.Security.Cryptography.RNGCryptoServiceProvider.Create().GetBytes(Salt);
 
-//make sure the pass matches
+            //// Convert the plain string pwd into bytes
+            //byte[] plainTextBytes = System.Text.UnicodeEncoding.Unicode.GetBytes(password);
+            //// Append salt to pwd before hashing
+            //byte[] combinedBytes = new byte[plainTextBytes.Length + Salt.Length];
+            //System.Buffer.BlockCopy(plainTextBytes, 0, combinedBytes, 0, plainTextBytes.Length);
+            //System.Buffer.BlockCopy(Salt, 0, combinedBytes, plainTextBytes.Length, Salt.Length);
 
-//set user rank = to the value in the rank column of the user
+            //// Create hash for the pwd+salt
+            //System.Security.Cryptography.HashAlgorithm hashAlgo = new System.Security.Cryptography.SHA256Managed();
+            //byte[] hash = hashAlgo.ComputeHash(combinedBytes);
 
+            //// Append the salt to the hash
+            //byte[] hashPlusSalt = new byte[hash.Length + Salt.Length];
+            //System.Buffer.BlockCopy(hash, 0, hashPlusSalt, 0, hash.Length);
+            //System.Buffer.BlockCopy(Salt, 0, hashPlusSalt, hash.Length, Salt.Length);
 
+            //this.Password = Encoding.UTF8.GetString(hashPlusSalt);
+        }
 
-/*
-    switch( caseSwitch )
-    {
-        case 1:
-            //stuff
-            break; 
-        case 1<i<n:
-            //stuff
-            break;
+        //methods
+        public User login(string username, string password)
+        {
+            int rank;
+            if (database.ValidateUser(UserName, Password))
+            {
+                rank = database.GetRank(UserName);
+                switch (rank)
+                {
+                    case 1:
+                        //return new Admin(FirstName, LastName, UserName, Password, Rank);
+                    case 2:
+                        return new FinanceManager();
+                    case 3:
+                        //return new ClientManager();
+                    case 4:
+                        return new Client(FirstName, LastName, UserName, Password, Rank);
+                }
+            }
 
-        case n:
-            //stuff
-            break
-        
-        default:
-            //error
-            break
-
- * /
-    }
-
-
-}
-
-    /*
-    public string FirstName { get; set; }
-
-    public string LastName { get; set; }
-
-    public string UserName { get; set; }
-
-    public string Password { get; set; }
-
-    public string Birthday { get; set; }
-
-    public string Phonenumber { get; set; }
-
-    private byte[] Salt { get; set; }
-
-    public int Rank { get; set; }
-
-    //public string creation { get; set;}
-
-    //public int claims { get; set;}
-
-    /* key */
-//public long id { get; set;}
-
-//constructor
-/*
-public User(string firstname, string lastname, string username, string password,
-            string birthday, string phonenumber, int rank)
-{
-    this.FirstName = firstname;
-    this.LastName = lastname;
-    this.UserName = username;
-    this.Birthday = birthday;
-    this.Phonenumber = phonenumber;
-    this.Rank = rank;
-
-    this.Salt = new byte[32];
-    System.Security.Cryptography.RNGCryptoServiceProvider.Create().GetBytes(Salt);
-
-    // Convert the plain string pwd into bytes
-    byte[] plainTextBytes = System.Text.UnicodeEncoding.Unicode.GetBytes(password);
-    // Append salt to pwd before hashing
-    byte[] combinedBytes = new byte[plainTextBytes.Length + Salt.Length];
-    System.Buffer.BlockCopy(plainTextBytes, 0, combinedBytes, 0, plainTextBytes.Length);
-    System.Buffer.BlockCopy(Salt, 0, combinedBytes, plainTextBytes.Length, Salt.Length);
-
-    // Create hash for the pwd+salt
-    System.Security.Cryptography.HashAlgorithm hashAlgo = new System.Security.Cryptography.SHA256Managed();
-    byte[] hash = hashAlgo.ComputeHash(combinedBytes);
-
-    // Append the salt to the hash
-    byte[] hashPlusSalt = new byte[hash.Length + Salt.Length];
-    System.Buffer.BlockCopy(hash, 0, hashPlusSalt, 0, hash.Length);
-    System.Buffer.BlockCopy(Salt, 0, hashPlusSalt, hash.Length, Salt.Length);
-
-    this.Password = Encoding.UTF8.GetString(hashPlusSalt);
-}
-
-//methods
-public void login(string username, string password)
-{
-
-}
-
-public override string ToString() {
-    return String.Format(@"First Name: {0}\nLast Name: {1}\nUsername: {2}\nPassword: {3}\n
+        public override string ToString()
+        {
+            return String.Format(@"First Name: {0}\nLast Name: {1}\nUsername: {2}\nPassword: {3}\n
                            Birthday: {4}\nPhone Number: {5}", this.FirstName, this.LastName,
-                           this.UserName, this.Password, this.Birthday, this.Phonenumber);
-}
-}*/
+                                   this.UserName, this.Password, this.Birthday, this.Phonenumber);
+        }
+    }
 }
