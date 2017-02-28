@@ -85,7 +85,7 @@
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditProfile.Location = new System.Drawing.Point(55, 240);
             this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(404, 34);
+            this.btnEditProfile.Size = new System.Drawing.Size(359, 34);
             this.btnEditProfile.TabIndex = 4;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             this.btnViewStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewStatus.Location = new System.Drawing.Point(236, 159);
             this.btnViewStatus.Name = "btnViewStatus";
-            this.btnViewStatus.Size = new System.Drawing.Size(176, 75);
+            this.btnViewStatus.Size = new System.Drawing.Size(178, 75);
             this.btnViewStatus.TabIndex = 5;
             this.btnViewStatus.Text = "View Current Status";
             this.btnViewStatus.UseVisualStyleBackColor = true;

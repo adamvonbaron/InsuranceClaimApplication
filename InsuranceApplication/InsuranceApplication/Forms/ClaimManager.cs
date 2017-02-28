@@ -38,7 +38,7 @@ namespace InsuranceApplication.Forms
         private void btnViewClientProfile_Click(object sender, EventArgs e)
         {
             this.Close();
-            EditUserProfile f3 = new EditUserProfile(Username);
+            ViewProfile f3 = new ViewProfile(Username);
             f3.Show();
         }
     }

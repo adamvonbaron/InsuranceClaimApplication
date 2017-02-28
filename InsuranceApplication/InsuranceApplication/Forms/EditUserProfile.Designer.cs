@@ -42,8 +42,6 @@
             this.lblUpdateLastname = new System.Windows.Forms.Label();
             this.lblUpdateFirstname = new System.Windows.Forms.Label();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtRank = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnExit
@@ -72,35 +70,35 @@
             // 
             this.txtUpdatePhone.Location = new System.Drawing.Point(214, 181);
             this.txtUpdatePhone.Name = "txtUpdatePhone";
-            this.txtUpdatePhone.Size = new System.Drawing.Size(177, 20);
+            this.txtUpdatePhone.Size = new System.Drawing.Size(200, 20);
             this.txtUpdatePhone.TabIndex = 32;
             // 
             // txtUpdatePassword
             // 
             this.txtUpdatePassword.Location = new System.Drawing.Point(214, 112);
             this.txtUpdatePassword.Name = "txtUpdatePassword";
-            this.txtUpdatePassword.Size = new System.Drawing.Size(177, 20);
+            this.txtUpdatePassword.Size = new System.Drawing.Size(200, 20);
             this.txtUpdatePassword.TabIndex = 29;
             // 
             // txtUpdateUsername
             // 
             this.txtUpdateUsername.Location = new System.Drawing.Point(214, 79);
             this.txtUpdateUsername.Name = "txtUpdateUsername";
-            this.txtUpdateUsername.Size = new System.Drawing.Size(177, 20);
+            this.txtUpdateUsername.Size = new System.Drawing.Size(200, 20);
             this.txtUpdateUsername.TabIndex = 28;
             // 
             // txtUpdateLastname
             // 
             this.txtUpdateLastname.Location = new System.Drawing.Point(214, 43);
             this.txtUpdateLastname.Name = "txtUpdateLastname";
-            this.txtUpdateLastname.Size = new System.Drawing.Size(177, 20);
+            this.txtUpdateLastname.Size = new System.Drawing.Size(200, 20);
             this.txtUpdateLastname.TabIndex = 27;
             // 
             // txtUpdateFirstname
             // 
             this.txtUpdateFirstname.Location = new System.Drawing.Point(214, 11);
             this.txtUpdateFirstname.Name = "txtUpdateFirstname";
-            this.txtUpdateFirstname.Size = new System.Drawing.Size(177, 20);
+            this.txtUpdateFirstname.Size = new System.Drawing.Size(200, 20);
             this.txtUpdateFirstname.TabIndex = 26;
             // 
             // lblUpdatePhone
@@ -170,30 +168,11 @@
             this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
             this.dtpBirthday.TabIndex = 36;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 217);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Update Rank:";
-            // 
-            // txtRank
-            // 
-            this.txtRank.Location = new System.Drawing.Point(139, 214);
-            this.txtRank.Name = "txtRank";
-            this.txtRank.Size = new System.Drawing.Size(100, 20);
-            this.txtRank.TabIndex = 38;
-            // 
             // EditUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 275);
-            this.Controls.Add(this.txtRank);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
@@ -232,7 +211,5 @@
         private System.Windows.Forms.Label lblUpdateLastname;
         private System.Windows.Forms.Label lblUpdateFirstname;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtRank;
     }
 }

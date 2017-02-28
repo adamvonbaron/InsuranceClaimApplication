@@ -32,7 +32,6 @@
             this.btnViewUserData = new System.Windows.Forms.Button();
             this.btnAddPermissions = new System.Windows.Forms.Button();
             this.btnCreateClientFolder = new System.Windows.Forms.Button();
-            this.btnRegisterCMFM = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
@@ -84,17 +83,6 @@
             this.btnCreateClientFolder.UseVisualStyleBackColor = true;
             this.btnCreateClientFolder.Click += new System.EventHandler(this.btnCreateClientFolder_Click);
             // 
-            // btnRegisterCMFM
-            // 
-            this.btnRegisterCMFM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterCMFM.Location = new System.Drawing.Point(233, 150);
-            this.btnRegisterCMFM.Name = "btnRegisterCMFM";
-            this.btnRegisterCMFM.Size = new System.Drawing.Size(184, 62);
-            this.btnRegisterCMFM.TabIndex = 4;
-            this.btnRegisterCMFM.Text = "Register CM/FM";
-            this.btnRegisterCMFM.UseVisualStyleBackColor = true;
-            this.btnRegisterCMFM.Click += new System.EventHandler(this.btnRegisterCMFM_Click);
-            // 
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(12, 422);
@@ -128,9 +116,9 @@
             // btnRegisterUser
             // 
             this.btnRegisterUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterUser.Location = new System.Drawing.Point(233, 218);
+            this.btnRegisterUser.Location = new System.Drawing.Point(233, 150);
             this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.Size = new System.Drawing.Size(184, 58);
+            this.btnRegisterUser.Size = new System.Drawing.Size(184, 62);
             this.btnRegisterUser.TabIndex = 8;
             this.btnRegisterUser.Text = "Register User";
             this.btnRegisterUser.UseVisualStyleBackColor = true;
@@ -139,7 +127,7 @@
             // btnMessageCenter
             // 
             this.btnMessageCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMessageCenter.Location = new System.Drawing.Point(48, 282);
+            this.btnMessageCenter.Location = new System.Drawing.Point(238, 218);
             this.btnMessageCenter.Name = "btnMessageCenter";
             this.btnMessageCenter.Size = new System.Drawing.Size(179, 58);
             this.btnMessageCenter.TabIndex = 9;
@@ -157,7 +145,6 @@
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnEditProfile);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnRegisterCMFM);
             this.Controls.Add(this.btnCreateClientFolder);
             this.Controls.Add(this.btnAddPermissions);
             this.Controls.Add(this.btnViewUserData);
@@ -175,7 +162,6 @@
         private System.Windows.Forms.Button btnViewUserData;
         private System.Windows.Forms.Button btnAddPermissions;
         private System.Windows.Forms.Button btnCreateClientFolder;
-        private System.Windows.Forms.Button btnRegisterCMFM;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.Label lblCurUserInfo;

@@ -64,23 +64,11 @@
     <Compile Include="Forms\AdminAddPermissions.Designer.cs">
       <DependentUpon>AdminAddPermissions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminCreateClientFolder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminCreateClientFolder.Designer.cs">
-      <DependentUpon>AdminCreateClientFolder.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AdminRegisterCMFM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminRegisterCMFM.Designer.cs">
-      <DependentUpon>AdminRegisterCMFM.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ViewProfile.cs">
       <SubType>Form</SubType>
@@ -111,18 +99,6 @@
     </Compile>
     <Compile Include="Forms\ClaimManager.Designer.cs">
       <DependentUpon>ClaimManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\EditTemplate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\EditTemplate.Designer.cs">
-      <DependentUpon>EditTemplate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FinanceManagerEditProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FinanceManagerEditProfile.Designer.cs">
-      <DependentUpon>FinanceManagerEditProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FinanceManagerHome.cs">
       <SubType>Form</SubType>
@@ -188,14 +164,8 @@
     <EmbeddedResource Include="Forms\AdminAddPermissions.resx">
       <DependentUpon>AdminAddPermissions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminCreateClientFolder.resx">
-      <DependentUpon>AdminCreateClientFolder.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminRegisterCMFM.resx">
-      <DependentUpon>AdminRegisterCMFM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewProfile.resx">
       <DependentUpon>ViewProfile.cs</DependentUpon>
@@ -211,12 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClaimManager.resx">
       <DependentUpon>ClaimManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditTemplate.resx">
-      <DependentUpon>EditTemplate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FinanceManagerEditProfile.resx">
-      <DependentUpon>FinanceManagerEditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinanceManagerHome.resx">
       <DependentUpon>FinanceManagerHome.cs</DependentUpon>

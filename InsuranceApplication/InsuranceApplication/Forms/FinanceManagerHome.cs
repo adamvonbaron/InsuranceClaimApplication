@@ -35,15 +35,13 @@ namespace InsuranceApplication.Forms
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Forms.FinanceManagerEditProfile f3 = new Forms.FinanceManagerEditProfile();
+            EditUserProfile f3 = new EditUserProfile(Username);
             f3.Show();
         }
 
         private void btnViewClientProfile_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Forms.ViewProfile f3 = new Forms.ViewProfile(Username);
+            ViewProfile f3 = new ViewProfile(Username);
             f3.Show();
         }
     }

@@ -13,6 +13,7 @@ using InsuranceApplication.Forms;
 namespace InsuranceApplication.Forms {
     public partial class EditUserProfile : Form {
         libsql database = new libsql();
+        int rank;
         public EditUserProfile(string username) {
             InitializeComponent();
             User curUser = database.GetUserData(username);
@@ -22,7 +23,7 @@ namespace InsuranceApplication.Forms {
             txtUpdatePassword.Text = curUser.Password;
             dtpBirthday.Text = curUser.Birthday;
             txtUpdatePhone.Text = curUser.Phonenumber;
-            txtRank.Text = curUser.Rank.ToString();
+            rank=curUser.Rank;
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
@@ -33,9 +34,8 @@ namespace InsuranceApplication.Forms {
 
             if (!database.UpdateUser(txtUpdateFirstname.Text, txtUpdateLastname.Text,
                                 txtUpdateUsername.Text, txtUpdatePassword.Text,
-                                dtpBirthday.Text, txtUpdatePhone.Text, int.Parse(txtRank.Text)))
-                MessageBox.Show("error updating user.", "Error",
-                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                dtpBirthday.Text, txtUpdatePhone.Text, rank))
+                MessageBox.Show("error updating user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void EditUserProfile_Load(object sender, EventArgs e)
