@@ -13,7 +13,8 @@ using InsuranceApplication.Forms;
 namespace InsuranceApplication.Forms {
     public partial class EditUserProfile : Form {
         int rank;
-        public EditUserProfile() {
+        /* fix to use with abstract User class */
+        public EditUserProfile(User user) {
             InitializeComponent();
             User curUser = user;
             switch(user.Rank)

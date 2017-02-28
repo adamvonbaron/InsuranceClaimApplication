@@ -1,5 +1,6 @@
 ﻿/* adam 2017-02-01 User.cs */
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace InsuranceApplication.Classes
@@ -53,6 +54,11 @@ namespace InsuranceApplication.Classes
                 MessageBox.Show(ex.ToString());
             }
             return type;
+        }
+
+        public static DataTable GetMessages(string username)
+        {
+            return libsql.GetInboxMessages(username);
         }
 
         public static UserData NullUserData = new UserData

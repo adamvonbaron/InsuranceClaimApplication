@@ -12,17 +12,16 @@ using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms {
     public partial class ViewMessagesForm : Form {
-        public string Username;
-        libsql database = new libsql();
+        User user = null;
         DataTable messages;
-        public ViewMessagesForm(string username) {
+        public ViewMessagesForm(User user) {
             InitializeComponent();
-            this.Username = username;
+            this.user = user;
         }
 
         private void ViewMessagesForm_Load(object sender, EventArgs e) {
             lvMessages.View = View.Details;
-            DataTable messages = database.GetInboxMessages(Username);
+            DataTable messages = User.GetMessages(user.UserName);
             lvMessages.Columns.Add("From", 75);
             lvMessages.Columns.Add("Date", 125);
             lvMessages.Columns.Add("Subject", 500);

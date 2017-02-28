@@ -37,7 +37,8 @@ namespace InsuranceApplication
         private void btnLogin_Click(object sender, EventArgs e)
         {
             UserType usertype = User.Login(txtUsername.Text, txtPassword.Text);
-            User user;
+            object user = null;
+            Form home = null;
             switch(usertype)
             {
                 case UserType.Admin:
@@ -45,14 +46,20 @@ namespace InsuranceApplication
                     break;
                 case UserType.FinanceManager:
                     user = new FinanceManager(txtUsername.Text, txtPassword.Text);
+                    home = new FinanceManagerHome((FinanceManager) user);
                     break;
                 case UserType.ClientManager:
                     //user = new ClientManager(txtUsername.Text, txtPassword.Text);
                     break;
                 case UserType.Client:
                     user = new Client(txtUsername.Text, txtPassword.Text);
+                    home = new ClientHome((Client) user);
                     break;
             }
+            this.Close();
+            home.ShowDialog();
+            txtPassword.Text = string.Empty;
+            this.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

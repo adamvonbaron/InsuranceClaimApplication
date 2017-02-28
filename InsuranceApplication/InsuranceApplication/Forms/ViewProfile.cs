@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Forms
 {
     public partial class ViewProfile : Form
     {
-        string Username;
-        public ViewProfile(string username)
+        public ViewProfile(User user)
         {
             InitializeComponent();
-            this.Username = username;
         }
 
         private void ClaimManagerViewClientProfile_Load(object sender, EventArgs e)

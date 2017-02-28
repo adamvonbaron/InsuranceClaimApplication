@@ -14,12 +14,11 @@ namespace InsuranceApplication.Forms
 {
     public partial class ClientApplyforClaim : Form
     {
-        public string Username;
-        libsql database = new libsql();
-        public ClientApplyforClaim(string username)
+        Client client = null;
+        public ClientApplyforClaim(Client client)
         {
             InitializeComponent();
-            this.Username = username;
+            this.client = client;
         }
 
         private void btnCancel_Click(object sender, EventArgs e) {
@@ -27,6 +26,7 @@ namespace InsuranceApplication.Forms
         }
 
         private void btnSubmit_Click(object sender, EventArgs e) {
+            /* replace database call with user call */
             if (database.SendClaim(Username, dtpClaimDate.Text,
                                txtStatus.Text, txtClaim.Text)) {
                 MessageBox.Show("Claim sent successfully.", "Send Claim", MessageBoxButtons.OK,

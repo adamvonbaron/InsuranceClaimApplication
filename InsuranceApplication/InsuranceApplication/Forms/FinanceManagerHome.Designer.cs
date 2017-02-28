@@ -145,6 +145,7 @@
             this.Controls.Add(this.lblFinanceManagerHome);
             this.Name = "FinanceManagerHome";
             this.Text = "FinanceManagerHome";
+            this.Load += new System.EventHandler(this.FinanceManagerHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

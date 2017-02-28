@@ -7,6 +7,14 @@ using System.Xml.Linq;
 using System.Windows.Forms;
 
 namespace InsuranceApplication.Classes {
+    struct SqlQuery
+    {
+        string Table;
+        string Column;
+        string Where;
+        string Data;
+    }
+
     static class libsql {
         /* properties */
         private static SqlConnection _conn = new SqlConnection(
@@ -122,15 +130,15 @@ namespace InsuranceApplication.Classes {
         }
 
         /* inserts claim in database */
-        public static bool SendClaim(string username, string date, string status, string claim) {
+        public static bool SendClaim(Claim claim) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = @"insert into claims (username, date, status, claim) 
                                 values(@username, @date, @status, @claim);";
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@date", date);
-            cmd.Parameters.AddWithValue("@status", status);
-            cmd.Parameters.AddWithValue("@claim", claim);
+            cmd.Parameters.AddWithValue("@username", claim.UserName);
+            cmd.Parameters.AddWithValue("@date", claim.Date);
+            cmd.Parameters.AddWithValue("@status", claim.Status);
+            cmd.Parameters.AddWithValue("@claim", claim.Claim);
             try {
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -143,17 +151,16 @@ namespace InsuranceApplication.Classes {
         }
 
         /* inserts message in database */
-        public static bool SendMessage(string to, string from, string date, 
-                                string subject, string message) {
+        public static bool SendMessage(Message message) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = @"insert into messages ([to], [from], date, subject, message)
                                 values(@to, @from, @date, @subject, @message);";
-            cmd.Parameters.AddWithValue("@to", to);
-            cmd.Parameters.AddWithValue("@from", from);
-            cmd.Parameters.AddWithValue("@date", date);
-            cmd.Parameters.AddWithValue("@subject", subject);
-            cmd.Parameters.AddWithValue("@message", message);
+            cmd.Parameters.AddWithValue("@to", message.To);
+            cmd.Parameters.AddWithValue("@from", message.From);
+            cmd.Parameters.AddWithValue("@date", message.Date);
+            cmd.Parameters.AddWithValue("@subject", message.Subject);
+            cmd.Parameters.AddWithValue("@message", message.Message);
             try {
                 conn.Open();
                 cmd.ExecuteNonQuery();

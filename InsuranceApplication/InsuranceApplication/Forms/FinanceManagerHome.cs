@@ -14,18 +14,11 @@ namespace InsuranceApplication.Forms
 {
     public partial class FinanceManagerHome : Form
     {
-        libsql database = new libsql();
-        public string Username;
-        public string Firstname;
-        public string Lastname;
-        public FinanceManagerHome(string firstname, string lastname, string username)
+        FinanceManager User { get; set; }
+        public FinanceManagerHome(FinanceManager user)
         {
+            User = user;
             InitializeComponent();
-            this.Username = username;
-            this.Firstname = firstname;
-            this.Lastname = lastname;
-            this.lblCurUserInfo.Text = "Logged in as: " + username + "      Rank: Finance Manager";
-            this.lblFinanceManagerHome.Text = "Welcome, " + firstname + " " + lastname;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -35,14 +28,20 @@ namespace InsuranceApplication.Forms
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            EditUserProfile f3 = new EditUserProfile(Username);
+            EditUserProfile f3 = new EditUserProfile(User);
             f3.Show();
         }
 
         private void btnViewClientProfile_Click(object sender, EventArgs e)
         {
-            ViewProfile f3 = new ViewProfile(Username);
+            ViewProfile f3 = new ViewProfile(User);
             f3.Show();
+        }
+
+        private void FinanceManagerHome_Load(object sender, EventArgs e)
+        {
+            lblCurUserInfo.Text = "Logged in as: " + User.UserName + "      Rank: Finance Manager";
+            lblFinanceManagerHome.Text = "Welcome, " + User.FirstName + " " + User.LastName;
         }
     }
 }

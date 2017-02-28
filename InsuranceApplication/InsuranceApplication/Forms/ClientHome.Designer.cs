@@ -135,6 +135,7 @@
             this.Controls.Add(this.lblClientHome);
             this.Name = "ClientHome";
             this.Text = "ClientHome";
+            this.Load += new System.EventHandler(this.ClientHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
