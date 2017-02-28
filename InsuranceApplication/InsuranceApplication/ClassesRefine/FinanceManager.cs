@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InsuranceApplication.ClassesRefine
 {
-    class FinanceManager : User
+    public class FinanceManager : User
     {
     }
 }

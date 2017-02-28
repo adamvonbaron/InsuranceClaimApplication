@@ -24,6 +24,7 @@ namespace InsuranceApplication.ClassesRefine
 
         public void EditProfile()
         {
+            EditUserProfile eup = new EditUserProfile(this);
 
         }
 

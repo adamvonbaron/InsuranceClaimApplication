@@ -7,23 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using InsuranceApplication.Classes;
+using InsuranceApplication.ClassesRefine;
 using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms {
     public partial class EditUserProfile : Form {
-        libsql database = new libsql();
         int rank;
-        public EditUserProfile(string username) {
+        public EditUserProfile(User user) {
             InitializeComponent();
-            User curUser = database.GetUserData(username);
+            User curUser = user;
+            switch(user.Rank)
+            {
+                //case 1:
+                //    public Admin curUser = user;
+                case 2:
+                    curUser = new FinanceManager();
+                //case 3:
+                //    curUser = new ClientManager();
+                case 4:
+                    curUser = new Client();
+            }
             txtUpdateFirstname.Text = curUser.FirstName;
             txtUpdateLastname.Text = curUser.LastName;
             txtUpdateUsername.Text = curUser.UserName;
             txtUpdatePassword.Text = curUser.Password;
             dtpBirthday.Text = curUser.Birthday;
             txtUpdatePhone.Text = curUser.Phonenumber;
-            rank=curUser.Rank;
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
@@ -32,7 +41,7 @@ namespace InsuranceApplication.Forms {
 
         private void btnEnter_Click(object sender, EventArgs e) {
 
-            if (!database.UpdateUser(txtUpdateFirstname.Text, txtUpdateLastname.Text,
+            if (!User.UpdateProfile(txtUpdateFirstname.Text, txtUpdateLastname.Text,
                                 txtUpdateUsername.Text, txtUpdatePassword.Text,
                                 dtpBirthday.Text, txtUpdatePhone.Text, rank))
                 MessageBox.Show("error updating user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
