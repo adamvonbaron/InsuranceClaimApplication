@@ -19,6 +19,8 @@ namespace InsuranceApplication.Forms
             this.Firstname = firstname;
             this.Lastname = lastname;
             this.Username = username;
+            this.lblClientManagerTitle.Text = "Welcome, " + firstname + " " + lastname;
+            this.lblCurUserInfo.Text = "Logged in as: " + username + "      Rank: Admin";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -30,10 +30,10 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
-            this.txtRank = new System.Windows.Forms.TextBox();
             this.lblRank = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.cboRank = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnExit
@@ -55,13 +55,6 @@
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
-            // 
-            // txtRank
-            // 
-            this.txtRank.Location = new System.Drawing.Point(107, 37);
-            this.txtRank.Name = "txtRank";
-            this.txtRank.Size = new System.Drawing.Size(138, 20);
-            this.txtRank.TabIndex = 13;
             // 
             // lblRank
             // 
@@ -90,19 +83,28 @@
             this.lblUsername.TabIndex = 14;
             this.lblUsername.Text = "Username:";
             // 
+            // cboRank
+            // 
+            this.cboRank.FormattingEnabled = true;
+            this.cboRank.Location = new System.Drawing.Point(107, 37);
+            this.cboRank.Name = "cboRank";
+            this.cboRank.Size = new System.Drawing.Size(121, 21);
+            this.cboRank.TabIndex = 16;
+            // 
             // AdminAddPermissions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 97);
+            this.Controls.Add(this.cboRank);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.txtRank);
             this.Controls.Add(this.lblRank);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
             this.Name = "AdminAddPermissions";
             this.Text = "AdminAddPermissions";
+            this.Load += new System.EventHandler(this.AdminAddPermissions_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,9 +114,9 @@
 
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnEnter;
-        private System.Windows.Forms.TextBox txtRank;
         private System.Windows.Forms.Label lblRank;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.ComboBox cboRank;
     }
 }

@@ -22,6 +22,7 @@ namespace InsuranceApplication.Forms {
             txtUpdatePassword.Text = curUser.Password;
             dtpBirthday.Text = curUser.Birthday;
             txtUpdatePhone.Text = curUser.Phonenumber;
+            txtRank.Text = curUser.Rank.ToString();
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
@@ -29,11 +30,17 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnEnter_Click(object sender, EventArgs e) {
+
             if (!database.UpdateUser(txtUpdateFirstname.Text, txtUpdateLastname.Text,
                                 txtUpdateUsername.Text, txtUpdatePassword.Text,
                                 dtpBirthday.Text, txtUpdatePhone.Text, int.Parse(txtRank.Text)))
                 MessageBox.Show("error updating user.", "Error",
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void EditUserProfile_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
