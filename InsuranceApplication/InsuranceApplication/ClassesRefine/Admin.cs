@@ -10,7 +10,7 @@ namespace InsuranceApplication.ClassesRefine
 {
     class Admin : User
     {
-        libsql database = new libsql();
+        Classes.libsql database = new Classes.libsql();
         //properties
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -35,7 +35,20 @@ namespace InsuranceApplication.ClassesRefine
         //methods
         public void UpdateUser(string firstname, string lastname, string username, string password, int rank, string birthday, string phonenumber)
         {
+            
+        }
 
+
+        public void DeleteUser(string username)
+        {
+            if(username != null)
+            {
+                //delete profile
+            }
+            else
+            {
+                //error message
+            }
         }
 
     }
