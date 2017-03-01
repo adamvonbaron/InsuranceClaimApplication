@@ -5,6 +5,6 @@
         public string From;
         public string Date;
         public string Subject;
-        public string Message;
+        public string Content;
     }
 }

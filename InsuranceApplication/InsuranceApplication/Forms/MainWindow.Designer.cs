@@ -127,16 +127,6 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // btnDriver
-            // 
-            this.btnDriver.Location = new System.Drawing.Point(394, 318);
-            this.btnDriver.Name = "btnDriver";
-            this.btnDriver.Size = new System.Drawing.Size(141, 23);
-            this.btnDriver.TabIndex = 9;
-            this.btnDriver.Text = "Run Driver";
-            this.btnDriver.UseVisualStyleBackColor = true;
-            this.btnDriver.Click += new System.EventHandler(this.btnDriver_Click);
-            // 
             // formInsuranceClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -4,6 +4,6 @@
         public string UserName;
         public string Date;
         public string Status;
-        public string Claim;
+        public string Content;
     }
 }

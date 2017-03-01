@@ -144,6 +144,7 @@
             this.Controls.Add(this.lblFirstName);
             this.Name = "ViewUserProfile";
             this.Text = "ViewUserProfile";
+            this.Load += new System.EventHandler(this.ViewUserProfile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

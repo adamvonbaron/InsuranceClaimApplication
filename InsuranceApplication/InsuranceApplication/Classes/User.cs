@@ -41,6 +41,16 @@ namespace InsuranceApplication.Classes
             Password = password;
         }
 
+        public User(UserData userdata)
+        {
+            FirstName = userdata.FirstName;
+            LastName = userdata.LastName;
+            Birthday = userdata.Birthday;
+            UserName = userdata.UserName;
+            Password = userdata.Password;
+            Type = userdata.Type;
+        }
+
         public static UserType Login(string username, string password)
         {
             UserType type = UserType.Undefined;
@@ -59,6 +69,11 @@ namespace InsuranceApplication.Classes
         public static DataTable GetMessages(string username)
         {
             return libsql.GetInboxMessages(username);
+        }
+
+        public static bool SendMessage(Message message)
+        {
+            return libsql.SendMessage(message);
         }
 
         public static UserData NullUserData = new UserData

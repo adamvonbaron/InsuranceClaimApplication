@@ -8,48 +8,32 @@ using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Classes
 {
-    class Admin : User
+    public class Admin : User
     {
-       
-        //properties
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public int Rank { get; set; }
-        public string Birthday { get; set; }
-        public string Phonenumber { get; set; }
-
-        //constructor
-        public Admin(string firstname, string lastname, string username, string password, int rank, string birthday, string phonenumber)
+        public Admin(string username, string password) : base(username, password)
         {
-            this.FirstName = firstname;
-            this.LastName = lastname;
-            this.UserName = username;
-            this.Password = password;
-            this.Rank = rank;
-            this.Birthday = birthday;
-            this.Phonenumber = phonenumber;
+            UserData userdata = libsql.GetUserData(UserName);
+            FirstName = userdata.FirstName;
+            LastName = userdata.LastName;
+            Birthday = userdata.Birthday;
+            Phonenumber = userdata.Phonenumber;
+            Type = userdata.Type;
         }
 
         //methods
-        public void UpdateUser(string firstname, string lastname, string username, string password, int rank, string birthday, string phonenumber)
+        public void UpdateUser(User user)
         {
              
         }
 
-        public void DeleteUser(string username)
+        public bool DeleteUser(string username)
         {
-            DeleteUser du = new DeleteUser(this);
+            return libsql.DeleteUser(username);
+        }
 
-            //if(username != null)
-            //{
-            //    DeleteUser(username);
-            //}
-            //else
-            //{
-            //    //error message
-            //}
+        public static bool RegisterUser(Client client)
+        {
+            return libsql.RegisterUser(client);
         }
        
     }

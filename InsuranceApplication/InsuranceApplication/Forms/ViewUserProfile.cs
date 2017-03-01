@@ -1,31 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using InsuranceApplication.Classes;
-using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms
 {
     public partial class ViewUserProfile : Form
     {
-        libsql database = new libsql();
-        string Username;
-        public ViewUserProfile(string username)
+        Admin admin;
+        FinanceManager financemanager;
+        public ViewUserProfile(UserType type)
         {
             InitializeComponent();
-            this.Username = username;
-            User curUser = database.GetUserData(Username);
-            lblFirstName.Text = "First Name: " + curUser.FirstName;
-            lblLastName.Text = "Last Name: " + curUser.LastName;
-            lblUsername.Text = "Username: " + curUser.UserName;
-            lblBirthday.Text = "Birthday: " + curUser.Birthday;
-            lblPhoneNumber.Text = "Phone Number: " + curUser.Phonenumber;
+            admin = user;
+            financemanager = null;
+            lblFirstName.Text = "First Name: " + admin.FirstName;
+            lblLastName.Text = "Last Name: " + admin.LastName;
+            lblUsername.Text = "Username: " + admin.UserName;
+            lblBirthday.Text = "Birthday: " + admin.Birthday;
+            lblPhoneNumber.Text = "Phone Number: " + admin.Phonenumber;
             lblNumOfClaims.Text = "# of Claims: 0";
         }
 
@@ -35,8 +27,14 @@ namespace InsuranceApplication.Forms
         }
 
         private void btnEditUser_Click(object sender, EventArgs e) {
-            EditUserProfile eup = new EditUserProfile(Username);
+            
+            EditUserProfile eup = new EditUserProfile();
             eup.ShowDialog();
+        }
+
+        private void ViewUserProfile_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -74,13 +74,6 @@ namespace InsuranceApplication
             f3.Show();
         }
 
-        private void btnDriver_Click(object sender, EventArgs e)
-        {
-            formFormDemo ffd = new formFormDemo();
-            ffd.Show();
-            
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             //EditTemplate et = new EditTemplate();

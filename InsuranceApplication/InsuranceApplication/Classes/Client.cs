@@ -19,6 +19,8 @@ namespace InsuranceApplication.Classes
             Type = userdata.Type;
         }
 
+        public Client(UserData userdata) : base(userdata) { }
+
         public void ViewProfile()
         {
 
@@ -30,9 +32,9 @@ namespace InsuranceApplication.Classes
 
         }
 
-        public void ApplyForClaim()
+        public bool ApplyForClaim(Claim claim)
         {
-
+            return libsql.SendClaim(claim);
         }
 
         public void ViewMessages()

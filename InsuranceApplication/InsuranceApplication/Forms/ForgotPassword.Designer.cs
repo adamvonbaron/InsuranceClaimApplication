@@ -34,6 +34,7 @@
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -90,11 +91,22 @@
             this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 9;
             // 
+            // txtSave
+            // 
+            this.txtSave.Location = new System.Drawing.Point(306, 169);
+            this.txtSave.Name = "txtSave";
+            this.txtSave.Size = new System.Drawing.Size(75, 23);
+            this.txtSave.TabIndex = 10;
+            this.txtSave.Text = "Save";
+            this.txtSave.UseVisualStyleBackColor = true;
+            this.txtSave.Click += new System.EventHandler(this.txtSave_Click);
+            // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 204);
+            this.Controls.Add(this.txtSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtNewPassword);
@@ -116,5 +128,6 @@
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button txtSave;
     }
 }

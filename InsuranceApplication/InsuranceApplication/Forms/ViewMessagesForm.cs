@@ -12,7 +12,7 @@ using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms {
     public partial class ViewMessagesForm : Form {
-        User user = null;
+        User user;
         DataTable messages;
         public ViewMessagesForm(User user) {
             InitializeComponent();

@@ -12,17 +12,12 @@ using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Forms {
     public partial class AdminHome : Form {
-        libsql database = new libsql();
-        public string Username;
-        public string Firstname;
-        public string Lastname;
-        public AdminHome(string firstname, string lastname, string username) {
+        Admin admin;
+        public AdminHome(Admin admin) {
             InitializeComponent();
-            this.Username = username;
-            this.Firstname = firstname;
-            this.Lastname = lastname;
-            this.lblAdminTitle.Text = "Welcome, " + firstname + " " + lastname;
-            this.lblCurUserInfo.Text = "Logged in as: " + username + "      Rank: Admin";
+            this.admin = admin;
+            lblAdminTitle.Text = "Welcome, " + admin.FirstName + " " + admin.LastName;
+            lblCurUserInfo.Text = "Logged in as: " + admin.UserName + "      Rank: Admin";
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
@@ -30,12 +25,12 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnViewUserData_Click(object sender, EventArgs e) {
-            ViewProfile f3 = new ViewProfile(Username);
+            ViewProfile f3 = new ViewProfile(admin);
             f3.ShowDialog();
         }
 
         private void btnAddPermissions_Click(object sender, EventArgs e) {
-            AdminAddPermissions f4 = new AdminAddPermissions();
+            AdminAddPermissions f4 = new AdminAddPermissions(admin);
             f4.ShowDialog();
         }
 
@@ -49,7 +44,7 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnEditProfile_Click(object sender, EventArgs e) {
-            EditUserProfile f2 = new EditUserProfile(Username);
+            EditUserProfile f2 = new EditUserProfile(admin);
             f2.ShowDialog();
         }
 
@@ -59,13 +54,13 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnMessageCenter_Click(object sender, EventArgs e) {
-            MessageCenter mc = new MessageCenter(Username);
+            MessageCenter mc = new MessageCenter(admin);
             mc.ShowDialog();
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            DeleteUser du = new DeleteUser();
+            DeleteUser du = new DeleteUser(admin);
             du.ShowDialog();
         }
     }

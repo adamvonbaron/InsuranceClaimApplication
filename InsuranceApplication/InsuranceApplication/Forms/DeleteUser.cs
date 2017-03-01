@@ -13,14 +13,16 @@ namespace InsuranceApplication.Forms
 {
     public partial class DeleteUser : Form
     {
-        public DeleteUser()
+        Admin admin;
+        public DeleteUser(Admin admin)
         {
             InitializeComponent();
+            this.admin = admin;
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            libsql.DeleteUser(txtUsername.Text);
+            admin.DeleteUser(txtUsername.Text);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

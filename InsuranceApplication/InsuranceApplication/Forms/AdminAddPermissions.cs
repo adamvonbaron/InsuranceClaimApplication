@@ -13,10 +13,18 @@ namespace InsuranceApplication.Forms
 {
     public partial class AdminAddPermissions : Form
     {
-        libsql database = new libsql();
-        public AdminAddPermissions()
+        Admin admin;
+        string[] ranks =
+        {
+            "Admin",
+            "Finance Manager",
+            "Claim Manager",
+            "Client"
+        };
+        public AdminAddPermissions(Admin admin)
         {
             InitializeComponent();
+            this.admin = admin;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -26,40 +34,14 @@ namespace InsuranceApplication.Forms
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if (cboRank.SelectedIndex == 0)
-            {
-                MessageBox.Show("Update Rank to Admin");
-                database.UpdateRank(txtUsername.Text, 1);
-            }
-                
-            if (cboRank.SelectedIndex == 1)
-            {
-                MessageBox.Show("Updated Rank to Finance Manager");
-                database.UpdateRank(txtUsername.Text, 2);
-            }
-                
-            if (cboRank.SelectedIndex == 2)
-            {
-                MessageBox.Show("Updated Rank to Claim Manager");
-                database.UpdateRank(txtUsername.Text, 3);
-            }
-                
-            if (cboRank.SelectedIndex == 3)
-            {
-                MessageBox.Show("Updated Rank to Client");
-                database.UpdateRank(txtUsername.Text, 4);
-            }
-                
-                
+            //admin.UpdateRank(txtUsername.text, cboRank.SelectedIndex + 1);
+            MessageBox.Show("Updated Rank to " + ranks[cboRank.SelectedIndex]);
         }
 
         private void AdminAddPermissions_Load(object sender, EventArgs e)
         {
-            string[] ranks = { "Admin", "Finance Manager", "Claim Manager", "Client" };
             foreach(string rank in ranks)
-            {
                 cboRank.Items.Add(rank);
-            }
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using InsuranceApplication.Classes;
 
@@ -13,9 +6,11 @@ namespace InsuranceApplication.Forms
 {
     public partial class ViewProfile : Form
     {
+        User user;
         public ViewProfile(User user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void ClaimManagerViewClientProfile_Load(object sender, EventArgs e)
@@ -29,7 +24,7 @@ namespace InsuranceApplication.Forms
         }
 
         private void btnViewProfile_Click(object sender, EventArgs e) {
-            ViewUserProfile vup = new ViewUserProfile(txtUsername.Text);
+            ViewUserProfile vup = new ViewUserProfile(user);
             vup.ShowDialog();
         }
     }

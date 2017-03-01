@@ -13,7 +13,6 @@ using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms {
     public partial class Register : Form {
-        libsql database = new libsql();
         public Register() {
             InitializeComponent();
         }
@@ -23,14 +22,20 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnEnter_Click(object sender, EventArgs e) {
-
-            if(database.RegisterUser(txtFirstname.Text, txtLastname.Text,
-                                  txtUsername.Text, txtPassword.Text,
-                                  dtpDateOfBirth.Text, txtPhone.Text, 4))
+            Client client = new Client(new UserData
             {
+                FirstName = txtFirstname.Text,
+                LastName = txtLastname.Text,
+                UserName = txtUsername.Text,
+                Password = txtPassword.Text,
+                Birthday = dtpDateOfBirth.Value.ToString(),
+                Phonenumber = txtPhone.Text,
+                Type = UserType.Client
+            });
+            if(Admin.RegisterUser(client))
                 MessageBox.Show("Registered user successfully.", "Register",
                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else
+            else
                 MessageBox.Show("Error registering user.", "Register",
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
 

@@ -28,14 +28,17 @@ namespace InsuranceApplication.Forms
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
             EditUserProfile eup = new EditUserProfile(client);
+            eup.ShowDialog();
         }
 
         private void btnApplyForClaim_Click(object sender, EventArgs e) {
             ClientApplyforClaim cafc = new ClientApplyforClaim(client);
+            cafc.ShowDialog();
         }
 
         private void btnViewMessages_Click(object sender, EventArgs e) {
             ViewMessagesForm vmf = new ViewMessagesForm(client);
+            vmf.ShowDialog();
         }
 
         private void ClientHome_Load(object sender, EventArgs e)

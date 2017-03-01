@@ -1,9 +1,7 @@
 ﻿/* adam 2017-01-30 libsql.cs */
 using System;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using System.Xml.Linq;
 using System.Windows.Forms;
 
 namespace InsuranceApplication.Classes {
@@ -70,15 +68,12 @@ namespace InsuranceApplication.Classes {
             return resp;
         }
 
-        private static bool UserDB(string firstname, string lastname,
-                           string username, string password,
-                           string birthday, string phonenumber, int rank,
-                           bool register) {
+        private static bool UserDB(User user, bool register) {
             string query = string.Empty;
             if (register) {
                 query = @"insert into users (firstname, lastname, username, password, birthday, phonenumber, rank)
                         values(@firstname, @lastname, @username, @password, @birthday, @phonenumber, @rank);";
-                if (!CheckUsername(username))
+                if (!CheckUsername(user.UserName))
                     return false;
             } else {
                 query = @"update users set firstname = @firstname, lastname = @lastname, 
@@ -88,13 +83,13 @@ namespace InsuranceApplication.Classes {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandText = query;
-            cmd.Parameters.AddWithValue("@firstname", firstname);
-            cmd.Parameters.AddWithValue("@lastname", lastname);
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
-            cmd.Parameters.AddWithValue("@birthday", birthday);
-            cmd.Parameters.AddWithValue("@phonenumber", phonenumber);
-            cmd.Parameters.AddWithValue("@rank", rank);
+            cmd.Parameters.AddWithValue("@firstname", user.FirstName);
+            cmd.Parameters.AddWithValue("@lastname", user.LastName);
+            cmd.Parameters.AddWithValue("@username", user.UserName);
+            cmd.Parameters.AddWithValue("@password", user.Password);
+            cmd.Parameters.AddWithValue("@birthday", user.Birthday);
+            cmd.Parameters.AddWithValue("@phonenumber", user.Phonenumber);
+            cmd.Parameters.AddWithValue("@rank", user.Type);
             try {
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -116,17 +111,13 @@ namespace InsuranceApplication.Classes {
         }
 
         /* creates new user in database */
-        public static bool RegisterUser(string firstname, string lastname,
-                                 string username, string password,
-                                 string birthday, string phonenumber, int rank) {
-            return UserDB(firstname, lastname, username, password, birthday, phonenumber, rank, true);
+        public static bool RegisterUser(User user) {
+            return UserDB(user, true);
         }
 
         /* updates existing user info */
-        public static bool UpdateUser(string firstname, string lastname, 
-                               string username, string password,
-                               string birthday, string phonenumber, int rank) {
-            return UserDB(firstname, lastname, username, password, birthday, phonenumber, rank, false);
+        public static bool UpdateUser(User user) {
+            return UserDB(user, false);
         }
 
         /* inserts claim in database */
@@ -138,7 +129,7 @@ namespace InsuranceApplication.Classes {
             cmd.Parameters.AddWithValue("@username", claim.UserName);
             cmd.Parameters.AddWithValue("@date", claim.Date);
             cmd.Parameters.AddWithValue("@status", claim.Status);
-            cmd.Parameters.AddWithValue("@claim", claim.Claim);
+            cmd.Parameters.AddWithValue("@claim", claim.Content);
             try {
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -160,7 +151,7 @@ namespace InsuranceApplication.Classes {
             cmd.Parameters.AddWithValue("@from", message.From);
             cmd.Parameters.AddWithValue("@date", message.Date);
             cmd.Parameters.AddWithValue("@subject", message.Subject);
-            cmd.Parameters.AddWithValue("@message", message.Message);
+            cmd.Parameters.AddWithValue("@message", message.Content);
             try {
                 conn.Open();
                 cmd.ExecuteNonQuery();
