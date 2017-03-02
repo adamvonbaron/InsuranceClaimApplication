@@ -48,6 +48,7 @@ namespace InsuranceApplication.Classes
             Birthday = userdata.Birthday;
             UserName = userdata.UserName;
             Password = userdata.Password;
+            Phonenumber = userdata.Phonenumber;
             Type = userdata.Type;
         }
 
