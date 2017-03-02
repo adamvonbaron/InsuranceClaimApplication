@@ -16,5 +16,11 @@ namespace InsuranceApplication.Classes
         }
 
         public FinanceManager(UserData userdata) : base(userdata) { }
+
+        //methods
+        public static DataTable ViewMessages(string username)
+        {
+            return libsql.GetInboxMessages(username)
+        }
     }
 }

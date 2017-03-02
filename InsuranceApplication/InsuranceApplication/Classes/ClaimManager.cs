@@ -21,5 +21,11 @@ namespace InsuranceApplication.Classes
         }
 
         public ClaimManager(UserData userdata) : base(userdata) { }
+
+        //methods
+        public static DataTable ViewMessages(string username)
+        {
+            return libsql.GetInboxMessages(username)
+        }
     }
 }
