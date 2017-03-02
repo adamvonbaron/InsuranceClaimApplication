@@ -76,8 +76,8 @@ namespace InsuranceApplication.Classes
                     user = new Admin(userdata);
                     return libsql.UpdateUser(user);
                 case UserType.FinanceManager:
-                //user = new FinanceManager(userdata);
-                //return libsql.UpdateUser(user);
+                user = new FinanceManager(userdata);
+                return libsql.UpdateUser(user);
                 case UserType.ClientManager:
                 //user = new ClientManager(userdata);
                 //return libsql.UpdateUser(user);
