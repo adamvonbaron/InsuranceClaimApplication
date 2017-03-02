@@ -37,7 +37,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnForgotPassword = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.btnDriver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -132,7 +131,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 386);
-            this.Controls.Add(this.btnDriver);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.btnExit);
@@ -160,7 +158,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnForgotPassword;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Button btnDriver;
     }
 }
 

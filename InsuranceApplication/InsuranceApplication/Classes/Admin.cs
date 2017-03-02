@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using InsuranceApplication.Forms;
-using InsuranceApplication.Classes;
-
-namespace InsuranceApplication.Classes
+﻿namespace InsuranceApplication.Classes
 {
     public class Admin : User
     {

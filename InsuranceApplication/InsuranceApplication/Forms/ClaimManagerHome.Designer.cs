@@ -1,6 +1,6 @@
 ﻿namespace InsuranceApplication.Forms
 {
-    partial class ClaimManager
+    partial class ClaimManagerHome
     {
         /// <summary>
         /// Required designer variable.

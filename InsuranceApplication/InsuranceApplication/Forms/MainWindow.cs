@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using InsuranceApplication.Classes;
 using InsuranceApplication.Forms;
@@ -66,19 +59,13 @@ namespace InsuranceApplication
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Register f4 = new Register();
-            f4.Show();
+            f4.ShowDialog();
         }
 
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
             ForgotPassword f3 = new ForgotPassword(txtUsername.Text);
-            f3.Show();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            //EditTemplate et = new EditTemplate();
-            //et.Show();
+            f3.ShowDialog();
         }
     }
 }

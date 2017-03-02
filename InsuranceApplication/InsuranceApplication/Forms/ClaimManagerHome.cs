@@ -11,10 +11,10 @@ using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClaimManager : Form
+    public partial class ClaimManagerHome : Form
     {
         public string Username, Firstname, Lastname;
-        public ClaimManager(string firstname, string lastname, string username)
+        public ClaimManagerHome(string firstname, string lastname, string username)
         {
             InitializeComponent();
             this.Firstname = firstname;
