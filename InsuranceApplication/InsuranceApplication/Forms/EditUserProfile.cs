@@ -34,7 +34,7 @@ namespace InsuranceApplication.Forms {
                 Phonenumber = txtUpdatePhone.Text,
                 Type = userdata.Type
             };
-            if (!Admin.UpdateUser(newdata))
+            if (!User.UpdateUser(newdata))
                 MessageBox.Show("error updating user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 

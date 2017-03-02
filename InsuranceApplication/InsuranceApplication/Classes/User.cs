@@ -66,6 +66,28 @@ namespace InsuranceApplication.Classes
             return type;
         }
 
+        public static bool UpdateUser(UserData userdata)
+        {
+            User user;
+            switch (userdata.Type)
+            {
+                case UserType.Admin:
+                    user = new Admin(userdata);
+                    /* TODO: figure out why Phonenumber turns null here */
+                    return libsql.UpdateUser(user);
+                case UserType.FinanceManager:
+                //user = new FinanceManager(userdata);
+                //return libsql.UpdateUser(user);
+                case UserType.ClientManager:
+                //user = new ClientManager(userdata);
+                //return libsql.UpdateUser(user);
+                case UserType.Client:
+                    user = new Client(userdata);
+                    return libsql.UpdateUser(user);
+            }
+            return false;
+        }
+
         public static DataTable GetMessages(string username)
         {
             return libsql.GetInboxMessages(username);
