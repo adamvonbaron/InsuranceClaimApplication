@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
             this.lblAdminTitle = new System.Windows.Forms.Label();
             this.btnViewUserData = new System.Windows.Forms.Button();
             this.btnAddPermissions = new System.Windows.Forms.Button();
@@ -43,7 +44,9 @@
             // lblAdminTitle
             // 
             this.lblAdminTitle.AutoSize = true;
+            this.lblAdminTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblAdminTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminTitle.ForeColor = System.Drawing.Color.White;
             this.lblAdminTitle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblAdminTitle.Location = new System.Drawing.Point(21, 20);
             this.lblAdminTitle.Name = "lblAdminTitle";
@@ -108,11 +111,11 @@
             // lblCurUserInfo
             // 
             this.lblCurUserInfo.AutoSize = true;
+            this.lblCurUserInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblCurUserInfo.Location = new System.Drawing.Point(93, 427);
             this.lblCurUserInfo.Name = "lblCurUserInfo";
-            this.lblCurUserInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblCurUserInfo.Size = new System.Drawing.Size(0, 13);
             this.lblCurUserInfo.TabIndex = 7;
-            this.lblCurUserInfo.Text = "label1";
             // 
             // btnRegisterUser
             // 
@@ -151,6 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(490, 457);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnMessageCenter);

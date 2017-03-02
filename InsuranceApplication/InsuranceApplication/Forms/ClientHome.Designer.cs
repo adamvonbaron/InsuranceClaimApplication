@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientHome));
             this.lblClientHome = new System.Windows.Forms.Label();
             this.btnApplyForClaim = new System.Windows.Forms.Button();
             this.btnViewMessages = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             // lblClientHome
             // 
             this.lblClientHome.AutoSize = true;
+            this.lblClientHome.BackColor = System.Drawing.Color.Transparent;
             this.lblClientHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientHome.Location = new System.Drawing.Point(81, 21);
             this.lblClientHome.Name = "lblClientHome";
@@ -114,16 +116,17 @@
             // lblCurUserInfo
             // 
             this.lblCurUserInfo.AutoSize = true;
+            this.lblCurUserInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblCurUserInfo.Location = new System.Drawing.Point(136, 373);
             this.lblCurUserInfo.Name = "lblCurUserInfo";
-            this.lblCurUserInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblCurUserInfo.Size = new System.Drawing.Size(0, 13);
             this.lblCurUserInfo.TabIndex = 7;
-            this.lblCurUserInfo.Text = "label1";
             // 
             // ClientHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(509, 403);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
