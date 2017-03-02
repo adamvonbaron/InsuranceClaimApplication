@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClaimManagerHome));
             this.lblClientManagerTitle = new System.Windows.Forms.Label();
             this.btnViewClientList = new System.Windows.Forms.Button();
             this.btnViewMessages = new System.Windows.Forms.Button();
@@ -42,12 +43,14 @@
             // lblClientManagerTitle
             // 
             this.lblClientManagerTitle.AutoSize = true;
+            this.lblClientManagerTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblClientManagerTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientManagerTitle.ForeColor = System.Drawing.Color.White;
             this.lblClientManagerTitle.Location = new System.Drawing.Point(40, 35);
             this.lblClientManagerTitle.Name = "lblClientManagerTitle";
-            this.lblClientManagerTitle.Size = new System.Drawing.Size(419, 24);
+            this.lblClientManagerTitle.Size = new System.Drawing.Size(418, 24);
             this.lblClientManagerTitle.TabIndex = 0;
-            this.lblClientManagerTitle.Text = "Welcome to the Client Manager Home Page";
+            this.lblClientManagerTitle.Text = "Welcome to the Claim Manager Home Page";
             // 
             // btnViewClientList
             // 
@@ -126,14 +129,14 @@
             this.lblCurUserInfo.AutoSize = true;
             this.lblCurUserInfo.Location = new System.Drawing.Point(125, 367);
             this.lblCurUserInfo.Name = "lblCurUserInfo";
-            this.lblCurUserInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblCurUserInfo.Size = new System.Drawing.Size(0, 13);
             this.lblCurUserInfo.TabIndex = 8;
-            this.lblCurUserInfo.Text = "label1";
             // 
-            // ClaimManager
+            // ClaimManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(497, 397);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
@@ -144,7 +147,7 @@
             this.Controls.Add(this.btnViewMessages);
             this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.lblClientManagerTitle);
-            this.Name = "ClaimManager";
+            this.Name = "ClaimManagerHome";
             this.Text = "ClientManagerHome";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceManagerHome));
             this.lblFinanceManagerHome = new System.Windows.Forms.Label();
             this.btnViewMessages = new System.Windows.Forms.Button();
             this.btnViewClientList = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             // lblFinanceManagerHome
             // 
             this.lblFinanceManagerHome.AutoSize = true;
+            this.lblFinanceManagerHome.BackColor = System.Drawing.Color.Transparent;
             this.lblFinanceManagerHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinanceManagerHome.Location = new System.Drawing.Point(35, 31);
             this.lblFinanceManagerHome.Name = "lblFinanceManagerHome";
@@ -133,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(508, 390);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
