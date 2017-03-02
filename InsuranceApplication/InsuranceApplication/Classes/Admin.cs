@@ -28,6 +28,11 @@ namespace InsuranceApplication.Classes
             return libsql.DeleteUser(username);
         }
 
+        public bool UpdatePermissions(string username, int rank)
+        {
+            return libsql.UpdateRank(username, rank);
+        }
+
         public static bool RegisterUser(Client client)
         {
             return libsql.RegisterUser(client);

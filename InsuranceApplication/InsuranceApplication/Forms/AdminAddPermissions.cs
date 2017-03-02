@@ -34,7 +34,7 @@ namespace InsuranceApplication.Forms
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            //admin.UpdateRank(txtUsername.text, cboRank.SelectedIndex + 1);
+            admin.UpdatePermissions(txtUsername.Text, cboRank.SelectedIndex + 1);
             MessageBox.Show("Updated Rank to " + ranks[cboRank.SelectedIndex]);
         }
 
