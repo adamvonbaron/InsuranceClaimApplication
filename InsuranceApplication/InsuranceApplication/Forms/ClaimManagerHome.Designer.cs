@@ -48,9 +48,9 @@
             this.lblClientManagerTitle.ForeColor = System.Drawing.Color.White;
             this.lblClientManagerTitle.Location = new System.Drawing.Point(40, 35);
             this.lblClientManagerTitle.Name = "lblClientManagerTitle";
-            this.lblClientManagerTitle.Size = new System.Drawing.Size(419, 24);
+            this.lblClientManagerTitle.Size = new System.Drawing.Size(418, 24);
             this.lblClientManagerTitle.TabIndex = 0;
-            this.lblClientManagerTitle.Text = "Welcome to the Client Manager Home Page";
+            this.lblClientManagerTitle.Text = "Welcome to the Claim Manager Home Page";
             // 
             // btnViewClientList
             // 
