@@ -18,6 +18,20 @@ namespace InsuranceApplication.Classes
         public FinanceManager(UserData userdata) : base(userdata) { }
 
         //methods
-       
+        public void ViewProfile()
+        {
+
+        }
+
+        public void ViewMessages()
+        {
+
+        }
+
+        public void EstimateAmount()
+        {
+
+        }
+
     }
 }

@@ -23,6 +23,19 @@ namespace InsuranceApplication.Classes
         public ClaimManager(UserData userdata) : base(userdata) { }
 
         //methods
-       
+        public void ViewProfile()
+        {
+
+        }
+
+        public void ViewMessages()
+        {
+
+        }
+
+        public void DownloadDocuments()
+        {
+
+        }
     }
 }
