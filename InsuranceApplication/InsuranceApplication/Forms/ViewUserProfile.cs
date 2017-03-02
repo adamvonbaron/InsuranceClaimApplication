@@ -6,19 +6,11 @@ namespace InsuranceApplication.Forms
 {
     public partial class ViewUserProfile : Form
     {
-        Admin admin;
-        FinanceManager financemanager;
-        public ViewUserProfile(UserType type)
+        public UserData userdata;
+        public ViewUserProfile(string username)
         {
             InitializeComponent();
-            admin = user;
-            financemanager = null;
-            lblFirstName.Text = "First Name: " + admin.FirstName;
-            lblLastName.Text = "Last Name: " + admin.LastName;
-            lblUsername.Text = "Username: " + admin.UserName;
-            lblBirthday.Text = "Birthday: " + admin.Birthday;
-            lblPhoneNumber.Text = "Phone Number: " + admin.Phonenumber;
-            lblNumOfClaims.Text = "# of Claims: 0";
+            userdata = User.GetUserData(username);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -28,13 +20,18 @@ namespace InsuranceApplication.Forms
 
         private void btnEditUser_Click(object sender, EventArgs e) {
             
-            EditUserProfile eup = new EditUserProfile();
+            EditUserProfile eup = new EditUserProfile(userdata);
             eup.ShowDialog();
         }
 
         private void ViewUserProfile_Load(object sender, EventArgs e)
         {
-            
+            lblFirstName.Text = "First Name: " + userdata.FirstName;
+            lblLastName.Text = "Last Name: " + userdata.LastName;
+            lblUsername.Text = "Username: " + userdata.UserName;
+            lblBirthday.Text = "Birthday: " + userdata.Birthday;
+            lblPhoneNumber.Text = "Phone Number: " + userdata.Phonenumber;
+            lblNumOfClaims.Text = "# of Claims: 0";
         }
     }
 }

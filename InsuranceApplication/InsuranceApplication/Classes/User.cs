@@ -76,6 +76,16 @@ namespace InsuranceApplication.Classes
             return libsql.SendMessage(message);
         }
 
+        public static UserData GetUserData(string username)
+        {
+            return libsql.GetUserData(username);
+        }
+
+        public UserData GetUserData()
+        {
+            return libsql.GetUserData(UserName);
+        }
+
         public static UserData NullUserData = new UserData
         {
             FirstName = "",

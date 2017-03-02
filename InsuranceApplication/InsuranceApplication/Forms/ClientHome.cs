@@ -27,7 +27,7 @@ namespace InsuranceApplication.Forms
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            EditUserProfile eup = new EditUserProfile(client);
+            EditUserProfile eup = new EditUserProfile(client.GetUserData());
             eup.ShowDialog();
         }
 

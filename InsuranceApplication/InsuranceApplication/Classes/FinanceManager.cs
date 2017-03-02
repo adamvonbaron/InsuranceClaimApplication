@@ -14,5 +14,7 @@ namespace InsuranceApplication.Classes
             Phonenumber = userdata.Phonenumber;
             Type = userdata.Type;
         }
+
+        public FinanceManager(UserData userdata) : base(userdata) { }
     }
 }

@@ -24,7 +24,7 @@ namespace InsuranceApplication.Forms
         }
 
         private void btnViewProfile_Click(object sender, EventArgs e) {
-            ViewUserProfile vup = new ViewUserProfile(user);
+            ViewUserProfile vup = new ViewUserProfile(txtUsername.Text);
             vup.ShowDialog();
         }
     }

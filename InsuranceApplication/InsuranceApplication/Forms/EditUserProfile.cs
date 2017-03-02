@@ -12,28 +12,11 @@ using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms {
     public partial class EditUserProfile : Form {
-        int rank;
-        /* fix to use with abstract User class */
-        public EditUserProfile(User user) {
+
+        public UserData userdata;
+        public EditUserProfile(UserData userdata) {
             InitializeComponent();
-            User curUser = user;
-            switch(user.Rank)
-            {
-                //case 1:
-                //    public Admin curUser = user;
-                case 2:
-                    curUser = new FinanceManager();
-                //case 3:
-                //    curUser = new ClientManager();
-                case 4:
-                    curUser = new Client();
-            }
-            txtUpdateFirstname.Text = curUser.FirstName;
-            txtUpdateLastname.Text = curUser.LastName;
-            txtUpdateUsername.Text = curUser.UserName;
-            txtUpdatePassword.Text = curUser.Password;
-            dtpBirthday.Text = curUser.Birthday;
-            txtUpdatePhone.Text = curUser.Phonenumber;
+            this.userdata = userdata;
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
@@ -42,15 +25,18 @@ namespace InsuranceApplication.Forms {
 
         private void btnEnter_Click(object sender, EventArgs e) {
 
-            if (!User.UpdateProfile(txtUpdateFirstname.Text, txtUpdateLastname.Text,
-                                txtUpdateUsername.Text, txtUpdatePassword.Text,
-                                dtpBirthday.Text, txtUpdatePhone.Text, rank))
+            if (!Admin.UpdateUser(userdata))
                 MessageBox.Show("error updating user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void EditUserProfile_Load(object sender, EventArgs e)
         {
-            
+            txtUpdateFirstname.Text = userdata.FirstName;
+            txtUpdateLastname.Text = userdata.LastName;
+            txtUpdateUsername.Text = userdata.UserName;
+            txtUpdatePassword.Text = userdata.Password;
+            dtpBirthday.Text = userdata.Birthday;
+            txtUpdatePhone.Text = userdata.Phonenumber;
         }
     }
 }

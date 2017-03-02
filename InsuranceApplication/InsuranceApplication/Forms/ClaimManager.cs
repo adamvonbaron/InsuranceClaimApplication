@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Forms
 {
@@ -31,14 +32,14 @@ namespace InsuranceApplication.Forms
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
             this.Close();
-            EditUserProfile f3 = new EditUserProfile(Username);
+            EditUserProfile f3 = new EditUserProfile(User.GetUserData(Username));
             f3.Show();
         }
 
         private void btnViewClientProfile_Click(object sender, EventArgs e)
         {
             this.Close();
-            ViewProfile f3 = new ViewProfile(Username);
+            ViewProfile f3 = new ViewProfile(new Client(User.NullUserData));
             f3.Show();
         }
     }

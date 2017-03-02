@@ -26,12 +26,6 @@ namespace InsuranceApplication.Classes
 
         }
 
-        public void EditProfile()
-        {
-            EditUserProfile eup = new EditUserProfile(this);
-
-        }
-
         public bool ApplyForClaim(Claim claim)
         {
             return libsql.SendClaim(claim);
