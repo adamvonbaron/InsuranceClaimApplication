@@ -42,7 +42,8 @@ namespace InsuranceApplication
             switch(usertype)
             {
                 case UserType.Admin:
-                    //user = new Admin();
+                    user = new Admin(txtUsername.Text, txtPassword.Text);
+                    home = new AdminHome((Admin)user);
                     break;
                 case UserType.FinanceManager:
                     user = new FinanceManager(txtUsername.Text, txtPassword.Text);
@@ -56,7 +57,7 @@ namespace InsuranceApplication
                     home = new ClientHome((Client) user);
                     break;
             }
-            this.Close();
+            this.Hide();
             home.ShowDialog();
             txtPassword.Text = string.Empty;
             this.Show();
