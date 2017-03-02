@@ -73,16 +73,17 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // ClaimManagerViewClientProfile
+            // ViewProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(295, 75);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnViewProfile);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
-            this.Name = "ClaimManagerViewClientProfile";
+            this.Name = "ViewProfile";
             this.Text = "Select User";
             this.Load += new System.EventHandler(this.ClaimManagerViewClientProfile_Load);
             this.ResumeLayout(false);

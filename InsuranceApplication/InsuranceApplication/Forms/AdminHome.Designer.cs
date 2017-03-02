@@ -39,6 +39,18 @@
             this.btnRegisterUser = new System.Windows.Forms.Button();
             this.btnMessageCenter = new System.Windows.Forms.Button();
             this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.cboRank = new System.Windows.Forms.ComboBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblRank = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAdminTitle
@@ -48,7 +60,7 @@
             this.lblAdminTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdminTitle.ForeColor = System.Drawing.Color.White;
             this.lblAdminTitle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblAdminTitle.Location = new System.Drawing.Point(21, 20);
+            this.lblAdminTitle.Location = new System.Drawing.Point(228, 20);
             this.lblAdminTitle.Name = "lblAdminTitle";
             this.lblAdminTitle.Size = new System.Drawing.Size(449, 25);
             this.lblAdminTitle.TabIndex = 0;
@@ -89,7 +101,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(12, 422);
+            this.btnExit.Location = new System.Drawing.Point(18, 554);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -150,12 +162,142 @@
             this.btnDeleteUser.UseVisualStyleBackColor = true;
             this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
+            // cboRank
+            // 
+            this.cboRank.FormattingEnabled = true;
+            this.cboRank.Location = new System.Drawing.Point(794, 133);
+            this.cboRank.Name = "cboRank";
+            this.cboRank.Size = new System.Drawing.Size(121, 21);
+            this.cboRank.TabIndex = 22;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(784, 104);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(138, 20);
+            this.txtUsername.TabIndex = 21;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(689, 105);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(74, 16);
+            this.lblUsername.TabIndex = 20;
+            this.lblUsername.Text = "Username:";
+            // 
+            // lblRank
+            // 
+            this.lblRank.AutoSize = true;
+            this.lblRank.BackColor = System.Drawing.Color.Transparent;
+            this.lblRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRank.ForeColor = System.Drawing.Color.White;
+            this.lblRank.Location = new System.Drawing.Point(689, 134);
+            this.lblRank.Name = "lblRank";
+            this.lblRank.Size = new System.Drawing.Size(99, 16);
+            this.lblRank.TabIndex = 19;
+            this.lblRank.Text = "Updated Rank:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(775, 170);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnEnter
+            // 
+            this.btnEnter.Location = new System.Drawing.Point(694, 170);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.TabIndex = 17;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(712, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "ADD PERMISSIONS";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(785, 328);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(698, 328);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Enter";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(785, 278);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(695, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 16);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Username:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(727, 246);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "DELETE USER";
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(490, 457);
+            this.ClientSize = new System.Drawing.Size(955, 589);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboRank);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblRank);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnMessageCenter);
             this.Controls.Add(this.btnRegisterUser);
@@ -185,5 +327,17 @@
         private System.Windows.Forms.Button btnRegisterUser;
         private System.Windows.Forms.Button btnMessageCenter;
         private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.ComboBox cboRank;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblRank;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
