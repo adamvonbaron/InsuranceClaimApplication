@@ -95,7 +95,8 @@ namespace InsuranceApplication.Classes {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-                return false;
+                MessageBox.Show(ex.ToString());
+                //return false;
             } finally {
                 conn.Close();
             }

@@ -45,6 +45,7 @@ namespace InsuranceApplication.Classes
             {
                 case UserType.Admin:
                     user = new Admin(userdata);
+                    /* TODO: figure out why Phonenumber turns null here */
                     return libsql.UpdateUser(user);
                 case UserType.FinanceManager:
                     //user = new FinanceManager(userdata);

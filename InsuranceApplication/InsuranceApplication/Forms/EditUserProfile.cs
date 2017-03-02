@@ -24,8 +24,17 @@ namespace InsuranceApplication.Forms {
         }
 
         private void btnEnter_Click(object sender, EventArgs e) {
-
-            if (!Admin.UpdateUser(userdata))
+            UserData newdata = new UserData
+            {
+                FirstName = txtUpdateFirstname.Text,
+                LastName = txtUpdateLastname.Text,
+                UserName = txtUpdateUsername.Text,
+                Password = txtUpdatePassword.Text,
+                Birthday = dtpBirthday.Value.ToString(),
+                Phonenumber = txtUpdatePhone.Text,
+                Type = userdata.Type
+            };
+            if (!Admin.UpdateUser(newdata))
                 MessageBox.Show("error updating user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
