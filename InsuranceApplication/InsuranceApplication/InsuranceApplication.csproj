@@ -96,11 +96,11 @@
     <Compile Include="Forms\ClientHome.Designer.cs">
       <DependentUpon>ClientHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ClaimManager.cs">
+    <Compile Include="Forms\ClaimManagerHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ClaimManager.Designer.cs">
-      <DependentUpon>ClaimManager.cs</DependentUpon>
+    <Compile Include="Forms\ClaimManagerHome.Designer.cs">
+      <DependentUpon>ClaimManagerHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FinanceManagerHome.cs">
       <SubType>Form</SubType>
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="Forms\ClientHome.resx">
       <DependentUpon>ClientHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ClaimManager.resx">
-      <DependentUpon>ClaimManager.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ClaimManagerHome.resx">
+      <DependentUpon>ClaimManagerHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinanceManagerHome.resx">
       <DependentUpon>FinanceManagerHome.cs</DependentUpon>
