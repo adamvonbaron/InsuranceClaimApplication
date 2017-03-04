@@ -150,6 +150,7 @@
     <Compile Include="Forms\ViewUserProfile.Designer.cs">
       <DependentUpon>ViewUserProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Backend.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdminAddPermissions.resx">

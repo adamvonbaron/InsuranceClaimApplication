@@ -180,8 +180,8 @@ namespace InsuranceApplication.Classes {
         }
 
         /* get user rank */
-        public static int GetRank(string username) {
-            return (int) GetField("users", "rank", "username", username);
+        public static UserType GetRank(string username) {
+            return (UserType) GetField("users", "rank", "username", username);
         }
 
         public static string GetFirstName(string username) {
@@ -192,7 +192,7 @@ namespace InsuranceApplication.Classes {
             return (string) GetField("users", "lastname", "username", username);
         }
 
-        public static bool UpdateRank(string username, int rank) {
+        public static bool UpdateRank(string username, UserType rank) {
             string query = "update users set rank = @rank where username = @username;";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@rank", rank);

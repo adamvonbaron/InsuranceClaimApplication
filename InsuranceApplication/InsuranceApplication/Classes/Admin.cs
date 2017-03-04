@@ -20,9 +20,9 @@
             return libsql.DeleteUser(username);
         }
 
-        public bool UpdatePermissions(string username, int rank)
+        public bool UpdatePermissions(string username, UserType type)
         {
-            return libsql.UpdateRank(username, rank);
+            return libsql.UpdateRank(username, type);
         }
 
         public static bool RegisterUser(Client client)
