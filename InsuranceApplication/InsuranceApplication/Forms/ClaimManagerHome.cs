@@ -13,15 +13,11 @@ namespace InsuranceApplication.Forms
 {
     public partial class ClaimManagerHome : Form
     {
-        public string Username, Firstname, Lastname;
-        public ClaimManagerHome(string firstname, string lastname, string username)
+        ClaimManager User { get; set; }
+        public ClaimManagerHome(ClaimManager user)
         {
+            User = user;
             InitializeComponent();
-            this.Firstname = firstname;
-            this.Lastname = lastname;
-            this.Username = username;
-            this.lblClientManagerTitle.Text = "Welcome, " + firstname + " " + lastname;
-            this.lblCurUserInfo.Text = "Logged in as: " + username + "      Rank: Admin";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -29,18 +25,15 @@ namespace InsuranceApplication.Forms
             this.Close();
         }
 
-        private void btnEditProfile_Click(object sender, EventArgs e)
+        private void btnViewProfile_Click(object sender, EventArgs e)
         {
-            this.Close();
-            EditUserProfile f3 = new EditUserProfile(User.GetUserData(Username));
-            f3.Show();
+            ViewUserProfile vup = new ViewUserProfile(txtViewUsername.Text);
+            vup.ShowDialog();
         }
 
-        private void btnViewClientProfile_Click(object sender, EventArgs e)
+        private void btnViewClear_Click(object sender, EventArgs e)
         {
-            this.Close();
-            ViewProfile f3 = new ViewProfile(new Client(User.NullUserData));
-            f3.Show();
+            txtViewUsername.Clear();
         }
     }
 }

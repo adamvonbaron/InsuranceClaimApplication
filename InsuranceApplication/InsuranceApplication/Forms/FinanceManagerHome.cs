@@ -35,5 +35,16 @@ namespace InsuranceApplication.Forms
             lblCurUserInfo.Text = "Logged in as: " + User.UserName + "      Rank: Finance Manager";
             lblFinanceManagerHome.Text = "Welcome, " + User.FirstName + " " + User.LastName;
         }
+
+        private void btnViewProfile_Click(object sender, EventArgs e)
+        {
+            ViewUserProfile vup = new ViewUserProfile(txtViewUsername.Text);
+            vup.ShowDialog();
+        }
+
+        private void btnViewClear_Click(object sender, EventArgs e)
+        {
+            txtViewUsername.Clear();
+        }
     }
 }

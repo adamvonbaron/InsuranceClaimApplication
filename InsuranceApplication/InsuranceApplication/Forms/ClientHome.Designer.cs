@@ -44,7 +44,7 @@
             this.lblClientHome.AutoSize = true;
             this.lblClientHome.BackColor = System.Drawing.Color.Transparent;
             this.lblClientHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientHome.Location = new System.Drawing.Point(81, 21);
+            this.lblClientHome.Location = new System.Drawing.Point(12, 9);
             this.lblClientHome.Name = "lblClientHome";
             this.lblClientHome.Size = new System.Drawing.Size(331, 24);
             this.lblClientHome.TabIndex = 0;
@@ -117,7 +117,7 @@
             // 
             this.lblCurUserInfo.AutoSize = true;
             this.lblCurUserInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurUserInfo.Location = new System.Drawing.Point(136, 373);
+            this.lblCurUserInfo.Location = new System.Drawing.Point(13, 43);
             this.lblCurUserInfo.Name = "lblCurUserInfo";
             this.lblCurUserInfo.Size = new System.Drawing.Size(0, 13);
             this.lblCurUserInfo.TabIndex = 7;
@@ -127,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(509, 403);
+            this.ClientSize = new System.Drawing.Size(774, 444);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnViewStatus);

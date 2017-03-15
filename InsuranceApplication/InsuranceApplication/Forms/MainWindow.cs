@@ -43,7 +43,8 @@ namespace InsuranceApplication
                     home = new FinanceManagerHome((FinanceManager) user);
                     break;
                 case UserType.ClientManager:
-                    //user = new ClientManager(txtUsername.Text, txtPassword.Text);
+                    user = new ClaimManager(txtUsername.Text, txtPassword.Text);
+                    home = new ClaimManagerHome((ClaimManager) user);
                     break;
                 case UserType.Client:
                     user = new Client(txtUsername.Text, txtPassword.Text);

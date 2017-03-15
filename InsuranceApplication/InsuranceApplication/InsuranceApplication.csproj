@@ -54,23 +54,11 @@
     <Compile Include="Classes\Claim.cs" />
     <Compile Include="Classes\libsql.cs" />
     <Compile Include="Classes\Message.cs" />
-    <Compile Include="Forms\AdminAddPermissions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AdminAddPermissions.Designer.cs">
-      <DependentUpon>AdminAddPermissions.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\DeleteUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\DeleteUser.Designer.cs">
-      <DependentUpon>DeleteUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ViewProfile.cs">
       <SubType>Form</SubType>
@@ -153,14 +141,8 @@
     <Compile Include="Interfaces\Backend.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AdminAddPermissions.resx">
-      <DependentUpon>AdminAddPermissions.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DeleteUser.resx">
-      <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewProfile.resx">
       <DependentUpon>ViewProfile.cs</DependentUpon>
