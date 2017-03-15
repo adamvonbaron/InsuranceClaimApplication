@@ -35,5 +35,11 @@ namespace InsuranceApplication.Forms
         {
             txtViewUsername.Clear();
         }
+
+        private void ClaimManagerHome_Load(object sender, EventArgs e)
+        {
+            lblCurUserInfo.Text = "Logged in as: " + User.UserName + "      Rank: Finance Manager";
+            lblClaimManagerTitle.Text = "Welcome, " + User.FirstName + " " + User.LastName;
+        }
     }
 }
