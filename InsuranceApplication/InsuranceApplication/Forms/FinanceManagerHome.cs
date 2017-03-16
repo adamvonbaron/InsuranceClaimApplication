@@ -49,8 +49,8 @@ namespace InsuranceApplication.Forms
 
         private void btnViewClientList_Click(object sender, EventArgs e)
         {
-            //ViewClientList vcl = new ViewClientList(User.GetUserData());
-           // vcl.ShowDialog();
+            ViewClientList vcl = new ViewClientList();
+            vcl.ShowDialog();
         }
     }
 }
