@@ -150,6 +150,9 @@
     <EmbeddedResource Include="Forms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientList.resx">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewProfile.resx">
       <DependentUpon>ViewProfile.cs</DependentUpon>
     </EmbeddedResource>
