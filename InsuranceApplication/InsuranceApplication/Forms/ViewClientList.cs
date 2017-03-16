@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InsuranceApplication.Classes;
 
 namespace InsuranceApplication.Forms
 {
-    public partial class ClientList : Form
+    public partial class ViewClientList : Form
     {
-        public ClientList()
+        public ViewClientList()
         {
             InitializeComponent();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

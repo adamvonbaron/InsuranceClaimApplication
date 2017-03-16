@@ -46,5 +46,11 @@ namespace InsuranceApplication.Forms
         {
             txtViewUsername.Clear();
         }
+
+        private void btnViewClientList_Click(object sender, EventArgs e)
+        {
+            ViewClientList f3 = new ViewClientList(User);
+            f3.Show();
+        }
     }
 }

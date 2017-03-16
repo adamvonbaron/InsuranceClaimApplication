@@ -1,6 +1,6 @@
 ﻿namespace InsuranceApplication.Forms
 {
-    partial class ClientList
+    partial class ViewClientList
     {
         /// <summary>
         /// Required designer variable.
@@ -48,15 +48,16 @@
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // ClientList
+            // ViewClientList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 352);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lstClientList);
-            this.Name = "ClientList";
+            this.Name = "ViewClientList";
             this.Text = "ClientList";
             this.ResumeLayout(false);
 
