@@ -58,9 +58,9 @@
             // btnViewClientList
             // 
             this.btnViewClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientList.Location = new System.Drawing.Point(44, 71);
+            this.btnViewClientList.Location = new System.Drawing.Point(232, 387);
             this.btnViewClientList.Name = "btnViewClientList";
-            this.btnViewClientList.Size = new System.Drawing.Size(161, 53);
+            this.btnViewClientList.Size = new System.Drawing.Size(144, 35);
             this.btnViewClientList.TabIndex = 1;
             this.btnViewClientList.Text = "View Client List";
             this.btnViewClientList.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // btnViewMessages
             // 
             this.btnViewMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewMessages.Location = new System.Drawing.Point(44, 130);
+            this.btnViewMessages.Location = new System.Drawing.Point(382, 387);
             this.btnViewMessages.Name = "btnViewMessages";
-            this.btnViewMessages.Size = new System.Drawing.Size(161, 52);
+            this.btnViewMessages.Size = new System.Drawing.Size(146, 37);
             this.btnViewMessages.TabIndex = 2;
             this.btnViewMessages.Text = "View Messages";
             this.btnViewMessages.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
             // btnDownload
             // 
             this.btnDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownload.Location = new System.Drawing.Point(211, 130);
+            this.btnDownload.Location = new System.Drawing.Point(534, 375);
             this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(173, 52);
+            this.btnDownload.Size = new System.Drawing.Size(168, 47);
             this.btnDownload.TabIndex = 3;
             this.btnDownload.Text = "Download Scanned Documents";
             this.btnDownload.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@
             // btnTransfer
             // 
             this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(211, 188);
+            this.btnTransfer.Location = new System.Drawing.Point(708, 387);
             this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(173, 60);
+            this.btnTransfer.Size = new System.Drawing.Size(146, 35);
             this.btnTransfer.TabIndex = 6;
             this.btnTransfer.Text = "Transfer File to FM";
             this.btnTransfer.UseVisualStyleBackColor = true;
@@ -121,7 +121,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(574, 104);
+            this.label5.Location = new System.Drawing.Point(60, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(182, 20);
             this.label5.TabIndex = 40;
@@ -130,7 +130,7 @@
             // btnViewClear
             // 
             this.btnViewClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClear.Location = new System.Drawing.Point(655, 178);
+            this.btnViewClear.Location = new System.Drawing.Point(141, 164);
             this.btnViewClear.Name = "btnViewClear";
             this.btnViewClear.Size = new System.Drawing.Size(62, 27);
             this.btnViewClear.TabIndex = 39;
@@ -141,7 +141,7 @@
             // btnViewProfile
             // 
             this.btnViewProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewProfile.Location = new System.Drawing.Point(548, 178);
+            this.btnViewProfile.Location = new System.Drawing.Point(34, 164);
             this.btnViewProfile.Name = "btnViewProfile";
             this.btnViewProfile.Size = new System.Drawing.Size(82, 27);
             this.btnViewProfile.TabIndex = 38;
@@ -151,7 +151,7 @@
             // 
             // txtViewUsername
             // 
-            this.txtViewUsername.Location = new System.Drawing.Point(628, 137);
+            this.txtViewUsername.Location = new System.Drawing.Point(114, 123);
             this.txtViewUsername.Name = "txtViewUsername";
             this.txtViewUsername.Size = new System.Drawing.Size(154, 20);
             this.txtViewUsername.TabIndex = 37;
@@ -162,7 +162,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(545, 137);
+            this.label4.Location = new System.Drawing.Point(31, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 18);
             this.label4.TabIndex = 36;
