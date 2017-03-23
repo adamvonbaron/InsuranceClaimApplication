@@ -37,7 +37,7 @@
             this.lstClientList.FormattingEnabled = true;
             this.lstClientList.Location = new System.Drawing.Point(58, 31);
             this.lstClientList.Name = "lstClientList";
-            this.lstClientList.Size = new System.Drawing.Size(401, 225);
+            this.lstClientList.Size = new System.Drawing.Size(401, 238);
             this.lstClientList.TabIndex = 0;
             // 
             // btnExit
