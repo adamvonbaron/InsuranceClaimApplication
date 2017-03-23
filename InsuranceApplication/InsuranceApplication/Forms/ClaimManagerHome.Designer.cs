@@ -64,6 +64,7 @@
             this.btnViewClientList.TabIndex = 1;
             this.btnViewClientList.Text = "View Client List";
             this.btnViewClientList.UseVisualStyleBackColor = true;
+            this.btnViewClientList.Click += new System.EventHandler(this.btnViewClientList_Click);
             // 
             // btnViewMessages
             // 

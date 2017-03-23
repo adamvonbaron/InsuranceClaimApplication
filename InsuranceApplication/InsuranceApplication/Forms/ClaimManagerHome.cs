@@ -41,5 +41,11 @@ namespace InsuranceApplication.Forms
             lblCurUserInfo.Text = "Logged in as: " + User.UserName + "      Rank: Finance Manager";
             lblClaimManagerTitle.Text = "Welcome, " + User.FirstName + " " + User.LastName;
         }
+
+        private void btnViewClientList_Click(object sender, EventArgs e)
+        {
+            ViewClientList vcl = new ViewClientList();
+            vcl.ShowDialog();
+        }
     }
 }
