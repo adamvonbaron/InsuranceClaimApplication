@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InsuranceApplication.Classes;
+using InsuranceApplication.Forms;
 
 namespace InsuranceApplication.Forms
 {
