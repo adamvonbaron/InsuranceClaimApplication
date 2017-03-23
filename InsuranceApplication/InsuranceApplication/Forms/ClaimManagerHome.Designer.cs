@@ -188,7 +188,7 @@
             this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.lblClaimManagerTitle);
             this.Name = "ClaimManagerHome";
-            this.Text = "ClientManagerHome";
+            this.Text = "ClaimManagerHome";
             this.Load += new System.EventHandler(this.ClaimManagerHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
