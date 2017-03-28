@@ -50,10 +50,10 @@
     <Compile Include="Classes\ClaimManager.cs" />
     <Compile Include="Classes\Client.cs" />
     <Compile Include="Classes\FinanceManager.cs" />
+    <Compile Include="Classes\Message.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Claim.cs" />
     <Compile Include="Classes\libsql.cs" />
-    <Compile Include="Classes\Message.cs" />
     <Compile Include="Forms\AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,29 +114,11 @@
     <Compile Include="Forms\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MessageCenter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MessageCenter.Designer.cs">
-      <DependentUpon>MessageCenter.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SendMessage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SendMessage.Designer.cs">
-      <DependentUpon>SendMessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ViewMessagesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ViewMessagesForm.Designer.cs">
-      <DependentUpon>ViewMessagesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ViewUserProfile.cs">
       <SubType>Form</SubType>
@@ -177,17 +159,8 @@
     <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MessageCenter.resx">
-      <DependentUpon>MessageCenter.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SendMessage.resx">
-      <DependentUpon>SendMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewMessagesForm.resx">
-      <DependentUpon>ViewMessagesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewUserProfile.resx">
       <DependentUpon>ViewUserProfile.cs</DependentUpon>

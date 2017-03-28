@@ -93,6 +93,16 @@ namespace InsuranceApplication.Classes
             return libsql.GetInboxMessages(username);
         }
 
+        public static DataTable GetClients()
+        {
+            return libsql.GetClientList();
+        }
+
+        public static DataTable GetManagers()
+        {
+            return libsql.GetManagement();
+        }
+
         public static bool SendMessage(Message message)
         {
             return libsql.SendMessage(message);

@@ -174,6 +174,26 @@ namespace InsuranceApplication.Classes {
             return messages;
         }
 
+        public static DataTable GetClientList()
+        {
+            string query = "select * from users where rank=4";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable clients = new DataTable();
+            sda.Fill(clients);
+            return clients;
+        }
+
+        public static DataTable GetManagement()
+        {
+            string query = "select * from users where rank=1 or rank=2 or rank=3";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable managers = new DataTable();
+            sda.Fill(managers);
+            return managers;
+        }
+
         /* checks username and password in database */
         public static bool ValidateUser(string username, string password) {
             return (CheckUsername(username) && CheckPassword(password));

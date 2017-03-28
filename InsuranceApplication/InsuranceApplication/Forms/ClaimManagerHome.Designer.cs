@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClaimManagerHome));
             this.lblClaimManagerTitle = new System.Windows.Forms.Label();
             this.btnViewClientList = new System.Windows.Forms.Button();
-            this.btnViewMessages = new System.Windows.Forms.Button();
             this.btnDownload = new System.Windows.Forms.Button();
             this.btnTransfer = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -41,6 +40,18 @@
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.txtViewUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lvMessages = new System.Windows.Forms.ListView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.txtSubject = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
+            this.lblCompose = new System.Windows.Forms.Label();
+            this.lblSubject = new System.Windows.Forms.Label();
+            this.lblTo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lvClients = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblClaimManagerTitle
@@ -58,7 +69,7 @@
             // btnViewClientList
             // 
             this.btnViewClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientList.Location = new System.Drawing.Point(232, 387);
+            this.btnViewClientList.Location = new System.Drawing.Point(304, 542);
             this.btnViewClientList.Name = "btnViewClientList";
             this.btnViewClientList.Size = new System.Drawing.Size(144, 35);
             this.btnViewClientList.TabIndex = 1;
@@ -66,20 +77,10 @@
             this.btnViewClientList.UseVisualStyleBackColor = true;
             this.btnViewClientList.Click += new System.EventHandler(this.btnViewClientList_Click);
             // 
-            // btnViewMessages
-            // 
-            this.btnViewMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewMessages.Location = new System.Drawing.Point(382, 387);
-            this.btnViewMessages.Name = "btnViewMessages";
-            this.btnViewMessages.Size = new System.Drawing.Size(146, 37);
-            this.btnViewMessages.TabIndex = 2;
-            this.btnViewMessages.Text = "View Messages";
-            this.btnViewMessages.UseVisualStyleBackColor = true;
-            // 
             // btnDownload
             // 
             this.btnDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownload.Location = new System.Drawing.Point(534, 375);
+            this.btnDownload.Location = new System.Drawing.Point(130, 530);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(168, 47);
             this.btnDownload.TabIndex = 3;
@@ -89,7 +90,7 @@
             // btnTransfer
             // 
             this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(708, 387);
+            this.btnTransfer.Location = new System.Drawing.Point(469, 542);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Size = new System.Drawing.Size(146, 35);
             this.btnTransfer.TabIndex = 6;
@@ -98,7 +99,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(44, 362);
+            this.btnExit.Location = new System.Drawing.Point(16, 542);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 7;
@@ -169,12 +170,141 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Username: ";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(108, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 20);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "VIEW MESSAGES";
+            // 
+            // lvMessages
+            // 
+            this.lvMessages.Location = new System.Drawing.Point(14, 256);
+            this.lvMessages.Name = "lvMessages";
+            this.lvMessages.Size = new System.Drawing.Size(383, 200);
+            this.lvMessages.TabIndex = 54;
+            this.lvMessages.UseCompatibleStateImageBehavior = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(466, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(163, 20);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "SEND MESSAGES";
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(470, 483);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.TabIndex = 70;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Location = new System.Drawing.Point(423, 210);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(309, 253);
+            this.txtMessage.TabIndex = 69;
+            // 
+            // txtSubject
+            // 
+            this.txtSubject.Location = new System.Drawing.Point(481, 154);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(200, 20);
+            this.txtSubject.TabIndex = 68;
+            // 
+            // txtTo
+            // 
+            this.txtTo.Location = new System.Drawing.Point(481, 121);
+            this.txtTo.Name = "txtTo";
+            this.txtTo.Size = new System.Drawing.Size(200, 20);
+            this.txtTo.TabIndex = 67;
+            // 
+            // lblCompose
+            // 
+            this.lblCompose.AutoSize = true;
+            this.lblCompose.BackColor = System.Drawing.Color.Transparent;
+            this.lblCompose.ForeColor = System.Drawing.Color.White;
+            this.lblCompose.Location = new System.Drawing.Point(426, 190);
+            this.lblCompose.Name = "lblCompose";
+            this.lblCompose.Size = new System.Drawing.Size(57, 13);
+            this.lblCompose.TabIndex = 66;
+            this.lblCompose.Text = "Compose: ";
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubject.ForeColor = System.Drawing.Color.White;
+            this.lblSubject.Location = new System.Drawing.Point(426, 157);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(49, 13);
+            this.lblSubject.TabIndex = 65;
+            this.lblSubject.Text = "Subject: ";
+            // 
+            // lblTo
+            // 
+            this.lblTo.AutoSize = true;
+            this.lblTo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTo.ForeColor = System.Drawing.Color.White;
+            this.lblTo.Location = new System.Drawing.Point(426, 124);
+            this.lblTo.Name = "lblTo";
+            this.lblTo.Size = new System.Drawing.Size(26, 13);
+            this.lblTo.TabIndex = 64;
+            this.lblTo.Text = "To: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(920, 183);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 20);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "VIEW CLIENTS";
+            // 
+            // lvClients
+            // 
+            this.lvClients.Location = new System.Drawing.Point(768, 210);
+            this.lvClients.Name = "lvClients";
+            this.lvClients.Size = new System.Drawing.Size(433, 257);
+            this.lvClients.TabIndex = 84;
+            this.lvClients.UseCompatibleStateImageBehavior = false;
+            // 
             // ClaimManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(866, 437);
+            this.ClientSize = new System.Drawing.Size(1213, 577);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lvClients);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.txtMessage);
+            this.Controls.Add(this.txtSubject);
+            this.Controls.Add(this.txtTo);
+            this.Controls.Add(this.lblCompose);
+            this.Controls.Add(this.lblSubject);
+            this.Controls.Add(this.lblTo);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lvMessages);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnViewClear);
             this.Controls.Add(this.btnViewProfile);
@@ -184,7 +314,6 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnTransfer);
             this.Controls.Add(this.btnDownload);
-            this.Controls.Add(this.btnViewMessages);
             this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.lblClaimManagerTitle);
             this.Name = "ClaimManagerHome";
@@ -199,7 +328,6 @@
 
         private System.Windows.Forms.Label lblClaimManagerTitle;
         private System.Windows.Forms.Button btnViewClientList;
-        private System.Windows.Forms.Button btnViewMessages;
         private System.Windows.Forms.Button btnDownload;
         private System.Windows.Forms.Button btnTransfer;
         private System.Windows.Forms.Button btnExit;
@@ -209,5 +337,17 @@
         private System.Windows.Forms.Button btnViewProfile;
         private System.Windows.Forms.TextBox txtViewUsername;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListView lvMessages;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.TextBox txtSubject;
+        private System.Windows.Forms.TextBox txtTo;
+        private System.Windows.Forms.Label lblCompose;
+        private System.Windows.Forms.Label lblSubject;
+        private System.Windows.Forms.Label lblTo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView lvClients;
     }
 }

@@ -35,20 +35,42 @@ namespace InsuranceApplication.Forms {
 
         }
 
-        private void btnRegisterCMFM_Click(object sender, EventArgs e) {
-            Register register = new Register();
-            register.ShowDialog();
-        }
-
-        private void btnMessageCenter_Click(object sender, EventArgs e) {
-            MessageCenter mc = new MessageCenter(admin);
-            mc.ShowDialog();
-        }
-
         private void AdminHome_Load(object sender, EventArgs e)
         {
-            foreach(string rank in ranks)
+            foreach (string rank in ranks)
                 cboRank.Items.Add(rank);
+
+            lvMessages.View = View.Details;
+            DataTable messages = User.GetMessages(admin.UserName);
+            lvMessages.Columns.Add("From", 75);
+            lvMessages.Columns.Add("Date", 125);
+            lvMessages.Columns.Add("Subject", 500);
+            lvMessages.Columns.Add("Message", 500);
+            for (int i = 0; i < messages.Rows.Count; i++)
+            {
+                DataRow dr = messages.Rows[i];
+                ListViewItem curItem = new ListViewItem(dr[1].ToString());
+                curItem.SubItems.Add(dr[2].ToString());
+                curItem.SubItems.Add(dr[3].ToString());
+                curItem.SubItems.Add(dr[4].ToString());
+                lvMessages.Items.Add(curItem);
+            }
+
+            lvClients.View = View.Details;
+            DataTable clients = User.GetClients();
+            lvClients.Columns.Add("firstname", 85);
+            lvClients.Columns.Add("lastname", 85);
+            lvClients.Columns.Add("birthday", 150);
+            lvClients.Columns.Add("phonenumber", 75);
+            for (int i = 0; i < clients.Rows.Count; i++)
+            {
+                DataRow dr = clients.Rows[i];
+                ListViewItem curItem = new ListViewItem(dr[0].ToString());
+                curItem.SubItems.Add(dr[1].ToString());
+                curItem.SubItems.Add(dr[4].ToString());
+                curItem.SubItems.Add(dr[5].ToString());
+                lvClients.Items.Add(curItem);
+            }
         }
 
         private void btnPermissionsEnter_Click(object sender, EventArgs e)
@@ -113,6 +135,23 @@ namespace InsuranceApplication.Forms {
             txtRegisterPassword.Clear();
             txtRegisterPhone.Clear();
             dtpRegisterDateOfBirth.ResetText();
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            Classes.Message message = new Classes.Message
+            {
+                To = txtTo.Text,
+                From = admin.UserName,
+                Date = DateTime.Now.ToString(),
+                Subject = txtSubject.Text,
+                Content = txtMessage.Text
+            };
+            if (User.SendMessage(message))
+            {
+                MessageBox.Show("Message sent successfully.", "Message", MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+            }
         }
     }
 }
