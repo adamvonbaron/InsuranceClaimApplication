@@ -29,32 +29,40 @@ namespace InsuranceApplication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            UserType usertype = User.Login(txtUsername.Text, txtPassword.Text);
-            object user = null;
-            Form home = null;
-            switch(usertype)
+            try
             {
-                case UserType.Admin:
-                    user = new Admin(txtUsername.Text, txtPassword.Text);
-                    home = new AdminHome((Admin)user);
-                    break;
-                case UserType.FinanceManager:
-                    user = new FinanceManager(txtUsername.Text, txtPassword.Text);
-                    home = new FinanceManagerHome((FinanceManager) user);
-                    break;
-                case UserType.ClientManager:
-                    user = new ClaimManager(txtUsername.Text, txtPassword.Text);
-                    home = new ClaimManagerHome((ClaimManager) user);
-                    break;
-                case UserType.Client:
-                    user = new Client(txtUsername.Text, txtPassword.Text);
-                    home = new ClientHome((Client) user);
-                    break;
+                UserType usertype = User.Login(txtUsername.Text, txtPassword.Text);
+                if (usertype == UserType.Undefined)
+                    throw new NullReferenceException();
+                object user = null;
+                Form home = null;
+                switch (usertype)
+                {
+                    case UserType.Admin:
+                        user = new Admin(txtUsername.Text, txtPassword.Text);
+                        home = new AdminHome((Admin)user);
+                        break;
+                    case UserType.FinanceManager:
+                        user = new FinanceManager(txtUsername.Text, txtPassword.Text);
+                        home = new FinanceManagerHome((FinanceManager)user);
+                        break;
+                    case UserType.ClientManager:
+                        user = new ClaimManager(txtUsername.Text, txtPassword.Text);
+                        home = new ClaimManagerHome((ClaimManager)user);
+                        break;
+                    case UserType.Client:
+                        user = new Client(txtUsername.Text, txtPassword.Text);
+                        home = new ClientHome((Client)user);
+                        break;
+                }
+                Hide();
+                home.ShowDialog();
+                txtPassword.Text = string.Empty;
+                Show();
+            } catch (NullReferenceException ex)
+            {
+                MessageBox.Show("Incorrect username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.Hide();
-            home.ShowDialog();
-            txtPassword.Text = string.Empty;
-            this.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

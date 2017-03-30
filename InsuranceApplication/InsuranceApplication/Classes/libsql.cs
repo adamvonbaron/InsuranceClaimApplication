@@ -48,7 +48,7 @@ namespace InsuranceApplication.Classes {
             } finally {
                 conn.Close();
             }
-            return true;
+            return false;
         }
 
         private static object GetField(string table, string column, string where, string data) {
