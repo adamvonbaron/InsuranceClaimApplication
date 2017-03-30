@@ -57,8 +57,7 @@ namespace InsuranceApplication.Classes
             UserType type = UserType.Undefined;
             try
             {
-                // fix this shit, this is where it is
-                // the thing where u can log in no matter what
+                // nvm i fixed it
                 if (!libsql.ValidateUser(username, password))
                     return UserType.Undefined;
                 type = libsql.GetRank(username);
