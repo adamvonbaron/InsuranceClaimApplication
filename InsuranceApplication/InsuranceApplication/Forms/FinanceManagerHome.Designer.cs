@@ -68,7 +68,7 @@
             // btnViewClientList
             // 
             this.btnViewClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientList.Location = new System.Drawing.Point(13, 569);
+            this.btnViewClientList.Location = new System.Drawing.Point(170, 539);
             this.btnViewClientList.Name = "btnViewClientList";
             this.btnViewClientList.Size = new System.Drawing.Size(132, 38);
             this.btnViewClientList.TabIndex = 2;
@@ -79,7 +79,7 @@
             // btnEstimate
             // 
             this.btnEstimate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstimate.Location = new System.Drawing.Point(151, 571);
+            this.btnEstimate.Location = new System.Drawing.Point(137, 659);
             this.btnEstimate.Name = "btnEstimate";
             this.btnEstimate.Size = new System.Drawing.Size(153, 36);
             this.btnEstimate.TabIndex = 3;
@@ -89,7 +89,7 @@
             // btnTransfer
             // 
             this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(310, 567);
+            this.btnTransfer.Location = new System.Drawing.Point(319, 649);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Size = new System.Drawing.Size(153, 56);
             this.btnTransfer.TabIndex = 6;
@@ -98,7 +98,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(184, 664);
+            this.btnExit.Location = new System.Drawing.Point(32, 666);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 7;
@@ -272,7 +272,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(138, 212);
+            this.label1.Location = new System.Drawing.Point(156, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 83;
@@ -280,7 +280,7 @@
             // 
             // lvClients
             // 
-            this.lvClients.Location = new System.Drawing.Point(12, 251);
+            this.lvClients.Location = new System.Drawing.Point(30, 258);
             this.lvClients.Name = "lvClients";
             this.lvClients.Size = new System.Drawing.Size(433, 257);
             this.lvClients.TabIndex = 82;

@@ -69,7 +69,7 @@
             // btnViewClientList
             // 
             this.btnViewClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientList.Location = new System.Drawing.Point(304, 542);
+            this.btnViewClientList.Location = new System.Drawing.Point(176, 542);
             this.btnViewClientList.Name = "btnViewClientList";
             this.btnViewClientList.Size = new System.Drawing.Size(144, 35);
             this.btnViewClientList.TabIndex = 1;
@@ -80,7 +80,7 @@
             // btnDownload
             // 
             this.btnDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownload.Location = new System.Drawing.Point(130, 530);
+            this.btnDownload.Location = new System.Drawing.Point(158, 633);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(168, 47);
             this.btnDownload.TabIndex = 3;
@@ -90,7 +90,7 @@
             // btnTransfer
             // 
             this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(469, 542);
+            this.btnTransfer.Location = new System.Drawing.Point(356, 639);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Size = new System.Drawing.Size(146, 35);
             this.btnTransfer.TabIndex = 6;
@@ -99,7 +99,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(16, 542);
+            this.btnExit.Location = new System.Drawing.Point(41, 645);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 7;
@@ -176,7 +176,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(108, 226);
+            this.label8.Location = new System.Drawing.Point(651, 489);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 55;
@@ -184,7 +184,7 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(14, 256);
+            this.lvMessages.Location = new System.Drawing.Point(557, 519);
             this.lvMessages.Name = "lvMessages";
             this.lvMessages.Size = new System.Drawing.Size(383, 200);
             this.lvMessages.TabIndex = 54;
@@ -196,7 +196,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(466, 90);
+            this.label9.Location = new System.Drawing.Point(620, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(163, 20);
             this.label9.TabIndex = 71;
@@ -204,7 +204,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(470, 483);
+            this.btnSend.Location = new System.Drawing.Point(624, 437);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 70;
@@ -214,7 +214,7 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(423, 210);
+            this.txtMessage.Location = new System.Drawing.Point(577, 164);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(309, 253);
@@ -222,14 +222,14 @@
             // 
             // txtSubject
             // 
-            this.txtSubject.Location = new System.Drawing.Point(481, 154);
+            this.txtSubject.Location = new System.Drawing.Point(635, 108);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(200, 20);
             this.txtSubject.TabIndex = 68;
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(481, 121);
+            this.txtTo.Location = new System.Drawing.Point(635, 75);
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(200, 20);
             this.txtTo.TabIndex = 67;
@@ -239,7 +239,7 @@
             this.lblCompose.AutoSize = true;
             this.lblCompose.BackColor = System.Drawing.Color.Transparent;
             this.lblCompose.ForeColor = System.Drawing.Color.White;
-            this.lblCompose.Location = new System.Drawing.Point(426, 190);
+            this.lblCompose.Location = new System.Drawing.Point(580, 144);
             this.lblCompose.Name = "lblCompose";
             this.lblCompose.Size = new System.Drawing.Size(57, 13);
             this.lblCompose.TabIndex = 66;
@@ -250,7 +250,7 @@
             this.lblSubject.AutoSize = true;
             this.lblSubject.BackColor = System.Drawing.Color.Transparent;
             this.lblSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSubject.Location = new System.Drawing.Point(426, 157);
+            this.lblSubject.Location = new System.Drawing.Point(580, 115);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(49, 13);
             this.lblSubject.TabIndex = 65;
@@ -261,7 +261,7 @@
             this.lblTo.AutoSize = true;
             this.lblTo.BackColor = System.Drawing.Color.Transparent;
             this.lblTo.ForeColor = System.Drawing.Color.White;
-            this.lblTo.Location = new System.Drawing.Point(426, 124);
+            this.lblTo.Location = new System.Drawing.Point(580, 82);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(26, 13);
             this.lblTo.TabIndex = 64;
@@ -273,7 +273,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(920, 183);
+            this.label1.Location = new System.Drawing.Point(186, 235);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 85;
@@ -281,7 +281,7 @@
             // 
             // lvClients
             // 
-            this.lvClients.Location = new System.Drawing.Point(768, 210);
+            this.lvClients.Location = new System.Drawing.Point(34, 262);
             this.lvClients.Name = "lvClients";
             this.lvClients.Size = new System.Drawing.Size(433, 257);
             this.lvClients.TabIndex = 84;
@@ -292,7 +292,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1213, 577);
+            this.ClientSize = new System.Drawing.Size(972, 741);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvClients);
             this.Controls.Add(this.label9);
