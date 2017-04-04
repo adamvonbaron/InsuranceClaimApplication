@@ -64,7 +64,7 @@
             // btnApplyForClaim
             // 
             this.btnApplyForClaim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyForClaim.Location = new System.Drawing.Point(592, 700);
+            this.btnApplyForClaim.Location = new System.Drawing.Point(684, 554);
             this.btnApplyForClaim.Name = "btnApplyForClaim";
             this.btnApplyForClaim.Size = new System.Drawing.Size(151, 40);
             this.btnApplyForClaim.TabIndex = 1;
@@ -75,7 +75,7 @@
             // btnUpload
             // 
             this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.Location = new System.Drawing.Point(422, 689);
+            this.btnUpload.Location = new System.Drawing.Point(497, 550);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(161, 48);
             this.btnUpload.TabIndex = 3;
@@ -85,7 +85,7 @@
             // btnEditProfile
             // 
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.Location = new System.Drawing.Point(129, 703);
+            this.btnEditProfile.Location = new System.Drawing.Point(528, 621);
             this.btnEditProfile.Name = "btnEditProfile";
             this.btnEditProfile.Size = new System.Drawing.Size(114, 34);
             this.btnEditProfile.TabIndex = 4;
@@ -96,7 +96,7 @@
             // btnViewStatus
             // 
             this.btnViewStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewStatus.Location = new System.Drawing.Point(249, 698);
+            this.btnViewStatus.Location = new System.Drawing.Point(684, 619);
             this.btnViewStatus.Name = "btnViewStatus";
             this.btnViewStatus.Size = new System.Drawing.Size(156, 39);
             this.btnViewStatus.TabIndex = 5;
@@ -105,7 +105,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(16, 714);
+            this.btnExit.Location = new System.Drawing.Point(33, 653);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 6;
@@ -128,7 +128,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(110, 100);
+            this.label8.Location = new System.Drawing.Point(127, 66);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 55;
@@ -136,7 +136,7 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(16, 130);
+            this.lvMessages.Location = new System.Drawing.Point(33, 96);
             this.lvMessages.Name = "lvMessages";
             this.lvMessages.Size = new System.Drawing.Size(383, 200);
             this.lvMessages.TabIndex = 54;
@@ -148,7 +148,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(540, 82);
+            this.label9.Location = new System.Drawing.Point(560, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(163, 20);
             this.label9.TabIndex = 71;
@@ -156,7 +156,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(492, 495);
+            this.btnSend.Location = new System.Drawing.Point(512, 486);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 70;
@@ -166,7 +166,7 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(492, 216);
+            this.txtMessage.Location = new System.Drawing.Point(512, 207);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(309, 253);
@@ -191,7 +191,7 @@
             this.lblCompose.AutoSize = true;
             this.lblCompose.BackColor = System.Drawing.Color.Transparent;
             this.lblCompose.ForeColor = System.Drawing.Color.Black;
-            this.lblCompose.Location = new System.Drawing.Point(489, 191);
+            this.lblCompose.Location = new System.Drawing.Point(509, 182);
             this.lblCompose.Name = "lblCompose";
             this.lblCompose.Size = new System.Drawing.Size(57, 13);
             this.lblCompose.TabIndex = 66;
@@ -202,7 +202,7 @@
             this.lblSubject.AutoSize = true;
             this.lblSubject.BackColor = System.Drawing.Color.Transparent;
             this.lblSubject.ForeColor = System.Drawing.Color.Black;
-            this.lblSubject.Location = new System.Drawing.Point(489, 163);
+            this.lblSubject.Location = new System.Drawing.Point(509, 154);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(49, 13);
             this.lblSubject.TabIndex = 65;
@@ -213,7 +213,7 @@
             this.lblTo.AutoSize = true;
             this.lblTo.BackColor = System.Drawing.Color.Transparent;
             this.lblTo.ForeColor = System.Drawing.Color.Black;
-            this.lblTo.Location = new System.Drawing.Point(489, 130);
+            this.lblTo.Location = new System.Drawing.Point(509, 121);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(26, 13);
             this.lblTo.TabIndex = 64;
@@ -225,7 +225,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(136, 351);
+            this.label1.Location = new System.Drawing.Point(142, 332);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 20);
             this.label1.TabIndex = 85;
@@ -233,7 +233,7 @@
             // 
             // lvManagers
             // 
-            this.lvManagers.Location = new System.Drawing.Point(10, 390);
+            this.lvManagers.Location = new System.Drawing.Point(16, 371);
             this.lvManagers.Name = "lvManagers";
             this.lvManagers.Size = new System.Drawing.Size(433, 257);
             this.lvManagers.TabIndex = 84;
@@ -244,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(887, 749);
+            this.ClientSize = new System.Drawing.Size(887, 682);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvManagers);
             this.Controls.Add(this.label9);
