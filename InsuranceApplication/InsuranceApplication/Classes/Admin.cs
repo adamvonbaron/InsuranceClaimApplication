@@ -4,7 +4,7 @@
     {
         public Admin(string username, string password) : base(username, password)
         {
-            UserData userdata = libsql.GetUserData(UserName);
+            UserData userdata = SqlManager.GetUserData(UserName);
             FirstName = userdata.FirstName;
             LastName = userdata.LastName;
             Birthday = userdata.Birthday;
@@ -17,17 +17,17 @@
         //methods
         public bool DeleteUser(string username)
         {
-            return libsql.DeleteUser(username);
+            return SqlManager.DeleteUser(username);
         }
 
         public bool UpdatePermissions(string username, UserType type)
         {
-            return libsql.UpdateRank(username, type);
+            return SqlManager.UpdateRank(username, type);
         }
 
         public static bool RegisterUser(Client client)
         {
-            return libsql.RegisterUser(client);
+            return SqlManager.RegisterUser(client);
         }
     }
 }

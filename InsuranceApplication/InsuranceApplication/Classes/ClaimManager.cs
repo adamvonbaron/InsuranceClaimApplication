@@ -12,7 +12,7 @@ namespace InsuranceApplication.Classes
         public ClaimManager(string username, string password)
                             : base(username, password)
         {
-            UserData userdata = libsql.GetUserData(UserName);
+            UserData userdata = SqlManager.GetUserData(UserName);
             FirstName = userdata.FirstName;
             LastName = userdata.LastName;
             Birthday = userdata.Birthday;

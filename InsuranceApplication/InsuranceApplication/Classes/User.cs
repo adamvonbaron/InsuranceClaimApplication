@@ -58,9 +58,9 @@ namespace InsuranceApplication.Classes
             try
             {
                 // nvm i fixed it
-                if (!libsql.ValidateUser(username, password))
+                if (!SqlManager.ValidateUser(username, password))
                     return UserType.Undefined;
-                type = libsql.GetRank(username);
+                type = SqlManager.GetRank(username);
             }
             catch (Exception ex)
             {
@@ -76,48 +76,48 @@ namespace InsuranceApplication.Classes
             {
                 case UserType.Admin:
                     user = new Admin(userdata);
-                    return libsql.UpdateUser(user);
+                    return SqlManager.UpdateUser(user);
                 case UserType.FinanceManager:
                 user = new FinanceManager(userdata);
-                return libsql.UpdateUser(user);
+                return SqlManager.UpdateUser(user);
                 case UserType.ClientManager:
                 //user = new ClientManager(userdata);
                 //return libsql.UpdateUser(user);
                 case UserType.Client:
                     user = new Client(userdata);
-                    return libsql.UpdateUser(user);
+                    return SqlManager.UpdateUser(user);
             }
             return false;
         }
 
         public static DataTable GetMessages(string username)
         {
-            return libsql.GetInboxMessages(username);
+            return SqlManager.GetInboxMessages(username);
         }
 
         public static DataTable GetClients()
         {
-            return libsql.GetClientList();
+            return SqlManager.GetClientList();
         }
 
         public static DataTable GetManagers()
         {
-            return libsql.GetManagement();
+            return SqlManager.GetManagement();
         }
 
         public static bool SendMessage(Message message)
         {
-            return libsql.SendMessage(message);
+            return SqlManager.SendMessage(message);
         }
 
         public static UserData GetUserData(string username)
         {
-            return libsql.GetUserData(username);
+            return SqlManager.GetUserData(username);
         }
 
         public UserData GetUserData()
         {
-            return libsql.GetUserData(UserName);
+            return SqlManager.GetUserData(UserName);
         }
 
         public static UserData NullUserData = new UserData

@@ -13,7 +13,7 @@ namespace InsuranceApplication.Classes {
         string Data;
     }
 
-    static class libsql {
+    static class SqlManager {
         /* properties */
         private static SqlConnection _conn = new SqlConnection(
             @"Server=tcp:insuranceclaim.database.windows.net,1433;

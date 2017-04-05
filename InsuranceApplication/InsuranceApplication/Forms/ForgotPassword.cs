@@ -34,7 +34,7 @@ namespace InsuranceApplication.Forms
 
         private void txtSave_Click(object sender, EventArgs e)
         {
-            libsql.UpdatePassword(txtUsername.Text, txtNewPassword.Text);
+            SqlManager.UpdatePassword(txtUsername.Text, txtNewPassword.Text);
         }
     }
 }

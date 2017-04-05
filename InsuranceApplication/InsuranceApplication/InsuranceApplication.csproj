@@ -53,7 +53,7 @@
     <Compile Include="Classes\Message.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Claim.cs" />
-    <Compile Include="Classes\libsql.cs" />
+    <Compile Include="Classes\SqlManager.cs" />
     <Compile Include="Forms\AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>

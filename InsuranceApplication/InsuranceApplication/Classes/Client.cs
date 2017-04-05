@@ -11,7 +11,7 @@ namespace InsuranceApplication.Classes
     {
         public Client(string username, string password) : base(username, password)
         {
-            UserData userdata = libsql.GetUserData(UserName);
+            UserData userdata = SqlManager.GetUserData(UserName);
             FirstName = userdata.FirstName;
             LastName = userdata.LastName;
             Birthday = userdata.Birthday;
@@ -28,7 +28,7 @@ namespace InsuranceApplication.Classes
 
         public bool ApplyForClaim(Claim claim)
         {
-            return libsql.SendClaim(claim);
+            return SqlManager.SendClaim(claim);
         }
 
         public void ViewMessages()
