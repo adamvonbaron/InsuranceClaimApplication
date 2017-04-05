@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstClientList = new System.Windows.Forms.ListBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lvClients = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // lstClientList
-            // 
-            this.lstClientList.FormattingEnabled = true;
-            this.lstClientList.Location = new System.Drawing.Point(58, 31);
-            this.lstClientList.Name = "lstClientList";
-            this.lstClientList.Size = new System.Drawing.Size(401, 238);
-            this.lstClientList.TabIndex = 0;
             // 
             // btnExit
             // 
@@ -50,13 +42,21 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lvClients
+            // 
+            this.lvClients.Location = new System.Drawing.Point(43, 38);
+            this.lvClients.Name = "lvClients";
+            this.lvClients.Size = new System.Drawing.Size(426, 240);
+            this.lvClients.TabIndex = 2;
+            this.lvClients.UseCompatibleStateImageBehavior = false;
+            // 
             // ViewClientList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 352);
+            this.Controls.Add(this.lvClients);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.lstClientList);
             this.Name = "ViewClientList";
             this.Text = "ClientList";
             this.ResumeLayout(false);
@@ -64,8 +64,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstClientList;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ListView lvClients;
     }
 }
