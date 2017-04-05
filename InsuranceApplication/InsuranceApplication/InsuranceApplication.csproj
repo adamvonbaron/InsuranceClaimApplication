@@ -60,6 +60,12 @@
     <Compile Include="Forms\AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SendMessage.Designer.cs">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ViewClientList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,11 +132,13 @@
     <Compile Include="Forms\ViewUserProfile.Designer.cs">
       <DependentUpon>ViewUserProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\Backend.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SendMessage.resx">
+      <DependentUpon>SendMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewClientList.resx">
       <DependentUpon>ViewClientList.cs</DependentUpon>

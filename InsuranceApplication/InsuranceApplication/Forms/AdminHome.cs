@@ -137,21 +137,10 @@ namespace InsuranceApplication.Forms {
             dtpRegisterDateOfBirth.ResetText();
         }
 
-        private void btnSend_Click(object sender, EventArgs e)
+        private void btnSendMessage_Click(object sender, EventArgs e)
         {
-            Classes.Message message = new Classes.Message
-            {
-                To = txtTo.Text,
-                From = admin.UserName,
-                Date = DateTime.Now.ToString(),
-                Subject = txtSubject.Text,
-                Content = txtMessage.Text
-            };
-            if (User.SendMessage(message))
-            {
-                MessageBox.Show("Message sent successfully.", "Message", MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
-            }
+            SendMessage sendmessage = new SendMessage(admin);
+            sendmessage.ShowDialog();
         }
     }
 }

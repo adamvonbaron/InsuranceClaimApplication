@@ -23,9 +23,9 @@ namespace InsuranceApplication.Classes
         public ClaimManager(UserData userdata) : base(userdata) { }
 
         //methods
-        public void ViewProfile()
+        public UserData ViewProfile()
         {
-
+            return SqlManager.GetUserData(UserName);
         }
 
         public void ViewMessages()

@@ -73,8 +73,8 @@ namespace InsuranceApplication.Classes {
             if (register) {
                 query = @"insert into users (firstname, lastname, username, password, birthday, phonenumber, rank)
                         values(@firstname, @lastname, @username, @password, @birthday, @phonenumber, @rank);";
-                if (!CheckUsername(user.UserName))
-                    return false;
+                //if (!CheckUsername(user.UserName))
+                //    return false;
             } else {
                 query = @"update users set firstname = @firstname, lastname = @lastname, 
                           username = @username, password = @password, birthday = @birthday, 

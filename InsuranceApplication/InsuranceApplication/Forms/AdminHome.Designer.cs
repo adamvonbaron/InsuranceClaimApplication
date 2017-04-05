@@ -67,16 +67,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lvMessages = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.txtMessage = new System.Windows.Forms.TextBox();
-            this.txtSubject = new System.Windows.Forms.TextBox();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.lblCompose = new System.Windows.Forms.Label();
-            this.lblSubject = new System.Windows.Forms.Label();
-            this.lblTo = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lvClients = new System.Windows.Forms.ListView();
+            this.btnSendMessage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdminTitle
@@ -95,7 +88,7 @@
             // btnCreateClientFolder
             // 
             this.btnCreateClientFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateClientFolder.Location = new System.Drawing.Point(398, 644);
+            this.btnCreateClientFolder.Location = new System.Drawing.Point(581, 690);
             this.btnCreateClientFolder.Name = "btnCreateClientFolder";
             this.btnCreateClientFolder.Size = new System.Drawing.Size(157, 39);
             this.btnCreateClientFolder.TabIndex = 3;
@@ -105,11 +98,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(594, 652);
+            this.btnExit.Location = new System.Drawing.Point(744, 706);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Logout";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -448,7 +441,7 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(792, 143);
+            this.lvMessages.Location = new System.Drawing.Point(382, 102);
             this.lvMessages.Name = "lvMessages";
             this.lvMessages.Size = new System.Drawing.Size(383, 200);
             this.lvMessages.TabIndex = 52;
@@ -460,88 +453,11 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(886, 113);
+            this.label8.Location = new System.Drawing.Point(378, 79);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 53;
             this.label8.Text = "VIEW MESSAGES";
-            // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(435, 518);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
-            this.btnSend.TabIndex = 60;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Location = new System.Drawing.Point(398, 244);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(309, 253);
-            this.txtMessage.TabIndex = 59;
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.Location = new System.Drawing.Point(446, 195);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(200, 20);
-            this.txtSubject.TabIndex = 58;
-            // 
-            // txtTo
-            // 
-            this.txtTo.Location = new System.Drawing.Point(446, 162);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(200, 20);
-            this.txtTo.TabIndex = 57;
-            // 
-            // lblCompose
-            // 
-            this.lblCompose.AutoSize = true;
-            this.lblCompose.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompose.ForeColor = System.Drawing.Color.White;
-            this.lblCompose.Location = new System.Drawing.Point(395, 228);
-            this.lblCompose.Name = "lblCompose";
-            this.lblCompose.Size = new System.Drawing.Size(57, 13);
-            this.lblCompose.TabIndex = 56;
-            this.lblCompose.Text = "Compose: ";
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSubject.Location = new System.Drawing.Point(395, 198);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(49, 13);
-            this.lblSubject.TabIndex = 55;
-            this.lblSubject.Text = "Subject: ";
-            // 
-            // lblTo
-            // 
-            this.lblTo.AutoSize = true;
-            this.lblTo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTo.ForeColor = System.Drawing.Color.White;
-            this.lblTo.Location = new System.Drawing.Point(414, 167);
-            this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(26, 13);
-            this.lblTo.TabIndex = 54;
-            this.lblTo.Text = "To: ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(431, 131);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 20);
-            this.label9.TabIndex = 63;
-            this.label9.Text = "SEND MESSAGES";
             // 
             // label10
             // 
@@ -549,7 +465,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(924, 399);
+            this.label10.Location = new System.Drawing.Point(378, 365);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 20);
             this.label10.TabIndex = 85;
@@ -557,28 +473,31 @@
             // 
             // lvClients
             // 
-            this.lvClients.Location = new System.Drawing.Point(765, 426);
+            this.lvClients.Location = new System.Drawing.Point(382, 388);
             this.lvClients.Name = "lvClients";
             this.lvClients.Size = new System.Drawing.Size(433, 257);
             this.lvClients.TabIndex = 84;
             this.lvClients.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Location = new System.Drawing.Point(382, 310);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(91, 23);
+            this.btnSendMessage.TabIndex = 86;
+            this.btnSendMessage.Text = "Send Message";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1253, 741);
+            this.ClientSize = new System.Drawing.Size(831, 741);
+            this.Controls.Add(this.btnSendMessage);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lvClients);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.txtSubject);
-            this.Controls.Add(this.txtTo);
-            this.Controls.Add(this.lblCompose);
-            this.Controls.Add(this.lblSubject);
-            this.Controls.Add(this.lblTo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lvMessages);
             this.Controls.Add(this.label7);
@@ -665,15 +584,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView lvMessages;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox txtMessage;
-        private System.Windows.Forms.TextBox txtSubject;
-        private System.Windows.Forms.TextBox txtTo;
-        private System.Windows.Forms.Label lblCompose;
-        private System.Windows.Forms.Label lblSubject;
-        private System.Windows.Forms.Label lblTo;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView lvClients;
+        private System.Windows.Forms.Button btnSendMessage;
     }
 }
