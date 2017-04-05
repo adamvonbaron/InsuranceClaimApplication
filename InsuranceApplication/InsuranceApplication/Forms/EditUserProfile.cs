@@ -28,6 +28,7 @@ namespace InsuranceApplication.Forms {
             };
             if (!User.UpdateUser(newdata))
                 MessageBox.Show("error updating user.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.Close();
         }
 
         private void EditUserProfile_Load(object sender, EventArgs e)
