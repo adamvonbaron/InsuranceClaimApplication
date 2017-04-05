@@ -174,14 +174,14 @@
             // 
             // txtSubject
             // 
-            this.txtSubject.Location = new System.Drawing.Point(544, 160);
+            this.txtSubject.Location = new System.Drawing.Point(564, 151);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(200, 20);
             this.txtSubject.TabIndex = 68;
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(544, 127);
+            this.txtTo.Location = new System.Drawing.Point(564, 118);
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(200, 20);
             this.txtTo.TabIndex = 67;
