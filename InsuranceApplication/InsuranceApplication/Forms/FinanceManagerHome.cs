@@ -116,5 +116,11 @@ namespace InsuranceApplication.Forms
             ViewMessage vm = new ViewMessage(financeManager, message.From, message.Subject, message.Date, message.Content);
             vm.ShowDialog();
         }
+
+        private void btnEstimate_Click(object sender, EventArgs e)
+        {
+            EstimateClaims ecl = new EstimateClaims();
+            ecl.ShowDialog();
+        }
     }
 }

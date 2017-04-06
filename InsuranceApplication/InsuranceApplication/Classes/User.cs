@@ -79,8 +79,8 @@ namespace InsuranceApplication.Classes
                     user = new Admin(userdata);
                     return SqlManager.UpdateUser(user);
                 case UserType.FinanceManager:
-                user = new FinanceManager(userdata);
-                return SqlManager.UpdateUser(user);
+                    user = new FinanceManager(userdata);
+                    return SqlManager.UpdateUser(user);
                 case UserType.ClientManager:
                 //user = new ClientManager(userdata);
                 //return libsql.UpdateUser(user);
@@ -95,9 +95,9 @@ namespace InsuranceApplication.Classes
         {
             List<Message> Messages = new List<Message>();
             DataTable datatable = SqlManager.GetInboxMessages(username);
-            foreach(DataRow dr in datatable.Rows)
+            foreach (DataRow dr in datatable.Rows)
             {
-                if(dr[0].ToString().Equals(username)) {
+                if (dr[0].ToString().Equals(username)) {
                     Message curMessage = new Message
                     {
                         To = dr[0].ToString(),
@@ -126,6 +126,16 @@ namespace InsuranceApplication.Classes
         public static DataTable GetManagers()
         {
             return SqlManager.GetManagement();
+        }
+
+        public static DataTable GetClaims()
+        {
+            return SqlManager.GetClaims();
+        }
+
+        public static bool UpdateClaimStatus(int id, string status)
+        {
+            return SqlManager.UpdateClaimStatus(id, status);
         }
 
         public static bool SendMessage(Message message)

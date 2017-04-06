@@ -85,6 +85,7 @@
             this.btnEstimate.TabIndex = 3;
             this.btnEstimate.Text = "Estimate Amount";
             this.btnEstimate.UseVisualStyleBackColor = true;
+            this.btnEstimate.Click += new System.EventHandler(this.btnEstimate_Click);
             // 
             // btnTransfer
             // 

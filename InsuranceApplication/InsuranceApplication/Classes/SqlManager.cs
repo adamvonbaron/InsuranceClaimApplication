@@ -173,6 +173,15 @@ namespace InsuranceApplication.Classes {
             sda.Fill(messages);
             return messages;
         }
+        public static DataTable GetClaims()
+        {
+            string query = "select * from claims where status is not null";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable claims = new DataTable();
+            sda.Fill(claims);
+            return claims;
+        }
 
         public static DataTable GetClientList()
         {
@@ -232,6 +241,29 @@ namespace InsuranceApplication.Classes {
 
         public static string GetLastName(string username) {
             return (string) GetField("users", "lastname", "username", username);
+        }
+
+        public static bool UpdateClaimStatus(int id, string status)
+        {
+            string query = "update claims set status = @status where id = @id;";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@status", status);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return true;
         }
 
         public static bool UpdateRank(string username, UserType rank) {
