@@ -7,9 +7,24 @@ namespace InsuranceApplication.Forms
     public partial class SendMessage : Form
     {
         User user { get; set; }
-        public SendMessage(User user)
+        string To;
+        string Subject;
+        public SendMessage(User user, string to, string subject, bool reply)
         {
             InitializeComponent();
+            Subject = "RE: " + subject;
+            To = to;
+            if (reply)
+            {
+                PopulateStuff();
+                txtMessage.Focus();
+            }
+        }
+
+        private void PopulateStuff()
+        {
+            txtTo.Text = To;
+            txtSubject.Text = Subject;
         }
 
         private void btnSend_Click(object sender, EventArgs e)

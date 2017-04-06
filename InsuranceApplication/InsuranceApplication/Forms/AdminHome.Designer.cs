@@ -446,6 +446,7 @@
             this.lvMessages.Size = new System.Drawing.Size(383, 200);
             this.lvMessages.TabIndex = 52;
             this.lvMessages.UseCompatibleStateImageBehavior = false;
+            this.lvMessages.SelectedIndexChanged += new System.EventHandler(this.lvMessages_SelectedIndexChanged);
             // 
             // label8
             // 

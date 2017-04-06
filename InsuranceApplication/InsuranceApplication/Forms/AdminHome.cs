@@ -41,18 +41,17 @@ namespace InsuranceApplication.Forms {
                 cboRank.Items.Add(rank);
 
             lvMessages.View = View.Details;
-            DataTable messages = User.GetMessages(admin.UserName);
+            List<Classes.Message> messages = User.GetMessages(admin.UserName);
+            lvMessages.Columns.Add("ID", 10);
             lvMessages.Columns.Add("From", 75);
             lvMessages.Columns.Add("Date", 125);
             lvMessages.Columns.Add("Subject", 500);
-            lvMessages.Columns.Add("Message", 500);
-            for (int i = 0; i < messages.Rows.Count; i++)
+            foreach(Classes.Message message in messages)
             {
-                DataRow dr = messages.Rows[i];
-                ListViewItem curItem = new ListViewItem(dr[1].ToString());
-                curItem.SubItems.Add(dr[2].ToString());
-                curItem.SubItems.Add(dr[3].ToString());
-                curItem.SubItems.Add(dr[4].ToString());
+                ListViewItem curItem = new ListViewItem(message.Id.ToString());
+                curItem.SubItems.Add(message.From);
+                curItem.SubItems.Add(message.Date);
+                curItem.SubItems.Add(message.Subject);
                 lvMessages.Items.Add(curItem);
             }
 
@@ -139,8 +138,15 @@ namespace InsuranceApplication.Forms {
 
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
-            SendMessage sendmessage = new SendMessage(admin);
+            SendMessage sendmessage = new SendMessage(admin, "", "", false);
             sendmessage.ShowDialog();
+        }
+
+        private void lvMessages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Classes.Message message = User.GetMessage(lvMessages.SelectedItems[0].SubItems[0].Text);
+            ViewMessage vm = new ViewMessage(admin, message.From, message.Subject, message.Date, message.Content);
+            vm.ShowDialog();
         }
     }
 }

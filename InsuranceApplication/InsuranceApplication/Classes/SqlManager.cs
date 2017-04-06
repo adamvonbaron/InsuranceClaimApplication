@@ -194,6 +194,28 @@ namespace InsuranceApplication.Classes {
             return managers;
         }
 
+        public static Message GetMessage(string id)
+        {
+            string query = "select * from messages where id = @id";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader sqlReader;
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@id", id);
+                conn.Open();
+                sqlReader = cmd.ExecuteReader();
+                sqlReader.Read();
+            Message message = new Message {
+                To = sqlReader.GetString(0),
+                From = sqlReader.GetString(1),
+                Date = sqlReader.GetString(2),
+                Subject = sqlReader.GetString(3),
+                Content = sqlReader.GetString(4),
+                Id = sqlReader.GetInt64(5)
+                };
+                conn.Close();
+            return message;
+        }
+
         /* checks username and password in database */
         public static bool ValidateUser(string username, string password) {
             return (CheckUsername(username) && CheckPassword(password));

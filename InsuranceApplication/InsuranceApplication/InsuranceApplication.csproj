@@ -72,6 +72,12 @@
     <Compile Include="Forms\ViewClientList.Designer.cs">
       <DependentUpon>ViewClientList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ViewMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewMessage.Designer.cs">
+      <DependentUpon>ViewMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ViewProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewClientList.resx">
       <DependentUpon>ViewClientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewMessage.resx">
+      <DependentUpon>ViewMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewProfile.resx">
       <DependentUpon>ViewProfile.cs</DependentUpon>
