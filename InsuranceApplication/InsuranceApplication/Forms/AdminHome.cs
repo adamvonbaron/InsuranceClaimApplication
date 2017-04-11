@@ -35,11 +35,6 @@ namespace InsuranceApplication.Forms
             this.Close();
         }
 
-        private void btnCreateClientFolder_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdminHome_Load(object sender, EventArgs e)
         {
             foreach (string rank in ranks)
