@@ -10,8 +10,10 @@ using System.Windows.Forms;
 using InsuranceApplication.Forms;
 using InsuranceApplication.Classes;
 
-namespace InsuranceApplication.Forms {
-    public partial class AdminHome : Form {
+namespace InsuranceApplication.Forms
+{
+    public partial class AdminHome : Form
+    {
         Admin admin;
         string[] ranks =
         {
@@ -20,18 +22,21 @@ namespace InsuranceApplication.Forms {
             "Claim Manager",
             "Client"
         };
-        public AdminHome(Admin admin) {
+        public AdminHome(Admin admin)
+        {
             InitializeComponent();
             this.admin = admin;
             lblAdminTitle.Text = "Welcome, " + admin.FirstName + " " + admin.LastName;
             lblCurUserInfo.Text = "Logged in as: " + admin.UserName + "      Rank: Admin";
         }
 
-        private void btnExit_Click(object sender, EventArgs e) {
+        private void btnExit_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void btnCreateClientFolder_Click(object sender, EventArgs e) {
+        private void btnCreateClientFolder_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -46,7 +51,7 @@ namespace InsuranceApplication.Forms {
             lvMessages.Columns.Add("From", 75);
             lvMessages.Columns.Add("Date", 125);
             lvMessages.Columns.Add("Subject", 500);
-            foreach(Classes.Message message in messages)
+            foreach (Classes.Message message in messages)
             {
                 ListViewItem curItem = new ListViewItem(message.Id.ToString());
                 curItem.SubItems.Add(message.From);
@@ -144,9 +149,16 @@ namespace InsuranceApplication.Forms {
 
         private void lvMessages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Classes.Message message = User.GetMessage(lvMessages.SelectedItems[0].SubItems[0].Text);
-            ViewMessage vm = new ViewMessage(admin, message.From, message.Subject, message.Date, message.Content);
-            vm.ShowDialog();
+            try
+            {
+                Classes.Message message = User.GetMessage(lvMessages.SelectedItems[0].SubItems[0].Text);
+                ViewMessage vm = new ViewMessage(admin, message.From, message.Subject, message.Date, message.Content);
+                vm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+            
+            }
         }
     }
 }
