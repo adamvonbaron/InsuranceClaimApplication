@@ -98,9 +98,17 @@ namespace InsuranceApplication.Forms
 
         private void lvMessages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Classes.Message message = User.GetMessage(lvMessages.SelectedItems[0].SubItems[0].Text);
-            ViewMessage vm = new ViewMessage(claimManager, message.From, message.Subject, message.Date, message.Content);
-            vm.ShowDialog();
+            try
+            {
+                Classes.Message message = User.GetMessage(lvMessages.SelectedItems[0].SubItems[0].Text);
+                ViewMessage vm = new ViewMessage(claimManager, message.From, message.Subject, message.Date, message.Content);
+                vm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
+
