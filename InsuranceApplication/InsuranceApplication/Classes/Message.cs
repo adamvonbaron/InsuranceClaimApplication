@@ -13,5 +13,6 @@ namespace InsuranceApplication.Classes
         public string Date;
         public string Subject;
         public string Content;
+        public double Id;
     }
 }

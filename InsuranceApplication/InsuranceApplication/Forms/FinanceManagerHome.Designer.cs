@@ -85,6 +85,7 @@
             this.btnEstimate.TabIndex = 3;
             this.btnEstimate.Text = "Estimate Amount";
             this.btnEstimate.UseVisualStyleBackColor = true;
+            this.btnEstimate.Click += new System.EventHandler(this.btnEstimate_Click);
             // 
             // btnTransfer
             // 
@@ -265,6 +266,7 @@
             this.lvMessages.Size = new System.Drawing.Size(383, 200);
             this.lvMessages.TabIndex = 72;
             this.lvMessages.UseCompatibleStateImageBehavior = false;
+            this.lvMessages.SelectedIndexChanged += new System.EventHandler(this.lvMessages_SelectedIndexChanged);
             // 
             // label1
             // 

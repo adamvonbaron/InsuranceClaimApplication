@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace InsuranceApplication.Classes
 {
@@ -78,8 +79,8 @@ namespace InsuranceApplication.Classes
                     user = new Admin(userdata);
                     return SqlManager.UpdateUser(user);
                 case UserType.FinanceManager:
-                user = new FinanceManager(userdata);
-                return SqlManager.UpdateUser(user);
+                    user = new FinanceManager(userdata);
+                    return SqlManager.UpdateUser(user);
                 case UserType.ClientManager:
                 //user = new ClientManager(userdata);
                 //return libsql.UpdateUser(user);
@@ -90,9 +91,31 @@ namespace InsuranceApplication.Classes
             return false;
         }
 
-        public static DataTable GetMessages(string username)
+        public static List<Message> GetMessages(string username)
         {
-            return SqlManager.GetInboxMessages(username);
+            List<Message> Messages = new List<Message>();
+            DataTable datatable = SqlManager.GetInboxMessages(username);
+            foreach (DataRow dr in datatable.Rows)
+            {
+                if (dr[0].ToString().Equals(username)) {
+                    Message curMessage = new Message
+                    {
+                        To = dr[0].ToString(),
+                        From = dr[1].ToString(),
+                        Date = dr[2].ToString(),
+                        Subject = dr[3].ToString(),
+                        Content = dr[4].ToString(),
+                        Id = int.Parse(dr[5].ToString())
+                    };
+                    Messages.Add(curMessage);
+                }
+            }
+            return Messages;
+        }
+
+        public static Message GetMessage(string id)
+        {
+            return SqlManager.GetMessage(id);
         }
 
         public static DataTable GetClients()
@@ -103,6 +126,16 @@ namespace InsuranceApplication.Classes
         public static DataTable GetManagers()
         {
             return SqlManager.GetManagement();
+        }
+
+        public static DataTable GetClaims()
+        {
+            return SqlManager.GetClaims();
+        }
+
+        public static bool UpdateClaimStatus(int id, string status)
+        {
+            return SqlManager.UpdateClaimStatus(id, status);
         }
 
         public static bool SendMessage(Message message)
@@ -129,6 +162,16 @@ namespace InsuranceApplication.Classes
             Birthday = "",
             Phonenumber = "",
             Type = UserType.Undefined
+        };
+
+        public static Message NullMessage = new Message
+        {
+            To = "",
+            From = "",
+            Date = "",
+            Subject = "",
+            Content = "",
+            Id = -1
         };
 
         public override string ToString()
