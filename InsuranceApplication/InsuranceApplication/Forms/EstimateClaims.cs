@@ -29,9 +29,9 @@ namespace InsuranceApplication.Forms
             DataTable claims = User.GetClaims();
             lvClaims.Columns.Add("date", 85);
             lvClaims.Columns.Add("username", 85);
-            lvClaims.Columns.Add("status", 100);
-            lvClaims.Columns.Add("amount", 100);
-            lvClaims.Columns.Add("claim", 200);
+            lvClaims.Columns.Add("status", 50);
+            lvClaims.Columns.Add("amount", 50);
+            lvClaims.Columns.Add("claim", 100);
             lvClaims.Columns.Add("id", 50);
             for (int i = 0; i < claims.Rows.Count; i++)
             {

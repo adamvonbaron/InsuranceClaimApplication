@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
             this.lblAdminTitle = new System.Windows.Forms.Label();
-            this.btnCreateClientFolder = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.cboRank = new System.Windows.Forms.ComboBox();
@@ -84,17 +83,6 @@
             this.lblAdminTitle.Size = new System.Drawing.Size(449, 25);
             this.lblAdminTitle.TabIndex = 0;
             this.lblAdminTitle.Text = "Welcome to the Administrator Home Page";
-            // 
-            // btnCreateClientFolder
-            // 
-            this.btnCreateClientFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateClientFolder.Location = new System.Drawing.Point(581, 690);
-            this.btnCreateClientFolder.Name = "btnCreateClientFolder";
-            this.btnCreateClientFolder.Size = new System.Drawing.Size(157, 39);
-            this.btnCreateClientFolder.TabIndex = 3;
-            this.btnCreateClientFolder.Text = "Create Client Folder";
-            this.btnCreateClientFolder.UseVisualStyleBackColor = true;
-            this.btnCreateClientFolder.Click += new System.EventHandler(this.btnCreateClientFolder_Click);
             // 
             // btnExit
             // 
@@ -535,7 +523,6 @@
             this.Controls.Add(this.btnPermissionsEnter);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnCreateClientFolder);
             this.Controls.Add(this.lblAdminTitle);
             this.Name = "AdminHome";
             this.Text = "AdminHome";
@@ -548,7 +535,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblAdminTitle;
-        private System.Windows.Forms.Button btnCreateClientFolder;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.ComboBox cboRank;

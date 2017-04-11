@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceManagerHome));
             this.lblFinanceManagerHome = new System.Windows.Forms.Label();
-            this.btnViewClientList = new System.Windows.Forms.Button();
             this.btnEstimate = new System.Windows.Forms.Button();
-            this.btnTransfer = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,14 +38,7 @@
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.txtViewUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnSend = new System.Windows.Forms.Button();
-            this.txtMessage = new System.Windows.Forms.TextBox();
-            this.txtSubject = new System.Windows.Forms.TextBox();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.lblCompose = new System.Windows.Forms.Label();
-            this.lblSubject = new System.Windows.Forms.Label();
-            this.lblTo = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lvMessages = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,17 +56,6 @@
             this.lblFinanceManagerHome.TabIndex = 0;
             this.lblFinanceManagerHome.Text = "Welcome to the Finance Manager Home Page";
             // 
-            // btnViewClientList
-            // 
-            this.btnViewClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientList.Location = new System.Drawing.Point(170, 539);
-            this.btnViewClientList.Name = "btnViewClientList";
-            this.btnViewClientList.Size = new System.Drawing.Size(132, 38);
-            this.btnViewClientList.TabIndex = 2;
-            this.btnViewClientList.Text = "View Client List";
-            this.btnViewClientList.UseVisualStyleBackColor = true;
-            this.btnViewClientList.Click += new System.EventHandler(this.btnViewClientList_Click);
-            // 
             // btnEstimate
             // 
             this.btnEstimate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,16 +66,6 @@
             this.btnEstimate.Text = "Estimate Amount";
             this.btnEstimate.UseVisualStyleBackColor = true;
             this.btnEstimate.Click += new System.EventHandler(this.btnEstimate_Click);
-            // 
-            // btnTransfer
-            // 
-            this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(319, 649);
-            this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(153, 56);
-            this.btnTransfer.TabIndex = 6;
-            this.btnTransfer.Text = "Transfer Details to Client";
-            this.btnTransfer.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -170,82 +140,15 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Username: ";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(581, 41);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 20);
-            this.label9.TabIndex = 81;
-            this.label9.Text = "SEND MESSAGES";
-            // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(538, 434);
+            this.btnSend.Location = new System.Drawing.Point(507, 424);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(123, 23);
             this.btnSend.TabIndex = 80;
-            this.btnSend.Text = "Send";
+            this.btnSend.Text = "Send Message";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Location = new System.Drawing.Point(538, 161);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(309, 253);
-            this.txtMessage.TabIndex = 79;
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.Location = new System.Drawing.Point(596, 105);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(200, 20);
-            this.txtSubject.TabIndex = 78;
-            // 
-            // txtTo
-            // 
-            this.txtTo.Location = new System.Drawing.Point(596, 72);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(200, 20);
-            this.txtTo.TabIndex = 77;
-            // 
-            // lblCompose
-            // 
-            this.lblCompose.AutoSize = true;
-            this.lblCompose.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompose.ForeColor = System.Drawing.Color.Black;
-            this.lblCompose.Location = new System.Drawing.Point(541, 141);
-            this.lblCompose.Name = "lblCompose";
-            this.lblCompose.Size = new System.Drawing.Size(57, 13);
-            this.lblCompose.TabIndex = 76;
-            this.lblCompose.Text = "Compose: ";
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubject.ForeColor = System.Drawing.Color.Black;
-            this.lblSubject.Location = new System.Drawing.Point(541, 108);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(49, 13);
-            this.lblSubject.TabIndex = 75;
-            this.lblSubject.Text = "Subject: ";
-            // 
-            // lblTo
-            // 
-            this.lblTo.AutoSize = true;
-            this.lblTo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTo.ForeColor = System.Drawing.Color.Black;
-            this.lblTo.Location = new System.Drawing.Point(541, 75);
-            this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(26, 13);
-            this.lblTo.TabIndex = 74;
-            this.lblTo.Text = "To: ";
             // 
             // label8
             // 
@@ -253,7 +156,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(591, 495);
+            this.label8.Location = new System.Drawing.Point(593, 173);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 73;
@@ -261,7 +164,7 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(505, 529);
+            this.lvMessages.Location = new System.Drawing.Point(507, 207);
             this.lvMessages.Name = "lvMessages";
             this.lvMessages.Size = new System.Drawing.Size(383, 200);
             this.lvMessages.TabIndex = 72;
@@ -296,14 +199,7 @@
             this.ClientSize = new System.Drawing.Size(907, 741);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvClients);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.txtSubject);
-            this.Controls.Add(this.txtTo);
-            this.Controls.Add(this.lblCompose);
-            this.Controls.Add(this.lblSubject);
-            this.Controls.Add(this.lblTo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lvMessages);
             this.Controls.Add(this.label5);
@@ -313,9 +209,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnTransfer);
             this.Controls.Add(this.btnEstimate);
-            this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.lblFinanceManagerHome);
             this.Name = "FinanceManagerHome";
             this.Text = "FinanceManagerHome";
@@ -328,9 +222,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblFinanceManagerHome;
-        private System.Windows.Forms.Button btnViewClientList;
         private System.Windows.Forms.Button btnEstimate;
-        private System.Windows.Forms.Button btnTransfer;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.Label label5;
@@ -338,14 +230,7 @@
         private System.Windows.Forms.Button btnViewProfile;
         private System.Windows.Forms.TextBox txtViewUsername;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox txtMessage;
-        private System.Windows.Forms.TextBox txtSubject;
-        private System.Windows.Forms.TextBox txtTo;
-        private System.Windows.Forms.Label lblCompose;
-        private System.Windows.Forms.Label lblSubject;
-        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView lvMessages;
         private System.Windows.Forms.Label label1;
