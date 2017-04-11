@@ -29,9 +29,10 @@ namespace InsuranceApplication.Forms
             Claim claim = new Claim
             {
                 UserName = client.UserName,
-                Date = dtpClaimDate.Value.ToString(),
-                Status = txtStatus.Text,
-                Content = txtClaim.Text
+                Date = DateTime.Now,
+                Status = 0,
+                Content = txtClaim.Text,
+                Amount = 0,
             };
             if (client.ApplyForClaim(claim)) {
                 MessageBox.Show("Claim sent successfully.", "Send Claim", MessageBoxButtons.OK,

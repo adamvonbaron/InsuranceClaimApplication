@@ -1,9 +1,12 @@
-﻿namespace InsuranceApplication.Classes {
+﻿using System;
+
+namespace InsuranceApplication.Classes {
     public struct Claim
     {
         public string UserName;
-        public string Date;
-        public string Status;
+        public DateTime Date;
+        public int Status;
         public string Content;
+        public int Amount;
     }
 }

@@ -30,6 +30,7 @@ namespace InsuranceApplication.Forms
             lvClaims.Columns.Add("date", 85);
             lvClaims.Columns.Add("username", 85);
             lvClaims.Columns.Add("status", 100);
+            lvClaims.Columns.Add("amount", 100);
             lvClaims.Columns.Add("claim", 200);
             lvClaims.Columns.Add("id", 50);
             for (int i = 0; i < claims.Rows.Count; i++)
@@ -40,15 +41,16 @@ namespace InsuranceApplication.Forms
                 curItem.SubItems.Add(dr[2].ToString());
                 curItem.SubItems.Add(dr[3].ToString());
                 curItem.SubItems.Add(dr[4].ToString());
+                curItem.SubItems.Add(dr[5].ToString());
                 lvClaims.Items.Add(curItem);
             }
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if(User.UpdateClaimStatus(int.Parse(txtID.Text), txtAmount.Text))
+            if(User.UpdateClaimAmount(int.Parse(txtID.Text), int.Parse(txtAmount.Text)))
             {
-                MessageBox.Show("Update claim successfully.", "Message", MessageBoxButtons.OK,
+                MessageBox.Show("Update claim amount successfully.", "Message", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
             lvClaims.Clear();

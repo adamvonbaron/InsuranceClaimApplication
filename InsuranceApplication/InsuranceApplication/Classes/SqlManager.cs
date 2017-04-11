@@ -125,12 +125,13 @@ namespace InsuranceApplication.Classes {
         public static bool SendClaim(Claim claim) {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
-            cmd.CommandText = @"insert into claims (username, date, status, claim) 
-                                values(@username, @date, @status, @claim);";
+            cmd.CommandText = @"insert into claims (username, date, status, claim, amount) 
+                                values(@username, @date, @status, @claim, @amount);";
             cmd.Parameters.AddWithValue("@username", claim.UserName);
             cmd.Parameters.AddWithValue("@date", claim.Date);
             cmd.Parameters.AddWithValue("@status", claim.Status);
             cmd.Parameters.AddWithValue("@claim", claim.Content);
+            cmd.Parameters.AddWithValue("@amount", claim.Amount);
             try {
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -175,7 +176,7 @@ namespace InsuranceApplication.Classes {
         }
         public static DataTable GetClaims()
         {
-            string query = "select * from claims where status is not null";
+            string query = "select * from claims";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable claims = new DataTable();
@@ -260,6 +261,29 @@ namespace InsuranceApplication.Classes {
             string query = "update claims set status = @status where id = @id;";
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@status", status);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return true;
+        }
+
+        public static bool UpdateClaimAmount(int id, int amount)
+        {
+            string query = "update claims set amount = @amount where id = @id;";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@amount", amount);
             cmd.Parameters.AddWithValue("@id", id);
             cmd.CommandType = CommandType.Text;
             try

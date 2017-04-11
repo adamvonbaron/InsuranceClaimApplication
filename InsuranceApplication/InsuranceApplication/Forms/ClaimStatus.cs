@@ -32,6 +32,7 @@ namespace InsuranceApplication.Forms
             lvClaimStatus.Columns.Add("date", 85);
             lvClaimStatus.Columns.Add("username", 85);
             lvClaimStatus.Columns.Add("status", 100);
+            lvClaimStatus.Columns.Add("amount", 100);
             lvClaimStatus.Columns.Add("claim", 200);
             lvClaimStatus.Columns.Add("id", 50);
             for (int i = 0; i < claims.Rows.Count; i++)
@@ -42,6 +43,7 @@ namespace InsuranceApplication.Forms
                 curItem.SubItems.Add(dr[2].ToString());
                 curItem.SubItems.Add(dr[3].ToString());
                 curItem.SubItems.Add(dr[4].ToString());
+                curItem.SubItems.Add(dr[5].ToString());
                 lvClaimStatus.Items.Add(curItem);
             }
         }
