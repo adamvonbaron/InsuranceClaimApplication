@@ -137,6 +137,10 @@ namespace InsuranceApplication.Classes
         {
             return SqlManager.UpdateClaimStatus(id, status);
         }
+        public static DataTable GetClaimStatus(string username)
+        {
+            return SqlManager.GetClaimStatus(username);
+        }
 
         public static bool SendMessage(Message message)
         {

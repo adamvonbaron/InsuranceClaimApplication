@@ -32,12 +32,6 @@ namespace InsuranceApplication.Forms
             f3.Show();
         }
 
-        private void btnViewClientProfile_Click(object sender, EventArgs e)
-        {
-            ViewProfile f3 = new ViewProfile(financeManager);
-            f3.Show();
-        }
-
         private void FinanceManagerHome_Load(object sender, EventArgs e)
         {
             lblCurUserInfo.Text = "Logged in as: " + financeManager.UserName + "      Rank: Finance Manager";

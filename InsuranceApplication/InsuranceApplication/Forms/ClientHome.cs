@@ -96,5 +96,11 @@ namespace InsuranceApplication.Forms
             ViewMessage vm = new ViewMessage(client, message.From, message.Subject, message.Date, message.Content);
             vm.ShowDialog();
         }
+
+        private void btnViewStatus_Click(object sender, EventArgs e)
+        {
+            ClaimStatus cs = new ClaimStatus(client);
+            cs.ShowDialog();
+        }
     }
 }
