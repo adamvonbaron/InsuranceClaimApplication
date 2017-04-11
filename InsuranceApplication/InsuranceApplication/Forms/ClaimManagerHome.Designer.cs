@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClaimManagerHome));
             this.lblClaimManagerTitle = new System.Windows.Forms.Label();
-            this.btnViewClientList = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,14 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lvMessages = new System.Windows.Forms.ListView();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnSend = new System.Windows.Forms.Button();
-            this.txtMessage = new System.Windows.Forms.TextBox();
-            this.txtSubject = new System.Windows.Forms.TextBox();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.lblCompose = new System.Windows.Forms.Label();
-            this.lblSubject = new System.Windows.Forms.Label();
-            this.lblTo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lvClients = new System.Windows.Forms.ListView();
             this.SuspendLayout();
@@ -63,17 +55,6 @@
             this.lblClaimManagerTitle.Size = new System.Drawing.Size(418, 24);
             this.lblClaimManagerTitle.TabIndex = 0;
             this.lblClaimManagerTitle.Text = "Welcome to the Claim Manager Home Page";
-            // 
-            // btnViewClientList
-            // 
-            this.btnViewClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClientList.Location = new System.Drawing.Point(176, 542);
-            this.btnViewClientList.Name = "btnViewClientList";
-            this.btnViewClientList.Size = new System.Drawing.Size(144, 35);
-            this.btnViewClientList.TabIndex = 1;
-            this.btnViewClientList.Text = "View Client List";
-            this.btnViewClientList.UseVisualStyleBackColor = true;
-            this.btnViewClientList.Click += new System.EventHandler(this.btnViewClientList_Click);
             // 
             // btnExit
             // 
@@ -154,7 +135,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(651, 489);
+            this.label8.Location = new System.Drawing.Point(616, 171);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 55;
@@ -162,89 +143,22 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(557, 519);
+            this.lvMessages.Location = new System.Drawing.Point(522, 201);
             this.lvMessages.Name = "lvMessages";
             this.lvMessages.Size = new System.Drawing.Size(383, 200);
             this.lvMessages.TabIndex = 54;
             this.lvMessages.UseCompatibleStateImageBehavior = false;
             this.lvMessages.SelectedIndexChanged += new System.EventHandler(this.lvMessages_SelectedIndexChanged);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(620, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 20);
-            this.label9.TabIndex = 71;
-            this.label9.Text = "SEND MESSAGES";
-            // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(624, 437);
+            this.btnSend.Location = new System.Drawing.Point(522, 418);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.Size = new System.Drawing.Size(114, 28);
             this.btnSend.TabIndex = 70;
-            this.btnSend.Text = "Send";
+            this.btnSend.Text = "Send Message";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Location = new System.Drawing.Point(577, 164);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(309, 253);
-            this.txtMessage.TabIndex = 69;
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.Location = new System.Drawing.Point(635, 108);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(200, 20);
-            this.txtSubject.TabIndex = 68;
-            // 
-            // txtTo
-            // 
-            this.txtTo.Location = new System.Drawing.Point(635, 75);
-            this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(200, 20);
-            this.txtTo.TabIndex = 67;
-            // 
-            // lblCompose
-            // 
-            this.lblCompose.AutoSize = true;
-            this.lblCompose.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompose.ForeColor = System.Drawing.Color.White;
-            this.lblCompose.Location = new System.Drawing.Point(580, 144);
-            this.lblCompose.Name = "lblCompose";
-            this.lblCompose.Size = new System.Drawing.Size(57, 13);
-            this.lblCompose.TabIndex = 66;
-            this.lblCompose.Text = "Compose: ";
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSubject.Location = new System.Drawing.Point(580, 115);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(49, 13);
-            this.lblSubject.TabIndex = 65;
-            this.lblSubject.Text = "Subject: ";
-            // 
-            // lblTo
-            // 
-            this.lblTo.AutoSize = true;
-            this.lblTo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTo.ForeColor = System.Drawing.Color.White;
-            this.lblTo.Location = new System.Drawing.Point(580, 82);
-            this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(26, 13);
-            this.lblTo.TabIndex = 64;
-            this.lblTo.Text = "To: ";
             // 
             // label1
             // 
@@ -274,14 +188,7 @@
             this.ClientSize = new System.Drawing.Size(972, 741);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvClients);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.txtSubject);
-            this.Controls.Add(this.txtTo);
-            this.Controls.Add(this.lblCompose);
-            this.Controls.Add(this.lblSubject);
-            this.Controls.Add(this.lblTo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lvMessages);
             this.Controls.Add(this.label5);
@@ -291,7 +198,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.lblClaimManagerTitle);
             this.Name = "ClaimManagerHome";
             this.Text = "ClaimManagerHome";
@@ -304,7 +210,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblClaimManagerTitle;
-        private System.Windows.Forms.Button btnViewClientList;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.Label label5;
@@ -314,14 +219,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView lvMessages;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox txtMessage;
-        private System.Windows.Forms.TextBox txtSubject;
-        private System.Windows.Forms.TextBox txtTo;
-        private System.Windows.Forms.Label lblCompose;
-        private System.Windows.Forms.Label lblSubject;
-        private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvClients;
     }
