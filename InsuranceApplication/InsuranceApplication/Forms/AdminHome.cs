@@ -47,7 +47,7 @@ namespace InsuranceApplication.Forms
 
             lvMessages.View = View.Details;
             List<Classes.Message> messages = User.GetMessages(admin.UserName);
-            lvMessages.Columns.Add("ID", 10);
+            lvMessages.Columns.Add("ID", 50);
             lvMessages.Columns.Add("From", 75);
             lvMessages.Columns.Add("Date", 125);
             lvMessages.Columns.Add("Subject", 500);
