@@ -60,6 +60,12 @@
     <Compile Include="Forms\AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ClaimStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClaimStatus.Designer.cs">
+      <DependentUpon>ClaimStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EstimateClaims.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +89,6 @@
     </Compile>
     <Compile Include="Forms\ViewMessage.Designer.cs">
       <DependentUpon>ViewMessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ViewProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ViewProfile.Designer.cs">
-      <DependentUpon>ViewProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ClientApplyforClaim.cs">
       <SubType>Form</SubType>
@@ -149,6 +149,9 @@
     <EmbeddedResource Include="Forms\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClaimStatus.resx">
+      <DependentUpon>ClaimStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EstimateClaims.resx">
       <DependentUpon>EstimateClaims.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewMessage.resx">
       <DependentUpon>ViewMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewProfile.resx">
-      <DependentUpon>ViewProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientApplyforClaim.resx">
       <DependentUpon>ClientApplyforClaim.cs</DependentUpon>
@@ -202,7 +202,6 @@
     </Compile>
     <None Include="ClassDiagram2.cd" />
     <None Include="Insurance Claim UML Diagrams %281%29.vsdx" />
-    <None Include="Insurance Claim UML Diagrams.vsdx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

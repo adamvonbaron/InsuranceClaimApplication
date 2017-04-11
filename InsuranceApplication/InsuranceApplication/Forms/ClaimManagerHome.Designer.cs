@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClaimManagerHome));
             this.lblClaimManagerTitle = new System.Windows.Forms.Label();
             this.btnViewClientList = new System.Windows.Forms.Button();
-            this.btnDownload = new System.Windows.Forms.Button();
-            this.btnTransfer = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -76,26 +74,6 @@
             this.btnViewClientList.Text = "View Client List";
             this.btnViewClientList.UseVisualStyleBackColor = true;
             this.btnViewClientList.Click += new System.EventHandler(this.btnViewClientList_Click);
-            // 
-            // btnDownload
-            // 
-            this.btnDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownload.Location = new System.Drawing.Point(158, 633);
-            this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(168, 47);
-            this.btnDownload.TabIndex = 3;
-            this.btnDownload.Text = "Download Scanned Documents";
-            this.btnDownload.UseVisualStyleBackColor = true;
-            // 
-            // btnTransfer
-            // 
-            this.btnTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransfer.Location = new System.Drawing.Point(356, 639);
-            this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(146, 35);
-            this.btnTransfer.TabIndex = 6;
-            this.btnTransfer.Text = "Transfer File to FM";
-            this.btnTransfer.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -313,8 +291,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCurUserInfo);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnTransfer);
-            this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.btnViewClientList);
             this.Controls.Add(this.lblClaimManagerTitle);
             this.Name = "ClaimManagerHome";
@@ -329,8 +305,6 @@
 
         private System.Windows.Forms.Label lblClaimManagerTitle;
         private System.Windows.Forms.Button btnViewClientList;
-        private System.Windows.Forms.Button btnDownload;
-        private System.Windows.Forms.Button btnTransfer;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.Label label5;

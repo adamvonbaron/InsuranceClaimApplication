@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientHome));
             this.lblClientHome = new System.Windows.Forms.Label();
             this.btnApplyForClaim = new System.Windows.Forms.Button();
-            this.btnUpload = new System.Windows.Forms.Button();
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.btnViewStatus = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -72,22 +71,12 @@
             this.btnApplyForClaim.UseVisualStyleBackColor = true;
             this.btnApplyForClaim.Click += new System.EventHandler(this.btnApplyForClaim_Click);
             // 
-            // btnUpload
-            // 
-            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.Location = new System.Drawing.Point(497, 550);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(161, 48);
-            this.btnUpload.TabIndex = 3;
-            this.btnUpload.Text = "Upload Scanned Documents";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            // 
             // btnEditProfile
             // 
             this.btnEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.Location = new System.Drawing.Point(528, 621);
+            this.btnEditProfile.Location = new System.Drawing.Point(512, 621);
             this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(114, 34);
+            this.btnEditProfile.Size = new System.Drawing.Size(119, 37);
             this.btnEditProfile.TabIndex = 4;
             this.btnEditProfile.Text = "Edit Profile";
             this.btnEditProfile.UseVisualStyleBackColor = true;
@@ -102,6 +91,7 @@
             this.btnViewStatus.TabIndex = 5;
             this.btnViewStatus.Text = "View Current Status";
             this.btnViewStatus.UseVisualStyleBackColor = true;
+            this.btnViewStatus.Click += new System.EventHandler(this.btnViewStatus_Click);
             // 
             // btnExit
             // 
@@ -262,7 +252,6 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnViewStatus);
             this.Controls.Add(this.btnEditProfile);
-            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnApplyForClaim);
             this.Controls.Add(this.lblClientHome);
             this.Name = "ClientHome";
@@ -277,7 +266,6 @@
 
         private System.Windows.Forms.Label lblClientHome;
         private System.Windows.Forms.Button btnApplyForClaim;
-        private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.Button btnViewStatus;
         private System.Windows.Forms.Button btnExit;

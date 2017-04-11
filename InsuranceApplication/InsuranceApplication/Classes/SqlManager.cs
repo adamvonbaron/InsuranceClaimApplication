@@ -183,6 +183,18 @@ namespace InsuranceApplication.Classes {
             return claims;
         }
 
+        //get claims for clients based on username
+        public static DataTable GetClaimStatus(string username)
+        {
+            string query = "select * from claims where username=@username";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable claims = new DataTable();
+            sda.Fill(claims);
+            return claims;
+        }
+
         public static DataTable GetClientList()
         {
             string query = "select * from users where rank=4";
