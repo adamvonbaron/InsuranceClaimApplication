@@ -136,6 +136,7 @@ namespace InsuranceApplication.Classes {
                 conn.Open();
                 cmd.ExecuteNonQuery();
             } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
                 return false;
             } finally {
                 conn.Close();
