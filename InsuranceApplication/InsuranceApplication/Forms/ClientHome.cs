@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using InsuranceApplication.Classes;
 
@@ -92,11 +87,17 @@ namespace InsuranceApplication.Forms
 
         private void lvMessages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Classes.Message message = User.GetMessage(lvMessages.SelectedItems[0].SubItems[0].Text);
-            ViewMessage vm = new ViewMessage(client, message.From, message.Subject, message.Date, message.Content);
-            vm.ShowDialog();
-        }
+            try
+            {
+                Classes.Message message = User.GetMessage(lvMessages.SelectedItems[0].SubItems[0].Text);
+                ViewMessage vm = new ViewMessage(client, message.From, message.Subject, message.Date, message.Content);
+                vm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
 
+            }
+        }
         private void btnViewStatus_Click(object sender, EventArgs e)
         {
             ClaimStatus cs = new ClaimStatus(client);
