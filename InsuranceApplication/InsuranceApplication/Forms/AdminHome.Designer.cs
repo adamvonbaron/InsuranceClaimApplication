@@ -69,6 +69,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lvClients = new System.Windows.Forms.ListView();
             this.btnSendMessage = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lvClaims = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblAdminTitle
@@ -429,9 +431,9 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(382, 102);
+            this.lvMessages.Location = new System.Drawing.Point(382, 92);
             this.lvMessages.Name = "lvMessages";
-            this.lvMessages.Size = new System.Drawing.Size(383, 200);
+            this.lvMessages.Size = new System.Drawing.Size(411, 143);
             this.lvMessages.TabIndex = 52;
             this.lvMessages.UseCompatibleStateImageBehavior = false;
             this.lvMessages.SelectedIndexChanged += new System.EventHandler(this.lvMessages_SelectedIndexChanged);
@@ -442,7 +444,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(378, 79);
+            this.label8.Location = new System.Drawing.Point(378, 69);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 53;
@@ -454,7 +456,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(378, 365);
+            this.label10.Location = new System.Drawing.Point(378, 283);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 20);
             this.label10.TabIndex = 85;
@@ -462,15 +464,15 @@
             // 
             // lvClients
             // 
-            this.lvClients.Location = new System.Drawing.Point(382, 388);
+            this.lvClients.Location = new System.Drawing.Point(382, 306);
             this.lvClients.Name = "lvClients";
-            this.lvClients.Size = new System.Drawing.Size(433, 257);
+            this.lvClients.Size = new System.Drawing.Size(411, 143);
             this.lvClients.TabIndex = 84;
             this.lvClients.UseCompatibleStateImageBehavior = false;
             // 
             // btnSendMessage
             // 
-            this.btnSendMessage.Location = new System.Drawing.Point(382, 310);
+            this.btnSendMessage.Location = new System.Drawing.Point(382, 241);
             this.btnSendMessage.Name = "btnSendMessage";
             this.btnSendMessage.Size = new System.Drawing.Size(91, 23);
             this.btnSendMessage.TabIndex = 86;
@@ -478,12 +480,34 @@
             this.btnSendMessage.UseVisualStyleBackColor = true;
             this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(378, 491);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 20);
+            this.label9.TabIndex = 88;
+            this.label9.Text = "VIEW CLAIMS";
+            // 
+            // lvClaims
+            // 
+            this.lvClaims.Location = new System.Drawing.Point(382, 514);
+            this.lvClaims.Name = "lvClaims";
+            this.lvClaims.Size = new System.Drawing.Size(411, 143);
+            this.lvClaims.TabIndex = 87;
+            this.lvClaims.UseCompatibleStateImageBehavior = false;
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(831, 741);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lvClaims);
             this.Controls.Add(this.btnSendMessage);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lvClients);
@@ -574,5 +598,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView lvClients;
         private System.Windows.Forms.Button btnSendMessage;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListView lvClaims;
     }
 }

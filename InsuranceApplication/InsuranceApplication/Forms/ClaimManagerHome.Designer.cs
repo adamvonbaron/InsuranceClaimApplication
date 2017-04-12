@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lvClients = new System.Windows.Forms.ListView();
             this.btnManageClaims = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblClaimManagerTitle
@@ -59,11 +60,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(41, 645);
+            this.btnExit.Location = new System.Drawing.Point(676, 553);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Logout";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -136,7 +137,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(616, 171);
+            this.label8.Location = new System.Drawing.Point(364, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 55;
@@ -144,18 +145,18 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(522, 201);
+            this.lvMessages.Location = new System.Drawing.Point(368, 116);
             this.lvMessages.Name = "lvMessages";
-            this.lvMessages.Size = new System.Drawing.Size(383, 200);
+            this.lvMessages.Size = new System.Drawing.Size(383, 154);
             this.lvMessages.TabIndex = 54;
             this.lvMessages.UseCompatibleStateImageBehavior = false;
             this.lvMessages.SelectedIndexChanged += new System.EventHandler(this.lvMessages_SelectedIndexChanged);
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(522, 418);
+            this.btnSend.Location = new System.Drawing.Point(368, 276);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(114, 28);
+            this.btnSend.Size = new System.Drawing.Size(97, 28);
             this.btnSend.TabIndex = 70;
             this.btnSend.Text = "Send Message";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -167,7 +168,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(186, 235);
+            this.label1.Location = new System.Drawing.Point(364, 317);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 85;
@@ -175,28 +176,41 @@
             // 
             // lvClients
             // 
-            this.lvClients.Location = new System.Drawing.Point(34, 262);
+            this.lvClients.Location = new System.Drawing.Point(368, 340);
             this.lvClients.Name = "lvClients";
-            this.lvClients.Size = new System.Drawing.Size(433, 257);
+            this.lvClients.Size = new System.Drawing.Size(383, 154);
             this.lvClients.TabIndex = 84;
             this.lvClients.UseCompatibleStateImageBehavior = false;
             // 
             // btnManageClaims
             // 
-            this.btnManageClaims.Location = new System.Drawing.Point(464, 108);
+            this.btnManageClaims.Location = new System.Drawing.Point(89, 293);
             this.btnManageClaims.Name = "btnManageClaims";
-            this.btnManageClaims.Size = new System.Drawing.Size(115, 36);
+            this.btnManageClaims.Size = new System.Drawing.Size(94, 32);
             this.btnManageClaims.TabIndex = 86;
             this.btnManageClaims.Text = "Manage Claims";
             this.btnManageClaims.UseVisualStyleBackColor = true;
             this.btnManageClaims.Click += new System.EventHandler(this.btnManageClaims_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(60, 250);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 20);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "MANAGE CLAIMS";
             // 
             // ClaimManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(972, 741);
+            this.ClientSize = new System.Drawing.Size(789, 582);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnManageClaims);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvClients);
@@ -235,5 +249,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvClients;
         private System.Windows.Forms.Button btnManageClaims;
+        private System.Windows.Forms.Label label2;
     }
 }
