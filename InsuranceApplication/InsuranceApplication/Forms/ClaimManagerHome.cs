@@ -92,6 +92,12 @@ namespace InsuranceApplication.Forms
 
             }
         }
+
+        private void btnManageClaims_Click(object sender, EventArgs e)
+        {
+            ManageClaims mc = new ManageClaims(claimManager);
+            mc.ShowDialog();
+        }
     }
 }
 

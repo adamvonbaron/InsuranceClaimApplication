@@ -42,6 +42,7 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lvClients = new System.Windows.Forms.ListView();
+            this.btnManageClaims = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblClaimManagerTitle
@@ -180,12 +181,23 @@
             this.lvClients.TabIndex = 84;
             this.lvClients.UseCompatibleStateImageBehavior = false;
             // 
+            // btnManageClaims
+            // 
+            this.btnManageClaims.Location = new System.Drawing.Point(464, 108);
+            this.btnManageClaims.Name = "btnManageClaims";
+            this.btnManageClaims.Size = new System.Drawing.Size(115, 36);
+            this.btnManageClaims.TabIndex = 86;
+            this.btnManageClaims.Text = "Manage Claims";
+            this.btnManageClaims.UseVisualStyleBackColor = true;
+            this.btnManageClaims.Click += new System.EventHandler(this.btnManageClaims_Click);
+            // 
             // ClaimManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(972, 741);
+            this.Controls.Add(this.btnManageClaims);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvClients);
             this.Controls.Add(this.btnSend);
@@ -222,5 +234,6 @@
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvClients;
+        private System.Windows.Forms.Button btnManageClaims;
     }
 }

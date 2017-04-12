@@ -9,6 +9,7 @@ namespace InsuranceApplication.Classes
 {
     public class ClaimManager : User
     {
+        //constructor
         public ClaimManager(string username, string password)
                             : base(username, password)
         {
@@ -23,19 +24,12 @@ namespace InsuranceApplication.Classes
         public ClaimManager(UserData userdata) : base(userdata) { }
 
         //methods
+
+        //view profile by username
         public UserData ViewProfile()
         {
             return SqlManager.GetUserData(UserName);
         }
 
-        public void ViewMessages()
-        {
-
-        }
-
-        public void DownloadDocuments()
-        {
-
-        }
     }
 }

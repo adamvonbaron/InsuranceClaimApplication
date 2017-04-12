@@ -9,22 +9,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using InsuranceApplication.Classes;
 
-namespace InsuranceApplication.Forms
+namespace InsuranceApplication
 {
-    public partial class EstimateClaims : Form
+    public partial class ManageClaims : Form
     {
-        public EstimateClaims()
+        ClaimManager claimManager;
+        string[] status =
         {
+            "New",
+            "Received-Not Estimated",
+            "Received-Estimated",
+            "Fully Reviewed"
+        };
+
+        public ManageClaims(ClaimManager claimManager)
+        {
+            this.claimManager = claimManager;
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void ManageClaims_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            foreach (string status in status)
+                cboStatus.Items.Add(status);
 
-        private void EstimateClaims_Load(object sender, EventArgs e)
-        {
             lvClaims.View = View.Details;
             DataTable claims = User.GetClaims();
             lvClaims.Columns.Add("date", 85);
@@ -46,11 +54,16 @@ namespace InsuranceApplication.Forms
             }
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            if(User.UpdateClaimAmount(int.Parse(txtID.Text), int.Parse(txtAmount.Text)))
+            if (User.UpdateClaimStatus(int.Parse(txtID.Text), cboStatus.SelectedIndex))
             {
-                MessageBox.Show("Update claim amount successfully.", "Message", MessageBoxButtons.OK,
+                MessageBox.Show("Update claim status successfully.", "Message", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
             lvClaims.Clear();
@@ -75,4 +88,5 @@ namespace InsuranceApplication.Forms
             }
         }
     }
+    
 }

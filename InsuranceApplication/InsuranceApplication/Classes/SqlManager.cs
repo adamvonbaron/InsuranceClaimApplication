@@ -166,6 +166,7 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        //get messages that are sent to a particular username
         public static DataTable GetInboxMessages(string username) {
             string query = "select * from messages where [to] = @username";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -175,6 +176,8 @@ namespace InsuranceApplication.Classes {
             sda.Fill(messages);
             return messages;
         }
+
+        //get all claims from database
         public static DataTable GetClaims()
         {
             string query = "select * from claims";
@@ -185,7 +188,7 @@ namespace InsuranceApplication.Classes {
             return claims;
         }
 
-        //get claims for clients based on username
+        //get claims for clients based on username from database
         public static DataTable GetClaimStatus(string username)
         {
             string query = "select * from claims where username=@username";
@@ -197,6 +200,7 @@ namespace InsuranceApplication.Classes {
             return claims;
         }
 
+        //get all users with client rank from database
         public static DataTable GetClientList()
         {
             string query = "select * from users where rank=4";
@@ -207,6 +211,7 @@ namespace InsuranceApplication.Classes {
             return clients;
         }
 
+        //get all users with rank as admin, claim manager, or finance manager from database
         public static DataTable GetManagement()
         {
             string query = "select * from users where rank=1 or rank=2 or rank=3";
@@ -217,6 +222,7 @@ namespace InsuranceApplication.Classes {
             return managers;
         }
 
+        //get messages sent by a particular id from database
         public static Message GetMessage(string id)
         {
             string query = "select * from messages where id = @id";
@@ -249,15 +255,18 @@ namespace InsuranceApplication.Classes {
             return (UserType) GetField("users", "rank", "username", username);
         }
 
+        //get firstname given a username
         public static string GetFirstName(string username) {
             return (string) GetField("users", "firstname", "username", username);
         }
 
+        //get lastname given a username
         public static string GetLastName(string username) {
             return (string) GetField("users", "lastname", "username", username);
         }
 
-        public static bool UpdateClaimStatus(int id, string status)
+        //claim manager updates the status field for a claim
+        public static bool UpdateClaimStatus(int id, int status)
         {
             string query = "update claims set status = @status where id = @id;";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -280,6 +289,7 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        //finance manager updates the amount field for the claim
         public static bool UpdateClaimAmount(int id, int amount)
         {
             string query = "update claims set amount = @amount where id = @id;";
@@ -303,6 +313,7 @@ namespace InsuranceApplication.Classes {
             return true;
         }
 
+        //admin changes the rank field for a user
         public static bool UpdateRank(string username, UserType rank) {
             string query = "update users set rank = @rank where username = @username;";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -374,6 +385,7 @@ namespace InsuranceApplication.Classes {
             return userdata;
         }
 
+        //admin deletes a user based on username from the database
         public static bool DeleteUser(string username)
         {
             string query = "delete from users where username = @username;";

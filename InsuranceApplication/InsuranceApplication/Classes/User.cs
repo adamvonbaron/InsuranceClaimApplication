@@ -28,6 +28,7 @@ namespace InsuranceApplication.Classes
 
     public abstract class User
     {
+        //properties
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Birthday { get; set; }
@@ -36,6 +37,7 @@ namespace InsuranceApplication.Classes
         public string Phonenumber { get; set; }
         public UserType Type { get; set; }
 
+        //constructor
         public User(string username, string password)
         {
             UserName = username;
@@ -133,7 +135,7 @@ namespace InsuranceApplication.Classes
             return SqlManager.GetClaims();
         }
 
-        public static bool UpdateClaimStatus(int id, string status)
+        public static bool UpdateClaimStatus(int id, int status)
         {
             return SqlManager.UpdateClaimStatus(id, status);
         }
@@ -157,6 +159,7 @@ namespace InsuranceApplication.Classes
             return SqlManager.GetUserData(username);
         }
 
+        //why are there two of these
         public UserData GetUserData()
         {
             return SqlManager.GetUserData(UserName);
@@ -183,6 +186,7 @@ namespace InsuranceApplication.Classes
             Id = -1
         };
 
+        //string that prints fields from the users table for a particular user
         public override string ToString()
         {
             return String.Format(@"First Name: {0}\nLast Name: {1}\nUsername: {2}\nPassword: {3}\n

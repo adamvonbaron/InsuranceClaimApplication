@@ -9,6 +9,7 @@ namespace InsuranceApplication.Classes
 {
     public class Client : User
     {
+        //constructor
         public Client(string username, string password) : base(username, password)
         {
             UserData userdata = SqlManager.GetUserData(UserName);
@@ -21,19 +22,10 @@ namespace InsuranceApplication.Classes
 
         public Client(UserData userdata) : base(userdata) { }
 
-        public void ViewProfile()
-        {
-
-        }
-
+        //apply for new insurance claim
         public bool ApplyForClaim(Claim claim)
         {
             return SqlManager.SendClaim(claim);
-        }
-
-        public void ViewMessages()
-        {
-
         }
     }    
 }

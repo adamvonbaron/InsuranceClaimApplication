@@ -4,6 +4,7 @@ namespace InsuranceApplication.Classes
 {
     public class FinanceManager : User
     {
+        //constructor
         public FinanceManager(string username, string password)
                               : base(username, password)
         {
@@ -16,22 +17,5 @@ namespace InsuranceApplication.Classes
         }
 
         public FinanceManager(UserData userdata) : base(userdata) { }
-
-        //methods
-        public void ViewProfile()
-        {
-
-        }
-
-        public void ViewMessages()
-        {
-
-        }
-
-        public void EstimateAmount()
-        {
-
-        }
-
     }
 }
