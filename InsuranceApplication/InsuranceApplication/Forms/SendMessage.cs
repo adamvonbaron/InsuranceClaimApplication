@@ -29,18 +29,27 @@ namespace InsuranceApplication.Forms
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            Classes.Message message = new Classes.Message
+            try
             {
-                To = txtTo.Text,
-                From = user.UserName,
-                Date = DateTime.Now.ToString(),
-                Subject = txtSubject.Text,
-                Content = txtMessage.Text
-            };
-            if (User.SendMessage(message))
+                Classes.Message message = new Classes.Message
+                {
+                    To = txtTo.Text,
+                    From = user.UserName,
+                    Date = DateTime.Now.ToString(),
+                    Subject = txtSubject.Text,
+                    Content = txtMessage.Text
+                };
+
+
+                if (User.SendMessage(message))
+                {
+                    MessageBox.Show("Message sent successfully.", "Message", MessageBoxButtons.OK,
+                                     MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception err)
             {
-                MessageBox.Show("Message sent successfully.", "Message", MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
+                MessageBox.Show("Something went really wrong here.");
             }
         }
 
