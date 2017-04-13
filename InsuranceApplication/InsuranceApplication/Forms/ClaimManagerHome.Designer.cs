@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClaimManagerHome));
             this.lblClaimManagerTitle = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnViewClear = new System.Windows.Forms.Button();
@@ -58,15 +58,15 @@
             this.lblClaimManagerTitle.TabIndex = 0;
             this.lblClaimManagerTitle.Text = "Welcome to the Claim Manager Home Page";
             // 
-            // btnExit
+            // btnLogout
             // 
-            this.btnExit.Location = new System.Drawing.Point(676, 553);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Logout";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnLogout.Location = new System.Drawing.Point(676, 518);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblCurUserInfo
             // 
@@ -198,18 +198,18 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(60, 250);
+            this.label2.Location = new System.Drawing.Point(95, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 20);
+            this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 87;
-            this.label2.Text = "MANAGE CLAIMS";
+            this.label2.Text = "CLAIMS";
             // 
             // ClaimManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(789, 582);
+            this.ClientSize = new System.Drawing.Size(789, 568);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnManageClaims);
             this.Controls.Add(this.label1);
@@ -223,7 +223,7 @@
             this.Controls.Add(this.txtViewUsername);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCurUserInfo);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblClaimManagerTitle);
             this.Name = "ClaimManagerHome";
             this.Text = "ClaimManagerHome";
@@ -236,7 +236,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblClaimManagerTitle;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnViewClear;

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceManagerHome));
             this.lblFinanceManagerHome = new System.Windows.Forms.Label();
             this.btnEstimate = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblCurUserInfo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnViewClear = new System.Windows.Forms.Button();
@@ -43,6 +43,7 @@
             this.lvMessages = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.lvClients = new System.Windows.Forms.ListView();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFinanceManagerHome
@@ -59,23 +60,23 @@
             // btnEstimate
             // 
             this.btnEstimate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstimate.Location = new System.Drawing.Point(137, 659);
+            this.btnEstimate.Location = new System.Drawing.Point(55, 271);
             this.btnEstimate.Name = "btnEstimate";
-            this.btnEstimate.Size = new System.Drawing.Size(153, 36);
+            this.btnEstimate.Size = new System.Drawing.Size(139, 31);
             this.btnEstimate.TabIndex = 3;
             this.btnEstimate.Text = "Estimate Amount";
             this.btnEstimate.UseVisualStyleBackColor = true;
             this.btnEstimate.Click += new System.EventHandler(this.btnEstimate_Click);
             // 
-            // btnExit
+            // btnLogout
             // 
-            this.btnExit.Location = new System.Drawing.Point(32, 666);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnLogout.Location = new System.Drawing.Point(747, 469);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblCurUserInfo
             // 
@@ -142,9 +143,9 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(507, 424);
+            this.btnSend.Location = new System.Drawing.Point(439, 245);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(123, 23);
+            this.btnSend.Size = new System.Drawing.Size(101, 23);
             this.btnSend.TabIndex = 80;
             this.btnSend.Text = "Send Message";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -156,7 +157,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(593, 173);
+            this.label8.Location = new System.Drawing.Point(435, 82);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 20);
             this.label8.TabIndex = 73;
@@ -164,9 +165,9 @@
             // 
             // lvMessages
             // 
-            this.lvMessages.Location = new System.Drawing.Point(507, 207);
+            this.lvMessages.Location = new System.Drawing.Point(439, 105);
             this.lvMessages.Name = "lvMessages";
-            this.lvMessages.Size = new System.Drawing.Size(383, 200);
+            this.lvMessages.Size = new System.Drawing.Size(383, 134);
             this.lvMessages.TabIndex = 72;
             this.lvMessages.UseCompatibleStateImageBehavior = false;
             this.lvMessages.SelectedIndexChanged += new System.EventHandler(this.lvMessages_SelectedIndexChanged);
@@ -177,7 +178,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(156, 219);
+            this.label1.Location = new System.Drawing.Point(435, 282);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 83;
@@ -185,18 +186,31 @@
             // 
             // lvClients
             // 
-            this.lvClients.Location = new System.Drawing.Point(30, 258);
+            this.lvClients.Location = new System.Drawing.Point(439, 305);
             this.lvClients.Name = "lvClients";
-            this.lvClients.Size = new System.Drawing.Size(433, 257);
+            this.lvClients.Size = new System.Drawing.Size(383, 134);
             this.lvClients.TabIndex = 82;
             this.lvClients.UseCompatibleStateImageBehavior = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(86, 230);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 20);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "CLAIMS";
             // 
             // FinanceManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(907, 741);
+            this.ClientSize = new System.Drawing.Size(859, 521);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lvClients);
             this.Controls.Add(this.btnSend);
@@ -208,7 +222,7 @@
             this.Controls.Add(this.txtViewUsername);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCurUserInfo);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnEstimate);
             this.Controls.Add(this.lblFinanceManagerHome);
             this.Name = "FinanceManagerHome";
@@ -223,7 +237,7 @@
 
         private System.Windows.Forms.Label lblFinanceManagerHome;
         private System.Windows.Forms.Button btnEstimate;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblCurUserInfo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnViewClear;
@@ -235,5 +249,6 @@
         private System.Windows.Forms.ListView lvMessages;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvClients;
+        private System.Windows.Forms.Label label2;
     }
 }
