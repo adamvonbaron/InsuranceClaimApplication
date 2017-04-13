@@ -83,7 +83,7 @@ namespace InsuranceApplication.Forms
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            SendMessage sm = new SendMessage(financeManager, "", "", false);
+            SendMessage sm = new SendMessage(financeManager.UserName, "", "", false);
             sm.ShowDialog();
         }
 

@@ -6,11 +6,12 @@ namespace InsuranceApplication.Forms
 {
     public partial class SendMessage : Form
     {
-        User user { get; set; }
+        string username;
         string To;
         string Subject;
-        public SendMessage(User user, string to, string subject, bool reply)
+        public SendMessage(String username, string to, string subject, bool reply)
         {
+            this.username = username;
             InitializeComponent();
             Subject = "RE: " + subject;
             To = to;
@@ -34,7 +35,7 @@ namespace InsuranceApplication.Forms
                 Classes.Message message = new Classes.Message
                 {
                     To = txtTo.Text,
-                    From = user.UserName,
+                    From = username,
                     Date = DateTime.Now.ToString(),
                     Subject = txtSubject.Text,
                     Content = txtMessage.Text
@@ -47,9 +48,9 @@ namespace InsuranceApplication.Forms
                                      MessageBoxIcon.Information);
                 }
             }
-            catch (Exception err)
+            catch (NullReferenceException err)
             {
-                MessageBox.Show("Something went really wrong here.");
+                MessageBox.Show(err.Message + "\n" + err.ToString());
             }
         }
 

@@ -26,7 +26,7 @@ namespace InsuranceApplication.Forms
 
         private void btnReply_Click(object sender, EventArgs e)
         {
-            SendMessage sendmessage = new SendMessage(pubUser, lblFromDisplay.Text, lblSubjectDisplay.Text, true);
+            SendMessage sendmessage = new SendMessage(pubUser.UserName, lblFromDisplay.Text, lblSubjectDisplay.Text, true);
             sendmessage.ShowDialog();
         }
     }

@@ -70,7 +70,7 @@ namespace InsuranceApplication.Forms
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            SendMessage sendmessage = new SendMessage(client, "", "", false);
+            SendMessage sendmessage = new SendMessage(client.UserName, "", "", false);
             sendmessage.ShowDialog();
         }
 

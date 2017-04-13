@@ -75,7 +75,7 @@ namespace InsuranceApplication.Forms
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            SendMessage sm = new SendMessage(claimManager, "", "", false);
+            SendMessage sm = new SendMessage(claimManager.UserName, "", "", false);
             sm.ShowDialog();
         }
 

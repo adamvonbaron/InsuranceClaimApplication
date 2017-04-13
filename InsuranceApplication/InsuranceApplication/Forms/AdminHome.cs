@@ -174,7 +174,7 @@ namespace InsuranceApplication.Forms
 
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
-            SendMessage sendmessage = new SendMessage(admin, "", "", false);
+            SendMessage sendmessage = new SendMessage(admin.UserName, "", "", false);
             sendmessage.ShowDialog();
         }
 
