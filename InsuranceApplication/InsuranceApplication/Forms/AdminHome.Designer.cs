@@ -458,9 +458,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(378, 283);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 20);
+            this.label10.Size = new System.Drawing.Size(159, 20);
             this.label10.TabIndex = 85;
-            this.label10.Text = "VIEW CLIENTS";
+            this.label10.Text = "VIEW ALL USERS";
             // 
             // lvClients
             // 
