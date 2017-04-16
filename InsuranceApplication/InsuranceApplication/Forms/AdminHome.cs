@@ -71,21 +71,6 @@ namespace InsuranceApplication.Forms
                 lvClients.Items.Add(curItem);
             }
 
-            lvClients.View = View.Details;
-            clients = User.GetManagers();
-            lvClients.Columns.Add("firstname", 85);
-            lvClients.Columns.Add("lastname", 85);
-            lvClients.Columns.Add("birthday", 150);
-            lvClients.Columns.Add("phonenumber", 75);
-            for (int i = 0; i < clients.Rows.Count; i++)
-            {
-                DataRow dr = clients.Rows[i];
-                ListViewItem curItem = new ListViewItem(dr[0].ToString());
-                curItem.SubItems.Add(dr[1].ToString());
-                curItem.SubItems.Add(dr[4].ToString());
-                curItem.SubItems.Add(dr[5].ToString());
-                lvClients.Items.Add(curItem);
-            }
 
             lvClaims.View = View.Details;
             DataTable claims = User.GetClaims();
