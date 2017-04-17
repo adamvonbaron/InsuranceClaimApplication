@@ -100,16 +100,9 @@ namespace InsuranceApplication.Forms
         }
 
         private void btnDeleteEnter_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                admin.DeleteUser(txtPermissionsUsername.Text);
-                MessageBox.Show("Deleted User " + txtDeleteUsername.Text);
-            }
-            catch (Exception ex)
-            {
-
-            }
+        { 
+            admin.DeleteUser(txtPermissionsUsername.Text);
+            MessageBox.Show("Deleted User " + txtDeleteUsername.Text);
         }
 
         private void btnPermissionsClear_Click(object sender, EventArgs e)
