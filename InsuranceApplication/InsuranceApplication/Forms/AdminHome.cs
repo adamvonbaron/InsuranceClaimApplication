@@ -101,7 +101,7 @@ namespace InsuranceApplication.Forms
 
         private void btnDeleteEnter_Click(object sender, EventArgs e)
         { 
-            admin.DeleteUser(txtPermissionsUsername.Text);
+            admin.DeleteUser(txtDeleteUsername.Text);
             MessageBox.Show("Deleted User " + txtDeleteUsername.Text);
         }
 
