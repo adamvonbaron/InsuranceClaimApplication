@@ -53,10 +53,10 @@ namespace InsuranceApplication.Forms
 
             lvManagers.View = View.Details;
             DataTable managers = User.GetManagers();
-            lvManagers.Columns.Add("From", 75);
-            lvManagers.Columns.Add("Date", 125);
-            lvManagers.Columns.Add("Subject", 500);
-            lvManagers.Columns.Add("Message", 500);
+            lvManagers.Columns.Add("firstname", 85);
+            lvManagers.Columns.Add("lastname", 85);
+            lvManagers.Columns.Add("birthday", 150);
+            lvManagers.Columns.Add("phonenumber", 75);
             for (int i = 0; i < managers.Rows.Count; i++)
             {
                 DataRow dr = managers.Rows[i];
