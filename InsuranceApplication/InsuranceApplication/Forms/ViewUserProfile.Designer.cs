@@ -36,7 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblBirthday = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.lblNumOfClaims = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -118,23 +117,12 @@
             this.lblPhoneNumber.TabIndex = 7;
             this.lblPhoneNumber.Text = "Phone Number:";
             // 
-            // lblNumOfClaims
-            // 
-            this.lblNumOfClaims.AutoSize = true;
-            this.lblNumOfClaims.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumOfClaims.Location = new System.Drawing.Point(12, 89);
-            this.lblNumOfClaims.Name = "lblNumOfClaims";
-            this.lblNumOfClaims.Size = new System.Drawing.Size(76, 16);
-            this.lblNumOfClaims.TabIndex = 8;
-            this.lblNumOfClaims.Text = "# of Claims:";
-            // 
             // ViewUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(408, 152);
-            this.Controls.Add(this.lblNumOfClaims);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.lblBirthday);
             this.Controls.Add(this.label4);
@@ -161,6 +149,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblBirthday;
         private System.Windows.Forms.Label lblPhoneNumber;
-        private System.Windows.Forms.Label lblNumOfClaims;
     }
 }

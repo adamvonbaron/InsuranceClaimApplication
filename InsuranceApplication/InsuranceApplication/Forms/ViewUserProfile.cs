@@ -31,7 +31,6 @@ namespace InsuranceApplication.Forms
             lblUsername.Text = "Username: " + userdata.UserName;
             lblBirthday.Text = "Birthday: " + userdata.Birthday;
             lblPhoneNumber.Text = "Phone Number: " + userdata.Phonenumber;
-            lblNumOfClaims.Text = "# of Claims: 0";
         }
     }
 }
